@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" shape-rendering="geometricPrecision">
+  <defs>
+    <path id="segment" d="M117.42 38.62 A90 90 0 0 1 138.58 38.62"/>
+  </defs>
+  <g transform="scale(.0625)" fill="none" stroke="#000" stroke-width="10" stroke-linecap="butt">
+    <use href="#segment" transform="rotate(112.750 128 128)"/>
+    <use href="#segment" transform="rotate(128.475 128 128)"/>
+    <use href="#segment" transform="rotate(144.200 128 128)"/>
+    <use href="#segment" transform="rotate(159.925 128 128)"/>
+    <use href="#segment" transform="rotate(175.650 128 128)"/>
+    <use href="#segment" transform="rotate(191.375 128 128)"/>
+    <use href="#segment" transform="rotate(207.100 128 128)"/>
+    <use href="#segment" transform="rotate(222.825 128 128)"/>
+    <use href="#segment" transform="rotate(238.550 128 128)"/>
+    <use href="#segment" transform="rotate(254.275 128 128)"/>
+    <use href="#segment" transform="rotate(270.000 128 128)"/>
+    <use href="#segment" transform="rotate(285.725 128 128)"/>
+    <use href="#segment" transform="rotate(301.450 128 128)"/>
+    <use href="#segment" transform="rotate(317.175 128 128)"/>
+    <use href="#segment" transform="rotate(332.900 128 128)"/>
+    <use href="#segment" transform="rotate(348.625 128 128)"/>
+    <use href="#segment" transform="rotate(364.350 128 128)"/>
+    <use href="#segment" transform="rotate(380.075 128 128)"/>
+    <use href="#segment" transform="rotate(395.800 128 128)"/>
+    <use href="#segment" transform="rotate(411.525 128 128)"/>
+    <use href="#segment" transform="rotate(427.250 128 128)"/>
+  </g>
+  <circle cx="13.625" cy="8" r=".53125" fill="#000"/>
+</svg>

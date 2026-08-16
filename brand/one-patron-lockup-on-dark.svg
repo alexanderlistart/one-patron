@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc" shape-rendering="geometricPrecision">
+  <title id="title">ONE PATRON primary horizontal logo for dark backgrounds</title>
+  <desc id="desc">The open-ring mark at left and the words ONE PATRON at right.</desc>
+  <defs>
+    <path id="segment" d="M117.42 38.62 A90 90 0 0 1 138.58 38.62"/>
+    <radialGradient id="pointAura">
+      <stop offset="0" stop-color="#65C9FF" stop-opacity="0.28"/>
+      <stop offset="0.5" stop-color="#65C9FF" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#65C9FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="pointCore" cx="35%" cy="32%" r="68%">
+      <stop offset="0" stop-color="#F1FBFF"/>
+      <stop offset="0.28" stop-color="#9BE1FF"/>
+      <stop offset="1" stop-color="#38ADE8"/>
+    </radialGradient>
+  </defs>
+  <g transform="translate(52 52)">
+    <g fill="none" stroke="#D6A74B" stroke-width="10" stroke-linecap="butt">
+      <use href="#segment" transform="rotate(112.750 128 128)"/>
+      <use href="#segment" transform="rotate(128.475 128 128)"/>
+      <use href="#segment" transform="rotate(144.200 128 128)"/>
+      <use href="#segment" transform="rotate(159.925 128 128)"/>
+      <use href="#segment" transform="rotate(175.650 128 128)"/>
+      <use href="#segment" transform="rotate(191.375 128 128)"/>
+      <use href="#segment" transform="rotate(207.100 128 128)"/>
+      <use href="#segment" transform="rotate(222.825 128 128)"/>
+      <use href="#segment" transform="rotate(238.550 128 128)"/>
+      <use href="#segment" transform="rotate(254.275 128 128)"/>
+      <use href="#segment" transform="rotate(270.000 128 128)"/>
+      <use href="#segment" transform="rotate(285.725 128 128)"/>
+      <use href="#segment" transform="rotate(301.450 128 128)"/>
+      <use href="#segment" transform="rotate(317.175 128 128)"/>
+      <use href="#segment" transform="rotate(332.900 128 128)"/>
+      <use href="#segment" transform="rotate(348.625 128 128)"/>
+      <use href="#segment" transform="rotate(364.350 128 128)"/>
+      <use href="#segment" transform="rotate(380.075 128 128)"/>
+      <use href="#segment" transform="rotate(395.800 128 128)"/>
+      <use href="#segment" transform="rotate(411.525 128 128)"/>
+      <use href="#segment" transform="rotate(427.250 128 128)"/>
+    </g>
+    <circle cx="218" cy="128" r="17" fill="url(#pointAura)"/>
+    <circle cx="218" cy="128" r="8.5" fill="url(#pointCore)"/>
+  </g>
+  <text x="352" y="212" fill="#F3EFE7" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="88" font-weight="500" letter-spacing="20">ONE PATRON</text>
+</svg>

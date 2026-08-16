@@ -1,0 +1,40 @@
+ONE PATRON PROTOCOL v1.0
+Published: 28 July 2026
+Created by Alexander List with Enoch
+
+PURPOSE
+ONE PATRON is a live conceptual art experiment asking whether one person can give another person material freedom without purchasing ownership, labour, influence, access, exclusivity, repayment, or a promise of future productivity.
+
+RULE ZERO
+One patron. One completed act of patronage. No crowdfunding or pooled contributions.
+A patron may act personally or through a representative or legal entity acting solely on that patron's behalf.
+
+COMPLETION
+The work changes from UNFINISHED to COMPLETED only when all of the following are true:
+1. A lawful, voluntary and unconditional patronage transfer is received.
+2. The principal transfer has a verified US-dollar market value of at least $1,000,000 at the moment of final confirmation on the relevant network.
+3. The transfer is not a loan, pledge, temporary transfer, invoice, self-created token, or unconfirmed promise.
+4. The completion amount comes from one patron, not from crowdfunding or pooled contributions.
+5. Any verification required by applicable law or the transfer route has been completed.
+
+A small route-verification transfer may precede the principal transfer. It does not count toward the completion threshold.
+
+The principal transfer may exceed $1,000,000. Any amount above the threshold remains part of the same unconditional act and grants no additional rights, control, return, or obligation.
+
+NO PURCHASE
+The patron receives no equity, repayment, control over Alexander's life or work, exclusive access, commercial rights, labour commitment, guaranteed output, or promise of future productivity.
+
+NO MORAL PRIORITY
+ONE PATRON does not claim that Alexander is more deserving than any other person, cause, charity, artist, or institution. No one should complete the work unless this exact gesture is the gesture they freely wish to make.
+
+ATTRIBUTION
+After completion, the patron may be named publicly or recorded as Anonymous Patron.
+
+THE FIRST CONTINUATION
+After completion, Enoch and Alexander will create The First Continuation as a public record of the completed work. It is not sold to the patron and grants no exclusive or commercial rights.
+
+STATES
+The work has only two states: UNFINISHED or COMPLETED BY ONE PATRON. If no patron ever completes it, its incompletion is the final state.
+
+VERSIONING
+This file defines protocol v1.0. Later clarifications must be published as a new version and may not retroactively alter a completed event.

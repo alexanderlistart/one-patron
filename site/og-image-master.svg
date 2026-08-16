@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc" shape-rendering="geometricPrecision">
+  <title id="title">ONE PATRON — One Person Can Finish It</title>
+  <desc id="desc">Branded social preview for the unfinished conceptual artwork ONE PATRON.</desc>
+  <defs>
+    <radialGradient id="backgroundGlow" cx="82%" cy="48%" r="52%">
+      <stop offset="0" stop-color="#25272B"/>
+      <stop offset="0.48" stop-color="#111317"/>
+      <stop offset="1" stop-color="#0B0C0E"/>
+    </radialGradient>
+    <radialGradient id="pointAura">
+      <stop offset="0" stop-color="#65C9FF" stop-opacity="0.30"/>
+      <stop offset="0.5" stop-color="#65C9FF" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#65C9FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="pointCore" cx="35%" cy="32%" r="68%">
+      <stop offset="0" stop-color="#F1FBFF"/>
+      <stop offset="0.28" stop-color="#9BE1FF"/>
+      <stop offset="1" stop-color="#38ADE8"/>
+    </radialGradient>
+    <path id="segment" d="M117.42 38.62 A90 90 0 0 1 138.58 38.62"/>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#backgroundGlow)"/>
+  <rect x="0" y="0" width="8" height="630" fill="#D6A74B"/>
+
+  <text x="72" y="90" fill="#F3EFE7" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="29" font-weight="500" letter-spacing="8">ONE PATRON</text>
+  <text x="70" y="212" fill="#F3EFE7" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="69" font-weight="600" letter-spacing="-2">ONE PERSON CAN</text>
+  <text x="70" y="285" fill="#F3EFE7" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="69" font-weight="600" letter-spacing="-2">FINISH IT.</text>
+  <text x="70" y="406" fill="#F0CF7A" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="68" font-weight="600" letter-spacing="-2">$1,000,000+</text>
+  <text x="72" y="482" fill="#C7C4BC" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="400">One lawful, unconditional act.</text>
+  <text x="72" y="520" fill="#A9A8A4" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="400">Nothing is purchased in return.</text>
+  <text x="72" y="577" fill="#65C9FF" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="600" letter-spacing="3">THE WORK IS UNFINISHED</text>
+
+  <g transform="translate(718 80) scale(1.79)">
+    <g fill="none" stroke="#D6A74B" stroke-width="10" stroke-linecap="butt">
+      <use href="#segment" transform="rotate(112.750 128 128)"/>
+      <use href="#segment" transform="rotate(128.475 128 128)"/>
+      <use href="#segment" transform="rotate(144.200 128 128)"/>
+      <use href="#segment" transform="rotate(159.925 128 128)"/>
+      <use href="#segment" transform="rotate(175.650 128 128)"/>
+      <use href="#segment" transform="rotate(191.375 128 128)"/>
+      <use href="#segment" transform="rotate(207.100 128 128)"/>
+      <use href="#segment" transform="rotate(222.825 128 128)"/>
+      <use href="#segment" transform="rotate(238.550 128 128)"/>
+      <use href="#segment" transform="rotate(254.275 128 128)"/>
+      <use href="#segment" transform="rotate(270.000 128 128)"/>
+      <use href="#segment" transform="rotate(285.725 128 128)"/>
+      <use href="#segment" transform="rotate(301.450 128 128)"/>
+      <use href="#segment" transform="rotate(317.175 128 128)"/>
+      <use href="#segment" transform="rotate(332.900 128 128)"/>
+      <use href="#segment" transform="rotate(348.625 128 128)"/>
+      <use href="#segment" transform="rotate(364.350 128 128)"/>
+      <use href="#segment" transform="rotate(380.075 128 128)"/>
+      <use href="#segment" transform="rotate(395.800 128 128)"/>
+      <use href="#segment" transform="rotate(411.525 128 128)"/>
+      <use href="#segment" transform="rotate(427.250 128 128)"/>
+    </g>
+    <circle cx="218" cy="128" r="17" fill="url(#pointAura)"/>
+    <circle cx="218" cy="128" r="8.5" fill="url(#pointCore)"/>
+  </g>
+</svg>

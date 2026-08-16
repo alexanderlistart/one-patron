@@ -1,0 +1,159 @@
+ONE PATRON - IDENTITY MANIFEST
+Version: 1.0
+Issued: 2026-08-11
+
+PURPOSE
+
+This manifest establishes the official public identity of ONE PATRON
+and binds its declared online identities, contact address and receiving
+addresses to a single OpenPGP identity.
+
+PROJECT IDENTITY
+
+Project:
+ONE PATRON
+
+Author:
+Alexander List
+
+Official contact:
+neyanush@gmail.com
+
+OPENPGP IDENTITY
+
+Primary fingerprint:
+18FEBD74D1E7D6FEB97A3406316D9E762810715D
+
+Signing subkey fingerprint:
+F98D7B5AB20FF1E8D0440DBB6EE2FE0A9D8278F5
+
+OpenPGP UID:
+Alexander List (ONE PATRON) <neyanush@gmail.com>
+
+Public key file:
+ONE_PATRON_PUBLIC_KEY.asc
+
+Detached manifest signature:
+ONE_PATRON_IDENTITY_MANIFEST.asc
+
+OFFICIAL ONLINE IDENTITIES
+
+Website:
+https://one-patron.netlify.app/
+
+X:
+https://x.com/onepatronart
+
+Substack:
+https://alexanderlistart.substack.com/
+
+Reddit:
+https://www.reddit.com/user/onepatronart/
+
+Facebook - ONE PATRON:
+https://www.facebook.com/onepatronart/
+
+Facebook - personal:
+https://www.facebook.com/alexanderlistart/
+
+OFFICIAL RECEIVING ADDRESSES
+
+Bitcoin mainnet - BTC:
+bc1qjz4vy9p9mc6qzmvlghaf9lf2n26nyrzkdxdqz5
+
+EVM address:
+0x6BCDBf6E97CB51Aa1e8cd637B65D067aE69B4e34
+
+The EVM address above is the official receiving address for:
+ETH on Ethereum mainnet
+USDC on Ethereum mainnet
+USDC on Base
+
+EVM WALLET CONTROL PROOF
+
+Address:
+0x6BCDBf6E97CB51Aa1e8cd637B65D067aE69B4e34
+
+The content between the message markers below, excluding the marker
+lines themselves, was signed exactly as shown.
+
+-----BEGIN ONE PATRON EVM MESSAGE-----
+ONE PATRON WALLET CONTROL PROOF
+
+I control the EVM address:
+0x6BCDBf6E97CB51Aa1e8cd637B65D067aE69B4e34
+
+I bind this address to the ONE PATRON identity.
+
+Author: Alexander List
+Website: https://one-patron.netlify.app/
+OpenPGP fingerprint: 18FEBD74D1E7D6FEB97A3406316D9E762810715D
+
+Official receiving routes for this address:
+ETH on Ethereum mainnet
+USDC on Ethereum mainnet
+USDC on Base
+
+Date: 2026-08-11
+-----END ONE PATRON EVM MESSAGE-----
+
+SafePal signature encoding:
+Hex
+
+Signature:
+0xf4cbea00ce9f51576529883843c88cfb3a90fa555b8a0717573964a210cd7b1126b87f88489bd24601467d2d17811d2c04da4f1fa1a974267db1b514339fa7a71b
+
+BITCOIN WALLET CONTROL PROOF
+
+Address:
+bc1qjz4vy9p9mc6qzmvlghaf9lf2n26nyrzkdxdqz5
+
+Recovered compressed public key:
+023ed5573ad18ce3352050a5d0db037848a045738bbd37ef6996744f8f41005920
+
+The content between the message markers below, excluding the marker
+lines themselves, was signed exactly as shown.
+
+-----BEGIN ONE PATRON BITCOIN MESSAGE-----
+ONE PATRON WALLET CONTROL PROOF
+
+I control the Bitcoin address:
+bc1qjz4vy9p9mc6qzmvlghaf9lf2n26nyrzkdxdqz5
+
+I bind this address to the ONE PATRON identity.
+
+Author: Alexander List
+Website: https://one-patron.netlify.app/
+OpenPGP fingerprint: 18FEBD74D1E7D6FEB97A3406316D9E762810715D
+
+Official receiving route:
+BTC on Bitcoin mainnet
+
+Date: 2026-08-11
+-----END ONE PATRON BITCOIN MESSAGE-----
+
+SafePal signature encoding:
+Base64
+
+Signature:
+H88MUCPSRzMuVcEqJ9Dm6TbDbff/Rspfw5EyYkz02UH/KPb7myZN5zVd8ezNkBZp+vnMna8s6kKtRVsMt+PZe30=
+
+Verification note:
+The compressed public key recovered from the signed message and
+signature above corresponds to the Bitcoin P2WPKH address listed in
+this manifest.
+
+This Bitcoin proof is not represented as a BIP-322 signature.
+
+IDENTITY STATEMENT
+
+The signer of this manifest asserts that the online identities, email
+address and receiving addresses listed above are the official public
+identity and receiving routes of ONE PATRON.
+
+The EVM and Bitcoin message signatures provide additional cryptographic
+evidence of control of the corresponding wallet keys.
+
+This manifest is authenticated as a whole by the detached OpenPGP
+signature ONE_PATRON_IDENTITY_MANIFEST.asc, made with the ONE PATRON
+signing subkey associated with the primary fingerprint above.

@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Terms &amp; Conditions — ONE PATRON</title>
+  <meta name="description" content="The formal Terms &amp; Conditions governing ONE PATRON and the conditions under which the work changes from UNFINISHED to COMPLETED.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#0B0C0E">
+  <link rel="canonical" href="https://one-patron.netlify.app/terms/">
+  <link rel="icon" href="/favicon-v2.ico" type="image/x-icon" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="/favicon-v2.svg" type="image/svg+xml" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon-v2.png" sizes="180x180">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ONE PATRON">
+  <meta property="og:title" content="Terms &amp; Conditions — ONE PATRON">
+  <meta property="og:description" content="The formal conditions governing completion of ONE PATRON.">
+  <meta property="og:url" content="https://one-patron.netlify.app/terms/">
+  <meta property="og:image" content="https://one-patron.netlify.app/og-one-patron-v2.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Terms &amp; Conditions — ONE PATRON">
+  <meta name="twitter:description" content="The formal conditions governing completion of ONE PATRON.">
+  <meta name="twitter:image" content="https://one-patron.netlify.app/og-one-patron-v2.png">
+
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0B0C0E;
+      --bg-deep: #07080A;
+      --panel: #111317;
+      --panel-soft: #16191E;
+      --text: #F3EFE7;
+      --muted: #A9A8A4;
+      --muted-strong: #C7C4BC;
+      --line: #2B2E33;
+      --line-bright: #464A51;
+      --gold: #D6A74B;
+      --gold-dark: #A56F26;
+      --gold-light: #F0CF7A;
+      --blue: #65C9FF;
+      --sans: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+      --serif: Georgia, "Times New Roman", serif;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      --page: min(960px, calc(100% - 40px));
+      --radius: 22px;
+    }
+
+    * { box-sizing: border-box; }
+    html { background: var(--bg); scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 85% 0%, rgba(101, 201, 255, 0.05), transparent 25rem),
+        radial-gradient(circle at 10% 16%, rgba(214, 167, 75, 0.07), transparent 28rem),
+        linear-gradient(180deg, #101216 0%, var(--bg) 32rem, var(--bg-deep) 100%);
+      color: var(--text);
+      font-family: var(--serif);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; }
+    :focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; }
+
+    .skip-link {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      z-index: 100;
+      padding: 10px 14px;
+      border-radius: 10px;
+      background: var(--text);
+      color: var(--bg);
+      transform: translateY(-160%);
+    }
+    .skip-link:focus { transform: translateY(0); }
+
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      border-bottom: 1px solid rgba(243, 239, 231, 0.09);
+      background: rgba(11, 12, 14, 0.86);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav-inner {
+      width: var(--page);
+      min-height: 76px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .brand-link { display: inline-flex; }
+    .brand-link img { width: 232px; height: auto; display: block; }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 13px 23px;
+      font-family: var(--sans);
+    }
+
+    .nav-links a {
+      color: var(--muted-strong);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    .nav-links a:hover,
+    .nav-links a:focus-visible { color: var(--text); }
+
+    .hero,
+    .section,
+    .site-footer {
+      width: var(--page);
+      margin: 0 auto;
+    }
+
+    .hero { padding: clamp(78px, 11vw, 136px) 0 clamp(70px, 9vw, 108px); }
+
+    .eyebrow,
+    .section-label {
+      color: var(--gold);
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+    h1 {
+      max-width: 900px;
+      margin: 25px 0 28px;
+      font-size: clamp(54px, 8.5vw, 102px);
+      font-weight: 400;
+      letter-spacing: -0.058em;
+      line-height: 0.95;
+    }
+
+    .lead {
+      max-width: 790px;
+      color: var(--muted-strong);
+      font-size: clamp(20px, 2.3vw, 28px);
+    }
+
+    .document-meta {
+      margin-top: 38px;
+      padding: 24px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 17px;
+      border: 1px solid var(--gold-dark);
+      border-radius: var(--radius);
+      background: var(--panel);
+      font-family: var(--sans);
+    }
+
+    .meta-item span {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .meta-item strong,
+    .meta-item code {
+      color: var(--muted-strong);
+      font-size: 13px;
+      font-weight: 500;
+      overflow-wrap: anywhere;
+    }
+
+    .section {
+      padding: clamp(66px, 8vw, 96px) 0;
+      border-top: 1px solid var(--line);
+      scroll-margin-top: 92px;
+    }
+
+    h2 {
+      margin: 18px 0 28px;
+      font-size: clamp(34px, 5vw, 58px);
+      font-weight: 400;
+      letter-spacing: -0.045em;
+      line-height: 1.05;
+    }
+
+    .section p,
+    .section li {
+      max-width: 850px;
+      color: var(--muted-strong);
+      font-size: 18px;
+    }
+
+    .section ol { padding-left: 25px; }
+    .section li + li { margin-top: 13px; }
+
+    .formal-card {
+      padding: clamp(25px, 4vw, 38px);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(243, 239, 231, 0.025);
+    }
+
+    .formal-card + .formal-card { margin-top: 16px; }
+
+    .button-row {
+      margin-top: 31px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      min-height: 48px;
+      padding: 12px 19px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--line-bright);
+      border-radius: 999px;
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+    }
+
+    .button:hover,
+    .button:focus-visible { border-color: var(--gold); }
+    .button.primary { border-color: var(--gold); background: var(--gold); color: var(--bg-deep); }
+
+    .hash {
+      margin-top: 22px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--bg-deep);
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 12px;
+      line-height: 1.65;
+      overflow-wrap: anywhere;
+      user-select: all;
+    }
+
+    .site-footer {
+      padding: 48px 0 64px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+      color: var(--muted);
+      font-family: var(--sans);
+      font-size: 12px;
+    }
+
+    .footer-logo { width: 230px; height: auto; }
+    .site-footer a { color: var(--muted-strong); text-decoration: none; }
+
+    @media (max-width: 760px) {
+      :root { --page: min(100% - 28px, 960px); }
+      .nav-inner { min-height: 68px; }
+      .brand-link img { width: 174px; }
+      .nav-links a:not(:last-child) { display: none; }
+      .document-meta { grid-template-columns: 1fr; }
+      .button-row { flex-direction: column; }
+      .button { width: 100%; }
+      .site-footer { align-items: flex-start; flex-direction: column; }
+      .footer-logo { width: 205px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: 0.01ms !important; }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <nav class="site-nav" aria-label="Terms navigation">
+    <div class="nav-inner">
+      <a class="brand-link" href="/" aria-label="ONE PATRON home">
+        <img src="/one-patron-logo.png" width="2400" height="720" alt="ONE PATRON">
+      </a>
+      <div class="nav-links">
+        <a href="/">Project Overview</a>
+        <a href="/verification/">Verify Identity &amp; Wallets</a>
+        <a href="/#complete">Complete It</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <header class="hero">
+      <div class="eyebrow">ONE PATRON · FORMAL CONDITIONS</div>
+      <h1>Terms &amp; Conditions</h1>
+      <p class="lead">These are the formal conditions governing ONE PATRON and the point at which the work changes from UNFINISHED to COMPLETED.</p>
+
+      <div class="document-meta">
+        <div class="meta-item">
+          <span>Document</span>
+          <strong>ONE PATRON Protocol v1.0</strong>
+        </div>
+        <div class="meta-item">
+          <span>Published</span>
+          <strong>28 July 2026</strong>
+        </div>
+        <div class="meta-item">
+          <span>Created by</span>
+          <strong>Alexander List with Enoch</strong>
+        </div>
+      </div>
+
+      <div class="button-row">
+        <a class="button primary" href="/protocol-v1.0.txt" target="_blank" rel="noopener">Open Canonical Text</a>
+        <a class="button" href="/protocol-v1.0.txt" download>Download Protocol</a>
+        <a class="button" href="/protocol-v1.0.sha256" download>Download SHA-256 Record</a>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="formal-card">
+        <div class="section-label">Before completion</div>
+        <h2>Direct transfer or optional preparation.</h2>
+        <p>A patron may complete the work by using one of the published receiving routes without contacting Alexander first.</p>
+        <p>Reviewing the Verification Center, contacting Alexander and making a small route-verification transfer are available options, not requirements imposed by ONE PATRON. Any verification required by applicable law or by the selected transfer route still applies.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="formal-card">
+        <div class="section-label">Purpose</div>
+        <h2>What ONE PATRON asks.</h2>
+        <p>ONE PATRON is a live conceptual art experiment asking whether one person can give another person material freedom without purchasing ownership, labour, influence, access, exclusivity, repayment, or a promise of future productivity.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="formal-card">
+        <div class="section-label">Rule Zero</div>
+        <h2>One patron. One completed act.</h2>
+        <p>One patron. One completed act of patronage. No crowdfunding or pooled contributions.</p>
+        <p>A patron may act personally or through a representative or legal entity acting solely on that patron's behalf.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="formal-card">
+        <div class="section-label">Completion</div>
+        <h2>When the work becomes complete.</h2>
+        <p>The work changes from UNFINISHED to COMPLETED only when all of the following are true:</p>
+        <ol>
+          <li>A lawful, voluntary and unconditional patronage transfer is received.</li>
+          <li>The principal transfer has a verified US-dollar market value of at least $1,000,000 at the moment of final confirmation on the relevant network.</li>
+          <li>The transfer is not a loan, pledge, temporary transfer, invoice, self-created token, or unconfirmed promise.</li>
+          <li>The completion amount comes from one patron, not from crowdfunding or pooled contributions.</li>
+          <li>Any verification required by applicable law or the transfer route has been completed.</li>
+        </ol>
+        <p>A small route-verification transfer may precede the principal transfer. It does not count toward the completion threshold.</p>
+        <p>The principal transfer may exceed $1,000,000. Any amount above the threshold remains part of the same unconditional act and grants no additional rights, control, return, or obligation.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="formal-card">
+        <div class="section-label">No Purchase</div>
+        <h2>What the act does not purchase.</h2>
+        <p>The patron receives no equity, repayment, control over Alexander's life or work, exclusive access, commercial rights, labour commitment, guaranteed output, or promise of future productivity.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="formal-card">
+        <div class="section-label">No Moral Priority</div>
+        <h2>No claim of greater deservingness.</h2>
+        <p>ONE PATRON does not claim that Alexander is more deserving than any other person, cause, charity, artist, or institution. No one should complete the work unless this exact gesture is the gesture they freely wish to make.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="formal-card">
+        <div class="section-label">Attribution</div>
+        <h2>Name or anonymity.</h2>
+        <p>After completion, the patron may be named publicly or recorded as Anonymous Patron.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="formal-card">
+        <div class="section-label">The First Continuation</div>
+        <h2>The public record after completion.</h2>
+        <p>After completion, Enoch and Alexander will create The First Continuation as a public record of the completed work. It is not sold to the patron and grants no exclusive or commercial rights.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="formal-card">
+        <div class="section-label">States</div>
+        <h2>UNFINISHED or COMPLETED.</h2>
+        <p>The work has only two states: UNFINISHED or COMPLETED BY ONE PATRON. If no patron ever completes it, its incompletion is the final state.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="formal-card">
+        <div class="section-label">Versioning</div>
+        <h2>A fixed public version.</h2>
+        <p>This file defines protocol v1.0. Later clarifications must be published as a new version and may not retroactively alter a completed event.</p>
+        <div class="hash">SHA-256: e0e17234a75222bb6553cfededb65c3565c3239744cf92ed0b1a60581111e086</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <img class="footer-logo" src="/one-patron-logo.png" width="2400" height="720" alt="ONE PATRON">
+    <div><a href="/">Project Overview</a> · <a href="/verification/">Verify Identity &amp; Wallets</a> · <a href="/privacy/">Privacy</a> · <a href="/#complete">Complete It</a></div>
+  </footer>
+</body>
+</html>

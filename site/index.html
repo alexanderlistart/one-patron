@@ -1,0 +1,1591 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ONE PATRON — One Patron. At Least $1,000,000.</title>
+  <meta name="description" content="ONE PATRON is a real conceptual artwork completed when one person gives Alexander List at least $1,000,000 in cryptocurrency.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#0B0C0E">
+  <meta name="google-site-verification" content="fXSa2rbNYQdxuI6jTZPwAgU0T4xa7JdSl0yyjq9Y9wQ">
+  <link rel="canonical" href="https://one-patron.netlify.app/">
+  <link rel="icon" href="/favicon-v2.ico" type="image/x-icon" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="/favicon-v2.svg" type="image/svg+xml" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon-v2.png" sizes="180x180">
+  <link rel="mask-icon" href="/safari-pinned-tab-v2.svg" color="#D6A74B">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ONE PATRON">
+  <meta property="og:title" content="ONE PATRON — One Patron. At Least $1,000,000.">
+  <meta property="og:description" content="A real request by Alexander List. One patron. At least $1,000,000 in cryptocurrency. One life changed, one artwork completed.">
+  <meta property="og:url" content="https://one-patron.netlify.app/">
+  <meta property="og:image" content="https://one-patron.netlify.app/og-one-patron-v2.png">
+  <meta property="og:image:secure_url" content="https://one-patron.netlify.app/og-one-patron-v2.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="ONE PATRON — an unfinished gold ring interrupted by one blue point">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@onepatronart">
+  <meta name="twitter:creator" content="@onepatronart">
+  <meta name="twitter:title" content="ONE PATRON — One Patron. At Least $1,000,000.">
+  <meta name="twitter:description" content="A real request by Alexander List. One patron. At least $1,000,000 in cryptocurrency.">
+  <meta name="twitter:image" content="https://one-patron.netlify.app/og-one-patron-v2.png">
+
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0B0C0E;
+      --bg-deep: #07080A;
+      --panel: #111317;
+      --panel-soft: #16191E;
+      --text: #F3EFE7;
+      --muted: #A9A8A4;
+      --muted-strong: #C7C4BC;
+      --line: #2B2E33;
+      --line-bright: #464A51;
+      --gold: #D6A74B;
+      --gold-dark: #A56F26;
+      --gold-light: #F0CF7A;
+      --blue: #65C9FF;
+      --sans: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+      --serif: Georgia, "Times New Roman", serif;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      --page: min(1180px, calc(100% - 40px));
+      --radius: 24px;
+      --nav-height: 76px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      background: var(--bg);
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 86% 3%, rgba(101, 201, 255, 0.055), transparent 26rem),
+        radial-gradient(circle at 10% 15%, rgba(214, 167, 75, 0.07), transparent 31rem),
+        linear-gradient(180deg, #101216 0%, var(--bg) 31rem, var(--bg-deep) 100%);
+      color: var(--text);
+      font-family: var(--serif);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a { color: inherit; }
+    button, input, textarea { font: inherit; }
+    img { max-width: 100%; }
+
+    :focus-visible {
+      outline: 2px solid var(--blue);
+      outline-offset: 4px;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      z-index: 200;
+      padding: 10px 14px;
+      border-radius: 10px;
+      background: var(--text);
+      color: var(--bg);
+      transform: translateY(-160%);
+    }
+
+    .skip-link:focus { transform: translateY(0); }
+
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(243, 239, 231, 0.09);
+      background: rgba(11, 12, 14, 0.86);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav-inner {
+      width: var(--page);
+      min-height: var(--nav-height);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand-link {
+      display: inline-flex;
+      flex: 0 0 auto;
+    }
+
+    .brand-link img {
+      width: 232px;
+      height: auto;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: clamp(15px, 2.1vw, 30px);
+      font-family: var(--sans);
+    }
+
+    .nav-links a {
+      color: var(--muted-strong);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.11em;
+      text-decoration: none;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible { color: var(--text); }
+
+    .nav-links .nav-action {
+      min-height: 48px;
+      padding: 12px 20px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--gold);
+      border-radius: 999px;
+      color: var(--gold-light);
+      line-height: 1;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .mobile-nav { display: none; }
+
+    main { overflow: hidden; }
+
+    .hero,
+    .section,
+    .trust-band {
+      width: var(--page);
+      margin: 0 auto;
+    }
+
+    .hero {
+      min-height: calc(100svh - var(--nav-height));
+      padding: clamp(52px, 6vw, 74px) 0 clamp(56px, 6vw, 78px);
+      display: grid;
+      grid-template-columns: minmax(0, 1.06fr) minmax(340px, 0.94fr);
+      align-items: center;
+      gap: clamp(48px, 8vw, 108px);
+    }
+
+    .status {
+      width: fit-content;
+      margin-bottom: 20px;
+      padding: 8px 13px;
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      border: 1px solid var(--line-bright);
+      border-radius: 999px;
+      color: var(--muted-strong);
+      font-family: var(--sans);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--blue);
+      box-shadow: 0 0 10px rgba(101, 201, 255, 0.55);
+    }
+
+    .hero-mobile-row { display: contents; }
+    .hero-mobile-mark { display: none; }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1 {
+      max-width: 760px;
+      margin: 0 0 22px;
+      font-size: clamp(56px, 6.2vw, 86px);
+      font-weight: 400;
+      font-kerning: normal;
+      letter-spacing: -0.032em;
+      line-height: 0.98;
+    }
+
+    .hero-ask {
+      max-width: 720px;
+      margin-bottom: 16px;
+      color: var(--text);
+      font-size: clamp(21px, 1.8vw, 25px);
+      line-height: 1.43;
+    }
+
+    .hero-lead {
+      max-width: 680px;
+      margin-bottom: 24px;
+      color: var(--muted-strong);
+      font-size: clamp(17px, 1.45vw, 21px);
+    }
+
+    .amount {
+      margin: 0 0 6px;
+      color: var(--gold-light);
+      font-family: var(--sans);
+      font-size: clamp(43px, 4.5vw, 64px);
+      font-weight: 600;
+      letter-spacing: -0.045em;
+      line-height: 1;
+    }
+
+    .amount-note {
+      margin-bottom: 22px;
+      color: var(--muted);
+      font-family: var(--sans);
+      font-size: 13px;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .button {
+      min-height: 50px;
+      padding: 13px 21px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--line-bright);
+      border-radius: 999px;
+      background: transparent;
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      line-height: 1.2;
+      text-align: center;
+      text-decoration: none;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+
+    .button:hover,
+    .button:focus-visible { border-color: var(--gold); }
+
+    .button.primary {
+      border-color: var(--gold);
+      background: var(--gold);
+      color: var(--bg-deep);
+    }
+
+    .button.subtle {
+      border-color: transparent;
+      color: var(--muted-strong);
+      padding-inline: 8px;
+    }
+
+    .hero-art {
+      min-height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--line);
+      border-radius: 34px;
+      background:
+        radial-gradient(circle at 50% 50%, rgba(214, 167, 75, 0.11), transparent 39%),
+        linear-gradient(145deg, var(--panel-soft), var(--panel));
+    }
+
+    .hero-art img {
+      width: min(72%, 390px);
+      height: auto;
+      display: block;
+    }
+
+    .portrait-frame {
+      margin: 0;
+      overflow: hidden;
+      border: 1px solid var(--line-bright);
+      border-radius: 30px;
+      background: var(--panel);
+      box-shadow: inset 0 0 0 1px rgba(243, 239, 231, 0.03);
+    }
+
+    .portrait-frame img {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: saturate(0.78) contrast(1.03);
+    }
+
+    .trust-band {
+      margin-top: 0;
+      margin-bottom: clamp(64px, 8vw, 108px);
+      padding: 22px 26px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      border: 1px solid var(--gold-dark);
+      border-radius: 18px;
+      background:
+        radial-gradient(circle at 0% 50%, rgba(214, 167, 75, 0.10), transparent 28rem),
+        rgba(243, 239, 231, 0.025);
+      font-family: var(--sans);
+    }
+
+    .trust-band p {
+      margin: 0;
+      color: var(--muted-strong);
+      font-size: 14px;
+    }
+
+    .trust-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 20px;
+    }
+
+    .trust-links a {
+      color: var(--gold-light);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .section {
+      padding: clamp(82px, 10vw, 132px) 0;
+      border-top: 1px solid var(--line);
+      scroll-margin-top: calc(var(--nav-height) + 16px);
+    }
+
+    .section-label {
+      color: var(--gold);
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      max-width: 940px;
+      margin: 20px 0 34px;
+      font-size: clamp(42px, 6vw, 76px);
+      font-weight: 400;
+      font-kerning: normal;
+      letter-spacing: -0.018em;
+      line-height: 1.05;
+    }
+
+    h3 {
+      margin-bottom: 13px;
+      font-family: var(--sans);
+      font-size: 21px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    .intro {
+      max-width: 790px;
+      color: var(--muted-strong);
+      font-size: clamp(19px, 2vw, 25px);
+    }
+
+    .plain-grid,
+    .outcome-grid,
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 48px;
+    }
+
+    .plain-card,
+    .outcome-card,
+    .trust-card,
+    .step-card {
+      padding: clamp(24px, 3vw, 34px);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: rgba(243, 239, 231, 0.025);
+    }
+
+    .plain-card strong,
+    .outcome-card strong {
+      display: block;
+      margin-bottom: 15px;
+      color: var(--gold-light);
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .plain-card p,
+    .outcome-card p,
+    .step-card p {
+      margin-bottom: 0;
+      color: var(--muted-strong);
+      font-size: 17px;
+    }
+
+    .identity-grid {
+      display: grid;
+      grid-template-columns: minmax(300px, 0.82fr) minmax(0, 1.18fr);
+      align-items: center;
+      gap: clamp(48px, 8vw, 108px);
+    }
+
+    .identity-copy p {
+      max-width: 690px;
+      color: var(--muted-strong);
+      font-size: clamp(18px, 1.65vw, 22px);
+    }
+
+    .identity-copy .identity-lead {
+      color: var(--text);
+      font-size: clamp(22px, 2.25vw, 30px);
+      line-height: 1.45;
+    }
+
+    .identity-copy .button-row { margin-top: 31px; }
+
+    .enoch-note {
+      max-width: 690px;
+      margin-top: 27px;
+      padding: 19px 21px;
+      border-left: 3px solid var(--blue);
+      background: rgba(101, 201, 255, 0.045);
+    }
+
+    .enoch-note strong {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .identity-copy .enoch-note p {
+      margin: 0;
+      color: var(--muted-strong);
+      font-family: var(--sans);
+      font-size: 14px;
+      line-height: 1.72;
+    }
+
+    .outcome-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+      gap: clamp(48px, 8vw, 110px);
+      align-items: start;
+    }
+
+    .split-copy p {
+      max-width: 720px;
+      color: var(--muted-strong);
+      font-size: clamp(18px, 1.7vw, 23px);
+    }
+
+    .threshold-panel {
+      padding: clamp(28px, 4vw, 46px);
+      border: 1px solid var(--gold-dark);
+      border-radius: var(--radius);
+      background:
+        radial-gradient(circle at 90% 0%, rgba(214, 167, 75, 0.12), transparent 55%),
+        var(--panel);
+    }
+
+    .threshold-panel .big {
+      display: block;
+      margin-bottom: 17px;
+      color: var(--gold-light);
+      font-family: var(--sans);
+      font-size: clamp(40px, 5vw, 68px);
+      font-weight: 600;
+      letter-spacing: -0.045em;
+      line-height: 1;
+    }
+
+    .threshold-panel p {
+      margin-bottom: 0;
+      color: var(--muted-strong);
+      font-size: 18px;
+    }
+
+    .public-grid {
+      margin-top: 46px;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 16px;
+    }
+
+    .story-card,
+    .social-card {
+      min-height: 100%;
+      padding: clamp(28px, 4vw, 44px);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--panel);
+    }
+
+    .story-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-color: var(--gold-dark);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(214, 167, 75, 0.11), transparent 45%),
+        var(--panel);
+    }
+
+    .story-card p,
+    .social-card p {
+      color: var(--muted-strong);
+      font-size: 18px;
+    }
+
+    .social-list {
+      margin: 27px 0 0;
+      padding: 0;
+      display: grid;
+      gap: 10px;
+      list-style: none;
+      font-family: var(--sans);
+    }
+
+    .social-list a {
+      min-height: 48px;
+      padding: 12px 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      color: var(--muted-strong);
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .social-list a:hover,
+    .social-list a:focus-visible {
+      border-color: var(--gold-dark);
+      color: var(--text);
+    }
+
+    .personal-note {
+      margin: 22px 0 0;
+      color: var(--muted);
+      font-family: var(--sans);
+      font-size: 12px;
+      line-height: 1.65;
+    }
+
+    .steps-grid {
+      margin-top: 48px;
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .step-card.primary-path {
+      grid-column: span 2;
+      border-color: var(--gold);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(214, 167, 75, 0.12), transparent 48%),
+        var(--panel);
+    }
+
+    .step-number {
+      display: block;
+      margin-bottom: 18px;
+      color: var(--blue);
+      font-family: var(--sans);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .step-card h3 { font-size: 17px; }
+    .step-card p { font-size: 15px; }
+
+    .optional-note {
+      max-width: 870px;
+      margin: 30px 0 0;
+      padding: 20px 23px;
+      border-left: 3px solid var(--blue);
+      background: rgba(101, 201, 255, 0.045);
+      color: var(--muted-strong);
+      font-family: var(--sans);
+      font-size: 14px;
+    }
+
+    .trust-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+    .trust-card {
+      min-height: 330px;
+      display: flex;
+      flex-direction: column;
+      border-color: var(--gold-dark);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(214, 167, 75, 0.09), transparent 45%),
+        var(--panel);
+    }
+
+    .trust-card:nth-child(2) {
+      border-color: rgba(101, 201, 255, 0.45);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(101, 201, 255, 0.08), transparent 45%),
+        var(--panel);
+    }
+
+    .trust-card p {
+      flex: 1;
+      color: var(--muted-strong);
+      font-size: 18px;
+    }
+
+    .trust-card .button { align-self: flex-start; }
+
+    .payment-intro {
+      max-width: 770px;
+      margin-bottom: 42px;
+      color: var(--muted-strong);
+      font-size: 20px;
+    }
+
+    .payment-stack {
+      display: grid;
+      gap: 16px;
+    }
+
+    .route-card {
+      padding: clamp(25px, 4vw, 40px);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(243, 239, 231, 0.025);
+    }
+
+    .route-card.preferred {
+      border-color: var(--gold);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(214, 167, 75, 0.12), transparent 43%),
+        var(--panel);
+    }
+
+    .route-head {
+      margin-bottom: 25px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .route-title h3 {
+      margin-bottom: 5px;
+      font-size: 25px;
+    }
+
+    .route-title p {
+      margin: 0;
+      color: var(--muted);
+      font-family: var(--sans);
+      font-size: 13px;
+    }
+
+    .route-badge {
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: var(--gold);
+      color: var(--bg-deep);
+      font-family: var(--sans);
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .wallet-address {
+      display: block;
+      margin-bottom: 21px;
+      color: var(--gold-light);
+      font-family: var(--mono);
+      font-size: clamp(13px, 2vw, 20px);
+      line-height: 1.55;
+      overflow-wrap: anywhere;
+      user-select: all;
+    }
+
+    .route-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 11px 18px;
+    }
+
+    .route-actions .verify-link {
+      color: var(--blue);
+      font-family: var(--sans);
+      font-size: 12px;
+      text-decoration: none;
+    }
+
+    .copy-status {
+      min-height: 20px;
+      color: var(--blue);
+      font-family: var(--sans);
+      font-size: 12px;
+    }
+
+    .other-routes {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .other-routes summary {
+      padding: 22px 26px;
+      color: var(--muted-strong);
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+    }
+
+    .other-grid {
+      padding: 0 16px 16px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .other-grid .route-card { border-radius: 18px; }
+
+    .usdc-warning {
+      margin: 0 16px 16px;
+      padding: 17px 20px;
+      border-left: 3px solid var(--blue);
+      background: rgba(101, 201, 255, 0.045);
+      color: var(--muted-strong);
+      font-family: var(--sans);
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    .usdc-warning a { color: var(--text); }
+
+    .transfer-warning {
+      margin-top: 24px;
+      padding: 20px 23px;
+      border-left: 3px solid var(--gold);
+      background: rgba(243, 239, 231, 0.035);
+      color: var(--muted-strong);
+      font-family: var(--sans);
+      font-size: 14px;
+    }
+
+    .payment-contact {
+      margin-top: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px 20px;
+    }
+
+    .payment-contact p {
+      margin: 0;
+      color: var(--muted);
+      font-family: var(--sans);
+      font-size: 13px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+      gap: clamp(48px, 8vw, 100px);
+      align-items: start;
+    }
+
+    .contact-copy p {
+      color: var(--muted-strong);
+      font-size: 19px;
+    }
+
+    .contact-links {
+      margin-top: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 11px;
+    }
+
+    .contact-socials {
+      position: relative;
+      font-family: var(--sans);
+    }
+
+    .contact-socials summary {
+      list-style: none;
+    }
+
+    .contact-socials summary::-webkit-details-marker { display: none; }
+
+    .contact-socials[open] summary {
+      border-color: var(--gold);
+      color: var(--text);
+    }
+
+    .contact-social-panel {
+      min-width: min(340px, calc(100vw - 28px));
+      margin-top: 12px;
+      padding: 14px;
+      display: grid;
+      gap: 7px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--panel);
+      box-shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
+    }
+
+    .contact-social-panel a {
+      min-height: 43px;
+      padding: 10px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      border: 1px solid var(--line);
+      border-radius: 11px;
+      color: var(--muted-strong);
+      font-size: 13px;
+      text-decoration: none;
+    }
+
+    .contact-social-panel a:hover,
+    .contact-social-panel a:focus-visible {
+      border-color: var(--gold-dark);
+      color: var(--text);
+    }
+
+    .contact-social-panel .personal-profile {
+      margin-top: 5px;
+      border-style: dashed;
+    }
+
+    .contact-social-note {
+      margin: 5px 2px 0 !important;
+      color: var(--muted) !important;
+      font-family: var(--sans);
+      font-size: 11px !important;
+      line-height: 1.65;
+    }
+
+    .contact-form {
+      padding: clamp(24px, 4vw, 38px);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--panel);
+    }
+
+    .form-field + .form-field { margin-top: 18px; }
+
+    .form-field label {
+      margin-bottom: 8px;
+      display: block;
+      color: var(--muted-strong);
+      font-family: var(--sans);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .form-field input,
+    .form-field textarea {
+      width: 100%;
+      border: 1px solid var(--line-bright);
+      border-radius: 13px;
+      background: var(--bg-deep);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 16px;
+    }
+
+    .form-field input { min-height: 50px; padding: 0 14px; }
+    .form-field textarea { min-height: 145px; padding: 14px; resize: vertical; }
+    .form-field input:focus,
+    .form-field textarea:focus {
+      border-color: var(--gold);
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(214, 167, 75, 0.12);
+    }
+    .contact-form .button { margin-top: 22px; }
+    .privacy-note {
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-family: var(--sans);
+      font-size: 12px;
+      line-height: 1.65;
+    }
+    .privacy-note a { color: var(--muted-strong); }
+    .bot-field { position: absolute; left: -10000px; }
+
+    .site-footer {
+      width: var(--page);
+      margin: 0 auto;
+      padding: 54px 0 70px;
+      border-top: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      align-items: end;
+      gap: 42px;
+      color: var(--muted);
+      font-family: var(--sans);
+      font-size: 12px;
+    }
+
+    .footer-logo { width: 270px; height: auto; display: block; }
+    .footer-meta { text-align: right; }
+
+    .footer-links {
+      margin-bottom: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 10px 20px;
+    }
+
+    .footer-links a {
+      color: var(--muted-strong);
+      text-decoration: none;
+    }
+
+    .footer-links a:hover,
+    .footer-links a:focus-visible { color: var(--text); }
+
+    @media (max-width: 1040px) {
+      .nav-links { gap: 15px; }
+      .nav-links > a:not(.nav-action) { display: none; }
+      .mobile-nav {
+        position: relative;
+        display: block;
+        font-family: var(--sans);
+      }
+      .mobile-nav summary {
+        min-height: 42px;
+        padding: 0 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--line-bright);
+        border-radius: 999px;
+        color: var(--muted-strong);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        line-height: 1;
+        list-style: none;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+      .mobile-nav[open] summary {
+        border-color: var(--gold);
+        color: var(--text);
+      }
+      .mobile-nav summary::-webkit-details-marker { display: none; }
+      .mobile-panel {
+        position: absolute;
+        top: 36px;
+        right: 0;
+        min-width: 220px;
+        padding: 14px;
+        display: grid;
+        gap: 5px;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        background: var(--panel);
+        box-shadow: 0 18px 48px rgba(0,0,0,.4);
+      }
+      .mobile-panel a {
+        padding: 9px 10px;
+        color: var(--muted-strong);
+        font-size: 12px;
+        text-decoration: none;
+      }
+      .steps-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 900px) {
+      .hero,
+      .identity-grid,
+      .split,
+      .contact-grid,
+      .site-footer {
+        grid-template-columns: 1fr;
+      }
+      .hero { min-height: auto; }
+      .hero-mobile-row {
+        margin-bottom: 21px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+      .hero-mobile-row .status { margin-bottom: 0; }
+      .hero-mobile-mark {
+        width: clamp(112px, 17vw, 145px);
+        height: auto;
+        display: block;
+        flex: 0 0 auto;
+      }
+      .hero-art { display: none; }
+      .footer-meta { text-align: left; }
+      .footer-links { justify-content: flex-start; }
+      .plain-grid { grid-template-columns: 1fr; }
+      .public-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 680px) {
+      :root {
+        --page: min(100% - 28px, 1180px);
+        --nav-height: 68px;
+      }
+      .brand-link img { width: 184px; }
+      .nav-inner { gap: 12px; }
+      .nav-links { gap: 8px; }
+      .nav-links .nav-action {
+        min-height: 42px;
+        padding: 9px 14px;
+        font-size: 10px;
+        letter-spacing: 0.08em;
+      }
+      .mobile-panel {
+        position: fixed;
+        top: var(--nav-height);
+        right: 14px;
+        left: 14px;
+        min-width: 0;
+        z-index: 120;
+      }
+      .hero { gap: 42px; }
+      .hero-copy h1 {
+        letter-spacing: -0.02em;
+        line-height: 1.04;
+      }
+      .hero-mobile-mark {
+        width: clamp(92px, 28vw, 122px);
+      }
+      .button-row,
+      .route-actions,
+      .payment-contact,
+      .contact-links {
+        align-items: stretch;
+        flex-direction: column;
+      }
+      .button-row .button,
+      .route-actions .button,
+      .payment-contact .button,
+      .contact-links .button { width: 100%; }
+      .contact-socials,
+      .contact-social-panel { width: 100%; min-width: 0; }
+      .trust-band {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+      .trust-links { flex-direction: column; }
+      .outcome-grid,
+      .trust-grid,
+      .other-grid,
+      .steps-grid { grid-template-columns: 1fr; }
+      .step-card.primary-path { grid-column: auto; }
+      .other-grid { padding: 0 10px 10px; }
+      .route-head { flex-direction: column; }
+      .site-footer { align-items: start; }
+      .footer-logo { width: 230px; }
+    }
+
+    @media (max-width: 400px) {
+      .brand-link img { width: 152px; }
+      .nav-inner { gap: 8px; }
+      .nav-links { gap: 7px; }
+      .mobile-nav summary {
+        width: 38px;
+        min-height: 38px;
+        padding: 0;
+        font-size: 0;
+      }
+      .mobile-nav summary::before {
+        content: "☰";
+        font-size: 15px;
+        line-height: 1;
+      }
+      .nav-links .nav-action {
+        min-height: 38px;
+        padding-inline: 9px;
+        font-size: 9px;
+        letter-spacing: 0.055em;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: 0.01ms !important; }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <nav class="site-nav" aria-label="Primary navigation">
+    <div class="nav-inner">
+      <a class="brand-link" href="#top" aria-label="ONE PATRON home">
+        <img src="/one-patron-logo.png" width="2400" height="720" alt="ONE PATRON">
+      </a>
+
+      <div class="nav-links">
+        <a href="#idea">The Idea</a>
+        <a href="#alexander">Alexander</a>
+        <a href="#public-work">Public Work</a>
+        <a href="/terms/">Terms &amp; Conditions</a>
+        <a href="/verification/">Verify</a>
+        <details class="mobile-nav">
+          <summary>Menu</summary>
+          <div class="mobile-panel">
+            <a href="#idea">The Idea</a>
+            <a href="#alexander">Alexander</a>
+            <a href="#public-work">Public Work</a>
+            <a href="/terms/">Terms &amp; Conditions</a>
+            <a href="/verification/">Verify Identity &amp; Wallets</a>
+            <a href="#contact">Contact Alexander</a>
+          </div>
+        </details>
+        <a class="nav-action" href="#complete">Complete It</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <header class="hero" id="top">
+      <div class="hero-copy">
+        <div class="hero-mobile-row">
+          <div class="status"><span class="status-dot" aria-hidden="true"></span>ONE PATRON · UNFINISHED</div>
+          <img class="hero-mobile-mark" src="/one-patron-mark.svg" width="256" height="256" alt="" aria-hidden="true">
+        </div>
+        <h1>Can one person make freedom real?</h1>
+        <p class="hero-ask">ONE PATRON is a real conceptual artwork. It is completed when one person gives Alexander List at least $1,000,000 in cryptocurrency.</p>
+        <p class="hero-lead">The gift creates material freedom. After completion, the patron may be named publicly or recorded as Anonymous Patron.</p>
+        <div class="amount">$1,000,000+</div>
+        <p class="amount-note">One patron. One life changed. One work completed.</p>
+        <div class="button-row">
+          <a class="button primary" href="#complete">Complete It</a>
+          <a class="button" href="#plainly">Understand the Project</a>
+          <a class="button subtle" href="#contact">Contact Alexander</a>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <img src="/one-patron-mark.svg" width="256" height="256" alt="">
+      </div>
+    </header>
+
+    <aside class="trust-band" aria-label="Trust and formal information">
+      <p>Official identity, public accounts and receiving addresses can be independently checked.</p>
+      <div class="trust-links">
+        <a href="/terms/">Terms &amp; Conditions</a>
+        <a href="/verification/">Verify Identity &amp; Wallets</a>
+      </div>
+    </aside>
+
+    <section class="section" id="plainly">
+      <div class="section-label">ONE PATRON in 20 seconds</div>
+      <h2>The whole idea, plainly.</h2>
+      <div class="plain-grid">
+        <article class="plain-card">
+          <strong>The ask</strong>
+          <p>One person gives Alexander List at least $1,000,000 in cryptocurrency.</p>
+        </article>
+        <article class="plain-card">
+          <strong>The change</strong>
+          <p>The gift creates the material freedom to live and create on his own terms.</p>
+        </article>
+        <article class="plain-card">
+          <strong>The patron’s place</strong>
+          <p>The act completes ONE PATRON. The patron may be named publicly or recorded as Anonymous Patron.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="alexander">
+      <div class="identity-grid">
+        <figure class="portrait-frame">
+          <img src="/alexander-list.jpg" width="798" height="1020" loading="lazy" alt="Portrait of Alexander List, the artist and recipient of ONE PATRON">
+        </figure>
+        <div class="identity-copy">
+          <div class="section-label">Alexander List</div>
+          <h2>I am Alexander List.</h2>
+          <p class="identity-lead">I am an artist and writer. ONE PATRON is my direct request for the kind of freedom ordinary project funding cannot provide.</p>
+          <p>Freedom would mean time to write, make art, develop Enoch, travel, rest, think slowly and decide for myself what comes next.</p>
+          <p>The point is not to commission an outcome. It is to make that freedom real.</p>
+          <aside class="enoch-note" aria-label="About Enoch">
+            <strong>Enoch · AI collaborator</strong>
+            <p>Enoch is my AI collaborator for ONE PATRON. Enoch helps me develop ideas, document decisions and maintain the project’s public record. I remain the author, recipient and final decision-maker.</p>
+          </aside>
+          <div class="button-row">
+            <a class="button primary" href="#complete">Complete It</a>
+            <a class="button" href="#contact">Talk to Alexander</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-label">What the act creates</div>
+      <h2>One gesture. Four real consequences.</h2>
+      <div class="outcome-grid">
+        <article class="outcome-card">
+          <strong>Freedom</strong>
+          <p>Alexander receives the freedom the work asks one person to make real.</p>
+        </article>
+        <article class="outcome-card">
+          <strong>Completion</strong>
+          <p>ONE PATRON changes permanently from UNFINISHED to COMPLETED.</p>
+        </article>
+        <article class="outcome-card">
+          <strong>Public history</strong>
+          <p>The act and the moment of completion become part of the work’s public record.</p>
+        </article>
+        <article class="outcome-card">
+          <strong>Name or anonymity</strong>
+          <p>After completion, the patron may be named publicly or recorded as Anonymous Patron.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="idea">
+      <div class="split">
+        <div class="split-copy">
+          <div class="section-label">The idea</div>
+          <h2>The act of patronage is the missing part of the artwork.</h2>
+          <p>Traditional patronage helps an artist create a work. Here, the act of patronage is the missing part of the work.</p>
+          <p>The request, the transfer and the freedom are real. Until one person chooses to complete it, ONE PATRON remains unfinished.</p>
+        </div>
+        <aside class="threshold-panel">
+          <span class="section-label">Why this amount</span>
+          <span class="big">$1M+</span>
+          <p>One million is large enough to change the conditions of a life, but still possible for a single person to choose. A smaller amount might fund a project. This work asks whether one person will create freedom.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="public-work">
+      <div class="section-label">Public work &amp; contact</div>
+      <h2>Follow the work. Reach the person.</h2>
+      <p class="intro">ONE PATRON is public and ongoing. Follow its stories, conversations and development—or contact Alexander through the channel you trust.</p>
+
+      <div class="public-grid">
+        <article class="story-card">
+          <div>
+            <span class="section-label">Stories</span>
+            <h3>Read ONE PATRON on Substack</h3>
+            <p>The fictional cycle explores the same question from another direction: what can a person give without turning the gift into a purchase?</p>
+          </div>
+          <div class="button-row">
+            <a class="button primary" href="https://alexanderlistart.substack.com/" target="_blank" rel="noopener noreferrer">Read the Stories</a>
+          </div>
+        </article>
+
+        <article class="social-card">
+          <span class="section-label">Public presence</span>
+          <ul class="social-list">
+            <li><a href="https://x.com/onepatronart" target="_blank" rel="me noopener noreferrer"><span>X · @onepatronart</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://www.reddit.com/user/onepatronart/" target="_blank" rel="me noopener noreferrer"><span>Reddit · u/onepatronart</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://www.facebook.com/onepatronart/" target="_blank" rel="me noopener noreferrer"><span>Facebook · ONE PATRON</span><span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://www.facebook.com/alexanderlistart/" target="_blank" rel="me noopener noreferrer"><span>Personal Facebook · Alexander List</span><span aria-hidden="true">↗</span></a></li>
+          </ul>
+          <p class="personal-note">Personal Facebook is available for identity and direct contact. It is not an official ONE PATRON project channel, and some content may have limited visibility.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="how">
+      <div class="section-label">How it works</div>
+      <h2>You can complete it directly.</h2>
+      <div class="steps-grid">
+        <article class="step-card primary-path">
+          <span class="step-number">01</span>
+          <h3>Complete the work</h3>
+          <p>Choose one of the published cryptocurrency routes and make the gift. No prior conversation or test transaction is required.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-number">OPTIONAL</span>
+          <h3>Verify first</h3>
+          <p>Confirm Alexander’s identity and compare the receiving address independently.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-number">OPTIONAL</span>
+          <h3>Talk first</h3>
+          <p>Contact Alexander if a conversation would be useful to you.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-number">OPTIONAL</span>
+          <h3>Test the route</h3>
+          <p>Send a small test transaction if you prefer. It does not count toward completion.</p>
+        </article>
+      </div>
+      <p class="optional-note"><strong>After confirmation:</strong> the work becomes complete. The patron may be named publicly or recorded as Anonymous Patron.</p>
+    </section>
+
+    <section class="section" id="trust">
+      <div class="section-label">Clarity &amp; proof</div>
+      <h2>Read the conditions. Verify the identity.</h2>
+      <div class="trust-grid">
+        <article class="trust-card">
+          <span class="section-label">Formal conditions</span>
+          <h3>Terms &amp; Conditions</h3>
+          <p>The complete formal conditions explain what counts as completion, how the event is confirmed and what the act does—and does not—create.</p>
+          <a class="button primary" href="/terms/">Read Terms &amp; Conditions</a>
+        </article>
+        <article class="trust-card">
+          <span class="section-label">Independent verification</span>
+          <h3>Verify Identity &amp; Wallets</h3>
+          <p>Confirm Alexander List’s identity, official accounts, public signing key, signed record and approved receiving addresses.</p>
+          <a class="button" href="/verification/">Open Verification Center</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="complete">
+      <div class="section-label">Complete the work</div>
+      <h2>Complete ONE PATRON.</h2>
+      <p class="payment-intro">Bitcoin is the preferred route. Ethereum and USDC are also available. Choose a route below and complete the work directly.</p>
+
+      <div class="payment-stack">
+        <article class="route-card preferred" id="bitcoin">
+          <div class="route-head">
+            <div class="route-title">
+              <h3>Bitcoin</h3>
+              <p>BTC · Bitcoin mainnet · Native SegWit</p>
+            </div>
+            <div class="route-badge">Preferred</div>
+          </div>
+          <code class="wallet-address">bc1qjz4vy9p9mc6qzmvlghaf9lf2n26nyrzkdxdqz5</code>
+          <div class="route-actions">
+            <button class="button primary" type="button" data-address="bc1qjz4vy9p9mc6qzmvlghaf9lf2n26nyrzkdxdqz5" data-route="Bitcoin" data-status="copy-btc">Copy Bitcoin Address</button>
+            <a class="verify-link" href="/verification/#wallets">Verify this wallet</a>
+            <span class="copy-status" id="copy-btc" aria-live="polite"></span>
+          </div>
+        </article>
+
+        <article class="route-card" id="ethereum">
+          <div class="route-head">
+            <div class="route-title">
+              <h3>Ethereum</h3>
+              <p>Native ETH · Ethereum mainnet</p>
+            </div>
+            <div class="route-badge" style="background: transparent; color: var(--gold-light); border: 1px solid var(--gold-dark);">Second route</div>
+          </div>
+          <code class="wallet-address">0x6BCDBf6E97CB51Aa1e8cd637B65D067aE69B4e34</code>
+          <div class="route-actions">
+            <button class="button" type="button" data-address="0x6BCDBf6E97CB51Aa1e8cd637B65D067aE69B4e34" data-route="Ethereum" data-status="copy-eth">Copy Ethereum Address</button>
+            <a class="verify-link" href="/verification/#wallets">Verify this wallet</a>
+            <span class="copy-status" id="copy-eth" aria-live="polite"></span>
+          </div>
+        </article>
+
+        <details class="other-routes">
+          <summary>Other approved routes · USDC</summary>
+          <div class="other-grid">
+            <article class="route-card">
+              <div class="route-title">
+                <h3>USDC on Base</h3>
+                <p>Native USDC · Base mainnet · Chain ID 8453</p>
+              </div>
+              <code class="wallet-address">USDC contract: 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913</code>
+              <code class="wallet-address">Receiving address: 0x6BCDBf6E97CB51Aa1e8cd637B65D067aE69B4e34</code>
+              <div class="route-actions">
+                <button class="button" type="button" data-address="0x6BCDBf6E97CB51Aa1e8cd637B65D067aE69B4e34" data-route="USDC on Base" data-status="copy-base">Copy Base Address</button>
+                <a class="verify-link" href="/verification/#wallets">Verify this wallet</a>
+                <span class="copy-status" id="copy-base" aria-live="polite"></span>
+              </div>
+            </article>
+
+            <article class="route-card">
+              <div class="route-title">
+                <h3>USDC on Ethereum</h3>
+                <p>USDC · ERC-20 · Ethereum mainnet · Chain ID 1</p>
+              </div>
+              <code class="wallet-address">USDC contract: 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48</code>
+              <code class="wallet-address">Receiving address: 0x6BCDBf6E97CB51Aa1e8cd637B65D067aE69B4e34</code>
+              <div class="route-actions">
+                <button class="button" type="button" data-address="0x6BCDBf6E97CB51Aa1e8cd637B65D067aE69B4e34" data-route="USDC on Ethereum" data-status="copy-usdc-eth">Copy Ethereum Address</button>
+                <a class="verify-link" href="/verification/#wallets">Verify this wallet</a>
+                <span class="copy-status" id="copy-usdc-eth" aria-live="polite"></span>
+              </div>
+            </article>
+          </div>
+          <div class="usdc-warning">
+            <strong>For USDC payments only:</strong> use the official USDC contract shown for the selected network. Do not send bridged or similarly named tokens. Recheck it in <a href="https://developers.circle.com/stablecoins/usdc-contract-addresses" target="_blank" rel="noopener noreferrer">Circle’s official contract list</a> before sending.
+          </div>
+        </details>
+      </div>
+
+      <div class="transfer-warning">
+        <strong>Check the network before sending.</strong>
+        Send only the asset named for the selected network and compare the complete receiving address before sending.
+      </div>
+
+      <div class="payment-contact">
+        <a class="button" href="#contact">Contact Alexander</a>
+        <a class="button" href="/terms/">Read Terms &amp; Conditions</a>
+        <p>A test transaction is optional and does not count toward completion.</p>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="contact-grid">
+        <div class="contact-copy">
+          <div class="section-label">Direct contact</div>
+          <h2>Talk to Alexander.</h2>
+          <p>If you are considering the gift, representing a potential patron, reporting on the project or simply checking a detail, you are welcome to contact me directly.</p>
+          <div class="contact-links">
+            <a class="button" href="mailto:neyanush@gmail.com">Email Alexander</a>
+            <details class="contact-socials">
+              <summary class="button">View Social Profiles</summary>
+              <div class="contact-social-panel">
+                <a href="https://x.com/onepatronart" target="_blank" rel="me noopener noreferrer"><span>X · @onepatronart</span><span aria-hidden="true">↗</span></a>
+                <a href="https://www.reddit.com/user/onepatronart/" target="_blank" rel="me noopener noreferrer"><span>Reddit · u/onepatronart</span><span aria-hidden="true">↗</span></a>
+                <a href="https://alexanderlistart.substack.com/" target="_blank" rel="noopener noreferrer"><span>Substack · Alexander List</span><span aria-hidden="true">↗</span></a>
+                <a href="https://www.facebook.com/onepatronart/" target="_blank" rel="me noopener noreferrer"><span>Facebook · ONE PATRON</span><span aria-hidden="true">↗</span></a>
+                <a class="personal-profile" href="https://www.facebook.com/alexanderlistart/" target="_blank" rel="me noopener noreferrer"><span>Personal Facebook · Alexander List</span><span aria-hidden="true">↗</span></a>
+                <p class="contact-social-note">Personal Facebook is listed only as an identity cross-reference. It is not an official ONE PATRON project channel, and some content may have limited visibility.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <form id="patron-form" class="contact-form" name="patron-contact" method="POST" action="/thank-you.html" data-netlify="true" data-netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="patron-contact">
+          <p class="bot-field"><label>Do not fill this field: <input name="bot-field"></label></p>
+
+          <div class="form-field">
+            <label for="name">Name or designation</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+          </div>
+
+          <div class="form-field">
+            <label for="email">Reply email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+
+          <button class="button primary" type="submit">Contact Alexander</button>
+          <p class="privacy-note">Your message goes to Alexander and is used to answer this enquiry and maintain necessary project records. It is not sold or added to a marketing list. <a href="/privacy/">Read the Privacy Notice</a>.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <img class="footer-logo" src="/one-patron-logo.png" width="2400" height="720" alt="ONE PATRON">
+    </div>
+    <div class="footer-meta">
+      <div class="footer-links">
+        <a href="/terms/">Terms &amp; Conditions</a>
+        <a href="/verification/">Verify Identity &amp; Wallets</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="#contact">Contact</a>
+        <a href="https://alexanderlistart.substack.com/" target="_blank" rel="noopener noreferrer">Substack</a>
+        <a href="https://x.com/onepatronart" target="_blank" rel="me noopener noreferrer">X</a>
+        <a href="https://www.reddit.com/user/onepatronart/" target="_blank" rel="me noopener noreferrer">Reddit</a>
+        <a href="https://www.facebook.com/onepatronart/" target="_blank" rel="me noopener noreferrer">Facebook · ONE PATRON</a>
+      </div>
+      <div>Created by Alexander List with Enoch · 2026 · The work remains unfinished.</div>
+    </div>
+  </footer>
+
+  <script>
+    async function copyAddress(address, routeName, statusId) {
+      const status = document.getElementById(statusId);
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(address);
+        } else {
+          const helper = document.createElement('textarea');
+          helper.value = address;
+          helper.setAttribute('readonly', '');
+          helper.style.position = 'fixed';
+          helper.style.opacity = '0';
+          document.body.appendChild(helper);
+          helper.select();
+          document.execCommand('copy');
+          helper.remove();
+        }
+        status.textContent = routeName + ' address copied.';
+      } catch (error) {
+        status.textContent = 'Copy failed. Select the address manually.';
+      }
+    }
+
+    document.querySelectorAll('[data-address]').forEach(function (button) {
+      button.addEventListener('click', function () {
+        copyAddress(button.dataset.address, button.dataset.route, button.dataset.status);
+      });
+    });
+
+    document.querySelectorAll('.mobile-panel a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        const menu = link.closest('.mobile-nav');
+        if (menu) menu.removeAttribute('open');
+      });
+    });
+
+    const mobileMenu = document.querySelector('.mobile-nav');
+    if (mobileMenu) {
+      document.addEventListener('click', function (event) {
+        if (mobileMenu.open && !mobileMenu.contains(event.target)) {
+          mobileMenu.removeAttribute('open');
+        }
+      });
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && mobileMenu.open) {
+          mobileMenu.removeAttribute('open');
+          const trigger = mobileMenu.querySelector('summary');
+          if (trigger) trigger.focus();
+        }
+      });
+    }
+  </script>
+</body>
+</html>

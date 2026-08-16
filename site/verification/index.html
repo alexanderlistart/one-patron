@@ -1,0 +1,803 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Verify Identity &amp; Wallets — ONE PATRON</title>
+  <meta name="description" content="Confirm Alexander List's identity, ONE PATRON's official profiles and the approved receiving addresses. Technical users can verify the signed identity record independently.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#0B0C0E">
+  <link rel="canonical" href="https://one-patron.netlify.app/verification/">
+  <link rel="icon" href="/favicon-v2.ico" type="image/x-icon" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="/favicon-v2.svg" type="image/svg+xml" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon-v2.png" sizes="180x180">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ONE PATRON">
+  <meta property="og:title" content="Verify Identity &amp; Wallets — ONE PATRON">
+  <meta property="og:description" content="Confirm the person, official profiles and approved receiving addresses behind ONE PATRON.">
+  <meta property="og:url" content="https://one-patron.netlify.app/verification/">
+  <meta property="og:image" content="https://one-patron.netlify.app/og-one-patron-v2.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Verify Identity &amp; Wallets — ONE PATRON">
+  <meta name="twitter:description" content="Confirm the person, official profiles and approved receiving addresses behind ONE PATRON.">
+  <meta name="twitter:image" content="https://one-patron.netlify.app/og-one-patron-v2.png">
+
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0B0C0E;
+      --bg-deep: #07080A;
+      --panel: #111317;
+      --panel-soft: #16191E;
+      --text: #F3EFE7;
+      --muted: #A9A8A4;
+      --muted-strong: #C7C4BC;
+      --line: #2B2E33;
+      --line-bright: #464A51;
+      --gold: #D6A74B;
+      --gold-dark: #A56F26;
+      --gold-light: #F0CF7A;
+      --blue: #65C9FF;
+      --sans: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+      --serif: Georgia, "Times New Roman", serif;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      --page: min(1080px, calc(100% - 40px));
+      --radius: 22px;
+    }
+
+    * { box-sizing: border-box; }
+    html { background: var(--bg); scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 84% 0%, rgba(101, 201, 255, 0.065), transparent 26rem),
+        radial-gradient(circle at 12% 15%, rgba(214, 167, 75, 0.07), transparent 30rem),
+        linear-gradient(180deg, #111317 0%, var(--bg) 34rem, var(--bg-deep) 100%);
+      color: var(--text);
+      font-family: var(--serif);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a { color: inherit; }
+    button { font: inherit; }
+    :focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; }
+
+    .skip-link {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      z-index: 200;
+      padding: 10px 14px;
+      border-radius: 10px;
+      background: var(--text);
+      color: var(--bg);
+      transform: translateY(-160%);
+    }
+    .skip-link:focus { transform: translateY(0); }
+
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(243, 239, 231, 0.09);
+      background: rgba(11, 12, 14, 0.87);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav-inner {
+      width: var(--page);
+      min-height: 76px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .brand-link { display: inline-flex; flex: 0 0 auto; }
+    .brand-link img { width: 232px; height: auto; display: block; }
+
+    .global-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 13px 24px;
+      font-family: var(--sans);
+    }
+
+    .global-links a {
+      color: var(--muted-strong);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .global-links a:last-child {
+      padding: 9px 14px;
+      border: 1px solid var(--gold);
+      border-radius: 999px;
+      color: var(--gold-light);
+    }
+
+    .global-links a:hover,
+    .global-links a:focus-visible { color: var(--text); }
+
+    .section-nav {
+      position: sticky;
+      top: 76px;
+      z-index: 90;
+      border-bottom: 1px solid var(--line);
+      background: rgba(7, 8, 10, 0.92);
+      backdrop-filter: blur(16px);
+    }
+
+    .section-nav-inner {
+      width: var(--page);
+      min-height: 48px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 10px 25px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      font-family: var(--sans);
+    }
+
+    .section-nav-inner::-webkit-scrollbar { display: none; }
+
+    .section-nav a {
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-decoration: none;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .section-nav a:hover,
+    .section-nav a:focus-visible { color: var(--text); }
+
+    main { overflow: hidden; }
+
+    .hero,
+    .section {
+      width: var(--page);
+      margin: 0 auto;
+    }
+
+    .hero { padding: clamp(76px, 10vw, 132px) 0 clamp(70px, 8vw, 104px); }
+
+    .eyebrow,
+    .section-label {
+      color: var(--gold);
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1 {
+      max-width: 950px;
+      margin: 25px 0 29px;
+      font-size: clamp(52px, 8vw, 98px);
+      font-weight: 400;
+      font-kerning: normal;
+      letter-spacing: -0.018em;
+      line-height: 1.14;
+    }
+
+    .lead {
+      max-width: 850px;
+      margin-bottom: 19px;
+      color: var(--muted-strong);
+      font-size: clamp(20px, 2.35vw, 28px);
+      line-height: 1.5;
+    }
+
+    .plain-note {
+      max-width: 790px;
+      margin: 0;
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 14px;
+    }
+
+    .section {
+      padding: clamp(72px, 9vw, 112px) 0;
+      border-top: 1px solid var(--line);
+      scroll-margin-top: 140px;
+    }
+
+    h2 {
+      max-width: 890px;
+      margin: 19px 0 32px;
+      font-size: clamp(38px, 5.5vw, 66px);
+      font-weight: 400;
+      letter-spacing: -0.045em;
+      line-height: 1.04;
+    }
+
+    h3 {
+      margin-bottom: 11px;
+      font-family: var(--sans);
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    .intro-copy {
+      max-width: 800px;
+      color: var(--muted-strong);
+      font-size: 20px;
+    }
+
+    .use-grid,
+    .identity-grid,
+    .wallet-grid,
+    .profile-grid,
+    .file-grid {
+      display: grid;
+      gap: 16px;
+      margin-top: 40px;
+    }
+
+    .use-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .identity-grid,
+    .wallet-grid,
+    .profile-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .file-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+    .use-card,
+    .identity-card,
+    .wallet-card,
+    .profile-card,
+    .file-card {
+      padding: clamp(23px, 3vw, 31px);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(243, 239, 231, 0.025);
+    }
+
+    .use-card strong {
+      display: block;
+      margin-bottom: 15px;
+      color: var(--blue);
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .use-card p,
+    .identity-card p,
+    .wallet-card p,
+    .profile-card p,
+    .file-card p {
+      margin-bottom: 0;
+      color: var(--muted-strong);
+      font-family: var(--sans);
+      font-size: 14px;
+      line-height: 1.72;
+    }
+
+    .identity-card.primary,
+    .wallet-card:first-child {
+      border-color: var(--gold-dark);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(214, 167, 75, 0.09), transparent 45%),
+        var(--panel);
+    }
+
+    .identity-name {
+      margin-bottom: 5px;
+      color: var(--text);
+      font-size: clamp(28px, 4vw, 43px);
+      font-weight: 400;
+      letter-spacing: -0.035em;
+      line-height: 1.1;
+    }
+
+    .identity-role {
+      margin-bottom: 25px !important;
+      color: var(--muted) !important;
+    }
+
+    .data-label {
+      display: block;
+      margin: 20px 0 8px;
+      color: var(--muted);
+      font-family: var(--sans);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .plain-value,
+    .data-value,
+    .fingerprint,
+    pre {
+      font-family: var(--mono);
+    }
+
+    .plain-value {
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 15px;
+    }
+
+    .fingerprint,
+    .data-value {
+      display: block;
+      color: var(--gold-light);
+      font-size: clamp(13px, 2vw, 19px);
+      line-height: 1.55;
+      overflow-wrap: anywhere;
+      user-select: all;
+    }
+
+    .copy-row {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .button {
+      min-height: 46px;
+      padding: 12px 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--line-bright);
+      border-radius: 999px;
+      background: transparent;
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .button:hover,
+    .button:focus-visible { border-color: var(--gold); }
+    .button.primary { border-color: var(--gold); background: var(--gold); color: var(--bg-deep); }
+
+    .copy-status {
+      min-height: 20px;
+      color: var(--blue);
+      font-family: var(--sans);
+      font-size: 12px;
+    }
+
+    details.key-details {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--bg-deep);
+    }
+
+    details.key-details summary {
+      padding: 16px 18px;
+      color: var(--muted-strong);
+      font-family: var(--sans);
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .key-detail-body {
+      padding: 0 18px 18px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .technical-row {
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+    }
+
+    .technical-row .data-label { margin-top: 0; }
+    .technical-row .data-value { color: var(--muted-strong); font-size: 13px; }
+
+    .proof-note {
+      max-width: 840px;
+      margin: 28px 0 0;
+      padding: 20px 23px;
+      border-left: 3px solid var(--blue);
+      background: rgba(101, 201, 255, 0.045);
+      color: var(--muted-strong);
+      font-family: var(--sans);
+      font-size: 13px;
+    }
+
+    .profile-list {
+      margin: 18px 0 0;
+      padding: 0;
+      display: grid;
+      gap: 10px;
+      list-style: none;
+    }
+
+    .profile-list a {
+      display: block;
+      color: var(--muted-strong);
+      font-family: var(--sans);
+      font-size: 14px;
+      overflow-wrap: anywhere;
+      text-decoration-color: var(--line-bright);
+      text-underline-offset: 4px;
+    }
+
+    .profile-list a:hover,
+    .profile-list a:focus-visible { color: var(--text); }
+
+    .profile-card.personal {
+      border-style: dashed;
+      background: transparent;
+    }
+
+    .file-card {
+      min-height: 250px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .file-card p { flex: 1; }
+    .file-card .button { align-self: flex-start; }
+
+    .verification-steps {
+      margin: 48px 0 0;
+      padding-left: 24px;
+      color: var(--muted-strong);
+      font-size: 18px;
+    }
+
+    .verification-steps li + li { margin-top: 25px; }
+
+    pre {
+      margin: 11px 0 0;
+      padding: 17px;
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--bg-deep);
+      color: var(--text);
+      font-size: 13px;
+      line-height: 1.65;
+      white-space: pre;
+    }
+
+    .trust-note {
+      max-width: 860px;
+      margin: 32px 0 0;
+      padding: 22px 24px;
+      border-left: 3px solid var(--gold);
+      background: rgba(243, 239, 231, 0.035);
+      color: var(--muted);
+      font-family: var(--sans);
+      font-size: 13px;
+      line-height: 1.75;
+    }
+
+    .site-footer {
+      width: var(--page);
+      margin: 0 auto;
+      padding: 48px 0 64px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+      color: var(--muted);
+      font-family: var(--sans);
+      font-size: 12px;
+    }
+
+    .footer-logo { width: 230px; height: auto; }
+    .site-footer a { color: var(--muted-strong); text-decoration: none; }
+    .site-footer a:hover,
+    .site-footer a:focus-visible { color: var(--text); }
+
+    @media (max-width: 900px) {
+      .global-links a:first-child { display: none; }
+      .use-grid,
+      .file-grid { grid-template-columns: 1fr; }
+      .file-card { min-height: auto; }
+    }
+
+    @media (max-width: 760px) {
+      :root { --page: min(100% - 28px, 1080px); }
+      .nav-inner { min-height: 68px; }
+      .brand-link img { width: 174px; }
+      .global-links a:not(:last-child) { display: none; }
+      .section-nav { top: 68px; }
+      .section-nav-inner { min-height: 44px; gap: 20px; }
+      .identity-grid,
+      .wallet-grid,
+      .profile-grid { grid-template-columns: 1fr; }
+      .button { width: 100%; }
+      .copy-row { align-items: stretch; flex-direction: column; }
+      .site-footer { align-items: flex-start; flex-direction: column; }
+      .footer-logo { width: 205px; }
+      .section { scroll-margin-top: 126px; }
+    }
+
+    @media (max-width: 380px) {
+      .nav-inner { gap: 11px; }
+      .brand-link img { width: 145px; }
+      .global-links a:last-child { padding-inline: 10px; font-size: 9px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: 0.01ms !important; }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <nav class="site-nav" aria-label="Global navigation">
+    <div class="nav-inner">
+      <a class="brand-link" href="/" aria-label="ONE PATRON home">
+        <img src="/one-patron-logo.png" width="2400" height="720" alt="ONE PATRON">
+      </a>
+      <div class="global-links">
+        <a href="/">Project Overview</a>
+        <a href="/terms/">Terms &amp; Conditions</a>
+        <a href="/#complete">Complete It</a>
+      </div>
+    </div>
+  </nav>
+
+  <nav class="section-nav" aria-label="Verification page navigation">
+    <div class="section-nav-inner">
+      <a href="#how-to-use">How to Use</a>
+      <a href="#identity">Identity</a>
+      <a href="#wallets">Receiving Addresses</a>
+      <a href="#profiles">Official Profiles</a>
+      <a href="#verify-signature">Verify Signature</a>
+    </div>
+  </nav>
+
+  <main id="main">
+    <header class="hero">
+      <div class="eyebrow">ONE PATRON · VERIFICATION CENTER</div>
+      <h1>Verify identity and receiving addresses.</h1>
+      <p class="lead">Use this page to confirm that Alexander List, ONE PATRON’s official profiles and the receiving addresses below belong to the same public identity.</p>
+      <p class="plain-note">Most visitors only need to compare the details shown here. Technical users can verify the signed record independently.</p>
+    </header>
+
+    <section class="section" id="how-to-use">
+      <div class="section-label">Start here</div>
+      <h2>How to use this page.</h2>
+      <p class="intro-copy">You do not need cryptographic knowledge for the basic check.</p>
+      <div class="use-grid">
+        <article class="use-card">
+          <strong>01 · Confirm the person</strong>
+          <p>Check the name, official contact and public profiles against the source through which you found ONE PATRON.</p>
+        </article>
+        <article class="use-card">
+          <strong>02 · Confirm the route</strong>
+          <p>Before sending funds, compare the complete receiving address and network with the details on the main site.</p>
+        </article>
+        <article class="use-card">
+          <strong>03 · Verify technically</strong>
+          <p>If you need a cryptographic check, download the three public files and verify the signed Identity Manifest.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="identity">
+      <div class="section-label">Identity</div>
+      <h2>Alexander List / ONE PATRON</h2>
+      <p class="intro-copy">This section identifies the person and public key behind the project.</p>
+
+      <div class="identity-grid">
+        <article class="identity-card primary">
+          <div class="identity-name">Alexander List</div>
+          <p class="identity-role">Artist, writer and recipient of ONE PATRON</p>
+          <span class="data-label">Official contact</span>
+          <a class="plain-value" href="mailto:neyanush@gmail.com">neyanush@gmail.com</a>
+          <span class="data-label">Status</span>
+          <span class="plain-value">Public · signed · independently verifiable</span>
+        </article>
+
+        <article class="identity-card">
+          <h3>Primary fingerprint</h3>
+          <p>The fingerprint uniquely identifies the published public key. Compare the complete value, not only the beginning or end.</p>
+          <code class="fingerprint">18FEBD74D1E7D6FEB97A3406316D9E762810715D</code>
+          <div class="copy-row">
+            <button class="button primary" type="button" data-copy="18FEBD74D1E7D6FEB97A3406316D9E762810715D" data-status="fingerprint-status">Copy Fingerprint</button>
+            <span class="copy-status" id="fingerprint-status" aria-live="polite"></span>
+          </div>
+        </article>
+      </div>
+
+      <details class="key-details" style="margin-top: 16px;">
+        <summary>Technical key details</summary>
+        <div class="key-detail-body">
+          <div class="technical-row">
+            <span class="data-label">Primary UID</span>
+            <code class="data-value">Alexander List (ONE PATRON) &lt;neyanush@gmail.com&gt;</code>
+          </div>
+          <div class="technical-row">
+            <span class="data-label">Signing subkey</span>
+            <code class="data-value">F98D7B5AB20FF1E8D0440DBB6EE2FE0A9D8278F5</code>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <section class="section" id="wallets">
+      <div class="section-label">Receiving addresses</div>
+      <h2>Approved payment routes.</h2>
+      <p class="intro-copy">These are the receiving addresses approved for ONE PATRON.</p>
+
+      <div class="wallet-grid">
+        <article class="wallet-card">
+          <h3>Bitcoin mainnet</h3>
+          <p>BTC · Native SegWit</p>
+          <code class="data-value">bc1qjz4vy9p9mc6qzmvlghaf9lf2n26nyrzkdxdqz5</code>
+          <div class="copy-row">
+            <button class="button primary" type="button" data-copy="bc1qjz4vy9p9mc6qzmvlghaf9lf2n26nyrzkdxdqz5" data-status="btc-status">Copy BTC Address</button>
+            <span class="copy-status" id="btc-status" aria-live="polite"></span>
+          </div>
+        </article>
+
+        <article class="wallet-card">
+          <h3>EVM</h3>
+          <p>Native ETH · Ethereum mainnet</p>
+          <code class="data-value">0x6BCDBf6E97CB51Aa1e8cd637B65D067aE69B4e34</code>
+          <div class="copy-row">
+            <button class="button" type="button" data-copy="0x6BCDBf6E97CB51Aa1e8cd637B65D067aE69B4e34" data-status="evm-status">Copy EVM Address</button>
+            <span class="copy-status" id="evm-status" aria-live="polite"></span>
+          </div>
+        </article>
+      </div>
+
+      <div class="wallet-grid" style="margin-top: 16px;">
+        <article class="wallet-card">
+          <h3>USDC on Base</h3>
+          <p>Base mainnet · Chain ID 8453 · Native USDC only</p>
+          <span class="data-label">Official Circle USDC contract</span>
+          <code class="data-value">0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913</code>
+          <span class="data-label">Receiving address</span>
+          <code class="data-value">0x6BCDBf6E97CB51Aa1e8cd637B65D067aE69B4e34</code>
+        </article>
+
+        <article class="wallet-card">
+          <h3>USDC on Ethereum</h3>
+          <p>Ethereum mainnet · Chain ID 1 · ERC-20 USDC only</p>
+          <span class="data-label">Official Circle USDC contract</span>
+          <code class="data-value">0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48</code>
+          <span class="data-label">Receiving address</span>
+          <code class="data-value">0x6BCDBf6E97CB51Aa1e8cd637B65D067aE69B4e34</code>
+        </article>
+      </div>
+
+      <p class="proof-note"><strong>For USDC payments only:</strong> use the official USDC contract shown for the selected network. Do not send bridged or similarly named tokens. Recheck it in <a href="https://developers.circle.com/stablecoins/usdc-contract-addresses" target="_blank" rel="noopener noreferrer">Circle’s official contract list</a> at the time of transfer.</p>
+
+      <p class="proof-note">The signed Identity Manifest records these as the official receiving addresses for ONE PATRON.</p>
+    </section>
+
+    <section class="section" id="profiles">
+      <div class="section-label">Public identity</div>
+      <h2>Official profiles and personal contact.</h2>
+      <p class="intro-copy">These public profiles are linked to the same ONE PATRON identity.</p>
+
+      <div class="profile-grid">
+        <article class="profile-card">
+          <h3>Official ONE PATRON profiles</h3>
+          <ul class="profile-list">
+            <li><a href="https://one-patron.netlify.app/">Website · one-patron.netlify.app</a></li>
+            <li><a href="https://x.com/onepatronart" target="_blank" rel="me noopener noreferrer">X · @onepatronart</a></li>
+            <li><a href="https://alexanderlistart.substack.com/" target="_blank" rel="me noopener noreferrer">Substack · Alexander List</a></li>
+            <li><a href="https://www.reddit.com/user/onepatronart/" target="_blank" rel="me noopener noreferrer">Reddit · u/onepatronart</a></li>
+            <li><a href="https://www.facebook.com/onepatronart/" target="_blank" rel="me noopener noreferrer">Facebook · ONE PATRON</a></li>
+          </ul>
+        </article>
+
+        <article class="profile-card personal">
+          <h3>Personal Facebook</h3>
+          <p>Identity cross-reference and a direct contact option. It is not an official ONE PATRON channel, and some content may have limited visibility.</p>
+          <ul class="profile-list">
+            <li><a href="https://www.facebook.com/alexanderlistart/" target="_blank" rel="me noopener noreferrer">Facebook · Alexander List</a></li>
+          </ul>
+          <p style="margin-top: 19px;">Personal posts and private content are not part of ONE PATRON.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="verify-signature">
+      <div class="section-label">Technical verification</div>
+      <h2>Download and verify the signed record.</h2>
+      <p class="intro-copy">The signed Identity Manifest is the authoritative cross-reference for the key, profiles and receiving addresses.</p>
+
+      <div class="file-grid">
+        <article class="file-card">
+          <span class="data-label">01</span>
+          <h3>Public Key</h3>
+          <p>The public OpenPGP key identified by the fingerprint shown above.</p>
+          <a class="button" href="/verification/ONE_PATRON_PUBLIC_KEY.asc" download>Download Public Key</a>
+        </article>
+
+        <article class="file-card">
+          <span class="data-label">02</span>
+          <h3>Identity Manifest</h3>
+          <p>The signed statement connecting the public key, official profiles and receiving addresses.</p>
+          <a class="button" href="/verification/ONE_PATRON_IDENTITY_MANIFEST.txt" download>Download Manifest</a>
+        </article>
+
+        <article class="file-card">
+          <span class="data-label">03</span>
+          <h3>Detached Signature</h3>
+          <p>The detached OpenPGP signature used to verify that the manifest has not been changed.</p>
+          <a class="button" href="/verification/ONE_PATRON_IDENTITY_MANIFEST.asc" download>Download Signature</a>
+        </article>
+      </div>
+
+      <ol class="verification-steps">
+        <li>Download all three files above.</li>
+        <li>Import the public key:
+          <pre><code>gpg --import ONE_PATRON_PUBLIC_KEY.asc</code></pre>
+        </li>
+        <li>Verify the detached signature:
+          <pre><code>gpg --verify ONE_PATRON_IDENTITY_MANIFEST.asc ONE_PATRON_IDENTITY_MANIFEST.txt</code></pre>
+        </li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <img class="footer-logo" src="/one-patron-logo.png" width="2400" height="720" alt="ONE PATRON">
+    <div><a href="/">Project Overview</a> · <a href="/terms/">Terms &amp; Conditions</a> · <a href="/privacy/">Privacy</a> · <a href="/#complete">Complete It</a></div>
+  </footer>
+
+  <script>
+    async function copyValue(value, statusId) {
+      const status = document.getElementById(statusId);
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(value);
+        } else {
+          const helper = document.createElement('textarea');
+          helper.value = value;
+          helper.setAttribute('readonly', '');
+          helper.style.position = 'fixed';
+          helper.style.opacity = '0';
+          document.body.appendChild(helper);
+          helper.select();
+          document.execCommand('copy');
+          helper.remove();
+        }
+        status.textContent = 'Copied.';
+      } catch (error) {
+        status.textContent = 'Copy failed. Select the value manually.';
+      }
+    }
+
+    document.querySelectorAll('[data-copy]').forEach(function (button) {
+      button.addEventListener('click', function () {
+        copyValue(button.dataset.copy, button.dataset.status);
+      });
+    });
+  </script>
+</body>
+</html>
