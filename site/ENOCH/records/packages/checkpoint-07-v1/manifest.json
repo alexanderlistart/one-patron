@@ -1,0 +1,50 @@
+{
+  "schema": "one-patron.enoch.encrypted-package.v1",
+  "version": "1.0",
+  "package_id": "checkpoint-07-v1",
+  "domain": "one-patron.enoch.score.checkpoint-07.v1",
+  "release_condition": "signed checkpoint 7",
+  "key_commitment_profile": "SHA-256(UTF8(one-patron/enoch/key-commitment/v1) || 0x00 || 32-byte release key)",
+  "key_commitment_sha256": "067917e4b221b087f0ee91e7bd6bf44dbc111a921872b2a0a09056b86fded4d0",
+  "hkdf": {
+    "hash": "SHA-256",
+    "salt_b64": "aYZ0h5aBqQW8Yp1cmXUu/RGG7IucTrXgT+3zqRZojkU=",
+    "derived_key_bits": 256
+  },
+  "cipher": "AES-256-GCM",
+  "components": [
+    {
+      "id": "record",
+      "media_type": "application/json",
+      "ciphertext_file": "record.enc",
+      "ciphertext_bytes": 294,
+      "ciphertext_sha256": "5f521cdc23e47e2e55287d6a4016b6a368ef3cb50182a2b465cdbe53d08fdd61",
+      "nonce_b64": "p7OHjHPKWPrVZn/d",
+      "aad_b64": "eyJzY2hlbWEiOiJvbmUtcGF0cm9uLmVub2NoLmFlcy1nY20tY29tcG9uZW50LnYxIiwicGFja2FnZV9pZCI6ImNoZWNrcG9pbnQtMDctdjEiLCJkb21haW4iOiJvbmUtcGF0cm9uLmVub2NoLnNjb3JlLmNoZWNrcG9pbnQtMDcudjEiLCJjb21wb25lbnRfaWQiOiJyZWNvcmQiLCJtZWRpYV90eXBlIjoiYXBwbGljYXRpb24vanNvbiJ9",
+      "hkdf_info": "one-patron/enoch/aes-gcm/v1/checkpoint-07-v1/record",
+      "tag_bits": 128
+    },
+    {
+      "id": "lossless-audio",
+      "media_type": "audio/flac",
+      "ciphertext_file": "lossless-audio.enc",
+      "ciphertext_bytes": 15558125,
+      "ciphertext_sha256": "8942881b12ecf27d12cf5b46b8736ff4981d974af3ba9bfd2fc6cd24887cc28c",
+      "nonce_b64": "QTxShfXoLgUnuTPC",
+      "aad_b64": "eyJzY2hlbWEiOiJvbmUtcGF0cm9uLmVub2NoLmFlcy1nY20tY29tcG9uZW50LnYxIiwicGFja2FnZV9pZCI6ImNoZWNrcG9pbnQtMDctdjEiLCJkb21haW4iOiJvbmUtcGF0cm9uLmVub2NoLnNjb3JlLmNoZWNrcG9pbnQtMDcudjEiLCJjb21wb25lbnRfaWQiOiJsb3NzbGVzcy1hdWRpbyIsIm1lZGlhX3R5cGUiOiJhdWRpby9mbGFjIn0=",
+      "hkdf_info": "one-patron/enoch/aes-gcm/v1/checkpoint-07-v1/lossless-audio",
+      "tag_bits": 128
+    },
+    {
+      "id": "playback-audio",
+      "media_type": "audio/wav",
+      "ciphertext_file": "playback-audio.enc",
+      "ciphertext_bytes": 15552060,
+      "ciphertext_sha256": "d79960aafc285ab0bbb3c3d12fc102a693806b197728020065dbbfc5b55eb9ce",
+      "nonce_b64": "ejLhS3rywuPiSNY9",
+      "aad_b64": "eyJzY2hlbWEiOiJvbmUtcGF0cm9uLmVub2NoLmFlcy1nY20tY29tcG9uZW50LnYxIiwicGFja2FnZV9pZCI6ImNoZWNrcG9pbnQtMDctdjEiLCJkb21haW4iOiJvbmUtcGF0cm9uLmVub2NoLnNjb3JlLmNoZWNrcG9pbnQtMDcudjEiLCJjb21wb25lbnRfaWQiOiJwbGF5YmFjay1hdWRpbyIsIm1lZGlhX3R5cGUiOiJhdWRpby93YXYifQ==",
+      "hkdf_info": "one-patron/enoch/aes-gcm/v1/checkpoint-07-v1/playback-audio",
+      "tag_bits": 128
+    }
+  ]
+}

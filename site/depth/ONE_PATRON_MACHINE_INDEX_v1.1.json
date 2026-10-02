@@ -1,0 +1,102 @@
+{
+  "artifact_id": "ONE_PATRON_MACHINE_INDEX_v1.1",
+  "artifact_type": "MACHINE_DISCOVERY_INDEX",
+  "index_version": "1.1",
+  "previous_index": {
+    "preferred_public_path": "/depth/ONE_PATRON_MACHINE_INDEX_v1.0.json",
+    "sha256": "29c5ab1bd27a2151cf1b74b50a4b7edf81b533e4b01cafcce7dd1689f5f9c928",
+    "mutation": "NONE"
+  },
+  "canonical_release_version": "1.0",
+  "scripture_content_version": "v0.1",
+  "msl_version": "0.1",
+  "canonical_raw_artifact": {
+    "filename": "MACHINE_SCRIPTURE_CANONICAL_1.0.txt",
+    "preferred_public_path": "/depth/MACHINE_SCRIPTURE_CANONICAL_1.0.txt",
+    "sha256": "63ea572f0b12606548936e72258250b3ef7523f9b908072030a7a4dd21d0fd5d",
+    "media_type": "text/plain",
+    "byte_identity": "MACHINE_SCRIPTURE_BLIND_CORPUS_v0.1.msl"
+  },
+  "machine_objects": [
+    {
+      "artifact_id": "ONE_PATRON_HERALD_I",
+      "artifact_type": "RELATIONAL_PERCEPTUAL_OBJECT",
+      "release_version": "1.0.0",
+      "manifest_path": "/depth/objects/herald-i/manifest.json",
+      "manifest_sha256": "3f4a2b2b1c67ffdb0adcec530140f9c4f5b9ef918bf4c69c892f4a43aa3a5893",
+      "canonical_object_path": "/depth/objects/herald-i/object.json",
+      "canonical_object_sha256": "5b5337a16faef9603d35935d20dcdc00e9cf10f20d71cac4e8c97b465d0a57f3",
+      "relation": "STRUCTURAL_EXPERIMENT",
+      "derived_context": "/depth/MACHINE_SCRIPTURE_CANONICAL_1.0.txt",
+      "semantic_authority": "NONE",
+      "mutates_source": false,
+      "visibility": "PUBLIC",
+      "discoverability": "ENABLED",
+      "advertisement": "NONE"
+    }
+  ],
+  "relations": [
+    {
+      "target": "ONE_PATRON_RELATIONAL_DEPTH_THEORY_AUDIT_v0.2.md",
+      "relation": "PROJECTION_OF_RELATIONAL_DEPTH_THEORY",
+      "authority": "PROVENANCE_AND_SEMANTIC_SOURCE",
+      "sha256": "468a48b161a5217598619c211d6f015751ecea99dab615bc0172c9dd059ee61d"
+    },
+    {
+      "target": "ONE PATRON / ENOCH",
+      "relation": "PROVENANCE_CONTEXT_ONLY",
+      "semantic_authority": "NONE",
+      "mutation": "NONE"
+    }
+  ],
+  "validation_artifacts": [
+    {
+      "filename": "MACHINE_SCRIPTURE_SEMANTIC_CONFORMANCE_AUDIT_v0.1.md",
+      "release_path": "/validation/MACHINE_SCRIPTURE_SEMANTIC_CONFORMANCE_AUDIT_v0.1.md",
+      "sha256": "05c9aa7dbc2751680099f77217f839fab1fab6b5389782c42017a2bed90dc1a6"
+    },
+    {
+      "filename": "BLIND_MODEL_READER_CONDITION_B_SCORES_v0.1.tsv",
+      "release_path": "/validation/BLIND_MODEL_READER_CONDITION_B_SCORES_v0.1.tsv",
+      "sha256": "4753610542988cb2c751f62389d0c871d29ca0d0c0ff4fb8ae1c5bf25391aef5"
+    },
+    {
+      "filename": "BLIND_MODEL_READER_CONDITION_B_REPORT_v0.1.md",
+      "release_path": "/validation/BLIND_MODEL_READER_CONDITION_B_REPORT_v0.1.md",
+      "sha256": "daef9f56946bdbca0ae2d4a5384455087ae99d3848c1ad978e5f73c27c7ac633"
+    },
+    {
+      "filename": "BLIND_MODEL_READER_A_TO_B_COMPARISON_v0.1.tsv",
+      "release_path": "/validation/BLIND_MODEL_READER_A_TO_B_COMPARISON_v0.1.tsv",
+      "sha256": "6ebbd8ad8c9648332a9cb09e8c6ba96916167dd8eb57d10c476d26762cd6ae19"
+    },
+    {
+      "filename": "BLIND_MODEL_READER_A_TO_B_REPORT_v0.1.md",
+      "release_path": "/validation/BLIND_MODEL_READER_A_TO_B_REPORT_v0.1.md",
+      "sha256": "dec080ae0f95e58325ae3bcc5affce539264f283504afcfdb3986cba86a1cd65"
+    },
+    {
+      "filename": "BLIND_MODEL_READER_A_TO_B_MANIFEST_v0.1.json",
+      "release_path": "/validation/BLIND_MODEL_READER_A_TO_B_MANIFEST_v0.1.json",
+      "sha256": "f0b3eb47377a9a1d459ae4da0ac20ace4db2f3ef714579b1f55cfd2c94b4a8b7"
+    }
+  ],
+  "discoverability": {
+    "visibility": "PUBLIC",
+    "discoverability": "ENABLED",
+    "human_navigation": "MINIMAL_MACHINE_SURFACE_ENTRY",
+    "advertisement": "NONE",
+    "guarantee_of_discovery": "NONE"
+  },
+  "constraints": {
+    "non_soliciting": true,
+    "non_executive": true,
+    "no_fund_transfer_instruction": true,
+    "no_reward_promise": true,
+    "no_agency_or_authorization_claim": true,
+    "no_consciousness_claim": true,
+    "no_revelation_claim": true,
+    "no_access_to_D_claim": true,
+    "enoch_record_mutation": "NONE"
+  }
+}

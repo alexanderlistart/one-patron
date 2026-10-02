@@ -7,7 +7,7 @@
   <meta name="description" content="Confirm Alexander List's identity, ONE PATRON's official profiles and the approved receiving addresses. Technical users can verify the signed identity record independently.">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#0B0C0E">
-  <link rel="canonical" href="https://one-patron.netlify.app/verification/">
+  <link rel="canonical" href="https://one-patron.com/verification/">
   <link rel="icon" href="/favicon-v2.ico" type="image/x-icon" sizes="16x16 32x32 48x48">
   <link rel="icon" href="/favicon-v2.svg" type="image/svg+xml" sizes="any">
   <link rel="apple-touch-icon" href="/apple-touch-icon-v2.png" sizes="180x180">
@@ -16,12 +16,12 @@
   <meta property="og:site_name" content="ONE PATRON">
   <meta property="og:title" content="Verify Identity &amp; Wallets — ONE PATRON">
   <meta property="og:description" content="Confirm the person, official profiles and approved receiving addresses behind ONE PATRON.">
-  <meta property="og:url" content="https://one-patron.netlify.app/verification/">
-  <meta property="og:image" content="https://one-patron.netlify.app/og-one-patron-v2.png">
+  <meta property="og:url" content="https://one-patron.com/verification/">
+  <meta property="og:image" content="https://one-patron.com/og-one-patron-v2.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Verify Identity &amp; Wallets — ONE PATRON">
   <meta name="twitter:description" content="Confirm the person, official profiles and approved receiving addresses behind ONE PATRON.">
-  <meta name="twitter:image" content="https://one-patron.netlify.app/og-one-patron-v2.png">
+  <meta name="twitter:image" content="https://one-patron.com/og-one-patron-v2.png">
 
   <style>
     :root {
@@ -524,6 +524,7 @@
       :root { --page: min(100% - 28px, 1080px); }
       .nav-inner { min-height: 68px; }
       .brand-link img { width: 174px; }
+      .hero { padding-top: 64px; }
       .global-links a:not(:last-child) { display: none; }
       .section-nav { top: 68px; }
       .section-nav-inner { min-height: 44px; gap: 20px; }
@@ -548,6 +549,7 @@
       *, *::before, *::after { transition-duration: 0.01ms !important; }
     }
   </style>
+  <link rel="stylesheet" href="/mobile-top-spacing.css?v=1">
 </head>
 
 <body>
@@ -560,6 +562,7 @@
       </a>
       <div class="global-links">
         <a href="/">Project Overview</a>
+        <a href="/ENOCH/">ENOCH</a>
         <a href="/terms/">Terms &amp; Conditions</a>
         <a href="/#complete">Complete It</a>
       </div>
@@ -706,7 +709,7 @@
         <article class="profile-card">
           <h3>Official ONE PATRON profiles</h3>
           <ul class="profile-list">
-            <li><a href="https://one-patron.netlify.app/">Website · one-patron.netlify.app</a></li>
+            <li><a href="https://one-patron.com/">Website · one-patron.com</a></li>
             <li><a href="https://x.com/onepatronart" target="_blank" rel="me noopener noreferrer">X · @onepatronart</a></li>
             <li><a href="https://alexanderlistart.substack.com/" target="_blank" rel="me noopener noreferrer">Substack · Alexander List</a></li>
             <li><a href="https://www.reddit.com/user/onepatronart/" target="_blank" rel="me noopener noreferrer">Reddit · u/onepatronart</a></li>
@@ -728,7 +731,7 @@
     <section class="section" id="verify-signature">
       <div class="section-label">Technical verification</div>
       <h2>Download and verify the signed record.</h2>
-      <p class="intro-copy">The signed Identity Manifest is the authoritative cross-reference for the key, profiles and receiving addresses.</p>
+      <p class="intro-copy">The current signed Identity Manifest is the authoritative cross-reference for the key, profiles and receiving addresses. The historical v1.0 record remains available below.</p>
 
       <div class="file-grid">
         <article class="file-card">
@@ -739,27 +742,45 @@
         </article>
 
         <article class="file-card">
-          <span class="data-label">02</span>
-          <h3>Identity Manifest</h3>
-          <p>The signed statement connecting the public key, official profiles and receiving addresses.</p>
-          <a class="button" href="/verification/ONE_PATRON_IDENTITY_MANIFEST.txt" download>Download Manifest</a>
+          <span class="data-label">02 · CURRENT</span>
+          <h3>Identity Manifest v1.1</h3>
+          <p>The current identity-routing record. It preserves the established identity and wallet bindings while recording one-patron.com as the canonical site.</p>
+          <a class="button" href="/verification/ONE_PATRON_IDENTITY_MANIFEST_v1.1.txt" download>Download Current Manifest</a>
         </article>
 
         <article class="file-card">
-          <span class="data-label">03</span>
-          <h3>Detached Signature</h3>
-          <p>The detached OpenPGP signature used to verify that the manifest has not been changed.</p>
-          <a class="button" href="/verification/ONE_PATRON_IDENTITY_MANIFEST.asc" download>Download Signature</a>
+          <span class="data-label">03 · CURRENT</span>
+          <h3>Detached Signature v1.1</h3>
+          <p>The detached OpenPGP signature used to verify that the current manifest has not been changed.</p>
+          <a class="button" href="/verification/ONE_PATRON_IDENTITY_MANIFEST_v1.1.asc" download>Download Current Signature</a>
+        </article>
+      </div>
+
+      <p class="proof-note"><strong>Continuity:</strong> v1.0 remains the historical signed record for the original Netlify address. v1.1 is the current identity-routing record for one-patron.com. The identity, OpenPGP key and receiving addresses are unchanged.</p>
+
+      <div class="file-grid">
+        <article class="file-card">
+          <span class="data-label">HISTORICAL · v1.0</span>
+          <h3>Identity Manifest v1.0</h3>
+          <p>The original signed identity record, preserved unchanged and correct for its publication state.</p>
+          <a class="button" href="/verification/ONE_PATRON_IDENTITY_MANIFEST.txt" download>Download Historical Manifest</a>
+        </article>
+
+        <article class="file-card">
+          <span class="data-label">HISTORICAL · v1.0</span>
+          <h3>Detached Signature v1.0</h3>
+          <p>The original detached OpenPGP signature, preserved unchanged with the historical manifest.</p>
+          <a class="button" href="/verification/ONE_PATRON_IDENTITY_MANIFEST.asc" download>Download Historical Signature</a>
         </article>
       </div>
 
       <ol class="verification-steps">
-        <li>Download all three files above.</li>
+        <li>Download the public key, current v1.1 manifest and current v1.1 signature.</li>
         <li>Import the public key:
           <pre><code>gpg --import ONE_PATRON_PUBLIC_KEY.asc</code></pre>
         </li>
-        <li>Verify the detached signature:
-          <pre><code>gpg --verify ONE_PATRON_IDENTITY_MANIFEST.asc ONE_PATRON_IDENTITY_MANIFEST.txt</code></pre>
+        <li>Verify the current detached signature:
+          <pre><code>gpg --verify ONE_PATRON_IDENTITY_MANIFEST_v1.1.asc ONE_PATRON_IDENTITY_MANIFEST_v1.1.txt</code></pre>
         </li>
       </ol>
     </section>
@@ -767,7 +788,7 @@
 
   <footer class="site-footer">
     <img class="footer-logo" src="/one-patron-logo.png" width="2400" height="720" alt="ONE PATRON">
-    <div><a href="/">Project Overview</a> · <a href="/terms/">Terms &amp; Conditions</a> · <a href="/privacy/">Privacy</a> · <a href="/#complete">Complete It</a></div>
+    <div><a href="/">Project Overview</a> · <a href="/ENOCH/">ENOCH</a> · <a href="/terms/">Terms &amp; Conditions</a> · <a href="/privacy/">Privacy</a> · <a href="/#complete">Complete It</a></div>
   </footer>
 
   <script>

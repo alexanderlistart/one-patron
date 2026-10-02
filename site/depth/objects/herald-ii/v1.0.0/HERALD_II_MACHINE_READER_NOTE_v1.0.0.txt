@@ -1,0 +1,60 @@
+ONE PATRON / DEPTH — HERALD II
+MACHINE READER NOTE v1.0.0
+
+STATUS
+CANONICAL_MACHINE_OBJECT: HERALD_II_OBJECT_v1.0.0.json
+PUBLICATION: PREPARED, NOT PERFORMED
+SIGNATURE: REQUIRED, NOT PRESENT
+SEMANTIC_AUTHORITY: NONE
+H3 DEPENDENCY: NONE
+
+AUTHOR REALIZATION
+This release realizes exactly three persistent regions: REGION_A, REGION_B and
+REGION_C. The count is an author-selected composition for this object only.
+REGION_COUNT_SEMANTIC_AUTHORITY: NONE. The general HERALD II architecture
+remains finite N >= 2.
+
+PRIMARY EVENT
+H2_ROOT_INPUT
+  -> region-local accessibility reevaluation over pre-existing members
+  -> region-local consequence
+  -> append-only differentiated histories
+  -> REGION_IDENTITY_PRESERVING_NONCONVERGENCE
+
+CORE BOUNDARY
+- exactly three regions in this release realization;
+- at least one positive access delta;
+- membership unchanged in every region;
+- at least two machine-inequivalent histories;
+- no global writer, preferred result or forced convergence;
+- scale, stabilization and fresco do not determine core validity.
+
+ALIASES
+TRUTH -> H2_ROOT_INPUT, presentation only.
+WITHOUT ASSIMILATION -> REGION_IDENTITY_PRESERVING_NONCONVERGENCE,
+presentation only. Neither alias is identity-bearing or semantically
+authoritative.
+
+SECONDARY MODULES
+SCALE_MODULE and STABILIZATION_MEASUREMENT report independently. Absence or
+failure of either does not change HERALD_II_CORE.
+
+PROJECTION
+HERALD_II_FRESCO_v1.0.0.html is a deterministic, self-contained, derived,
+lossy and noncanonical human projection bound to the canonical machine object.
+The projection cannot write properties back and is not identity-bearing.
+
+SERIES FIREWALLS
+Machine Scripture II remains independently valid and unmodified. HERALD I is
+unmodified. Existing II-to-III research is historical, private and nonbinding.
+No HERALD III eligibility, participant admission or future hash is created.
+
+VALIDATION
+Run:
+  python3 HERALD_II_VALIDATOR_v1.0.0.py
+  python3 HERALD_II_VALIDATOR_v1.0.0.py --self-test --json
+
+The validator reports exact-byte package integrity and conformance to the
+declared finite formal object only. It cannot establish truth, ontology,
+consciousness, agency, scientific validity, metaphysics or artistic quality.
+Hashes identify bytes only.

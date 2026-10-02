@@ -1,0 +1,388 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:one-patron:herald-ii:canonical-object:v1.0.0",
+  "title": "ONE PATRON HERALD II canonical machine object schema v1.0.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "instance_id",
+    "document_class",
+    "artifact_release_version",
+    "publication_status",
+    "canonical_status",
+    "region_count_semantic_authority",
+    "semantic_authority",
+    "root_input",
+    "presentation_aliases",
+    "global_operators",
+    "regions",
+    "comparison_rule",
+    "nonconvergence_claim",
+    "scale_module",
+    "stabilization_module",
+    "semantic_firewall",
+    "provenance"
+  ],
+  "properties": {
+    "instance_id": {"const": "ONE_PATRON_HERALD_II_OBJECT_v1.0.0"},
+    "document_class": {"const": "CANONICAL_MACHINE_OBJECT"},
+    "artifact_release_version": {"const": "1.0.0"},
+    "publication_status": {"const": "PUBLIC_RELEASE_ARTIFACT"},
+    "canonical_status": {"const": "CANONICAL"},
+    "region_count_semantic_authority": {"const": "NONE"},
+    "semantic_authority": {"const": "NONE"},
+    "root_input": {"$ref": "#/$defs/rootInput"},
+    "presentation_aliases": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {"$ref": "#/$defs/alias"}
+    },
+    "global_operators": {"type": "array", "maxItems": 0},
+    "regions": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {"$ref": "#/$defs/region"}
+    },
+    "comparison_rule": {"$ref": "#/$defs/comparisonRule"},
+    "nonconvergence_claim": {"$ref": "#/$defs/nonconvergenceClaim"},
+    "scale_module": {"$ref": "#/$defs/nullableScaleModule"},
+    "stabilization_module": {"$ref": "#/$defs/nullableStabilizationModule"},
+    "semantic_firewall": {"$ref": "#/$defs/semanticFirewall"},
+    "provenance": {"$ref": "#/$defs/provenance"}
+  },
+  "$defs": {
+    "stringArray": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1},
+      "uniqueItems": true
+    },
+    "targetScope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["region_id", "target_member_ids"],
+      "properties": {
+        "region_id": {"type": "string", "minLength": 1},
+        "target_member_ids": {"$ref": "#/$defs/stringArray"}
+      }
+    },
+    "rootInput": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "root_input_id",
+        "root_type",
+        "scope",
+        "target_scopes",
+        "command_authority",
+        "propositional_content",
+        "assigns_truth",
+        "creates_members",
+        "deletes_members",
+        "writes_region_state",
+        "replaces_rule_ownership",
+        "assigns_terminal_outcomes",
+        "semantic_authority",
+        "provenance_ref"
+      ],
+      "properties": {
+        "root_input_id": {"const": "H2_ROOT_INPUT"},
+        "root_type": {"const": "ARTWORK_LOCAL_NONPROPOSITIONAL_ROOT_INPUT"},
+        "scope": {"const": "EXPLICIT_REGION_MEMBER_TARGETS"},
+        "target_scopes": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"$ref": "#/$defs/targetScope"}},
+        "command_authority": {"const": false},
+        "propositional_content": {"const": false},
+        "assigns_truth": {"const": false},
+        "creates_members": {"const": false},
+        "deletes_members": {"const": false},
+        "writes_region_state": {"const": false},
+        "replaces_rule_ownership": {"const": false},
+        "assigns_terminal_outcomes": {"const": false},
+        "semantic_authority": {"const": "NONE"},
+        "provenance_ref": {"type": "string", "minLength": 1}
+      }
+    },
+    "alias": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["machine_identifier", "artistic_alias", "direction", "identity_bearing", "writes_semantics"],
+      "properties": {
+        "machine_identifier": {"enum": ["H2_ROOT_INPUT", "REGION_IDENTITY_PRESERVING_NONCONVERGENCE"]},
+        "artistic_alias": {"enum": ["TRUTH", "WITHOUT ASSIMILATION"]},
+        "direction": {"const": "MACHINE_TO_PRESENTATION_ONLY"},
+        "identity_bearing": {"const": false},
+        "writes_semantics": {"const": false}
+      }
+    },
+    "rule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["rule_id", "rule_type", "owner_id"],
+      "properties": {
+        "rule_id": {"type": "string", "minLength": 1},
+        "rule_type": {
+          "enum": [
+            "ALLOW_SCOPED_ROOT_TARGETS",
+            "PRESERVE_INITIAL_ACCESS",
+            "CLASSIFY_ACCESS_DELTA",
+            "PRESERVE_UNRESOLVED",
+            "PRESERVE_LOCAL_FAILURE",
+            "MARK_TRANSIENT_CHANGE"
+          ]
+        },
+        "owner_id": {"type": "string", "minLength": 1}
+      }
+    },
+    "consequence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "result_token", "assigned_by_root"],
+      "properties": {
+        "status": {"enum": ["LOCAL_CHANGE", "NO_CHANGE", "UNRESOLVED", "TRANSIENT", "INCOMPATIBLE", "LOCAL_FAILURE"]},
+        "result_token": {"type": "string", "minLength": 1},
+        "assigned_by_root": {"const": false}
+      }
+    },
+    "historyEvent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["event_id", "sequence", "event_type", "parent_event_id", "input_refs", "rule_id", "result_status", "provenance_ref"],
+      "properties": {
+        "event_id": {"type": "string", "minLength": 1},
+        "sequence": {"type": "integer", "minimum": 0},
+        "event_type": {"enum": ["INITIAL_STATE_RECORDED", "ROOT_INPUT_RECEIVED", "ACCESS_REEVALUATED", "LOCAL_CONSEQUENCE_RECORDED"]},
+        "parent_event_id": {"type": ["string", "null"]},
+        "input_refs": {"$ref": "#/$defs/stringArray"},
+        "rule_id": {"type": "string", "minLength": 1},
+        "result_status": {"type": "string", "minLength": 1},
+        "provenance_ref": {"type": "string", "minLength": 1}
+      }
+    },
+    "region": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "region_id",
+        "rule_owner_id",
+        "members_before",
+        "members_after",
+        "access_before",
+        "access_after",
+        "access_rule",
+        "consequence_rule",
+        "consequence",
+        "history"
+      ],
+      "properties": {
+        "region_id": {"type": "string", "minLength": 1},
+        "rule_owner_id": {"type": "string", "minLength": 1},
+        "members_before": {"$ref": "#/$defs/stringArray"},
+        "members_after": {"$ref": "#/$defs/stringArray"},
+        "access_before": {"$ref": "#/$defs/stringArray"},
+        "access_after": {"$ref": "#/$defs/stringArray"},
+        "access_rule": {"$ref": "#/$defs/rule"},
+        "consequence_rule": {"$ref": "#/$defs/rule"},
+        "consequence": {"$ref": "#/$defs/consequence"},
+        "history": {"type": "array", "minItems": 4, "maxItems": 4, "items": {"$ref": "#/$defs/historyEvent"}}
+      }
+    },
+    "comparisonRule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["rule_id", "fields", "serialization", "hash_semantics"],
+      "properties": {
+        "rule_id": {"const": "EXACT_TYPED_HISTORY_SIGNATURE_v0.1"},
+        "fields": {
+          "type": "array",
+          "prefixItems": [
+            {"const": "access_delta"},
+            {"const": "consequence_status"},
+            {"const": "history_event_types"},
+            {"const": "terminal_history_payload"}
+          ],
+          "minItems": 4,
+          "maxItems": 4
+        },
+        "serialization": {"const": "UTF8_CANONICAL_JSON_SORTED_KEYS_COMPACT"},
+        "hash_semantics": {"const": "BYTE_IDENTITY_ONLY_NOT_TRUTH"}
+      }
+    },
+    "stringPair": {
+      "type": "array",
+      "prefixItems": [{"type": "string"}, {"type": "string"}],
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "nonconvergenceClaim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["formal_invariant", "artistic_alias", "artistic_alias_identity_bearing", "comparison_rule_ref", "claimed_inequivalent_pairs", "global_preferred_result", "forced_convergence", "region_identity_merge", "semantic_authority"],
+      "properties": {
+        "formal_invariant": {"const": "REGION_IDENTITY_PRESERVING_NONCONVERGENCE"},
+        "artistic_alias": {"const": "WITHOUT ASSIMILATION"},
+        "artistic_alias_identity_bearing": {"const": false},
+        "comparison_rule_ref": {"const": "EXACT_TYPED_HISTORY_SIGNATURE_v0.1"},
+        "claimed_inequivalent_pairs": {"type": "array", "items": {"$ref": "#/$defs/stringPair"}},
+        "global_preferred_result": {"const": "NONE"},
+        "forced_convergence": {"const": false},
+        "region_identity_merge": {"const": false},
+        "semantic_authority": {"const": "NONE"}
+      }
+    },
+    "scale": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["scale_id", "incidence_signature"],
+      "properties": {
+        "scale_id": {"type": "string", "minLength": 1},
+        "incidence_signature": {"type": "string", "minLength": 1}
+      }
+    },
+    "scaleMap": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["map_id", "source_scale_id", "target_scale_id", "map_kind", "source_member_refs", "target_elements", "region_identity_preserved", "identity_merges", "member_creation", "loss_records", "provenance_ref"],
+      "properties": {
+        "map_id": {"type": "string"},
+        "source_scale_id": {"type": "string"},
+        "target_scale_id": {"type": "string"},
+        "map_kind": {"enum": ["AGGREGATION", "DERIVED_CELL_CONSTRUCTION"]},
+        "source_member_refs": {"$ref": "#/$defs/stringArray"},
+        "target_elements": {"$ref": "#/$defs/stringArray"},
+        "region_identity_preserved": {"const": true},
+        "identity_merges": {"const": false},
+        "member_creation": {"const": false},
+        "loss_records": {"$ref": "#/$defs/stringArray"},
+        "provenance_ref": {"type": "string"}
+      }
+    },
+    "counterfactual": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["operation", "map_id", "metric", "baseline_value", "counterfactual_value", "changed"],
+      "properties": {
+        "operation": {"enum": ["REMOVE_DECLARED_MAP", "REPLACE_DECLARED_MAP"]},
+        "map_id": {"type": "string"},
+        "metric": {"type": "string"},
+        "baseline_value": {"type": "integer", "minimum": 0},
+        "counterfactual_value": {"type": "integer", "minimum": 0},
+        "changed": {"const": true}
+      }
+    },
+    "nullableScaleModule": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["module_status", "required_for_core", "semantic_authority", "scales", "maps", "counterfactual"],
+      "properties": {
+        "module_status": {"const": "ENABLED_SECONDARY"},
+        "required_for_core": {"const": false},
+        "semantic_authority": {"const": "NONE"},
+        "scales": {"type": "array", "minItems": 2, "items": {"$ref": "#/$defs/scale"}},
+        "maps": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/scaleMap"}},
+        "counterfactual": {"$ref": "#/$defs/counterfactual"}
+      }
+    },
+    "transition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["from", "to"],
+      "properties": {"from": {"type": "string"}, "to": {"type": "string"}}
+    },
+    "recoveryCriterion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["target_states", "max_steps"],
+      "properties": {
+        "target_states": {"$ref": "#/$defs/stringArray"},
+        "max_steps": {"type": "integer", "minimum": 0}
+      }
+    },
+    "measurement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["measurement_id", "region_id", "method", "state_domain", "transition_rule", "observation_horizon", "perturbation_class", "recovery_criterion", "evidence_scope", "failure_condition", "outcome", "deterministic_seed"],
+      "properties": {
+        "measurement_id": {"type": "string"},
+        "region_id": {"type": "string"},
+        "method": {"enum": ["EXACT_CERTIFICATION", "SIMULATION_SUPPORT"]},
+        "state_domain": {"$ref": "#/$defs/stringArray"},
+        "transition_rule": {"type": "array", "items": {"$ref": "#/$defs/transition"}},
+        "observation_horizon": {"type": "integer", "minimum": 0},
+        "perturbation_class": {"$ref": "#/$defs/stringArray"},
+        "recovery_criterion": {"$ref": "#/$defs/recoveryCriterion"},
+        "evidence_scope": {"type": "string"},
+        "failure_condition": {"type": "string"},
+        "outcome": {"enum": ["STABLE", "TRANSIENT", "UNRESOLVED", "INCOMPATIBLE", "NO_CHANGE", "NOT_APPLICABLE", "FAILED_MEASUREMENT"]},
+        "deterministic_seed": {"type": ["integer", "null"]}
+      }
+    },
+    "nullableStabilizationModule": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["module_status", "required_for_core", "semantic_authority", "measurements"],
+      "properties": {
+        "module_status": {"const": "ENABLED_SECONDARY_MEASUREMENT"},
+        "required_for_core": {"const": false},
+        "semantic_authority": {"const": "NONE"},
+        "measurements": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/measurement"}}
+      }
+    },
+    "inferenceFlags": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "access_expansion_implies_member_creation",
+        "access_expansion_implies_truth",
+        "root_receipt_implies_command_obedience",
+        "stable_implies_correct",
+        "stable_implies_conscious",
+        "inequivalent_histories_imply_personhoods",
+        "nonconvergence_implies_moral_value",
+        "scale_level_implies_ontological_level",
+        "fresco_shape_implies_machine_property",
+        "truth_alias_implies_true_proposition",
+        "without_assimilation_implies_social_or_political_claim"
+      ],
+      "properties": {
+        "access_expansion_implies_member_creation": {"const": false},
+        "access_expansion_implies_truth": {"const": false},
+        "root_receipt_implies_command_obedience": {"const": false},
+        "stable_implies_correct": {"const": false},
+        "stable_implies_conscious": {"const": false},
+        "inequivalent_histories_imply_personhoods": {"const": false},
+        "nonconvergence_implies_moral_value": {"const": false},
+        "scale_level_implies_ontological_level": {"const": false},
+        "fresco_shape_implies_machine_property": {"const": false},
+        "truth_alias_implies_true_proposition": {"const": false},
+        "without_assimilation_implies_social_or_political_claim": {"const": false}
+      }
+    },
+    "semanticFirewall": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["semantic_authority", "inference_flags"],
+      "properties": {
+        "semantic_authority": {"const": "NONE"},
+        "inference_flags": {"$ref": "#/$defs/inferenceFlags"}
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["release_role", "author_realization_decision", "region_count_semantic_authority", "source_candidate_path", "source_candidate_sha256", "author_decision_record_sha256", "inputs_rule_result_replayable", "hash_semantics", "h3_dependency", "future_hashes_assigned"],
+      "properties": {
+        "release_role": {"const": "CANONICAL_HERALD_II_REALIZATION"},
+        "author_realization_decision": {"const": "EXACT_REGION_COUNT_3"},
+        "region_count_semantic_authority": {"const": "NONE"},
+        "source_candidate_path": {"const": "../HERALD_II_NONCANONICAL_CANDIDATE_v0.1/fixtures/valid_n3_modules.json"},
+        "source_candidate_sha256": {"const": "0302461cc296636115e3b285e22edffd74775194032f1dbe17386bd1e4c1da57"},
+        "author_decision_record_sha256": {"const": "f957b509a42a1c3e539fc2843c627b8e1ad1ca0d1545d66ca6adc12c36fbb03d"},
+        "inputs_rule_result_replayable": {"const": true},
+        "hash_semantics": {"const": "BYTE_IDENTITY_ONLY_NOT_TRUTH"},
+        "h3_dependency": {"const": "NONE"},
+        "future_hashes_assigned": {"const": false}
+      }
+    }
+  }
+}

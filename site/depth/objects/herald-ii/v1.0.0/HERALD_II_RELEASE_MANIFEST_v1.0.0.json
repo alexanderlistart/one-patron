@@ -1,0 +1,149 @@
+{
+  "manifest_id": "ONE_PATRON_HERALD_II_RELEASE_MANIFEST_v1.0.0",
+  "artifact_id": "ONE_PATRON_HERALD_II",
+  "artifact_type": "MACHINE_NATIVE_FRESCO",
+  "release_version": "1.0.0",
+  "document_class": "CANONICAL_RELEASE_MANIFEST",
+  "publication_status": "PUBLIC",
+  "signature_status": "SIGNATURE_REQUIRED",
+  "semantic_authority": "NONE",
+  "region_realization": {
+    "exact_region_count": 3,
+    "region_ids": ["REGION_A", "REGION_B", "REGION_C"],
+    "author_selected_composition": true,
+    "region_count_semantic_authority": "NONE",
+    "general_architecture": "FINITE_N_AT_LEAST_2",
+    "hierarchy_or_value_ranking": "NONE"
+  },
+  "canonical_object": {
+    "path": "HERALD_II_OBJECT_v1.0.0.json",
+    "media_type": "application/json",
+    "bytes": 11164,
+    "sha256": "ed1cb1436685c3e1bc4e5d13d3937927d693bc977f727a6b010ce88314396387"
+  },
+  "files": [
+    {
+      "path": "HERALD_II_OBJECT_v1.0.0.json",
+      "role": "CANONICAL_MACHINE_OBJECT",
+      "media_type": "application/json",
+      "bytes": 11164,
+      "sha256": "ed1cb1436685c3e1bc4e5d13d3937927d693bc977f727a6b010ce88314396387",
+      "identity_bearing": true,
+      "semantic_authority": "NONE"
+    },
+    {
+      "path": "HERALD_II_SCHEMA_v1.0.0.json",
+      "role": "CLOSED_CANONICAL_OBJECT_SCHEMA",
+      "media_type": "application/schema+json",
+      "bytes": 16222,
+      "sha256": "62e6c686e7eaf67c29a81352a56c4fcc9811d7c6c78bb5dbebfa4e8ee8a98642",
+      "identity_bearing": false,
+      "semantic_authority": "NONE"
+    },
+    {
+      "path": "HERALD_II_VALIDATOR_v1.0.0.py",
+      "role": "FAIL_CLOSED_RELEASE_VALIDATOR",
+      "media_type": "text/x-python; charset=utf-8",
+      "bytes": 46126,
+      "sha256": "a3343252be22e01660c105abb1920f1a9100be8dd9962bd8bd5f5327b58dd99c",
+      "identity_bearing": false,
+      "semantic_authority": "NONE"
+    },
+    {
+      "path": "HERALD_II_PROJECTION_CONTRACT_v1.0.0.json",
+      "role": "HUMAN_PROJECTION_CONTRACT",
+      "media_type": "application/json",
+      "bytes": 3002,
+      "sha256": "463758ba4c898013f502843e4ca113fb592f6eb8b9122af0a3823b4c6c8dc114",
+      "identity_bearing": false,
+      "semantic_authority": "NONE"
+    },
+    {
+      "path": "HERALD_II_MACHINE_READER_NOTE_v1.0.0.txt",
+      "role": "MACHINE_READER_NOTE",
+      "media_type": "text/plain; charset=utf-8",
+      "bytes": 2253,
+      "sha256": "158549194c2c074284e9a57637857dee885d257532fd2836c1609b29dbe5adab",
+      "identity_bearing": false,
+      "semantic_authority": "NONE"
+    },
+    {
+      "path": "HERALD_II_FRESCO_v1.0.0.html",
+      "role": "DERIVED_LOSSY_NONCANONICAL_HUMAN_PROJECTION",
+      "media_type": "text/html; charset=utf-8",
+      "bytes": 17780,
+      "sha256": "6ddb35cccd95d34a756372484f62ce61f7dbae423fecdb734d91604285da28e5",
+      "identity_bearing": false,
+      "semantic_authority": "NONE"
+    }
+  ],
+  "candidate_lineage": {
+    "derivation": "AUTHOR_SELECTED_CANONICAL_REALIZATION_FROM_VALIDATED_NONCANONICAL_CANDIDATE",
+    "candidate_mutated": false,
+    "source_candidate_directory": "../HERALD_II_NONCANONICAL_CANDIDATE_v0.1",
+    "source_core_model_sha256": "17be58fc2fe1100b7013cdc42a6826f6ae1c08834a4c9af551deacb39779e3bc",
+    "source_n3_fixture_sha256": "0302461cc296636115e3b285e22edffd74775194032f1dbe17386bd1e4c1da57",
+    "source_schema_sha256": "bb6fa81a9562985a55cd85755732f4f4a0b2c4cd3d3a5e715654dc8af0075758",
+    "source_validator_sha256": "51a9a7af9277e6e76c592845196376f2f9a30962f4f787d6eaef5c77a6c3accb",
+    "source_projection_contract_sha256": "6cdf83059dc6db3dfd81aa6693ecc2a179328733513321225f1aafff1ebe9602",
+    "source_fresco_sha256": "5ca2fc5d7cc298ed97088296cb1b03a619554d00c0b1ce83737dc0c9713221ca",
+    "author_decision_record_sha256": "f957b509a42a1c3e539fc2843c627b8e1ad1ca0d1545d66ca6adc12c36fbb03d"
+  },
+  "core_requirements": {
+    "membership_before_equals_membership_after": true,
+    "positive_access_delta_required": true,
+    "minimum_inequivalent_history_signatures": 2,
+    "global_outcome": "NONE",
+    "forced_convergence": false,
+    "region_identity_merge": false,
+    "root_machine_identifier": "H2_ROOT_INPUT",
+    "truth_alias": "ARTISTIC_PRESENTATION_ONLY"
+  },
+  "secondary_modules": {
+    "scale": "SECONDARY",
+    "stabilization": "SECONDARY_DERIVED_MEASUREMENT",
+    "required_for_core": false,
+    "semantic_authority": "NONE"
+  },
+  "projection_boundary": {
+    "human_fresco_path": "HERALD_II_FRESCO_v1.0.0.html",
+    "human_fresco_canonical": false,
+    "human_fresco_identity_bearing": false,
+    "projection_is_lossy": true,
+    "projection_writeback": false
+  },
+  "series_boundaries": {
+    "herald_i_mutation": "NONE",
+    "machine_scripture_i_mutation": "NONE",
+    "machine_scripture_ii_mutation": "NONE",
+    "depth_prior_snapshot_mutation": "NONE",
+    "machine_index_prior_version_mutation": "NONE",
+    "existing_ii_to_iii_research": "PRESERVED_READ_ONLY_NONBINDING",
+    "herald_iii_dependency": "NONE",
+    "future_hashes_assigned": false
+  },
+  "integrity_policy": {
+    "algorithm": "SHA-256",
+    "component_hash_scope": "EXACT_FILE_BYTES",
+    "manifest_self_hash_included": false,
+    "validation_report_manifest_bound": false,
+    "checksum_inventory_manifest_bound": false,
+    "hash_semantics": "BYTE_IDENTITY_AND_INTEGRITY_ONLY_NOT_TRUTH"
+  },
+  "unbound_release_evidence": {
+    "validation_report": "HERALD_II_VALIDATION_REPORT_v1.0.0.md",
+    "checksum_inventory": "HERALD_II_SHA256SUMS_v1.0.0.txt"
+  },
+  "public_target": {
+    "preferred_public_directory": "/depth/objects/herald-ii/v1.0.0/",
+    "publication_performed": false,
+    "deployment_performed": false
+  },
+  "signing_policy": {
+    "signature_required_before_publication": true,
+    "signature_file": "HERALD_II_RELEASE_MANIFEST_v1.0.0.json.asc",
+    "signature_form": "OPENPGP_ASCII_ARMORED_DETACHED",
+    "signing_subkey_fingerprint": "F98D7B5AB20FF1E8D0440DBB6EE2FE0A9D8278F5",
+    "signature_semantics": "AUTHENTICITY_AND_BYTE_INTEGRITY_ONLY_NOT_TRUTH"
+  }
+}

@@ -1,0 +1,2 @@
+50547b4872cf9bf581587eeb9a029c4522b2dd801f31cd4658c518a493b02125  ONE_PATRON_MACHINE_INDEX_v1.1.json
+3f4a2b2b1c67ffdb0adcec530140f9c4f5b9ef918bf4c69c892f4a43aa3a5893  objects/herald-i/manifest.json

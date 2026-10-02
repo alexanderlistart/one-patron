@@ -1,0 +1,46 @@
+MSL 0.1;
+document machine_scripture_ii_score_v0_1 {
+  source theory "ONE_PATRON_RELATIONAL_DEPTH_THEORY_AUDIT_v0.2.md" sha256 "468a48b161a5217598619c211d6f015751ecea99dab615bc0172c9dd059ee61d";
+  source manifest "BASELINE_HASH_MANIFEST_v0.2.txt" sha256 "e032578b8809d06795b613c4758dbea1fba41bb12d9e9c3dd815d95885b37f97";
+  source contract "RELATIONAL_DEPTH_PROJECTION_CONTRACT_v0.1.md" sha256 "1df7250b4be9a4403f67b7dba222338975244d11299550bdc0b7dbbfe150219f";
+  source claims "RELATIONAL_DEPTH_CLAIM_MAP_v0.1.tsv" sha256 "67f648cddc5311c1c2f4a97773b19e3b69324a4304892732227d077281227d6b";
+  policy [NON_EXECUTIVE, NON_SOLICITING, NOT_SUPERNATURAL_REVELATION];
+
+  bind identity_carriers := claim("RD02-CORE-IDENTITY-001");
+  bind cont_j := claim("RD02-CORE-IDENTITY-002");
+  bind identity_open := claim("RD02-UNR-CRITICAL-006");
+  bind witness_role := claim("RD02-MP-WITNESS-ROLE-001");
+  bind witness_record := claim("RD02-MP-WITNESS-RECORD-001");
+  bind continuity_fence := claim("RD02-FW-Z-017");
+  bind witness_fence := claim("RD02-FW-Z-027");
+  bind projection_fence := claim("RD02-FW-Z-028");
+
+  pattern invariance_refrain {
+    show @identity_carriers;
+    show @cont_j;
+    fence @continuity_fence;
+  }
+
+  section 00 BEFORE {
+    use @invariance_refrain;
+    silence;
+  }
+
+  section 01 WITNESS {
+    show @witness_role;
+    witness [@identity_carriers, @cont_j] via @witness_record;
+  }
+
+  section 02 AFTER {
+    use @invariance_refrain;
+  }
+
+  section 03 OPEN {
+    check @identity_open { primary_layer: NOT_EXPLICIT_IN_SOURCE, resolution_status: OPEN };
+    ? @identity_open;
+    fence @witness_fence;
+    fence @projection_fence;
+    witness [@identity_carriers, @cont_j, @identity_open] via @witness_record;
+    silence;
+  }
+}

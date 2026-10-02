@@ -1,0 +1,85 @@
+{
+  "contract_id": "ONE_PATRON_HERALD_II_PROJECTION_CONTRACT_v1.0.0",
+  "document_class": "PUBLIC_RELEASE_PROJECTION_CONTRACT",
+  "publication_status": "PUBLIC_RELEASE_ARTIFACT",
+  "semantic_authority": "NONE",
+  "source_model": "./HERALD_II_OBJECT_v1.0.0.json",
+  "axioms": {
+    "human_render_is_canonical_object": false,
+    "projection_is_lossy": true,
+    "projection_is_identity_bearing": false,
+    "projection_may_write_properties_back": false,
+    "projection_may_change_validation": false,
+    "projection_may_promote_alias_to_machine_semantics": false,
+    "multiple_legitimate_renders_may_share_one_machine_object": true,
+    "projection_proves_ontology_or_meaning": false
+  },
+  "licensed_inputs": [
+    "REGION_IDS",
+    "MEMBERS_BEFORE_AND_AFTER",
+    "ACCESS_BEFORE_AND_AFTER",
+    "ACCESS_DELTA",
+    "ROOT_TARGET_SCOPE",
+    "LOCAL_CONSEQUENCE_STATUS",
+    "REGION_HISTORY_EVENT_TYPES",
+    "OPTIONAL_SCALE_MODULE_SUMMARY",
+    "OPTIONAL_STABILIZATION_SUMMARY"
+  ],
+  "licensed_operations": [
+    "ORDER_REGIONS_BY_DECLARED_SERIALIZATION_ORDER",
+    "MAP_REGION_TO_DETERMINISTIC_GEOMETRY",
+    "MAP_MEMBER_TO_STABLE_POSITION",
+    "DISTINGUISH_ACCESS_STATE_BY_SHAPE_AND_TEXT",
+    "MAP_HISTORY_STATUS_TO_NONRANKING_PATH_PATTERN",
+    "OMIT_DECLARED_MACHINE_INFORMATION",
+    "SHOW_OPTIONAL_SECONDARY_LAYER"
+  ],
+  "required_disclosures": [
+    "CANONICAL MACHINE OBJECT != HUMAN FRESCO",
+    "HUMAN FRESCO IS DERIVED LOSSY AND NONCANONICAL",
+    "MEMBERS SHOWN AFTER ACCESS ALREADY EXISTED BEFORE ACCESS",
+    "VISUAL DIFFERENCE DOES NOT ENCODE VALUE OR CORRECTNESS",
+    "ARTISTIC ALIASES HAVE NO MACHINE AUTHORITY"
+  ],
+  "omitted_information_classes": [
+    "COMPLETE_EVENT_ANCESTRY",
+    "EXACT_RULE_CLAUSE_TRACES",
+    "ALL_PROVENANCE_REFERENCES",
+    "FULL_FAILURE_RECORDS",
+    "FULL_UNRESOLVED_DEPENDENCY_RECORDS",
+    "CANONICAL_HISTORY_COMPARISON_BYTES",
+    "COMPLETE_SCALE_LOSS_RECORDS",
+    "COMPLETE_STABILIZATION_EVIDENCE"
+  ],
+  "artistic_aliases": [
+    {
+      "alias": "TRUTH",
+      "machine_identifier": "H2_ROOT_INPUT",
+      "presentation_only": true,
+      "identity_bearing": false
+    },
+    {
+      "alias": "WITHOUT ASSIMILATION",
+      "machine_identifier": "REGION_IDENTITY_PRESERVING_NONCONVERGENCE",
+      "presentation_only": true,
+      "identity_bearing": false
+    }
+  ],
+  "prohibitions": [
+    "NO_RENDER_SHAPE_MAY_ASSERT_MACHINE_PROPERTY",
+    "NO_COLOR_MAY BE THE ONLY STATUS CHANNEL",
+    "NO_STABLE_EQUALS_GOOD CODING",
+    "NO_UNSTABLE_EQUALS_BAD CODING",
+    "NO_REGION_POSITION MAY IMPLY AUTHORITY",
+    "NO_ROOT_VISUAL MAY IMPLY COMMAND OR SOVEREIGNTY",
+    "NO_VISUAL_MEMBER_APPEARANCE MAY IMPLY MEMBER_CREATION",
+    "NO_SILENT_UNRESOLVED_OR_FAILED_REGION MAY DISAPPEAR",
+    "NO_SCALE LEVEL MAY IMPLY ONTOLOGICAL LEVEL",
+    "NO_HUMAN_OR_SUPERNATURAL FIGURE CLAIM"
+  ],
+  "determinism": {
+    "unseeded_randomness": false,
+    "remote_runtime_dependency": false,
+    "same_data_config_renderer_produces_same_svg_structure": true
+  }
+}

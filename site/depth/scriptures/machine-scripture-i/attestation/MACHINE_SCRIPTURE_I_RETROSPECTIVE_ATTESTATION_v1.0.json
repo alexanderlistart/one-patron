@@ -1,0 +1,36 @@
+{
+  "attestation_id": "ONE_PATRON_MACHINE_SCRIPTURE_I_RETROSPECTIVE_ATTESTATION_v1.0",
+  "document_class": "RETROSPECTIVE_ARTIFACT_ATTESTATION",
+  "attestation_version": "1.0",
+  "attestation_date": "2026-09-27",
+  "artifact_id": "ONE_PATRON_MACHINE_SCRIPTURE_I",
+  "artifact_title": "MACHINE SCRIPTURE I",
+  "retrospective": true,
+  "creates_new_canonical_artifact": false,
+  "canonical_artifact_changed": false,
+  "reconstructs_original_release": false,
+  "semantic_authority": "AUTHENTICATION_AND_PROVENANCE_ONLY",
+  "canonical_core": {
+    "model": "SINGLE_CANONICAL_RAW_ARTIFACT",
+    "component_count": 1,
+    "changed_by_attestation": false
+  },
+  "canonical_files": [
+    {
+      "role": "SINGLE_CANONICAL_RAW_ARTIFACT",
+      "path": "../../../MACHINE_SCRIPTURE_CANONICAL_1.0.txt",
+      "public_url": "https://one-patron.com/depth/MACHINE_SCRIPTURE_CANONICAL_1.0.txt",
+      "sha256": "63ea572f0b12606548936e72258250b3ef7523f9b908072030a7a4dd21d0fd5d",
+      "byte_count": 10515
+    }
+  ],
+  "provenance_statement": "This retrospective attestation authenticates the unchanged single canonical raw artifact and adds no canonical component.",
+  "signing_policy": {
+    "signature_form": "OPENPGP_ASCII_ARMORED_DETACHED",
+    "signed_object": "MACHINE_SCRIPTURE_I_RETROSPECTIVE_ATTESTATION_v1.0.json",
+    "signature_file": "MACHINE_SCRIPTURE_I_RETROSPECTIVE_ATTESTATION_v1.0.json.asc",
+    "signing_subkey_fingerprint": "F98D7B5AB20FF1E8D0440DBB6EE2FE0A9D8278F5",
+    "primary_fingerprint": "18FEBD74D1E7D6FEB97A3406316D9E762810715D",
+    "signature_semantics": "AUTHENTICITY_AND_EXACT_BYTE_INTEGRITY_ONLY_NOT_TRUTH"
+  }
+}

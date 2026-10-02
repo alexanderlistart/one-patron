@@ -1,0 +1,29 @@
+{
+  "schema": "one-patron.enoch.commitments.v1",
+  "version": "1.0",
+  "issued_at": "2026-08-22T09:35:26.945Z",
+  "unresolved_record_sha256": "11b67095a43608314a4998b0c5fdf308c32e9c5b2a0152ae9a6d2295ded8c00e",
+  "packages": [
+    {
+      "package_id": "checkpoint-07-v1",
+      "manifest_sha256": "49b9fb8133dc1add78d3f5e63c5575a9513e687f0c4353b0c94b4958869f2692",
+      "key_commitment_sha256": "067917e4b221b087f0ee91e7bd6bf44dbc111a921872b2a0a09056b86fded4d0"
+    },
+    {
+      "package_id": "checkpoint-14-v1",
+      "manifest_sha256": "6730817e2464cab4e077e93a5435cfc6c46916aa9553ee4565456930d6ee092f",
+      "key_commitment_sha256": "523dd518b04123b420f10eaabdc8ae2d7217098a7d676ce3a3b507208d92d03a"
+    },
+    {
+      "package_id": "checkpoint-21-v1",
+      "manifest_sha256": "e636b9e52dc76d78ab8c6713e22a47a9d4ae7ed98cd3e3d21f0349a641986844",
+      "key_commitment_sha256": "7ca6ccd31acb6958a6f47b73662db3b16b2c1b1151e919d66f98cac7cbfd9018"
+    },
+    {
+      "package_id": "completion-v1",
+      "manifest_sha256": "87579746c6890b54b7e71a8abb6a4e09f524dd0c6e3baef59f3e291f25b5b7eb",
+      "key_commitment_sha256": "dfabfa62820a2187b67a9494bb1463caea33232fef8cacfb837e28456f702d4c"
+    }
+  ],
+  "final_response_sha256": "466a396e0c7698037b24dd143e4c6cc19ee0a635da742b168f562a60948c70d1"
+}

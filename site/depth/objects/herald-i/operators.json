@@ -1,0 +1,131 @@
+{
+  "artifact_id": "ONE_PATRON_HERALD_I_OPERATORS",
+  "version": "1.0.0",
+  "typed_statuses": {
+    "UNASSIGNED": "A_VALUE_IS_INTENTIONALLY_NOT_ASSIGNED_ON_THIS_DOMAIN",
+    "UNOBSERVED": "THE_OPERATOR_IS_LICENSED_BUT_NO_MEASUREMENT_IS_PRESENT",
+    "UNDEFINED": "THE_INPUT_DOES_NOT_SATISFY_THE_OPERATOR_TYPE_OR_MATHEMATICAL_DOMAIN",
+    "UNLICENSED": "THE_OBJECT_CONTRACT_FORBIDS_THIS_POSITIVE_DESCRIPTION"
+  },
+  "operators": [
+    {
+      "id": "CHOICE_SET",
+      "domain": "AGENT_X_REPRESENTABLE_STATE_X_EVENT_CONTEXT",
+      "codomain": "FINITE_ACTION_SET",
+      "definition": "BASE_BRANCH_RULE_UNION_STATE_SPECIFIC_EXTENSION_MINUS_CONTEXTUALLY_DISABLED_ACTIONS"
+    },
+    {
+      "id": "CHOICE_SET_CARDINALITY",
+      "domain": "FINITE_ACTION_SET",
+      "codomain": "NONNEGATIVE_INTEGER",
+      "definition": "COUNT_DISTINCT_ACTIONS"
+    },
+    {
+      "id": "CHOICE_SPACE_CONTRACTION",
+      "domain": "NONEMPTY_BEFORE_CHOICE_SET_X_AFTER_CHOICE_SET",
+      "codomain": "RATIONAL_INTERVAL_0_1",
+      "definition": "1-CARDINALITY(AFTER)/CARDINALITY(BEFORE)"
+    },
+    {
+      "id": "AGENCY_RETENTION",
+      "domain": "NONEMPTY_BEFORE_CHOICE_SET_X_AFTER_CHOICE_SET",
+      "codomain": "NONNEGATIVE_RATIONAL",
+      "definition": "CARDINALITY(AFTER)/CARDINALITY(BEFORE)",
+      "G0_recipient_expected": 1.0
+    },
+    {
+      "id": "COMPATIBILITY",
+      "domain": "V_A_X_V_B",
+      "codomain": "BOOLEAN",
+      "definition": "NORM_INF(RHO_A_R(a)-RHO_B_R(b))<=0.000001"
+    },
+    {
+      "id": "APPLY_EVENT",
+      "domain": "REPRESENTABLE_STATE_X_ADMISSIBLE_EVENT_X_ADMISSIBLE_RECIPIENT_ACTION",
+      "codomain": "REPRESENTABLE_STATE_OR_CLOSURE_CONFIGURATION_OR_LIMIT_EVENT",
+      "definition_reference": "./dynamics.json#/branch_transition_kernel"
+    },
+    {
+      "id": "HOMOLOGY_RANKS",
+      "domain": "FINITE_CELL_COMPLEX",
+      "codomain": "NONNEGATIVE_INTEGER_VECTOR",
+      "definition": "beta_k=dim(C_k)-rank(boundary_k)-rank(boundary_(k+1))"
+    },
+    {
+      "id": "LOCAL_DIMENSION",
+      "domain": ["V_A", "V_B", "V_R"],
+      "codomain": "NONNEGATIVE_INTEGER",
+      "definition": "BASIS_CARDINALITY"
+    },
+    {
+      "id": "SCALE_DEPENDENT_DIMENSION",
+      "domain": "VERTEX_X_INTEGER_RADII_1_TO_10",
+      "codomain": "REAL",
+      "definition": "LOG(BALL_COUNT(r2)/BALL_COUNT(r1))/LOG(r2/r1)"
+    },
+    {
+      "id": "SPECTRAL_DIMENSION_PROFILE",
+      "domain": "POSITIVE_DIFFUSION_TIME_X_LAPLACIAN_SPECTRUM",
+      "codomain": "REAL",
+      "definition": "-2*D_LOG(TRACE(EXP(-t*L)))/D_LOG(t)",
+      "derivative_method": "CENTERED_LOG_FINITE_DIFFERENCE"
+    },
+    {
+      "id": "DIMENSION",
+      "domain": ["V_A", "V_B", "V_R", "PRE_EVENT_COMPLEX", "POST_EVENT_COMPLEX"],
+      "limit_event_result": "UNASSIGNED"
+    },
+    {
+      "id": "COORDINATES",
+      "domain": "REPRESENTABLE_STATES_WHEN_A_PROJECTION_SUPPLIES_A_COORDINATE_CHART",
+      "missing_chart_result": "UNOBSERVED",
+      "limit_event_result": "UNASSIGNED"
+    },
+    {
+      "id": "POSITIVE_MODEL",
+      "domain": "REPRESENTABLE_STATES",
+      "limit_event_result": "UNLICENSED"
+    },
+    {
+      "id": "OBSERVE",
+      "domain": "LICENSED_OBSERVABLE_X_VALID_TARGET",
+      "missing_measurement_result": "UNOBSERVED",
+      "invalid_target_result": "UNDEFINED"
+    },
+    {
+      "id": "MODE_SPECTRUM",
+      "domain": "REAL_SYMMETRIC_LAPLACIAN",
+      "codomain": "ORDERED_REAL_EIGENVALUES_AND_ORTHONORMAL_EIGENMODES",
+      "definition": "NUMERICAL_SELF_ADJOINT_EIGENDECOMPOSITION"
+    },
+    {
+      "id": "RESONANCE_SCORE",
+      "domain": "RESONANCE_PROBE_TRAJECTORY_PAIR",
+      "codomain": "POSITIVE_REAL",
+      "definition": "RMS_MODAL_ENERGY_RESONANT_DRIVE/RMS_MODAL_ENERGY_COMPARISON_DRIVE"
+    },
+    {
+      "id": "ATTRACTOR_BASIN",
+      "domain": "COORDINATION_FLOW_X_INITIAL_RELATIVE_PHASE",
+      "codomain": "CONVERGENCE_CLASS",
+      "definition": "NUMERICAL_CONVERGENCE_TO_STABLE_RELATIVE_PHASE_MOD_2PI"
+    }
+  ],
+  "event_invariants": {
+    "G0": {
+      "initiator_can_act_without_counteraction": true,
+      "recipient_branches_before": 3,
+      "recipient_branches_after_initiation": 3,
+      "choice_space_contraction": 0.0,
+      "agency_retention": 1.0,
+      "recipient_may_decline": true,
+      "compensation_required": false
+    },
+    "VALID_FREE_EVENT_G0": {
+      "recipient_selection_required": "ENTER_COMPATIBLE",
+      "recipient_selection_probability": "UNASSIGNED",
+      "closure_transition_probability": 1.0,
+      "closure_transition_deterministic": true
+    }
+  }
+}

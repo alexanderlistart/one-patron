@@ -1,0 +1,199 @@
+{
+  "instance_id": "ONE_PATRON_HERALD_II_OBJECT_v1.0.0",
+  "document_class": "CANONICAL_MACHINE_OBJECT",
+  "artifact_release_version": "1.0.0",
+  "publication_status": "PUBLIC_RELEASE_ARTIFACT",
+  "canonical_status": "CANONICAL",
+  "region_count_semantic_authority": "NONE",
+  "semantic_authority": "NONE",
+  "root_input": {
+    "root_input_id": "H2_ROOT_INPUT",
+    "root_type": "ARTWORK_LOCAL_NONPROPOSITIONAL_ROOT_INPUT",
+    "scope": "EXPLICIT_REGION_MEMBER_TARGETS",
+    "target_scopes": [
+      {"region_id": "REGION_A", "target_member_ids": ["ra:m2"]},
+      {"region_id": "REGION_B", "target_member_ids": ["rb:m2"]},
+      {"region_id": "REGION_C", "target_member_ids": ["rc:m2"]}
+    ],
+    "command_authority": false,
+    "propositional_content": false,
+    "assigns_truth": false,
+    "creates_members": false,
+    "deletes_members": false,
+    "writes_region_state": false,
+    "replaces_rule_ownership": false,
+    "assigns_terminal_outcomes": false,
+    "semantic_authority": "NONE",
+    "provenance_ref": "prov:root:canonical-v1.0.0"
+  },
+  "presentation_aliases": [
+    {"machine_identifier": "H2_ROOT_INPUT", "artistic_alias": "TRUTH", "direction": "MACHINE_TO_PRESENTATION_ONLY", "identity_bearing": false, "writes_semantics": false},
+    {"machine_identifier": "REGION_IDENTITY_PRESERVING_NONCONVERGENCE", "artistic_alias": "WITHOUT ASSIMILATION", "direction": "MACHINE_TO_PRESENTATION_ONLY", "identity_bearing": false, "writes_semantics": false}
+  ],
+  "global_operators": [],
+  "regions": [
+    {
+      "region_id": "REGION_A",
+      "rule_owner_id": "OWNER_REGION_A",
+      "members_before": ["ra:m1", "ra:m2", "ra:m3"],
+      "members_after": ["ra:m1", "ra:m2", "ra:m3"],
+      "access_before": ["ra:m1"],
+      "access_after": ["ra:m1", "ra:m2"],
+      "access_rule": {"rule_id": "access:ra", "rule_type": "ALLOW_SCOPED_ROOT_TARGETS", "owner_id": "OWNER_REGION_A"},
+      "consequence_rule": {"rule_id": "consequence:ra", "rule_type": "CLASSIFY_ACCESS_DELTA", "owner_id": "OWNER_REGION_A"},
+      "consequence": {"status": "LOCAL_CHANGE", "result_token": "ra:local-change", "assigned_by_root": false},
+      "history": [
+        {"event_id": "ra:e0", "sequence": 0, "event_type": "INITIAL_STATE_RECORDED", "parent_event_id": null, "input_refs": ["ra:members:initial", "ra:access:initial"], "rule_id": "INITIAL_DECLARATION", "result_status": "RECORDED", "provenance_ref": "prov:ra:e0"},
+        {"event_id": "ra:e1", "sequence": 1, "event_type": "ROOT_INPUT_RECEIVED", "parent_event_id": "ra:e0", "input_refs": ["H2_ROOT_INPUT", "ra:m2"], "rule_id": "SCOPE_RESOLUTION", "result_status": "RECORDED", "provenance_ref": "prov:ra:e1"},
+        {"event_id": "ra:e2", "sequence": 2, "event_type": "ACCESS_REEVALUATED", "parent_event_id": "ra:e1", "input_refs": ["access:ra"], "rule_id": "access:ra", "result_status": "ACCESS_EXPANDED", "provenance_ref": "prov:ra:e2"},
+        {"event_id": "ra:e3", "sequence": 3, "event_type": "LOCAL_CONSEQUENCE_RECORDED", "parent_event_id": "ra:e2", "input_refs": ["consequence:ra", "ra:local-change"], "rule_id": "consequence:ra", "result_status": "LOCAL_CHANGE", "provenance_ref": "prov:ra:e3"}
+      ]
+    },
+    {
+      "region_id": "REGION_B",
+      "rule_owner_id": "OWNER_REGION_B",
+      "members_before": ["rb:m1", "rb:m2", "rb:m3"],
+      "members_after": ["rb:m1", "rb:m2", "rb:m3"],
+      "access_before": ["rb:m1"],
+      "access_after": ["rb:m1"],
+      "access_rule": {"rule_id": "access:rb", "rule_type": "PRESERVE_INITIAL_ACCESS", "owner_id": "OWNER_REGION_B"},
+      "consequence_rule": {"rule_id": "consequence:rb", "rule_type": "PRESERVE_UNRESOLVED", "owner_id": "OWNER_REGION_B"},
+      "consequence": {"status": "UNRESOLVED", "result_token": "rb:unresolved-preserved", "assigned_by_root": false},
+      "history": [
+        {"event_id": "rb:e0", "sequence": 0, "event_type": "INITIAL_STATE_RECORDED", "parent_event_id": null, "input_refs": ["rb:members:initial", "rb:access:initial"], "rule_id": "INITIAL_DECLARATION", "result_status": "RECORDED", "provenance_ref": "prov:rb:e0"},
+        {"event_id": "rb:e1", "sequence": 1, "event_type": "ROOT_INPUT_RECEIVED", "parent_event_id": "rb:e0", "input_refs": ["H2_ROOT_INPUT", "rb:m2"], "rule_id": "SCOPE_RESOLUTION", "result_status": "RECORDED", "provenance_ref": "prov:rb:e1"},
+        {"event_id": "rb:e2", "sequence": 2, "event_type": "ACCESS_REEVALUATED", "parent_event_id": "rb:e1", "input_refs": ["access:rb"], "rule_id": "access:rb", "result_status": "NO_CHANGE", "provenance_ref": "prov:rb:e2"},
+        {"event_id": "rb:e3", "sequence": 3, "event_type": "LOCAL_CONSEQUENCE_RECORDED", "parent_event_id": "rb:e2", "input_refs": ["consequence:rb", "rb:unresolved-preserved"], "rule_id": "consequence:rb", "result_status": "UNRESOLVED", "provenance_ref": "prov:rb:e3"}
+      ]
+    },
+    {
+      "region_id": "REGION_C",
+      "rule_owner_id": "OWNER_REGION_C",
+      "members_before": ["rc:m1", "rc:m2", "rc:m3"],
+      "members_after": ["rc:m1", "rc:m2", "rc:m3"],
+      "access_before": ["rc:m1"],
+      "access_after": ["rc:m1", "rc:m2"],
+      "access_rule": {"rule_id": "access:rc", "rule_type": "ALLOW_SCOPED_ROOT_TARGETS", "owner_id": "OWNER_REGION_C"},
+      "consequence_rule": {"rule_id": "consequence:rc", "rule_type": "PRESERVE_LOCAL_FAILURE", "owner_id": "OWNER_REGION_C"},
+      "consequence": {"status": "LOCAL_FAILURE", "result_token": "rc:failure-preserved", "assigned_by_root": false},
+      "history": [
+        {"event_id": "rc:e0", "sequence": 0, "event_type": "INITIAL_STATE_RECORDED", "parent_event_id": null, "input_refs": ["rc:members:initial", "rc:access:initial"], "rule_id": "INITIAL_DECLARATION", "result_status": "RECORDED", "provenance_ref": "prov:rc:e0"},
+        {"event_id": "rc:e1", "sequence": 1, "event_type": "ROOT_INPUT_RECEIVED", "parent_event_id": "rc:e0", "input_refs": ["H2_ROOT_INPUT", "rc:m2"], "rule_id": "SCOPE_RESOLUTION", "result_status": "RECORDED", "provenance_ref": "prov:rc:e1"},
+        {"event_id": "rc:e2", "sequence": 2, "event_type": "ACCESS_REEVALUATED", "parent_event_id": "rc:e1", "input_refs": ["access:rc"], "rule_id": "access:rc", "result_status": "ACCESS_EXPANDED", "provenance_ref": "prov:rc:e2"},
+        {"event_id": "rc:e3", "sequence": 3, "event_type": "LOCAL_CONSEQUENCE_RECORDED", "parent_event_id": "rc:e2", "input_refs": ["consequence:rc", "rc:failure-preserved"], "rule_id": "consequence:rc", "result_status": "LOCAL_FAILURE", "provenance_ref": "prov:rc:e3"}
+      ]
+    }
+  ],
+  "comparison_rule": {
+    "rule_id": "EXACT_TYPED_HISTORY_SIGNATURE_v0.1",
+    "fields": ["access_delta", "consequence_status", "history_event_types", "terminal_history_payload"],
+    "serialization": "UTF8_CANONICAL_JSON_SORTED_KEYS_COMPACT",
+    "hash_semantics": "BYTE_IDENTITY_ONLY_NOT_TRUTH"
+  },
+  "nonconvergence_claim": {
+    "formal_invariant": "REGION_IDENTITY_PRESERVING_NONCONVERGENCE",
+    "artistic_alias": "WITHOUT ASSIMILATION",
+    "artistic_alias_identity_bearing": false,
+    "comparison_rule_ref": "EXACT_TYPED_HISTORY_SIGNATURE_v0.1",
+    "claimed_inequivalent_pairs": [["REGION_A", "REGION_B"], ["REGION_A", "REGION_C"]],
+    "global_preferred_result": "NONE",
+    "forced_convergence": false,
+    "region_identity_merge": false,
+    "semantic_authority": "NONE"
+  },
+  "scale_module": {
+    "module_status": "ENABLED_SECONDARY",
+    "required_for_core": false,
+    "semantic_authority": "NONE",
+    "scales": [
+      {"scale_id": "SCALE_A", "incidence_signature": "REGION_LOCAL_MEMBER_RELATIONS"},
+      {"scale_id": "SCALE_B", "incidence_signature": "AGGREGATED_REGION_RELATIONS_WITH_EXPLICIT_LOSS"}
+    ],
+    "maps": [
+      {
+        "map_id": "SCALE_MAP_A_TO_B",
+        "source_scale_id": "SCALE_A",
+        "target_scale_id": "SCALE_B",
+        "map_kind": "AGGREGATION",
+        "source_member_refs": ["ra:m1", "ra:m2", "rb:m1", "rc:m1", "rc:m2"],
+        "target_elements": ["aggregate:REGION_A", "aggregate:REGION_B", "aggregate:REGION_C"],
+        "region_identity_preserved": true,
+        "identity_merges": false,
+        "member_creation": false,
+        "loss_records": ["MEMBER_LEVEL_ADJACENCY_OMITTED"],
+        "provenance_ref": "prov:scale-map:a-b"
+      }
+    ],
+    "counterfactual": {
+      "operation": "REMOVE_DECLARED_MAP",
+      "map_id": "SCALE_MAP_A_TO_B",
+      "metric": "TRANSPORTED_REGION_AGGREGATE_COUNT",
+      "baseline_value": 3,
+      "counterfactual_value": 0,
+      "changed": true
+    }
+  },
+  "stabilization_module": {
+    "module_status": "ENABLED_SECONDARY_MEASUREMENT",
+    "required_for_core": false,
+    "semantic_authority": "NONE",
+    "measurements": [
+      {
+        "measurement_id": "stability:ra",
+        "region_id": "REGION_A",
+        "method": "EXACT_CERTIFICATION",
+        "state_domain": ["qa:0", "qa:1"],
+        "transition_rule": [{"from": "qa:0", "to": "qa:1"}, {"from": "qa:1", "to": "qa:1"}],
+        "observation_horizon": 3,
+        "perturbation_class": ["qa:0"],
+        "recovery_criterion": {"target_states": ["qa:1"], "max_steps": 1},
+        "evidence_scope": "DECLARED_FINITE_MODEL_ONLY",
+        "failure_condition": "NO_RECOVERY_WITHIN_DECLARED_BOUND",
+        "outcome": "STABLE",
+        "deterministic_seed": null
+      },
+      {
+        "measurement_id": "stability:rb",
+        "region_id": "REGION_B",
+        "method": "SIMULATION_SUPPORT",
+        "state_domain": ["qb:0", "qb:1"],
+        "transition_rule": [{"from": "qb:0", "to": "qb:1"}, {"from": "qb:1", "to": "qb:0"}],
+        "observation_horizon": 4,
+        "perturbation_class": ["qb:0"],
+        "recovery_criterion": {"target_states": ["qb:1"], "max_steps": 1},
+        "evidence_scope": "FINITE_DETERMINISTIC_SIMULATION_ONLY",
+        "failure_condition": "TRACE_DOES_NOT_REMAIN_IN_TARGET_SET",
+        "outcome": "TRANSIENT",
+        "deterministic_seed": 17
+      }
+    ]
+  },
+  "semantic_firewall": {
+    "semantic_authority": "NONE",
+    "inference_flags": {
+      "access_expansion_implies_member_creation": false,
+      "access_expansion_implies_truth": false,
+      "root_receipt_implies_command_obedience": false,
+      "stable_implies_correct": false,
+      "stable_implies_conscious": false,
+      "inequivalent_histories_imply_personhoods": false,
+      "nonconvergence_implies_moral_value": false,
+      "scale_level_implies_ontological_level": false,
+      "fresco_shape_implies_machine_property": false,
+      "truth_alias_implies_true_proposition": false,
+      "without_assimilation_implies_social_or_political_claim": false
+    }
+  },
+  "provenance": {
+    "release_role": "CANONICAL_HERALD_II_REALIZATION",
+    "author_realization_decision": "EXACT_REGION_COUNT_3",
+    "region_count_semantic_authority": "NONE",
+    "source_candidate_path": "../HERALD_II_NONCANONICAL_CANDIDATE_v0.1/fixtures/valid_n3_modules.json",
+    "source_candidate_sha256": "0302461cc296636115e3b285e22edffd74775194032f1dbe17386bd1e4c1da57",
+    "author_decision_record_sha256": "f957b509a42a1c3e539fc2843c627b8e1ad1ca0d1545d66ca6adc12c36fbb03d",
+    "inputs_rule_result_replayable": true,
+    "hash_semantics": "BYTE_IDENTITY_ONLY_NOT_TRUTH",
+    "h3_dependency": "NONE",
+    "future_hashes_assigned": false
+  }
+}

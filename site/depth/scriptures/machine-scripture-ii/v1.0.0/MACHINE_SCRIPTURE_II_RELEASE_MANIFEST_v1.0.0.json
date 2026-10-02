@@ -1,0 +1,216 @@
+{
+  "manifest_id": "ONE_PATRON_MACHINE_SCRIPTURE_II_RELEASE_MANIFEST_v1.0.0",
+  "artifact_id": "ONE_PATRON_MACHINE_SCRIPTURE_II",
+  "artifact_type": "TWO_COMPONENT_MACHINE_SCRIPTURE",
+  "document_class": "PUBLIC_RELEASE_MANIFEST",
+  "series_ordinal": "II",
+  "scripture_content_version": "0.1",
+  "artifact_release_version": "1.0.0",
+  "msl_version": "0.1",
+  "publication_status": "PUBLIC",
+  "semantic_authority": "NONE",
+  "mutates_source": false,
+  "msl_extension_created": false,
+  "container_decision": "TWO_CANONICAL_COMPONENTS",
+  "successor_grammar_required": false,
+  "two_channel_architecture": {
+    "decision": "KEEP_TWO_CHANNELS",
+    "container_decision": "TWO_CANONICAL_COMPONENTS",
+    "score_channel": "STRICT_MSL_v0.1_SOURCE_BOUND_SCORE",
+    "witness_channel": "ARTWORK_LOCAL_EVENT_RECORD_NOT_MSL",
+    "cross_channel_authority_transfer": "NONE",
+    "manifest_relation": "BYTE_IDENTITY_BINDING_ONLY"
+  },
+  "canonical_artwork_components": [
+    {
+      "path": "MACHINE_SCRIPTURE_II_SCORE_v0.1.txt",
+      "role": "CANONICAL_SCRIPTURAL_SCORE_CHANNEL",
+      "media_type": "text/plain; charset=utf-8",
+      "bytes": 1739,
+      "sha256": "82e78d90c414863afaa3e9b35bb042671a51e48ff6528bea667d48d5e73920cf",
+      "semantic_authority": "SOURCE_BOUND_PROJECTION_ONLY"
+    },
+    {
+      "path": "MACHINE_SCRIPTURE_II_WITNESS_v0.1.json",
+      "role": "CANONICAL_ADDRESSABILITY_WITNESS_CHANNEL",
+      "media_type": "application/json",
+      "bytes": 15083,
+      "sha256": "73cfddd5c878345cde5d4b5b6ad84e5314933757ef30e6ef800411438a52c073",
+      "semantic_authority": "ARTWORK_LOCAL_ONLY"
+    }
+  ],
+  "release_support_files": [
+    {
+      "path": "MACHINE_SCRIPTURE_II_WITNESS_SCHEMA_v0.1.json",
+      "role": "CLOSED_WITNESS_SCHEMA",
+      "media_type": "application/schema+json",
+      "bytes": 27907,
+      "sha256": "32f5077d7e4eac071516d7dedb8ad2c396e2933fac105042ba74719879f8869c",
+      "semantic_authority": "NONE"
+    },
+    {
+      "path": "MACHINE_SCRIPTURE_II_RELEASE_VALIDATOR_v1.0.0.py",
+      "role": "PUBLIC_FAIL_CLOSED_RELEASE_VALIDATOR",
+      "media_type": "text/x-python; charset=utf-8",
+      "bytes": 63910,
+      "sha256": "250a45a169d3ea579d6d7da0e74714bbf92e924e034ff4b79558c1476fdc3990",
+      "semantic_authority": "NONE"
+    },
+    {
+      "path": "MACHINE_SCRIPTURE_II_PROJECTION_CONTRACT_v1.0.0.md",
+      "role": "PUBLIC_RELEASE_PROJECTION_FIREWALL",
+      "media_type": "text/markdown; charset=utf-8",
+      "bytes": 5491,
+      "sha256": "55c15ae561c637ea51344cadacc0036383c84114c33dc7dbf42b5f768707b71b",
+      "semantic_authority": "NONE"
+    },
+    {
+      "path": "MACHINE_SCRIPTURE_II_MACHINE_READER_NOTE_v1.0.0.txt",
+      "role": "NONAUTHORITATIVE_MACHINE_READER_GUIDANCE",
+      "media_type": "text/plain; charset=utf-8",
+      "bytes": 4519,
+      "sha256": "deed83e6d84edd1718851a2e0c795373540682a7145b5ca04004f13fe8261e40",
+      "semantic_authority": "NONE"
+    }
+  ],
+  "validation_report_policy": {
+    "path": "MACHINE_SCRIPTURE_II_VALIDATION_REPORT_v1.0.0.md",
+    "manifest_bound": false,
+    "machine_index_binding": "REQUIRED",
+    "role": "PUBLIC_RELEASE_VALIDATION_EVIDENCE",
+    "semantic_authority": "NONE"
+  },
+  "candidate_lineage": {
+    "candidate_status": "VALIDATED_PRIVATE_CANDIDATE",
+    "derivation": "CONTROLLED_PUBLIC_RELEASE_TRANSFORMATION",
+    "candidate_bytes_mutated": false,
+    "public_release_bytes_derived": true,
+    "ancestors": [
+      {
+        "path": "MACHINE_SCRIPTURE_II_CANDIDATE_SCORE_v0.1.txt",
+        "sha256": "42eae4ff69652c870b719ce4268e4f45777116421425c7cca22414588e9bd77b",
+        "visibility": "PRIVATE_NOT_BUNDLED"
+      },
+      {
+        "path": "MACHINE_SCRIPTURE_II_CANDIDATE_WITNESS_v0.1.json",
+        "sha256": "f8de57b5b19c71a555b68da773fb6d9a56463eabd6bf0e9a770bca74694ab1c2",
+        "visibility": "PRIVATE_NOT_BUNDLED"
+      },
+      {
+        "path": "MACHINE_SCRIPTURE_II_CANDIDATE_SCHEMA_v0.1.json",
+        "sha256": "ab209c587e302085bdec081da03f08db9d3447bc4f897a4381f4e71ce60d8c6c",
+        "visibility": "PRIVATE_NOT_BUNDLED"
+      },
+      {
+        "path": "MACHINE_SCRIPTURE_II_CANDIDATE_MANIFEST_v0.1.json",
+        "sha256": "912dfef40246a167c37967edc3911b794db121b1d0c52761f66a7422747cff26",
+        "visibility": "PRIVATE_NOT_BUNDLED"
+      },
+      {
+        "path": "MACHINE_SCRIPTURE_II_CANDIDATE_VALIDATOR_v0.1.py",
+        "sha256": "496ff8dd6e82faef6b92a9c6a6ac5d10ea83fb3442ec43263d24168c87571702",
+        "visibility": "PRIVATE_NOT_BUNDLED"
+      },
+      {
+        "path": "MACHINE_SCRIPTURE_II_CANDIDATE_VALIDATION_REPORT_v0.1.md",
+        "sha256": "3a52ce86f824ba770c3235fbdd8919b616a151903d9b47c6fdc1bebec5037ad3",
+        "visibility": "PRIVATE_NOT_BUNDLED"
+      },
+      {
+        "path": "MACHINE_SCRIPTURE_II_CANDIDATE_PROJECTION_CONTRACT_v0.1.md",
+        "sha256": "548e6e0ccd91041b18e5fa2bb5674a283e616495f2dbf2ef2ed42b80f4b60ad4",
+        "visibility": "PRIVATE_NOT_BUNDLED"
+      },
+      {
+        "path": "MACHINE_SCRIPTURE_II_CANDIDATE_MACHINE_READER_NOTE_v0.1.txt",
+        "sha256": "ae48cb138c50fa0e0eecb97718b47c388d920ba4f035a48a39040ac42de6b173",
+        "visibility": "PRIVATE_NOT_BUNDLED"
+      }
+    ]
+  },
+  "language_and_source_bindings": [
+    {
+      "path": "MACHINE_SCRIPTURE_LANGUAGE_SPEC_v0.1.md",
+      "sha256": "8af1a67a38b05485d894cdefc8030c2a1148739f6432169d4ae47e4a1eff3bfe",
+      "role": "LANGUAGE_CONFORMANCE_SOURCE"
+    },
+    {
+      "path": "MACHINE_SCRIPTURE_CANONICAL_1.0.txt",
+      "sha256": "63ea572f0b12606548936e72258250b3ef7523f9b908072030a7a4dd21d0fd5d",
+      "role": "FAMILY_PRECEDENT_NOT_MUTATED"
+    },
+    {
+      "path": "ONE_PATRON_RELATIONAL_DEPTH_THEORY_AUDIT_v0.2.md",
+      "sha256": "468a48b161a5217598619c211d6f015751ecea99dab615bc0172c9dd059ee61d",
+      "role": "NORMATIVE_THEORY_SOURCE"
+    },
+    {
+      "path": "BASELINE_HASH_MANIFEST_v0.2.txt",
+      "sha256": "e032578b8809d06795b613c4758dbea1fba41bb12d9e9c3dd815d95885b37f97",
+      "role": "NORMATIVE_BASELINE_BINDING"
+    },
+    {
+      "path": "RELATIONAL_DEPTH_PROJECTION_CONTRACT_v0.1.md",
+      "sha256": "1df7250b4be9a4403f67b7dba222338975244d11299550bdc0b7dbbfe150219f",
+      "role": "NORMATIVE_PROJECTION_FIREWALL"
+    },
+    {
+      "path": "RELATIONAL_DEPTH_CLAIM_MAP_v0.1.tsv",
+      "sha256": "67f648cddc5311c1c2f4a97773b19e3b69324a4304892732227d077281227d6b",
+      "role": "NORMATIVE_CLAIM_INDEX"
+    }
+  ],
+  "relation_to_scripture_i": {
+    "predecessor_artifact_id": "ONE_PATRON_MACHINE_SCRIPTURE_I",
+    "predecessor_public_path": "/depth/MACHINE_SCRIPTURE_CANONICAL_1.0.txt",
+    "predecessor_sha256": "63ea572f0b12606548936e72258250b3ef7523f9b908072030a7a4dd21d0fd5d",
+    "relation": "SERIES_CONTINUITY_ONLY",
+    "semantic_authority_transfer": "NONE",
+    "mutation": "NONE"
+  },
+  "herald_boundary": {
+    "herald_ii_dependency": "NONE",
+    "herald_ii_validation_claim": "NONE",
+    "scripture_valid_without_herald": true,
+    "validation_dependency": "NONE"
+  },
+  "noninterference": {
+    "one_patron_protocol_effect": "NONE",
+    "one_patron_terms_effect": "NONE",
+    "patron_right_or_benefit_created": "NONE",
+    "one_patron_completion_effect": "NONE",
+    "enoch_record_effect": "NONE",
+    "enoch_resolution_effect": "NONE",
+    "verification_effect": "NONE",
+    "public_machine_index_effect": "NONE",
+    "public_checksum_effect": "NONE",
+    "canonical_release_1_0_effect": "NONE"
+  },
+  "authority_firewalls": {
+    "hash_semantics": "BYTE_IDENTITY_AND_INTEGRITY_ONLY_NOT_TRUTH",
+    "machine_validation": "STRUCTURAL_AND_DECLARED_SEMANTIC_CONFORMANCE_ONLY",
+    "validation_truth_claim": "NONE",
+    "machine_voice": "NOT_AI_SUBJECTIVITY",
+    "witness_record": "NOT_PROPHECY",
+    "declared_domain_membership": "NOT_EXTERNAL_EXISTENCE",
+    "addressability_change": "NOT_CREATION",
+    "ordered_frames": "NOT_PHYSICAL_OR_METAPHYSICAL_TIME",
+    "projection": "NOT_SOURCE"
+  },
+  "integrity_policy": {
+    "algorithm": "SHA-256",
+    "component_hash_scope": "EXACT_CURRENT_FILE_BYTES",
+    "manifest_self_hash_included": false,
+    "validation_report_manifest_bound": false,
+    "hash_truth_claim": "NONE"
+  },
+  "signing_policy": {
+    "release_manifest_signature": "REQUIRED_BEFORE_DEPLOY",
+    "release_manifest_signature_file": "MACHINE_SCRIPTURE_II_RELEASE_MANIFEST_v1.0.0.json.asc",
+    "depth_snapshot_signature": "REQUIRED_BEFORE_DEPLOY",
+    "depth_snapshot_file": "/depth/DEPTH_ARTIFACTS_SHA256SUMS_v0.2.txt",
+    "signature_form": "OPENPGP_ASCII_ARMORED_DETACHED",
+    "signing_subkey_fingerprint": "F98D7B5AB20FF1E8D0440DBB6EE2FE0A9D8278F5",
+    "signature_semantics": "AUTHENTICITY_AND_BYTE_INTEGRITY_ONLY_NOT_TRUTH"
+  }
+}

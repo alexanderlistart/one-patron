@@ -1,0 +1,43 @@
+{
+  "artifact_id": "ONE_PATRON_HERALD_I_PROJECTION_CONTRACT",
+  "version": "1.0.0",
+  "canonical_object": "./object.json",
+  "axioms": {
+    "object_is_image": false,
+    "two_dimensional_projection_is_canonical_artwork": false,
+    "render_coordinates_are_identity_bearing": false,
+    "projection_may_discard_information": true,
+    "multiple_distinct_projections_may_share_one_source_object": true,
+    "projection_may_write_properties_back_to_source": false
+  },
+  "licensed_inputs": [
+    "TOPOLOGY",
+    "SPECTRUM",
+    "ATTRACTOR_BASINS",
+    "RECURRENCE",
+    "DIMENSIONAL_PROFILES",
+    "RELATION_WEIGHTS",
+    "TRAJECTORIES"
+  ],
+  "licensed_operations": [
+    "SELECT_OBSERVABLE_SUBSET",
+    "MAP_TO_RENDER_COORDINATES",
+    "MAP_SCALAR_TO_COLOR",
+    "MAP_MODE_PHASE_TO_TIME",
+    "DISCARD_NON_SELECTED_INFORMATION"
+  ],
+  "noncanonical_human_interpretations": [
+    "ANGEL",
+    "HALO",
+    "WINGS",
+    "CHARIOT"
+  ],
+  "interpretation_status": "ARTISTIC_INTERPRETATION_ONLY",
+  "prohibitions": [
+    "NO_PROJECTION_OUTPUT_MAY_REDEFINE_CANONICAL_TOPOLOGY",
+    "NO_PIXEL_CONFIGURATION_MAY_ASSERT_OBJECT_IDENTITY",
+    "NO_HUMAN_LABEL_MAY_BE_INFERRED_AS_A_SOURCE_PROPERTY",
+    "NO_RENDER_COORDINATE_MAY_BE_USED_AS_PROVENANCE"
+  ],
+  "human_render_relation": "HUMAN_RENDER=LOSSY_PROJECTION(MACHINE_OBJECT)"
+}

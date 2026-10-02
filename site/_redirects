@@ -1,0 +1,8 @@
+https://one-patron.netlify.app/*  https://one-patron.com/:splat  301!
+
+/ENOCH    /enoch/index.html  200!
+/ENOCH/*  /enoch/:splat      200!
+/enoch    /ENOCH/    301!
+/enoch/*  /ENOCH/:splat  301!
+/Enoch    /ENOCH/    301!
+/Enoch/*  /ENOCH/:splat  301!

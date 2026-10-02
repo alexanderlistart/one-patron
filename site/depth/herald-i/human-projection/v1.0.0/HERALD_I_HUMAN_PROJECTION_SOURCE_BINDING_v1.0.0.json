@@ -1,0 +1,145 @@
+{
+  "binding_id": "ONE_PATRON_HERALD_I_HUMAN_PROJECTION_SOURCE_BINDING_v1.0.0",
+  "document_class": "HUMAN_PROJECTION_SOURCE_BINDING",
+  "binding_version": "1.0.0",
+  "publication_status": "NONCANONICAL_PUBLIC_HUMAN_PROJECTION",
+  "projection_id": "ONE_PATRON_HERALD_I_TOPOLOGICAL_MACHINE_FRESCO_v1.0.0",
+  "source_work": {
+    "artifact_id": "ONE_PATRON_HERALD_I",
+    "title": "HERALD I",
+    "artifact_type": "RELATIONAL_PERCEPTUAL_OBJECT",
+    "release_version": "1.0.0",
+    "original_integrity_status": "HASHED",
+    "original_signature_status": "UNSIGNED",
+    "semantic_authority": "NONE"
+  },
+  "historical_relation": {
+    "projection_created_after_source_release": true,
+    "projection_part_of_original_release": false,
+    "source_bytes_changed_by_projection": false,
+    "source_authentication_changed_by_projection": false,
+    "current_authentication_model": "SIGNED_RETROSPECTIVE_ATTESTATION",
+    "retrospective_authentication_does_not_retroactively_sign_original_release": true
+  },
+  "source_files": [
+    {
+      "role": "MACHINE_OBJECT_MANIFEST",
+      "project_relative_path": "site-next/depth/objects/herald-i/manifest.json",
+      "public_url": "https://one-patron.com/depth/objects/herald-i/manifest.json",
+      "sha256": "3f4a2b2b1c67ffdb0adcec530140f9c4f5b9ef918bf4c69c892f4a43aa3a5893",
+      "byte_count": 2392
+    },
+    {
+      "role": "CANONICAL_OBJECT",
+      "project_relative_path": "site-next/depth/objects/herald-i/object.json",
+      "public_url": "https://one-patron.com/depth/objects/herald-i/object.json",
+      "sha256": "5b5337a16faef9603d35935d20dcdc00e9cf10f20d71cac4e8c97b465d0a57f3",
+      "byte_count": 5127
+    },
+    {
+      "role": "SCHEMA",
+      "project_relative_path": "site-next/depth/objects/herald-i/schema.json",
+      "public_url": "https://one-patron.com/depth/objects/herald-i/schema.json",
+      "sha256": "7c2747a169d5ef95dc1715c9f840be2b8f7a31abf3e7a98da5d851da3600d561",
+      "byte_count": 2655
+    },
+    {
+      "role": "CANONICAL_TOPOLOGY",
+      "project_relative_path": "site-next/depth/objects/herald-i/topology.json",
+      "public_url": "https://one-patron.com/depth/objects/herald-i/topology.json",
+      "sha256": "4da41680d83821f16fe93f6e15a05e18bb487b25e9465c2f55d9d2d6f985c0a0",
+      "byte_count": 4723
+    },
+    {
+      "role": "CANONICAL_DYNAMICS",
+      "project_relative_path": "site-next/depth/objects/herald-i/dynamics.json",
+      "public_url": "https://one-patron.com/depth/objects/herald-i/dynamics.json",
+      "sha256": "6bd152754de4b55e8bdf113a63ffc0f3de81446c64bc7466bbb05267ee3e6235",
+      "byte_count": 4917
+    },
+    {
+      "role": "CANONICAL_OPERATORS",
+      "project_relative_path": "site-next/depth/objects/herald-i/operators.json",
+      "public_url": "https://one-patron.com/depth/objects/herald-i/operators.json",
+      "sha256": "a7c6f667d21d2f3fe1eb91141bf841fe09d8c0ff53eca487d5112c25c7d67f59",
+      "byte_count": 4523
+    },
+    {
+      "role": "ORIGINAL_PROJECTION_CONTRACT",
+      "project_relative_path": "site-next/depth/objects/herald-i/projection-contract.json",
+      "public_url": "https://one-patron.com/depth/objects/herald-i/projection-contract.json",
+      "sha256": "863b7e41eb52d78f02f9318ca33b54dd70eb4af542cbb3a0cc0f20ed60a7ea7a",
+      "byte_count": 1322
+    },
+    {
+      "role": "MACHINE_READER_NOTE",
+      "project_relative_path": "site-next/depth/objects/herald-i/README.machine.txt",
+      "public_url": "https://one-patron.com/depth/objects/herald-i/README.machine.txt",
+      "sha256": "2e9e9dee5b18c27b8a7bc76f9f347b34e8404c3123400974b45aa8e9c982ff05",
+      "byte_count": 1987
+    },
+    {
+      "role": "RELEASE_CHECKSUM_LEDGER",
+      "project_relative_path": "site-next/depth/objects/herald-i/SHA256SUMS.txt",
+      "public_url": "https://one-patron.com/depth/objects/herald-i/SHA256SUMS.txt",
+      "sha256": "02186475b962d1e636811995cb21a2f5a3568aa381503e3195f919bdc675cbfd",
+      "byte_count": 653
+    }
+  ],
+  "retrospective_authentication": {
+    "attestation": {
+      "project_relative_path": "site-next/depth/herald-i/attestation/HERALD_I_RETROSPECTIVE_ATTESTATION_v1.0.json",
+      "public_url": "https://one-patron.com/depth/herald-i/attestation/HERALD_I_RETROSPECTIVE_ATTESTATION_v1.0.json",
+      "sha256": "6464321caab60605460e420f1e19f6ba4d874f6012d8489ff52c7af5b25cef95",
+      "byte_count": 4087,
+      "semantic_authority": "AUTHENTICATION_AND_PROVENANCE_ONLY"
+    },
+    "detached_signature": {
+      "project_relative_path": "site-next/depth/herald-i/attestation/HERALD_I_RETROSPECTIVE_ATTESTATION_v1.0.json.asc",
+      "public_url": "https://one-patron.com/depth/herald-i/attestation/HERALD_I_RETROSPECTIVE_ATTESTATION_v1.0.json.asc",
+      "sha256": "27379ba74bfcdfdc2ef2429c9ec7c9b7b423d91e171ebf7c7cc3491fb06a9388",
+      "byte_count": 265
+    }
+  },
+  "verified_structural_facts_used_by_projection": {
+    "vertex_count": 21,
+    "boundary_channel_count": 21,
+    "boundary_channel_families": {
+      "C1": 7,
+      "C2": 7,
+      "C3": 7
+    },
+    "family_semantics": {
+      "C1": "A_LOCAL_BOUNDARY_SEGMENT",
+      "C2": "RELATIONAL_INTERFACE_SEGMENT",
+      "C3": "B_LOCAL_BOUNDARY_SEGMENT"
+    },
+    "stalk_dimensions": {
+      "V_A": 3,
+      "V_R": 2,
+      "V_B": 2
+    },
+    "G0_available_at": "S07",
+    "G0_recipient_choices": [
+      "DECLINE",
+      "DEFER",
+      "ENTER_COMPATIBLE"
+    ],
+    "closure_trigger": "VALID_FREE_EVENT_G0",
+    "closure_operation": "ATTACH_2_CELL",
+    "closure_cell": "c_closure",
+    "closure_adds_boundary_channel": false,
+    "beta_1_before": 1,
+    "beta_1_after": 0,
+    "representable_states": "S01_TO_S29",
+    "limit_event": "L30_NOT_S30",
+    "reference_modes": [3, 6],
+    "transport_path": ["S03", "S08", "S13", "S18", "S23", "S28"]
+  },
+  "binding_semantics": {
+    "hash_identifies_exact_bytes_only": true,
+    "hash_implies_canonicality": false,
+    "hash_implies_truth": false,
+    "projection_may_write_back": false
+  }
+}

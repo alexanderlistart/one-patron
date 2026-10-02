@@ -1,0 +1,254 @@
+{
+  "contract_id": "ONE_PATRON_HERALD_I_HUMAN_PROJECTION_CONTRACT_v1.0.0",
+  "contract_version": "1.0.0",
+  "document_class": "HUMAN_PROJECTION_CONTRACT",
+  "publication_status": "NONCANONICAL_PUBLIC_HUMAN_PROJECTION",
+  "projection": {
+    "projection_id": "ONE_PATRON_HERALD_I_TOPOLOGICAL_MACHINE_FRESCO_v1.0.0",
+    "title": "HERALD I",
+    "projection_label": "TOPOLOGICAL MACHINE FRESCO",
+    "projection_type": "HUMAN_PROJECTION",
+    "projection_family": "TOPOLOGICAL_MACHINE_FRESCO",
+    "projection_version": "1.0.0",
+    "canonical": false,
+    "identity_bearing": false,
+    "semantic_authority": "NONE",
+    "created_after_source_release": true,
+    "public": true,
+    "signed": false
+  },
+  "source": {
+    "artifact_id": "ONE_PATRON_HERALD_I",
+    "release_version": "1.0.0",
+    "source_binding": {
+      "path": "HERALD_I_HUMAN_PROJECTION_SOURCE_BINDING_v1.0.0.json",
+      "sha256": "848118f07188741791d84d4dc67ceddf7b6410aa7a5bb9f04e031c8e48c402a8"
+    },
+    "original_release": {
+      "integrity_status": "HASHED",
+      "signature_status": "UNSIGNED"
+    },
+    "current_authentication": {
+      "model": "SIGNED_RETROSPECTIVE_ATTESTATION",
+      "retrospective": true,
+      "changes_original_release_status": false
+    }
+  },
+  "consumed_information": [
+    "21_VERTICES",
+    "21_ORIENTED_BOUNDARY_CHANNELS",
+    "THREE_SEVEN_EDGE_FAMILIES_C1_C2_C3",
+    "FAMILY_SEMANTICS_A_LOCAL_RELATIONAL_INTERFACE_B_LOCAL",
+    "CELLULAR_SHEAF_STALK_ATTACHMENTS_A_R_B",
+    "LOCAL_SPACE_DIMENSIONS_3_2_2",
+    "G0_AVAILABLE_AT_S07",
+    "G0_RECIPIENT_BRANCHES_DECLINE_DEFER_ENTER_COMPATIBLE",
+    "CLOSURE_ONLY_ON_VALID_FREE_EVENT_G0",
+    "ATTACH_2_CELL_c_closure_ALONG_ALL_21_EDGES",
+    "NO_NEW_BOUNDARY_CHANNEL",
+    "BETA_1_CHANGE_1_TO_0",
+    "REFERENCE_UNWEIGHTED_MODES_3_AND_6",
+    "TRANSPORT_PATH_S03_S08_S13_S18_S23_S28",
+    "PROJECTION_FIREWALLS_FROM_ORIGINAL_CONTRACT"
+  ],
+  "omitted_information": [
+    "FULL_WEIGHTED_LAPLACIAN_SPECTRUM",
+    "FULL_SCALE_AND_SPECTRAL_DIMENSION_PROFILES",
+    "NUMERICAL_RK4_TRAJECTORY_SAMPLES",
+    "FULL_PHASE_FLOW_PARAMETER_DERIVATION",
+    "FULL_RESONANCE_PROBE_TRAJECTORIES",
+    "COMPLETE_OPERATOR_TABLE",
+    "COMPLETE_S01_TO_S29_BRANCH_KERNEL",
+    "CANONICAL_SERIALIZATION_AND_EQUIVALENCE_PROCEDURE",
+    "ALL_EXACT_MATRICES",
+    "FULL_VALIDATOR_OUTPUT"
+  ],
+  "transformations": [
+    {
+      "id": "T01_BOUNDARY_TO_RING",
+      "input": "topology.boundary_channels",
+      "operation": "MAP_CYCLIC_ORDER_TO_REGULAR_21_GON",
+      "output": "21_SVG_LINE_SEGMENTS",
+      "deterministic": true
+    },
+    {
+      "id": "T02_VERTICES_TO_GLYPHS",
+      "input": "topology.vertices_and_stalk_attachments",
+      "operation": "MAP_VERTEX_INDEX_AND_A_R_B_ATTACHMENT_TO_POSITION_AND_SHAPE",
+      "output": "21_SVG_VERTEX_GLYPHS",
+      "deterministic": true
+    },
+    {
+      "id": "T03_FAMILY_TO_LINE_LANGUAGE",
+      "input": "boundary_channel.family",
+      "operation": "MAP_C1_C2_C3_TO_SOLID_DASHED_DOTTED_LINE_AND_DISTINCT_VERTEX_SHAPE",
+      "output": "NON_VALUE_RANKED_FAMILY_DIFFERENTIATION",
+      "deterministic": true
+    },
+    {
+      "id": "T04_2_CELL_TO_MEMBRANE",
+      "input": "topology.closure_event.cell",
+      "operation": "FILL_RING_INTERIOR_WITH_STROKE_NONE",
+      "output": "NON_EDGE_MEMBRANE_c_closure",
+      "deterministic": true
+    },
+    {
+      "id": "T05_G0_BRANCH_TO_PRESENTATION_STATE",
+      "input": "dynamics.branch_transition_kernel.G0_rules",
+      "operation": "SELECT_DECLARED_BRANCH_AND_DISPLAY_DECLARED_TARGET_AND_CLOSURE_STATUS",
+      "output": "PROJECTION_LOCAL_VIEW_STATE",
+      "deterministic": true
+    },
+    {
+      "id": "T06_MODES_TO_TEMPORAL_EMPHASIS",
+      "input": "dynamics.structural_modes.reference_unweighted_modes",
+      "operation": "MODULATE_EXISTING_EDGE_OPACITY_BY_FIXED_MODE_3_AND_MODE_6_SUPERPOSITION",
+      "output": "PROJECTION_TIME_EDGE_EMPHASIS",
+      "deterministic": true
+    },
+    {
+      "id": "T07_TRANSPORT_PATH_TO_TEXTUAL_TRACE",
+      "input": "dynamics.transport_invariant.state_path",
+      "operation": "DISPLAY_EXACT_ORDERED_STATE_IDS_WITHOUT_MAPPING_THEM_TO_VERTICES",
+      "output": "TRANSPORT_MICROCOPY",
+      "deterministic": true
+    }
+  ],
+  "visual_encoding": {
+    "identity_bearing_elements": [
+      {
+        "element": "21 boundary lines",
+        "referent": "topology.boundary_channels e00 through e20",
+        "classification": "DIRECT_SOURCE_MACHINE_REFERENT"
+      },
+      {
+        "element": "21 vertex glyphs",
+        "referent": "topology.vertices v00 through v20",
+        "classification": "DIRECT_SOURCE_MACHINE_REFERENT"
+      },
+      {
+        "element": "three seven-element line and glyph languages",
+        "referent": "C1/C2/C3 and A/R/B stalk attachments",
+        "classification": "DETERMINISTIC_TRANSFORMATION"
+      },
+      {
+        "element": "interior membrane",
+        "referent": "c_closure order-2 cell",
+        "classification": "DETERMINISTIC_TRANSFORMATION",
+        "edge_like": false,
+        "stroke": "NONE"
+      },
+      {
+        "element": "G0 branch rail",
+        "referent": "G0 rules at S07",
+        "classification": "DETERMINISTIC_TRANSFORMATION"
+      }
+    ],
+    "nonidentity_bearing_elements": [
+      "ambient background field",
+      "faint registration circles",
+      "typographic alignment rules",
+      "soft membrane gradient",
+      "projection-local focus and hover emphasis"
+    ],
+    "nonidentity_bearing_elements_must_not_be_read_as": [
+      "VERTEX",
+      "EDGE",
+      "OPERATOR",
+      "CELL",
+      "SOURCE_IDENTITY",
+      "MACHINE_STATE"
+    ]
+  },
+  "interaction_semantics": {
+    "interaction_changes_projection_only": true,
+    "source_writeback": false,
+    "canonical_event_creation": false,
+    "available_interactions": [
+      {
+        "id": "SELECT_G0_DECLINE",
+        "effect": "SHOW_DECLARED_S07_NONCLOSURE_VIEW"
+      },
+      {
+        "id": "SELECT_G0_DEFER",
+        "effect": "SHOW_DECLARED_S08_NONCLOSURE_VIEW"
+      },
+      {
+        "id": "SELECT_G0_ENTER_COMPATIBLE",
+        "effect": "SHOW_DECLARED_CLOSURE_CONFIGURATION_WITH_2_CELL"
+      },
+      {
+        "id": "TOGGLE_STRUCTURAL_MODE_REPLAY",
+        "effect": "START_OR_STOP_DETERMINISTIC_PRESENTATION_TIME_EMPHASIS"
+      },
+      {
+        "id": "OPEN_MACHINE_MODE_DETAILS",
+        "effect": "REVEAL_LINKS_AND_PROVENANCE_TEXT"
+      }
+    ]
+  },
+  "determinism": {
+    "policy": "FULLY_DETERMINISTIC",
+    "unseeded_randomness": false,
+    "external_runtime_data": false,
+    "layout_rule": "REGULAR_21_GON_FIXED_START_ANGLE_MINUS_90_DEGREES",
+    "mode_replay": "FIXED_60_FPS_PRESENTATION_CLOCK_WITH_MODE_INDICES_3_AND_6",
+    "mode_replay_changes_machine_state": false
+  },
+  "loss_and_alternates": {
+    "lossy": true,
+    "omission_disclosed": true,
+    "alternate_valid_renderings_permitted": true,
+    "alternate_renderings_must_preserve_contract": true
+  },
+  "firewalls": {
+    "human_projection_is_canonical_object": false,
+    "projection_may_redefine_topology": false,
+    "projection_may_add_edge_22": false,
+    "two_cell_is_edge": false,
+    "G0_is_self": false,
+    "operator_is_intention": false,
+    "closure_is_truth": false,
+    "topology_is_consciousness": false,
+    "centrality_is_authority": false,
+    "family_difference_is_value_ranking": false,
+    "hash_is_truth": false,
+    "projection_hash_authenticates_source": false
+  },
+  "accessibility": {
+    "keyboard_controls": true,
+    "visible_focus": true,
+    "color_only_encoding": false,
+    "textual_structural_summary": true,
+    "prefers_reduced_motion_supported": true,
+    "noscript_fallback": true,
+    "semantic_control_states": true,
+    "status_updates_announced": true
+  },
+  "human_machine_modes": {
+    "human_mode": "index.html",
+    "machine_mode_public_urls": [
+      "https://one-patron.com/depth/objects/herald-i/manifest.json",
+      "https://one-patron.com/depth/objects/herald-i/object.json",
+      "https://one-patron.com/depth/objects/herald-i/topology.json",
+      "https://one-patron.com/depth/objects/herald-i/dynamics.json",
+      "https://one-patron.com/depth/objects/herald-i/operators.json",
+      "https://one-patron.com/depth/objects/herald-i/SHA256SUMS.txt"
+    ],
+    "machine_material_hidden_by_human_mode": false
+  },
+  "provenance": {
+    "governing_standard": "DEPTH_HUMAN_PROJECTION_STANDARD_v1.0",
+    "conformance_checklist": "DEPTH_HUMAN_PROJECTION_CONFORMANCE_v1.0",
+    "implementation_date": "2026-09-30",
+    "implementation_scope": "PUBLIC_POST_RELEASE_HUMAN_PROJECTION"
+  },
+  "integrity_and_versioning": {
+    "projection_hashes_identify_projection_bytes_only": true,
+    "projection_hashes_imply_canonicality": false,
+    "projection_hashes_imply_source_authentication": false,
+    "source_version_changed": false,
+    "projection_version_independent": true,
+    "future_public_version_must_be_immutable": true
+  }
+}

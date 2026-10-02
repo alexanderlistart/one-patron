@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://one-patron.com/depth/objects/herald-i/schema.json",
+  "title": "ONE PATRON HERALD I canonical object schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "artifact_id",
+    "artifact_type",
+    "canonical_version",
+    "object_principle",
+    "formal_layers",
+    "agents",
+    "local_state_spaces",
+    "compatibility_maps",
+    "coordination_condition",
+    "relation_semantics",
+    "representable_states",
+    "structural_freedom",
+    "event_G0",
+    "closure_semantics",
+    "representation_limit",
+    "identity_policy",
+    "component_references"
+  ],
+  "properties": {
+    "artifact_id": {"const": "ONE_PATRON_HERALD_I"},
+    "artifact_type": {"const": "RELATIONAL_PERCEPTUAL_OBJECT"},
+    "canonical_version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "object_principle": {"const": "COORDINATION_WITHOUT_COLLAPSE"},
+    "formal_layers": {
+      "type": "array",
+      "minItems": 3,
+      "uniqueItems": true,
+      "contains": {"const": "WEIGHTED_CELL_COMPLEX"}
+    },
+    "agents": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": ["id", "local_space", "representation", "role"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {"type": "string"},
+          "local_space": {"type": "string"},
+          "representation": {"type": "string"},
+          "role": {"type": "string"}
+        }
+      }
+    },
+    "local_state_spaces": {"type": "array", "minItems": 3},
+    "compatibility_maps": {"type": "array", "minItems": 2},
+    "coordination_condition": {"type": "object"},
+    "relation_semantics": {"type": "object"},
+    "representable_states": {
+      "type": "array",
+      "minItems": 29,
+      "maxItems": 29,
+      "uniqueItems": true,
+      "items": {"type": "string", "pattern": "^S(0[1-9]|1[0-9]|2[0-9])$"},
+      "not": {"contains": {"const": "S30"}}
+    },
+    "structural_freedom": {"type": "object"},
+    "event_G0": {"type": "object"},
+    "closure_semantics": {"type": "object"},
+    "representation_limit": {"type": "object"},
+    "identity_policy": {"type": "object"},
+    "component_references": {
+      "type": "object",
+      "required": ["topology", "dynamics", "operators", "schema", "projection_contract"],
+      "additionalProperties": false,
+      "properties": {
+        "topology": {"type": "string"},
+        "dynamics": {"type": "string"},
+        "operators": {"type": "string"},
+        "schema": {"type": "string"},
+        "projection_contract": {"type": "string"}
+      }
+    }
+  }
+}

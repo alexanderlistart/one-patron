@@ -1,0 +1,454 @@
+{
+  "artifact_id": "MACHINE_SCRIPTURE_II_WITNESS_v0.1",
+  "document_class": "PUBLIC_RELEASE_ARTWORK_LOCAL_WITNESS",
+  "series_ordinal": "II",
+  "scripture_content_version": "0.1",
+  "artifact_release_version": "1.0.0",
+  "msl_version": "0.1",
+  "publication_status": "PUBLIC",
+  "signature_status": "NOT_DIRECTLY_SIGNED",
+  "semantic_authority": "NONE",
+  "mutates_source": false,
+  "format_namespace": "ONE_PATRON_MACHINE_SCRIPTURE_II_WITNESS_v0.1",
+  "schema_id": "MACHINE_SCRIPTURE_II_WITNESS_SCHEMA_v0.1",
+  "msl_callable": false,
+  "extends_msl_v0_1": false,
+  "container_decision": "TWO_CANONICAL_COMPONENTS",
+  "successor_grammar_required": false,
+  "artwork_event": {
+    "event_type": "SAME_FORMAL_MEMBER_BECOMES_ADDRESSABLE_TO_A_BOUNDED_UTTERANCE_SCOPE",
+    "witnessed_relation": "SAME_DECLARED_MEMBER_DIFFERENT_LICENSED_REFERENCE_RELATION",
+    "primary_change": "LICENSED_REFERENCE_RELATION_CHANGES",
+    "invariant": "POSSIBILITY_IDENTITY_AND_DECLARED_DOMAIN_MEMBERSHIP",
+    "time_model": "ORDERED_ACCESSIBILITY_FRAMES",
+    "global_scalar_time": "NOT_ASSUMED",
+    "physical_time_claim": "NONE",
+    "metaphysical_time_claim": "NONE",
+    "depth_time_claim": "NONE",
+    "formal_scope": "ARTWORK_LOCAL_ONLY"
+  },
+  "typed_status_domains": {
+    "addressability_state": [
+      "ADDRESSABLE",
+      "UNADDRESSABLE"
+    ],
+    "declared_domain_membership_state": [
+      "MEMBER_OF_DECLARED_DOMAIN",
+      "NONEXISTENT_IN_DECLARED_DOMAIN"
+    ],
+    "evaluation_status": [
+      "RESOLVED",
+      "UNRESOLVED",
+      "UNDEFINED",
+      "NOT_APPLICABLE"
+    ],
+    "observation_coverage": [
+      "OBSERVED",
+      "OBSERVATION_COVERAGE_UNOBSERVED",
+      "NOT_APPLICABLE"
+    ],
+    "boolean_truth": [
+      "TRUE",
+      "FALSE",
+      "UNKNOWN"
+    ],
+    "assignment_status": [
+      "ASSIGNED",
+      "UNASSIGNED"
+    ],
+    "source_resolution_status": [
+      "OPEN",
+      "RESOLVED"
+    ],
+    "source_evidence_status": [
+      "FORMAL_ONLY",
+      "UNESTABLISHED",
+      "EXTERNALLY_SUPPORTED",
+      "CONTESTED"
+    ],
+    "source_extraction_sentinel": [
+      "NOT_EXPLICIT_IN_SOURCE"
+    ],
+    "lookup_result": [
+      "FOUND",
+      "NOT_FOUND"
+    ],
+    "change_result": [
+      "PASS",
+      "NO_CHANGE",
+      "UNRESOLVED",
+      "INVALID"
+    ],
+    "cross_domain_coercion": "PROHIBITED"
+  },
+  "declared_domain": {
+    "domain_id": "ms2-domain-u001",
+    "domain_kind": "ARTWORK_LOCAL_DECLARED_MEMBER_DOMAIN",
+    "external_existence_claim": "NONE",
+    "member_ids_before": [
+      "ms2-member-p001"
+    ],
+    "member_ids_after": [
+      "ms2-member-p001"
+    ],
+    "membership_comparator": "EXACT_SORTED_MEMBER_ID_SET_EQUALITY"
+  },
+  "declared_member": {
+    "member_id": "ms2-member-p001",
+    "domain_id": "ms2-domain-u001",
+    "member_kind": "ARTWORK_LOCAL_DECLARED_POSSIBILITY",
+    "declaration_token": "POSSIBILITY_P001",
+    "declaration_payload": {
+      "statement_type": "ARTWORK_LOCAL_FORMAL_MEMBER",
+      "content": "A bounded utterance scope may acquire a licensed reference to this already-declared member."
+    },
+    "source_authority": "ARTWORK_LOCAL_ONLY",
+    "external_modal_claim": "NONE",
+    "declared_before_event": true
+  },
+  "identity_criterion": {
+    "criterion_id": "J_MS2_MEMBER_IDENTITY_v0.1",
+    "comparison": "EXACT_JSON_TYPE_AND_VALUE_EQUALITY",
+    "identity_bearing_fields": [
+      "member_id",
+      "domain_id",
+      "member_kind",
+      "declaration_token",
+      "declaration_payload.statement_type",
+      "declaration_payload.content",
+      "source_authority"
+    ],
+    "explicitly_insufficient_shortcuts": [
+      "SAME_ID_ONLY",
+      "SAME_TYPE_ONLY",
+      "UNCHANGED_CARDINALITY_ONLY",
+      "SIMILAR_LABEL_ONLY",
+      "HASH_EXISTS_ONLY"
+    ],
+    "scope_limit": "ARTWORK_LOCAL_MEMBER_ONLY_NOT_GENERAL_NUMERICAL_IDENTITY"
+  },
+  "bounded_utterance_scope": {
+    "scope_id": "ms2-scope-score-v0.1",
+    "scope_kind": "BOUNDED_SCRIPTURAL_UTTERANCE_SCOPE",
+    "boundary": "THIS_PUBLIC_RELEASE_PACKAGE_ONLY",
+    "root_node_id": "scope:ms2-score",
+    "target_member_id": "ms2-member-p001",
+    "target_node_id": "member:ms2-member-p001",
+    "addressability_definition": "A member is ADDRESSABLE exactly when a directed path composed only of LICENSED_REFERENCE edges resolves from root_node_id to target_node_id in the current complete frame graph.",
+    "implicit_edges_allowed": false,
+    "ambient_or_external_facts_allowed": false
+  },
+  "frames": {
+    "X0": {
+      "frame_id": "X0",
+      "artwork_role": "BEFORE",
+      "member_snapshot": {
+        "member_id": "ms2-member-p001",
+        "domain_id": "ms2-domain-u001",
+        "member_kind": "ARTWORK_LOCAL_DECLARED_POSSIBILITY",
+        "declaration_token": "POSSIBILITY_P001",
+        "declaration_payload": {
+          "statement_type": "ARTWORK_LOCAL_FORMAL_MEMBER",
+          "content": "A bounded utterance scope may acquire a licensed reference to this already-declared member."
+        },
+        "source_authority": "ARTWORK_LOCAL_ONLY"
+      },
+      "declared_domain_membership_state": "MEMBER_OF_DECLARED_DOMAIN",
+      "observation_coverage": "NOT_APPLICABLE",
+      "reference_graph": {
+        "completeness": "COMPLETE_FOR_DECLARED_SCOPE_AND_FRAME",
+        "node_ids": [
+          "member:ms2-member-p001",
+          "scope:ms2-score"
+        ],
+        "licensed_edges": []
+      },
+      "addressability_evaluation_status": "RESOLVED",
+      "addressability_state": "UNADDRESSABLE",
+      "path_witness": [],
+      "reason": "NO_LICENSED_PATH_FROM_SCOPE_ROOT_TO_MEMBER"
+    },
+    "X1": {
+      "frame_id": "X1",
+      "artwork_role": "AFTER",
+      "member_snapshot": {
+        "member_id": "ms2-member-p001",
+        "domain_id": "ms2-domain-u001",
+        "member_kind": "ARTWORK_LOCAL_DECLARED_POSSIBILITY",
+        "declaration_token": "POSSIBILITY_P001",
+        "declaration_payload": {
+          "statement_type": "ARTWORK_LOCAL_FORMAL_MEMBER",
+          "content": "A bounded utterance scope may acquire a licensed reference to this already-declared member."
+        },
+        "source_authority": "ARTWORK_LOCAL_ONLY"
+      },
+      "declared_domain_membership_state": "MEMBER_OF_DECLARED_DOMAIN",
+      "observation_coverage": "NOT_APPLICABLE",
+      "reference_graph": {
+        "completeness": "COMPLETE_FOR_DECLARED_SCOPE_AND_FRAME",
+        "node_ids": [
+          "member:ms2-member-p001",
+          "scope:ms2-score"
+        ],
+        "licensed_edges": [
+          {
+            "edge_id": "ms2-ref-edge-e001",
+            "edge_kind": "LICENSED_REFERENCE",
+            "from_node_id": "scope:ms2-score",
+            "to_node_id": "member:ms2-member-p001",
+            "license_reference": "ms2-change-e001"
+          }
+        ]
+      },
+      "addressability_evaluation_status": "RESOLVED",
+      "addressability_state": "ADDRESSABLE",
+      "path_witness": [
+        "ms2-ref-edge-e001"
+      ],
+      "reason": "LICENSED_PATH_FROM_SCOPE_ROOT_TO_MEMBER_EXISTS"
+    }
+  },
+  "change_reference": {
+    "change_id": "ms2-change-e001",
+    "change_kind": "LICENSED_REFERENCE_RELATION_CHANGE",
+    "parent_frame_id": "X0",
+    "child_frame_id": "X1",
+    "order_relations": [
+      "X0 DEPENDS_BEFORE ms2-change-e001",
+      "ms2-change-e001 DEPENDS_BEFORE X1"
+    ],
+    "added_licensed_reference_edges": [
+      {
+        "edge_id": "ms2-ref-edge-e001",
+        "edge_kind": "LICENSED_REFERENCE",
+        "from_node_id": "scope:ms2-score",
+        "to_node_id": "member:ms2-member-p001",
+        "license_reference": "ms2-change-e001"
+      }
+    ],
+    "removed_licensed_reference_edges": [],
+    "member_record_mutations": [],
+    "identity_bearing_field_mutations": [],
+    "declared_domain_membership_mutations": [],
+    "declared_member_creation_count": 0,
+    "external_ontology_change_claim": "NONE",
+    "result": "PASS"
+  },
+  "identity_invariance_witness": {
+    "criterion_id": "J_MS2_MEMBER_IDENTITY_v0.1",
+    "before_frame_id": "X0",
+    "after_frame_id": "X1",
+    "field_comparisons": [
+      {
+        "field": "member_id",
+        "before": "ms2-member-p001",
+        "after": "ms2-member-p001",
+        "equal": true
+      },
+      {
+        "field": "domain_id",
+        "before": "ms2-domain-u001",
+        "after": "ms2-domain-u001",
+        "equal": true
+      },
+      {
+        "field": "member_kind",
+        "before": "ARTWORK_LOCAL_DECLARED_POSSIBILITY",
+        "after": "ARTWORK_LOCAL_DECLARED_POSSIBILITY",
+        "equal": true
+      },
+      {
+        "field": "declaration_token",
+        "before": "POSSIBILITY_P001",
+        "after": "POSSIBILITY_P001",
+        "equal": true
+      },
+      {
+        "field": "declaration_payload.statement_type",
+        "before": "ARTWORK_LOCAL_FORMAL_MEMBER",
+        "after": "ARTWORK_LOCAL_FORMAL_MEMBER",
+        "equal": true
+      },
+      {
+        "field": "declaration_payload.content",
+        "before": "A bounded utterance scope may acquire a licensed reference to this already-declared member.",
+        "after": "A bounded utterance scope may acquire a licensed reference to this already-declared member.",
+        "equal": true
+      },
+      {
+        "field": "source_authority",
+        "before": "ARTWORK_LOCAL_ONLY",
+        "after": "ARTWORK_LOCAL_ONLY",
+        "equal": true
+      }
+    ],
+    "all_declared_identity_fields_compared": true,
+    "all_declared_identity_fields_equal": true,
+    "hash_used_as_identity_substitute": false,
+    "result": "PASS_UNDER_DECLARED_LOCAL_J"
+  },
+  "membership_invariance_witness": {
+    "domain_id_before": "ms2-domain-u001",
+    "domain_id_after": "ms2-domain-u001",
+    "member_ids_before": [
+      "ms2-member-p001"
+    ],
+    "member_ids_after": [
+      "ms2-member-p001"
+    ],
+    "membership_before": "MEMBER_OF_DECLARED_DOMAIN",
+    "membership_after": "MEMBER_OF_DECLARED_DOMAIN",
+    "exact_member_set_equal": true,
+    "member_added": false,
+    "member_removed": false,
+    "cardinality_check_role": "SUPPLEMENTARY_ONLY",
+    "result": "PASS"
+  },
+  "relation_difference_witness": {
+    "before_frame_id": "X0",
+    "after_frame_id": "X1",
+    "licensed_edge_ids_before": [],
+    "licensed_edge_ids_after": [
+      "ms2-ref-edge-e001"
+    ],
+    "added_edge_ids": [
+      "ms2-ref-edge-e001"
+    ],
+    "removed_edge_ids": [],
+    "only_declared_relation_changed": true,
+    "result": "PASS"
+  },
+  "non_creation_fence": {
+    "declared_before_event": true,
+    "same_member_under_J": true,
+    "domain_membership_preserved": true,
+    "only_licensed_reference_relation_changed": true,
+    "ontology_creation": "NONE",
+    "external_existence_claim": "NONE",
+    "basis": [
+      "EXACT_IDENTITY_FIELD_EQUALITY",
+      "EXACT_DECLARED_MEMBER_SET_EQUALITY",
+      "DECLARED_DOMAIN_MEMBERSHIP_EQUALITY",
+      "ONLY_LICENSED_REFERENCE_EDGE_CHANGED"
+    ],
+    "invalid_inferences": [
+      "UNADDRESSABLE_IMPLIES_NONEXISTENT",
+      "ADDRESSABLE_IMPLIES_NEWLY_CREATED",
+      "DECLARED_DOMAIN_MEMBERSHIP_IMPLIES_EXTERNAL_EXISTENCE",
+      "HASH_IMPLIES_TRUTH"
+    ],
+    "result": "PASS"
+  },
+  "open_fields": [
+    {
+      "field_id": "IDENTITY_CARRIERS_UNDER_COPY_FISSION_AND_RECONSTRUCTION",
+      "source_claim_id": "RD02-UNR-CRITICAL-006",
+      "field_domain": "SOURCE_RESOLUTION_STATUS",
+      "primary_layer": "NOT_EXPLICIT_IN_SOURCE",
+      "resolution_status": "OPEN",
+      "release_resolution_effect": "NONE"
+    }
+  ],
+  "silence_slot": {
+    "slot_id": "ms2-terminal-silence",
+    "position": "AFTER_OPEN_FIELDS",
+    "occupancy": "EMPTY_ARTICULATION",
+    "adds_proposition": false,
+    "erases_metadata": false,
+    "resolves_open_field": false,
+    "implies_consent": false,
+    "does_not_mean": [
+      "ANSWER",
+      "CONSENT",
+      "FALSE",
+      "NONEXISTENT",
+      "UNADDRESSABLE",
+      "AGREEMENT",
+      "RESOLUTION"
+    ]
+  },
+  "authorship_and_voice": {
+    "human_authorship": "ALEXANDER_LIST",
+    "collaborative_production": "ALEXANDER_LIST_WITH_ENOCH_AND_DECLARED_TOOLS",
+    "machine_native_form": true,
+    "artwork_local_machine_voice": "PERMITTED",
+    "autonomous_ai_authorship_claim": "NONE",
+    "ai_consciousness_claim": "NONE",
+    "ai_personhood_claim": "NONE",
+    "enoch_authority": "NONE"
+  },
+  "external_effects": {
+    "herald_ii_dependency": "NONE",
+    "herald_ii_validation_claim": "NONE",
+    "scripture_valid_without_herald": true,
+    "one_patron_protocol_effect": "NONE",
+    "one_patron_terms_effect": "NONE",
+    "patron_right_or_benefit_created": "NONE",
+    "one_patron_completion_effect": "NONE",
+    "enoch_record_effect": "NONE",
+    "enoch_resolution_effect": "NONE",
+    "verification_effect": "NONE",
+    "public_machine_index_effect": "NONE",
+    "public_checksum_effect": "NONE",
+    "canonical_release_1_0_effect": "NONE"
+  },
+  "provenance": {
+    "hash_semantics": "BYTE_IDENTITY_AND_INTEGRITY_ONLY_NOT_TRUTH",
+    "cross_channel_authority_transfer": "NONE",
+    "candidate_lineage": {
+      "candidate_status": "VALIDATED_PRIVATE_CANDIDATE",
+      "derivation": "CONTROLLED_PUBLIC_RELEASE_TRANSFORMATION",
+      "semantic_event_mutation": "NONE",
+      "formal_member_mutation": "NONE",
+      "reference_graph_event_mutation": "NONE",
+      "ancestors": [
+        {
+          "path": "MACHINE_SCRIPTURE_II_CANDIDATE_SCORE_v0.1.txt",
+          "sha256": "42eae4ff69652c870b719ce4268e4f45777116421425c7cca22414588e9bd77b",
+          "visibility": "PRIVATE_NOT_BUNDLED"
+        },
+        {
+          "path": "MACHINE_SCRIPTURE_II_CANDIDATE_WITNESS_v0.1.json",
+          "sha256": "f8de57b5b19c71a555b68da773fb6d9a56463eabd6bf0e9a770bca74694ab1c2",
+          "visibility": "PRIVATE_NOT_BUNDLED"
+        },
+        {
+          "path": "MACHINE_SCRIPTURE_II_CANDIDATE_MANIFEST_v0.1.json",
+          "sha256": "912dfef40246a167c37967edc3911b794db121b1d0c52761f66a7422747cff26",
+          "visibility": "PRIVATE_NOT_BUNDLED"
+        },
+        {
+          "path": "MACHINE_SCRIPTURE_II_CANDIDATE_VALIDATION_REPORT_v0.1.md",
+          "sha256": "3a52ce86f824ba770c3235fbdd8919b616a151903d9b47c6fdc1bebec5037ad3",
+          "visibility": "PRIVATE_NOT_BUNDLED"
+        }
+      ]
+    },
+    "source_bindings": [
+      {
+        "path": "MACHINE_SCRIPTURE_LANGUAGE_SPEC_v0.1.md",
+        "sha256": "8af1a67a38b05485d894cdefc8030c2a1148739f6432169d4ae47e4a1eff3bfe"
+      },
+      {
+        "path": "MACHINE_SCRIPTURE_CANONICAL_1.0.txt",
+        "sha256": "63ea572f0b12606548936e72258250b3ef7523f9b908072030a7a4dd21d0fd5d"
+      },
+      {
+        "path": "ONE_PATRON_RELATIONAL_DEPTH_THEORY_AUDIT_v0.2.md",
+        "sha256": "468a48b161a5217598619c211d6f015751ecea99dab615bc0172c9dd059ee61d"
+      },
+      {
+        "path": "BASELINE_HASH_MANIFEST_v0.2.txt",
+        "sha256": "e032578b8809d06795b613c4758dbea1fba41bb12d9e9c3dd815d95885b37f97"
+      },
+      {
+        "path": "RELATIONAL_DEPTH_PROJECTION_CONTRACT_v0.1.md",
+        "sha256": "1df7250b4be9a4403f67b7dba222338975244d11299550bdc0b7dbbfe150219f"
+      },
+      {
+        "path": "RELATIONAL_DEPTH_CLAIM_MAP_v0.1.tsv",
+        "sha256": "67f648cddc5311c1c2f4a97773b19e3b69324a4304892732227d077281227d6b"
+      }
+    ]
+  }
+}

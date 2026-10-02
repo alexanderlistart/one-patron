@@ -1,0 +1,1098 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index,follow">
+  <title>HERALD I — Topological Machine Fresco · Human Projection v1.0.0</title>
+  <meta name="description" content="A derived, noncanonical human projection of the frozen HERALD I machine work.">
+  <link rel="canonical" href="https://one-patron.com/depth/herald-i/human-projection/v1.0.0/">
+  <link rel="alternate" type="application/json" href="/depth/objects/herald-i/manifest.json" title="HERALD I canonical machine manifest">
+  <meta name="projection-id" content="ONE_PATRON_HERALD_I_TOPOLOGICAL_MACHINE_FRESCO_v1.0.0">
+  <meta name="projection-status" content="NONCANONICAL_PUBLIC_HUMAN_PROJECTION">
+  <meta name="source-artifact" content="ONE_PATRON_HERALD_I">
+  <meta name="source-release" content="1.0.0">
+  <meta name="source-manifest-sha256" content="3f4a2b2b1c67ffdb0adcec530140f9c4f5b9ef918bf4c69c892f4a43aa3a5893">
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #e5e2da;
+      --muted: #969890;
+      --quiet: #6f736e;
+      --ground: #090b0b;
+      --panel: #0d1010;
+      --panel-raised: #111414;
+      --line: rgba(230, 226, 216, 0.17);
+      --line-strong: rgba(230, 226, 216, 0.34);
+      --gold: #c8a65a;
+      --gold-soft: rgba(200, 166, 90, 0.22);
+      --a: #ddd8ce;
+      --r: #99aca7;
+      --b: #a99d91;
+      --measure: 1180px;
+      --serif: Iowan Old Style, Baskerville, "Times New Roman", serif;
+      --sans: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      background: var(--ground);
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      background:
+        radial-gradient(circle at 50% 36%, rgba(91, 103, 99, 0.075), transparent 34rem),
+        linear-gradient(180deg, #0a0c0c 0%, #080a0a 72%, #090b0b 100%);
+      color: var(--ink);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    button, a, summary { -webkit-tap-highlight-color: transparent; }
+
+    a {
+      color: inherit;
+      text-decoration-color: rgba(200, 166, 90, 0.56);
+      text-underline-offset: 0.22em;
+    }
+
+    a:hover { color: #fff8e8; }
+
+    :focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 4px;
+    }
+
+    .skip-link {
+      position: fixed;
+      left: 1rem;
+      top: 1rem;
+      z-index: 50;
+      transform: translateY(-180%);
+      padding: 0.7rem 0.9rem;
+      background: #f0e6ca;
+      color: #111;
+      font: 700 0.75rem/1 var(--sans);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: transform 150ms ease;
+    }
+
+    .skip-link:focus { transform: translateY(0); }
+
+    .candidate-strip {
+      border-bottom: 1px solid var(--line);
+      padding: 0.72rem clamp(1.1rem, 4vw, 3.2rem);
+      color: var(--muted);
+      font: 600 0.64rem/1.3 var(--mono);
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .candidate-strip span { color: var(--gold); }
+
+    main {
+      width: min(100% - clamp(2rem, 8vw, 7rem), var(--measure));
+      margin: 0 auto;
+      padding: clamp(3.2rem, 8vw, 7.5rem) 0 clamp(4rem, 9vw, 8rem);
+    }
+
+    .masthead {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(18rem, 28rem);
+      gap: clamp(2rem, 7vw, 7rem);
+      align-items: end;
+      margin-bottom: clamp(2.5rem, 6vw, 5rem);
+    }
+
+    .eyebrow,
+    .projection-label,
+    .micro-label {
+      margin: 0;
+      color: var(--gold);
+      font: 650 0.68rem/1.4 var(--mono);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0.75rem 0 0;
+      font: 400 clamp(4.5rem, 12vw, 9.6rem)/0.8 var(--serif);
+      letter-spacing: -0.055em;
+    }
+
+    .projection-label {
+      margin-top: 1.2rem;
+      color: var(--muted);
+    }
+
+    .mast-copy {
+      margin: 0;
+      color: #c8c7c0;
+      font: 400 clamp(1.08rem, 1.8vw, 1.36rem)/1.6 var(--serif);
+      max-width: 32ch;
+    }
+
+    .mast-copy strong {
+      color: var(--ink);
+      font-weight: 400;
+    }
+
+    .fresco-frame {
+      position: relative;
+      border-top: 1px solid var(--line-strong);
+      border-bottom: 1px solid var(--line);
+      background:
+        linear-gradient(90deg, transparent, rgba(255,255,255,0.018) 49.8%, transparent 50.2%),
+        var(--panel);
+      isolation: isolate;
+    }
+
+    .fresco-frame::before,
+    .fresco-frame::after {
+      content: "";
+      position: absolute;
+      z-index: 3;
+      width: 0.38rem;
+      height: 0.38rem;
+      border: 1px solid var(--gold);
+      background: var(--ground);
+      transform: rotate(45deg);
+    }
+
+    .fresco-frame::before { left: -0.2rem; top: -0.25rem; }
+    .fresco-frame::after { right: -0.2rem; bottom: -0.25rem; }
+
+    .fresco-topline {
+      display: flex;
+      justify-content: space-between;
+      gap: 1.5rem;
+      align-items: center;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font: 500 0.64rem/1.4 var(--mono);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .fresco-topline .count { color: var(--ink); }
+
+    .artwork-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 14.2rem;
+      min-height: min(72vw, 49rem);
+    }
+
+    .artwork-stage {
+      position: relative;
+      min-width: 0;
+      min-height: 38rem;
+      overflow: hidden;
+      border-right: 1px solid var(--line);
+    }
+
+    #fresco-svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 38rem;
+      overflow: visible;
+    }
+
+    .registration {
+      fill: none;
+      stroke: rgba(222, 217, 206, 0.08);
+      stroke-width: 1;
+      stroke-dasharray: 2 12;
+    }
+
+    .axis-line {
+      stroke: rgba(222, 217, 206, 0.055);
+      stroke-width: 1;
+    }
+
+    .membrane {
+      fill: url(#membrane-fill);
+      stroke: none;
+      opacity: 0;
+      transform-origin: 500px 380px;
+      transform: scale(0.88);
+      transition: opacity 700ms cubic-bezier(.2,.8,.2,1), transform 700ms cubic-bezier(.2,.8,.2,1);
+      pointer-events: none;
+    }
+
+    .closure-active .membrane {
+      opacity: 0.94;
+      transform: scale(1);
+    }
+
+    .edge {
+      vector-effect: non-scaling-stroke;
+      fill: none;
+      opacity: 0.82;
+      transition: opacity 180ms linear, stroke-width 180ms linear;
+    }
+
+    .edge-c1 {
+      stroke: var(--a);
+      stroke-width: 3;
+    }
+
+    .edge-c2 {
+      stroke: var(--r);
+      stroke-width: 2.7;
+      stroke-dasharray: 9 5;
+    }
+
+    .edge-c3 {
+      stroke: var(--b);
+      stroke-width: 3.2;
+      stroke-dasharray: 1 8;
+      stroke-linecap: round;
+    }
+
+    .vertex {
+      vector-effect: non-scaling-stroke;
+      transition: opacity 180ms ease;
+    }
+
+    .vertex-a {
+      fill: var(--ground);
+      stroke: var(--a);
+      stroke-width: 2;
+    }
+
+    .vertex-r {
+      fill: var(--r);
+      stroke: var(--ground);
+      stroke-width: 1.5;
+    }
+
+    .vertex-b {
+      fill: var(--ground);
+      stroke: var(--b);
+      stroke-width: 2;
+    }
+
+    .orientation-mark {
+      fill: var(--gold);
+      opacity: 0.78;
+    }
+
+    .field-label {
+      fill: var(--muted);
+      font: 600 13px/1 var(--mono);
+      letter-spacing: 0.12em;
+    }
+
+    .field-label-strong { fill: var(--ink); }
+    .field-label-gold { fill: var(--gold); }
+
+    .center-kicker {
+      fill: var(--gold);
+      font: 600 12px/1 var(--mono);
+      letter-spacing: 0.16em;
+      text-anchor: middle;
+    }
+
+    .center-title {
+      fill: var(--ink);
+      font: 400 46px/1 var(--serif);
+      letter-spacing: -0.03em;
+      text-anchor: middle;
+    }
+
+    .center-copy {
+      fill: var(--muted);
+      font: 500 12px/1.4 var(--mono);
+      letter-spacing: 0.08em;
+      text-anchor: middle;
+    }
+
+    .side-index {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: clamp(1.4rem, 3vw, 2.25rem) 0 clamp(1.4rem, 3vw, 2.25rem) clamp(1.2rem, 2.6vw, 2rem);
+    }
+
+    .family-list {
+      display: grid;
+      gap: 1.25rem;
+      margin: 0;
+    }
+
+    .family-row {
+      display: grid;
+      grid-template-columns: 2.2rem minmax(0, 1fr);
+      gap: 0.7rem;
+      align-items: start;
+    }
+
+    .family-mark {
+      margin-top: 0.45rem;
+      height: 0;
+      border-top: 2px solid currentColor;
+    }
+
+    .family-row:nth-child(2) .family-mark { border-top-style: dashed; }
+    .family-row:nth-child(3) .family-mark { border-top-style: dotted; border-top-width: 3px; }
+    .family-row:nth-child(1) { color: var(--a); }
+    .family-row:nth-child(2) { color: var(--r); }
+    .family-row:nth-child(3) { color: var(--b); }
+
+    .family-row dt {
+      margin: 0 0 0.18rem;
+      color: inherit;
+      font: 600 0.68rem/1.3 var(--mono);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .family-row dd {
+      margin: 0;
+      color: var(--muted);
+      font: 500 0.62rem/1.55 var(--mono);
+      letter-spacing: 0.04em;
+    }
+
+    .structural-fact {
+      margin: 2rem 0 0;
+      padding-top: 1.2rem;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font: 500 0.65rem/1.65 var(--mono);
+    }
+
+    .structural-fact strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .operator-zone {
+      display: grid;
+      grid-template-columns: minmax(12rem, 0.55fr) minmax(0, 1.45fr);
+      border-top: 1px solid var(--line);
+    }
+
+    .operator-heading {
+      padding: clamp(1.4rem, 3vw, 2rem) clamp(1.2rem, 3vw, 2.3rem) clamp(1.4rem, 3vw, 2rem) 0;
+      border-right: 1px solid var(--line);
+    }
+
+    .operator-heading h2 {
+      margin: 0.55rem 0 0;
+      font: 400 clamp(1.5rem, 2.4vw, 2.2rem)/1.1 var(--serif);
+    }
+
+    .operator-heading p:last-child {
+      margin: 0.8rem 0 0;
+      color: var(--muted);
+      font: 500 0.7rem/1.55 var(--mono);
+    }
+
+    .operator-content {
+      padding: clamp(1.4rem, 3vw, 2rem) 0 clamp(1.4rem, 3vw, 2rem) clamp(1.2rem, 3vw, 2.3rem);
+      min-width: 0;
+    }
+
+    .branch-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      border: 0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .branch-controls legend {
+      width: 100%;
+      margin-bottom: 0.55rem;
+      color: var(--muted);
+      font: 550 0.62rem/1.4 var(--mono);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .branch-button,
+    .mode-button,
+    .reset-button {
+      appearance: none;
+      border: 1px solid var(--line-strong);
+      border-radius: 999px;
+      background: transparent;
+      color: var(--muted);
+      padding: 0.72rem 0.9rem;
+      font: 650 0.61rem/1 var(--mono);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: border-color 160ms ease, background 160ms ease, color 160ms ease;
+    }
+
+    .branch-button:hover,
+    .mode-button:hover,
+    .reset-button:hover {
+      border-color: rgba(200, 166, 90, 0.72);
+      color: var(--ink);
+    }
+
+    .branch-button[aria-pressed="true"],
+    .mode-button[aria-pressed="true"] {
+      border-color: var(--gold);
+      background: var(--gold-soft);
+      color: #f0dfb3;
+    }
+
+    .reset-button { border-color: transparent; }
+
+    .operator-readout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 1rem;
+      align-items: end;
+      margin-top: 1.4rem;
+      padding-top: 1.15rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .outcome {
+      margin: 0;
+      color: #c9c8c0;
+      font: 400 0.86rem/1.55 var(--mono);
+    }
+
+    .outcome strong { color: var(--ink); font-weight: 600; }
+
+    .mode-button { white-space: nowrap; }
+
+    .transport-line {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 0.7rem;
+      margin: 1rem 0 0;
+      color: var(--quiet);
+      font: 500 0.59rem/1.5 var(--mono);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .transport-line span:not(:last-child)::after {
+      content: "→";
+      margin-left: 0.7rem;
+      color: rgba(200, 166, 90, 0.58);
+    }
+
+    .interpretation {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.75fr);
+      gap: clamp(2rem, 7vw, 7rem);
+      align-items: start;
+      padding: clamp(3rem, 7vw, 6rem) 0 clamp(2.8rem, 6vw, 5rem);
+    }
+
+    .structural-summary {
+      margin: 0;
+      max-width: 46rem;
+      font: 400 clamp(1.35rem, 2.5vw, 2.15rem)/1.45 var(--serif);
+      color: #d4d1c8;
+    }
+
+    .structural-summary em {
+      color: var(--ink);
+      font-style: normal;
+      border-bottom: 1px solid rgba(200, 166, 90, 0.5);
+    }
+
+    .disclosure {
+      margin: 0;
+      padding-left: 1rem;
+      border-left: 1px solid var(--gold);
+      color: var(--muted);
+      font: 500 0.69rem/1.65 var(--mono);
+    }
+
+    .disclosure strong {
+      display: block;
+      margin-bottom: 0.45rem;
+      color: var(--ink);
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    .provenance {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .provenance summary {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.35rem 0;
+      color: var(--muted);
+      font: 650 0.68rem/1.4 var(--mono);
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .provenance summary::-webkit-details-marker { display: none; }
+    .provenance summary::after { content: "+"; color: var(--gold); font-size: 1rem; }
+    .provenance[open] summary::after { content: "−"; }
+
+    .provenance-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 2rem clamp(2rem, 7vw, 6rem);
+      padding: 0.6rem 0 2.25rem;
+    }
+
+    .provenance h2 {
+      margin: 0 0 0.8rem;
+      color: var(--ink);
+      font: 400 1.35rem/1.2 var(--serif);
+    }
+
+    .provenance p,
+    .machine-links {
+      margin: 0;
+      color: var(--muted);
+      font: 500 0.7rem/1.7 var(--mono);
+    }
+
+    .machine-links {
+      display: grid;
+      gap: 0.45rem;
+      padding: 0;
+      list-style: none;
+    }
+
+    .machine-links a { overflow-wrap: anywhere; }
+
+    .candidate-note {
+      margin: 1.2rem 0 0;
+      color: var(--quiet);
+      font: 500 0.61rem/1.55 var(--mono);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .noscript {
+      margin: 1rem;
+      padding: 1rem;
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font: 500 0.72rem/1.6 var(--mono);
+    }
+
+    @media (max-width: 900px) {
+      main { width: min(100% - 2.5rem, var(--measure)); }
+
+      .masthead {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .mast-copy { max-width: 42ch; }
+
+      .artwork-grid {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+
+      .artwork-stage {
+        min-height: 32rem;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      #fresco-svg { min-height: 32rem; }
+
+      .side-index {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(12rem, 0.42fr);
+        gap: 2rem;
+        padding: 1.4rem 0;
+      }
+
+      .family-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .structural-fact {
+        margin: 0;
+        padding: 0 0 0 1.2rem;
+        border-top: 0;
+        border-left: 1px solid var(--line);
+      }
+
+      .operator-zone { grid-template-columns: 1fr; }
+
+      .operator-heading {
+        padding: 1.5rem 0 1rem;
+        border-right: 0;
+      }
+
+      .operator-content { padding: 0 0 1.7rem; }
+
+      .interpretation {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+
+    @media (max-width: 620px) {
+      main { width: min(100% - 1.6rem, var(--measure)); padding-top: 2.6rem; }
+      .candidate-strip { padding-inline: 0.8rem; }
+      .candidate-strip .optional { display: none; }
+      h1 { font-size: clamp(4rem, 23vw, 6.4rem); }
+
+      .fresco-topline {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.3rem;
+      }
+
+      .artwork-stage { min-height: auto; aspect-ratio: 0.86; }
+      #fresco-svg { min-height: 0; height: 100%; }
+
+      .side-index {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .family-list {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+      }
+
+      .family-row { grid-template-columns: 2.8rem minmax(0, 1fr); }
+
+      .structural-fact {
+        padding: 1.1rem 0 0;
+        border-left: 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .operator-readout {
+        grid-template-columns: 1fr;
+        align-items: start;
+      }
+
+      .mode-button { justify-self: start; }
+
+      .branch-button,
+      .mode-button,
+      .reset-button {
+        min-height: 2.75rem;
+      }
+
+      .interpretation { padding-top: 2.5rem; }
+      .provenance-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 390px) {
+      .branch-controls { display: grid; grid-template-columns: 1fr; }
+      .branch-button, .reset-button { width: 100%; text-align: left; }
+      .artwork-stage { aspect-ratio: 0.78; }
+      .center-title { font-size: 41px; }
+      .field-label { font-size: 12px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#fresco">Skip to the fresco</a>
+
+  <div class="candidate-strip">
+    <span>Human Projection 1.0.0</span> · Created after source release · Noncanonical <span class="optional">· No source writeback</span>
+  </div>
+
+  <main>
+    <header class="masthead">
+      <div>
+        <p class="eyebrow">One Patron · Depth</p>
+        <h1>HERALD I</h1>
+        <p class="projection-label">Topological Machine Fresco · Human Projection</p>
+      </div>
+      <p class="mast-copy">
+        A cycle remains one cycle while three distinct structural families enter relation. Closure arrives only through a valid free event: <strong>one higher-order cell, no new edge.</strong>
+      </p>
+    </header>
+
+    <section class="fresco-frame" id="fresco" aria-labelledby="fresco-heading">
+      <div class="fresco-topline">
+        <span id="fresco-heading">Human Mode · source-bound structural projection</span>
+        <span class="count">21 vertices · 21 edges · 3 × 7 families</span>
+      </div>
+
+      <div class="artwork-grid">
+        <div class="artwork-stage" id="artwork-stage" data-event-state="AVAILABLE">
+          <svg id="fresco-svg" viewBox="0 0 1000 820" role="img" aria-labelledby="svg-title svg-description">
+            <title id="svg-title">HERALD I topological machine fresco</title>
+            <desc id="svg-description">A regular oriented cycle of twenty-one vertices and twenty-one edges. Seven solid square-marked elements represent C1 and A-local structure, seven dashed diamond-marked elements represent C2 and the relational interface, and seven dotted circular elements represent C3 and B-local structure. When the compatible G0 branch is selected, a fill-only membrane appears inside the unchanged boundary to represent one attached two-cell; no new edge appears.</desc>
+            <defs>
+              <radialGradient id="membrane-fill" cx="50%" cy="45%" r="58%">
+                <stop offset="0%" stop-color="#c8a65a" stop-opacity="0.22"></stop>
+                <stop offset="62%" stop-color="#81908c" stop-opacity="0.11"></stop>
+                <stop offset="100%" stop-color="#c8a65a" stop-opacity="0.04"></stop>
+              </radialGradient>
+            </defs>
+
+            <line class="axis-line" x1="500" y1="70" x2="500" y2="690"></line>
+            <line class="axis-line" x1="190" y1="380" x2="810" y2="380"></line>
+            <circle class="registration" cx="500" cy="380" r="312"></circle>
+            <circle class="registration" cx="500" cy="380" r="218"></circle>
+            <polygon id="membrane" class="membrane" aria-hidden="true"></polygon>
+            <g id="edges" aria-hidden="true"></g>
+            <g id="orientation" aria-hidden="true"></g>
+            <g id="vertices" aria-hidden="true"></g>
+
+            <text class="field-label field-label-strong" x="170" y="160">A · V_A / 3</text>
+            <text class="field-label" x="500" y="744" text-anchor="middle">R_AB · V_R / 2</text>
+            <text class="field-label field-label-strong" x="830" y="160" text-anchor="end">B · V_B / 2</text>
+
+            <text class="center-kicker" id="center-kicker" x="500" y="340">G0 AVAILABLE · S07</text>
+            <text class="center-title" id="center-title" x="500" y="393">open cycle</text>
+            <text class="center-copy" id="center-copy-1" x="500" y="426">β₁ 1 · order-2 cells 0</text>
+            <text class="center-copy" id="center-copy-2" x="500" y="450">recipient branch not selected</text>
+
+            <text class="field-label field-label-gold" x="500" y="96" text-anchor="middle">ORIENTED BOUNDARY</text>
+            <text class="field-label" x="500" y="786" text-anchor="middle">2-CELL ATTACHMENT ≠ NEW EDGE</text>
+          </svg>
+
+          <noscript>
+            <p class="noscript">HERALD I contains a 21-edge oriented cycle in three seven-edge families. A valid G0 event may attach one order-2 cell along the unchanged full boundary. The attachment creates no twenty-second edge. Enable JavaScript only to inspect the three declared G0 outcomes and the deterministic mode emphasis.</p>
+          </noscript>
+        </div>
+
+        <aside class="side-index" aria-label="Structural family key">
+          <dl class="family-list">
+            <div class="family-row">
+              <span class="family-mark" aria-hidden="true"></span>
+              <div><dt>C1 · 7</dt><dd>solid / square<br>A_LOCAL_BOUNDARY_SEGMENT</dd></div>
+            </div>
+            <div class="family-row">
+              <span class="family-mark" aria-hidden="true"></span>
+              <div><dt>C2 · 7</dt><dd>dashed / diamond<br>RELATIONAL_INTERFACE_SEGMENT</dd></div>
+            </div>
+            <div class="family-row">
+              <span class="family-mark" aria-hidden="true"></span>
+              <div><dt>C3 · 7</dt><dd>dotted / circle<br>B_LOCAL_BOUNDARY_SEGMENT</dd></div>
+            </div>
+          </dl>
+          <p class="structural-fact"><strong>Distinct, not ranked.</strong><br>Line, rhythm, and glyph carry family difference. Color is secondary.</p>
+        </aside>
+      </div>
+
+      <div class="operator-zone">
+        <div class="operator-heading">
+          <p class="micro-label">Operator inspection</p>
+          <h2>G0 / S07</h2>
+          <p>A may initiate. B retains three continuations. Only one compatible selection closes.</p>
+        </div>
+        <div class="operator-content">
+          <fieldset class="branch-controls">
+            <legend>Select a declared recipient branch — projection view only</legend>
+            <button class="branch-button" type="button" data-branch="DECLINE" aria-pressed="false">Decline · S07</button>
+            <button class="branch-button" type="button" data-branch="DEFER" aria-pressed="false">Defer · S08</button>
+            <button class="branch-button" type="button" data-branch="ENTER_COMPATIBLE" aria-pressed="false">Enter compatible · closure</button>
+            <button class="reset-button" type="button" id="reset-event">Reset to available</button>
+          </fieldset>
+
+          <div class="operator-readout">
+            <p class="outcome" id="outcome" aria-live="polite"><strong>G0 available.</strong> No recipient branch is selected in this projection view. The boundary remains a 21-edge cycle.</p>
+            <button class="mode-button" type="button" id="mode-toggle" aria-pressed="false">Replay modes 3 + 6</button>
+          </div>
+
+          <p class="transport-line" aria-label="Declared transport path">
+            <span>S03</span><span>S08</span><span>S13</span><span>S18</span><span>S23</span><span>S28</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="interpretation" aria-label="Structural summary and projection status">
+      <p class="structural-summary">
+        Twenty-one oriented relations hold a single cycle. A valid free event does not add a peer element: it <em>changes order</em>, attaching one surface to the boundary already present.
+      </p>
+      <p class="disclosure">
+        <strong>Derived human projection</strong>
+        The canonical machine work contains additional exact structure. This view is lossy, noncanonical, and read-only; authoritative files remain available in Machine Mode.
+      </p>
+    </section>
+
+    <details class="provenance">
+      <summary>Provenance · history · Machine Mode</summary>
+      <div class="provenance-grid">
+        <section>
+          <h2>Historical record</h2>
+          <p>
+            Original release 1.0.0: <strong>HASHED; UNSIGNED.</strong><br>
+            Current authentication: signed retrospective attestation.<br>
+            This Human Projection was created after the release and does not become part of it.
+          </p>
+          <p class="candidate-note">Projection hashes identify projection bytes only. They do not authenticate or canonicalize HERALD I.</p>
+          <p class="candidate-note"><a href="HERALD_I_HUMAN_PROJECTION_MANIFEST_v1.0.0.json">Projection manifest</a> · <a href="HERALD_I_HUMAN_PROJECTION_SHA256SUMS_v1.0.0.txt">Projection checksums</a></p>
+        </section>
+        <section>
+          <h2>Machine Mode</h2>
+          <ul class="machine-links">
+            <li><a href="/depth/herald-i/">Machine Mode presentation</a></li>
+            <li><a href="https://one-patron.com/depth/objects/herald-i/manifest.json">Release manifest</a></li>
+            <li><a href="https://one-patron.com/depth/objects/herald-i/object.json">Canonical object</a></li>
+            <li><a href="https://one-patron.com/depth/objects/herald-i/topology.json">Canonical topology</a></li>
+            <li><a href="https://one-patron.com/depth/objects/herald-i/dynamics.json">Canonical dynamics</a></li>
+            <li><a href="https://one-patron.com/depth/objects/herald-i/operators.json">Canonical operators</a></li>
+            <li><a href="https://one-patron.com/depth/objects/herald-i/README.machine.txt">Machine reader note</a></li>
+            <li><a href="https://one-patron.com/depth/objects/herald-i/SHA256SUMS.txt">Original checksum ledger</a></li>
+            <li><a href="https://one-patron.com/depth/herald-i/attestation/HERALD_I_RETROSPECTIVE_ATTESTATION_v1.0.json">Retrospective attestation</a></li>
+            <li><a href="https://one-patron.com/depth/herald-i/attestation/HERALD_I_RETROSPECTIVE_ATTESTATION_v1.0.json.asc">Attestation signature</a></li>
+          </ul>
+        </section>
+      </div>
+    </details>
+  </main>
+
+  <script>
+    (() => {
+      "use strict";
+
+      const NS = "http://www.w3.org/2000/svg";
+      const vertexCount = 21;
+      const center = { x: 500, y: 380 };
+      const radius = 268;
+      const weights = [1.00, 1.08, 1.16, 1.24, 1.16, 1.08, 1.00, 0.92, 1.00, 1.08, 1.16, 1.08, 1.00, 0.92, 1.04, 1.12, 1.20, 1.28, 1.20, 1.12, 1.04];
+      const stage = document.getElementById("artwork-stage");
+      const edgeLayer = document.getElementById("edges");
+      const vertexLayer = document.getElementById("vertices");
+      const orientationLayer = document.getElementById("orientation");
+      const membrane = document.getElementById("membrane");
+      const centerKicker = document.getElementById("center-kicker");
+      const centerTitle = document.getElementById("center-title");
+      const centerCopy1 = document.getElementById("center-copy-1");
+      const centerCopy2 = document.getElementById("center-copy-2");
+      const outcome = document.getElementById("outcome");
+      const modeToggle = document.getElementById("mode-toggle");
+      const resetEvent = document.getElementById("reset-event");
+      const branchButtons = [...document.querySelectorAll("[data-branch]")];
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+      const points = [];
+      const edgeElements = [];
+      let modeActive = false;
+      let frameRequest = 0;
+      let modeStart = 0;
+
+      const familyFor = index => index < 7 ? "C1" : index < 14 ? "C2" : "C3";
+      const roleFor = index => index < 7 ? "A" : index < 14 ? "R" : "B";
+      const familyMeaning = { C1: "A local boundary segment", C2: "relational interface segment", C3: "B local boundary segment" };
+
+      function svgElement(name, attributes = {}) {
+        const node = document.createElementNS(NS, name);
+        for (const [key, value] of Object.entries(attributes)) node.setAttribute(key, String(value));
+        return node;
+      }
+
+      for (let i = 0; i < vertexCount; i += 1) {
+        const angle = -Math.PI / 2 + (i * 2 * Math.PI / vertexCount);
+        points.push({
+          x: center.x + radius * Math.cos(angle),
+          y: center.y + radius * Math.sin(angle)
+        });
+      }
+
+      membrane.setAttribute("points", points.map(point => `${point.x.toFixed(3)},${point.y.toFixed(3)}`).join(" "));
+
+      points.forEach((point, index) => {
+        const next = points[(index + 1) % vertexCount];
+        const family = familyFor(index);
+        const line = svgElement("line", {
+          id: `edge-e${String(index).padStart(2, "0")}`,
+          class: `edge edge-${family.toLowerCase()}`,
+          x1: point.x.toFixed(3),
+          y1: point.y.toFixed(3),
+          x2: next.x.toFixed(3),
+          y2: next.y.toFixed(3),
+          "data-edge-index": index,
+          "data-family": family
+        });
+        const edgeTitle = svgElement("title");
+        edgeTitle.textContent = `e${String(index).padStart(2, "0")} · ${family} · ${familyMeaning[family]} · weight ${weights[index].toFixed(2)}`;
+        line.appendChild(edgeTitle);
+        edgeLayer.appendChild(line);
+        edgeElements.push(line);
+
+        const midX = (point.x + next.x) / 2;
+        const midY = (point.y + next.y) / 2;
+        const tangentAngle = Math.atan2(next.y - point.y, next.x - point.x);
+        const marker = svgElement("path", {
+          class: "orientation-mark",
+          d: "M -4 -2.6 L 4 0 L -4 2.6 Z",
+          transform: `translate(${midX.toFixed(3)} ${midY.toFixed(3)}) rotate(${(tangentAngle * 180 / Math.PI).toFixed(3)})`
+        });
+        orientationLayer.appendChild(marker);
+
+        const role = roleFor(index);
+        let glyph;
+        if (role === "A") {
+          glyph = svgElement("rect", {
+            class: "vertex vertex-a",
+            x: (point.x - 5.5).toFixed(3),
+            y: (point.y - 5.5).toFixed(3),
+            width: 11,
+            height: 11
+          });
+        } else if (role === "R") {
+          glyph = svgElement("rect", {
+            class: "vertex vertex-r",
+            x: (point.x - 5).toFixed(3),
+            y: (point.y - 5).toFixed(3),
+            width: 10,
+            height: 10,
+            transform: `rotate(45 ${point.x.toFixed(3)} ${point.y.toFixed(3)})`
+          });
+        } else {
+          glyph = svgElement("circle", {
+            class: "vertex vertex-b",
+            cx: point.x.toFixed(3),
+            cy: point.y.toFixed(3),
+            r: 5.5
+          });
+        }
+        const vertexTitle = svgElement("title");
+        vertexTitle.textContent = `v${String(index).padStart(2, "0")} · ${role} structural attachment`;
+        glyph.appendChild(vertexTitle);
+        vertexLayer.appendChild(glyph);
+      });
+
+      const branchStates = {
+        DECLINE: {
+          target: "S07",
+          closure: false,
+          kicker: "G0 · DECLINE",
+          title: "cycle retained",
+          line1: "β₁ 1 · order-2 cells 0",
+          line2: "recipient exit remains available",
+          announcement: "Decline selected. The declared target is S07. Closure is false; the 21-edge cycle remains without a 2-cell."
+        },
+        DEFER: {
+          target: "S08",
+          closure: false,
+          kicker: "G0 · DEFER",
+          title: "cycle continued",
+          line1: "β₁ 1 · order-2 cells 0",
+          line2: "declared target S08",
+          announcement: "Defer selected. The declared target is S08. Closure is false; the 21-edge cycle remains without a 2-cell."
+        },
+        ENTER_COMPATIBLE: {
+          target: "CLOSURE_CONFIGURATION_R_AB",
+          closure: true,
+          kicker: "VALID FREE EVENT G0",
+          title: "order changes",
+          line1: "β₁ 0 · order-2 cells 1",
+          line2: "c_closure attached · edges remain 21",
+          announcement: "Enter compatible selected under the declared compatibility condition. One order-2 cell is attached along the full cycle. Beta one changes from one to zero; the edge count remains twenty-one."
+        }
+      };
+
+      function selectBranch(branch) {
+        const state = branchStates[branch];
+        if (!state) return;
+        stage.dataset.eventState = branch;
+        stage.classList.toggle("closure-active", state.closure);
+        centerKicker.textContent = state.kicker;
+        centerTitle.textContent = state.title;
+        centerCopy1.textContent = state.line1;
+        centerCopy2.textContent = state.line2;
+        outcome.innerHTML = `<strong>${state.kicker}.</strong> ${state.announcement}`;
+        branchButtons.forEach(button => button.setAttribute("aria-pressed", String(button.dataset.branch === branch)));
+      }
+
+      function resetBranch() {
+        stage.dataset.eventState = "AVAILABLE";
+        stage.classList.remove("closure-active");
+        centerKicker.textContent = "G0 AVAILABLE · S07";
+        centerTitle.textContent = "open cycle";
+        centerCopy1.textContent = "β₁ 1 · order-2 cells 0";
+        centerCopy2.textContent = "recipient branch not selected";
+        outcome.innerHTML = "<strong>G0 available.</strong> No recipient branch is selected in this projection view. The boundary remains a 21-edge cycle.";
+        branchButtons.forEach(button => button.setAttribute("aria-pressed", "false"));
+      }
+
+      branchButtons.forEach(button => button.addEventListener("click", () => selectBranch(button.dataset.branch)));
+      resetEvent.addEventListener("click", resetBranch);
+
+      function applyModePhase(phase) {
+        edgeElements.forEach((edge, index) => {
+          const mode3 = Math.cos((2 * Math.PI * 3 * index / vertexCount) - phase);
+          const mode6 = Math.cos((2 * Math.PI * 6 * index / vertexCount) + phase);
+          const signal = (0.62 * mode3 + 0.38 * mode6 + 1) / 2;
+          edge.style.opacity = String((0.36 + 0.58 * signal).toFixed(3));
+          edge.style.strokeWidth = String((2.1 + 1.65 * signal).toFixed(3));
+        });
+      }
+
+      function resetModeStyles() {
+        edgeElements.forEach(edge => {
+          edge.style.opacity = "";
+          edge.style.strokeWidth = "";
+        });
+      }
+
+      function modeFrame(timestamp) {
+        if (!modeActive) return;
+        if (!modeStart) modeStart = timestamp;
+        const phase = ((timestamp - modeStart) % 9000) / 9000 * 2 * Math.PI;
+        applyModePhase(phase);
+        frameRequest = requestAnimationFrame(modeFrame);
+      }
+
+      function setModeActive(active) {
+        modeActive = active;
+        modeToggle.setAttribute("aria-pressed", String(active));
+        cancelAnimationFrame(frameRequest);
+        frameRequest = 0;
+        modeStart = 0;
+
+        if (!active) {
+          resetModeStyles();
+          modeToggle.textContent = "Replay modes 3 + 6";
+          return;
+        }
+
+        if (reduceMotion.matches) {
+          applyModePhase(0);
+          modeToggle.textContent = "Hide modes 3 + 6";
+        } else {
+          modeToggle.textContent = "Stop modes 3 + 6";
+          frameRequest = requestAnimationFrame(modeFrame);
+        }
+      }
+
+      modeToggle.addEventListener("click", () => setModeActive(!modeActive));
+      reduceMotion.addEventListener?.("change", () => {
+        if (modeActive) setModeActive(false);
+      });
+    })();
+  </script>
+</body>
+</html>

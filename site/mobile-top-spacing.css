@@ -1,0 +1,14 @@
+@media (max-width: 760px) {
+  :root {
+    --mobile-first-content-gap: 44px;
+  }
+
+  main > .hero:first-child,
+  main#artifact {
+    padding-top: var(--mobile-first-content-gap);
+  }
+
+  main > .hero:first-child .hero-mobile-row {
+    align-items: flex-start;
+  }
+}

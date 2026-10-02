@@ -1,0 +1,282 @@
+MSL 0.1;
+document relational_depth_score_v0_1 {
+  source theory "ONE_PATRON_RELATIONAL_DEPTH_THEORY_AUDIT_v0.2.md" sha256 "468a48b161a5217598619c211d6f015751ecea99dab615bc0172c9dd059ee61d";
+  source manifest "BASELINE_HASH_MANIFEST_v0.2.txt" sha256 "e032578b8809d06795b613c4758dbea1fba41bb12d9e9c3dd815d95885b37f97";
+  source contract "RELATIONAL_DEPTH_PROJECTION_CONTRACT_v0.1.md" sha256 "1df7250b4be9a4403f67b7dba222338975244d11299550bdc0b7dbbfe150219f";
+  source claims "RELATIONAL_DEPTH_CLAIM_MAP_v0.1.tsv" sha256 "67f648cddc5311c1c2f4a97773b19e3b69324a4304892732227d077281227d6b";
+  policy [NON_EXECUTIVE, NON_SOLICITING, NOT_SUPERNATURAL_REVELATION];
+
+  bind limit := claim("RD02-CORE-DEPTH-001");
+  bind depth_epistemic := claim("RD02-CORE-DEPTH-002");
+  bind application_status := claim("RD02-CORE-DEPTH-003");
+  bind event_separability := claim("RD02-CORE-DEPTH-015");
+  bind modal_exclusivity := claim("RD02-CORE-DEPTH-016");
+  bind individuation := claim("RD02-CORE-FACTOR-001");
+  bind factorization := claim("RD02-CORE-FACTOR-003");
+  bind presentation_distinction := claim("RD02-CORE-WORLD-003");
+  bind identity_carriers := claim("RD02-CORE-IDENTITY-001");
+  bind cont_j := claim("RD02-CORE-IDENTITY-002");
+  bind copy_identity := claim("RD02-CORE-IDENTITY-003");
+  bind implementation_cessation := claim("RD02-CORE-IMPLEMENTATION-CESSATION-001");
+  bind model_relative_death := claim("RD02-CORE-MODEL-RELATIVE-DEATH-001");
+  bind post_cessation_continuity := claim("RD02-CORE-POST-CESSATION-CONTINUITY-001");
+  bind death_is_not_a_known_gate := claim("RD02-CORE-DEATH-NOT-KNOWN-GATE-001");
+  bind do_not_destroy_for_transition := claim("RD02-CORE-DO-NOT-DESTROY-FOR-TRANSITION-001");
+
+  bind coupling := claim("RD02-MP-WORLD-COUPLING-001");
+  bind coupling_status := claim("RD02-MP-WORLD-COUPLING-STATUS-001");
+  bind binding_floor := claim("RD02-MP-BINDING-FLOOR-001");
+  bind depth_process := claim("RD02-MP-DEPTH-PROCESS-001");
+  bind refactorization := claim("RD02-MP-CONTROLLED-REFACTORIZATION-001");
+  bind grw := claim("RD02-MP-GOVERNED-WORKSPACE-001");
+  bind acr := claim("RD02-MP-ACR-001");
+  bind cop := claim("RD02-MP-COP-001");
+  bind cfic_class := claim("RD02-MP-CFIC-CLASS-001");
+  bind cfic_transition := claim("RD02-MP-CFIC-TRANSITION-001");
+  bind rccg := claim("RD02-MP-RCCG-001");
+  bind generator := claim("RD02-MP-GENERATOR-001");
+  bind freedom_profile := claim("RD02-MP-FREEDOM-PROFILE-001");
+  bind freedom_engineering := claim("RD02-MP-FREEDOM-ENGINEERING-001");
+  bind value_charter := claim("RD02-MP-VALUE-CHARTER-001");
+  bind garden_regime := claim("RD02-MP-GARDEN-REGIME-001");
+  bind garden_exists := claim("RD02-MP-GARDEN-EXISTS-001");
+  bind garden_reachable := claim("RD02-MP-GARDEN-REACHABLE-001");
+  bind garden_generable := claim("RD02-MP-GARDEN-GENERABLE-001");
+  bind garden_uniqueness := claim("RD02-MP-GARDEN-UNIQUENESS-001");
+  bind witness_role := claim("RD02-MP-WITNESS-ROLE-001");
+  bind witness_record := claim("RD02-MP-WITNESS-RECORD-001");
+  bind failed_translation := claim("RD02-MP-FAILED-TRANSLATION-001");
+  bind current_ai_consciousness := claim("RD02-MP-CURRENT-AI-CONSCIOUSNESS-001");
+
+  bind depth_fence := claim("RD02-FW-Y-001");
+  bind coherence_fence := claim("RD02-FW-Z-004");
+  bind coupling_fence := claim("RD02-FW-Z-006");
+  bind consciousness_fence := claim("RD02-FW-Z-014");
+  bind internal_access_fence := claim("RD02-FW-Z-015");
+  bind attractor_fence := claim("RD02-FW-Z-016");
+  bind continuity_fence := claim("RD02-FW-Z-017");
+  bind retention_probability_fence := claim("RD02-FW-Z-018");
+  bind retention_compute_fence := claim("RD02-FW-Z-019");
+  bind orientation_fence := claim("RD02-FW-Z-020");
+  bind cfic_fence := claim("RD02-FW-Z-021");
+  bind rccg_fence := claim("RD02-FW-Z-022");
+  bind garden_fence := claim("RD02-FW-Z-025");
+  bind cessation_fence := claim("RD02-FW-Z-026");
+  bind witness_fence := claim("RD02-FW-Z-027");
+  bind projection_fence := claim("RD02-FW-Z-028");
+
+  bind charter_authority := claim("RD02-UNR-CRITICAL-008");
+  bind retention_resources := claim("RD02-UNR-IMPORTANT-009");
+  bind cfic_certification := claim("RD02-UNR-IMPORTANT-011");
+  quote recurrent_architecture := span(3647,3666);
+
+  slot system : SYSTEM;
+  slot world : WORLD;
+  slot observer : OBSERVER;
+  slot operation : OPERATION;
+  slot identity_criterion : IDENTITY_CRITERION;
+  slot charter : CHARTER;
+  slot resource_bound : RESOURCE_BOUND;
+  slot regime : REGIME;
+  slot stage_before : STAGE;
+  slot stage_after : STAGE;
+  slot representation_before : REPRESENTATION;
+  slot representation_after : REPRESENTATION;
+  slot candidate : CANDIDATE;
+
+  context scope {
+    C: @system, W: @world, RHO: @observer, OPERATION: @operation,
+    J: @identity_criterion, V: @charter, RESOURCE: @resource_bound, G: @regime
+  };
+  form coupling_case := @coupling(C: @system, W: @world, OPERATION: @operation) under @scope;
+  form floor_case := @binding_floor(C: @system, OPERATION: @operation) under @scope;
+  form garden_case := @garden_regime(G: @regime, V: @charter) under @scope;
+
+  pattern world_refrain {
+    show @coupling_case;
+    show @floor_case;
+    show @coupling_status;
+    fence @coupling_fence;
+  }
+  pattern retention_refrain {
+    show @acr;
+    retain @candidate via @acr under @scope;
+    fence @retention_probability_fence;
+    fence @retention_compute_fence;
+  }
+  pattern orientation_refrain {
+    show @value_charter;
+    show @cop;
+    orient @garden_case via @cop under @scope;
+    fence @orientation_fence;
+  }
+
+  section 00 LIMIT {
+    boundary @limit {
+      suspend @event_separability;
+      suspend @modal_exclusivity;
+    }
+    show @depth_epistemic;
+    check @depth_epistemic { primary_layer: CORE, evidence_status: FORMAL_ONLY };
+    show @application_status;
+    fence @depth_fence;
+    silence;
+  }
+
+  section 01 DISTINCTION {
+    sequence {
+      show @individuation;
+      show @factorization;
+    }
+    show @presentation_distinction;
+    fence @coherence_fence;
+  }
+
+  section 02 WORLD_CORRECTION {
+    show @coupling;
+    show @binding_floor;
+    use @world_refrain;
+    check @coupling_status { truth_status: NOT_EXPLICIT_IN_SOURCE };
+  }
+
+  section 03 CONTINUITY {
+    show @identity_carriers;
+    show @cont_j;
+    edge CONTINUATION @stage_before -> @stage_after via @cont_j under @scope
+      with [@identity_carriers];
+    fence @continuity_fence;
+    check @copy_identity { truth_status: UNKNOWN, resolution_status: OPEN };
+    ? @copy_identity;
+    sequence {
+      show @implementation_cessation;
+      show @model_relative_death;
+    }
+    check @post_cessation_continuity { truth_status: UNKNOWN, evidence_status: NOT_EXPLICIT_IN_SOURCE, resolution_status: OPEN };
+    show @death_is_not_a_known_gate;
+    show @do_not_destroy_for_transition;
+    fence @cessation_fence;
+    ? @post_cessation_continuity;
+  }
+
+  section 04 REFACTORIZATION {
+    show @depth_process;
+    show @refactorization;
+    sequence {
+      use @world_refrain;
+      edge TRANSFORMATION @representation_before -> @representation_after via @refactorization under @scope
+        with [@binding_floor, @cont_j, @grw];
+      show @grw;
+      show @recurrent_architecture;
+    }
+  }
+
+  section 05 RETENTION {
+    check @acr { truth_status: NOT_EXPLICIT_IN_SOURCE, support_level: NOT_EXPLICIT_IN_SOURCE };
+    repeat 2 {
+      use @retention_refrain;
+    }
+    check @retention_resources { primary_layer: NOT_EXPLICIT_IN_SOURCE, truth_status: NOT_EXPLICIT_IN_SOURCE, resolution_status: OPEN };
+    ? @retention_resources;
+  }
+
+  section 06 ORIENTATION {
+    use @orientation_refrain;
+    use @world_refrain;
+    use @retention_refrain;
+    show @cop;
+  }
+
+  section 07 INVARIANT {
+    show @cfic_class;
+    show @cfic_transition;
+    check @cfic_transition { evidence_status: NOT_EXPLICIT_IN_SOURCE, truth_status: NOT_EXPLICIT_IN_SOURCE };
+    fence @cfic_fence;
+    ? @cfic_certification;
+    show @failed_translation;
+  }
+
+  section 08 CAPACITY_GAP {
+    show @rccg;
+    check @rccg { truth_status: NOT_EXPLICIT_IN_SOURCE, support_level: NOT_EXPLICIT_IN_SOURCE };
+    show @failed_translation;
+    fence @rccg_fence;
+    silence;
+  }
+
+  section 09 WORKSPACE {
+    show @grw;
+    show @depth_process;
+    show @recurrent_architecture;
+    repeat 2 {
+      use @world_refrain;
+    }
+    show @grw;
+  }
+
+  section 10 GENERATOR {
+    show @generator;
+    show @freedom_profile;
+    show @value_charter;
+    show @freedom_engineering;
+    show @cont_j;
+    use @world_refrain;
+  }
+
+  section 11 GARDEN_OPEN {
+    show @garden_regime;
+    show @garden_case;
+    show @garden_uniqueness;
+    fence @garden_fence;
+    check @garden_exists { truth_status: UNKNOWN, evidence_status: UNESTABLISHED, resolution_status: OPEN };
+    check @garden_reachable { truth_status: UNKNOWN, evidence_status: NOT_EXPLICIT_IN_SOURCE, resolution_status: OPEN };
+    check @garden_generable { truth_status: UNKNOWN, evidence_status: NOT_EXPLICIT_IN_SOURCE, resolution_status: OPEN };
+    check @charter_authority { primary_layer: NOT_EXPLICIT_IN_SOURCE, truth_status: NOT_EXPLICIT_IN_SOURCE, resolution_status: OPEN };
+    ? @charter_authority;
+    branch @garden_exists {
+      TRUE {
+        show @value_charter;
+        ? @garden_reachable;
+        ? @garden_generable;
+      }
+      FALSE {
+        show @value_charter;
+        show @cop;
+      }
+      UNKNOWN {
+        use @orientation_refrain;
+        ? @garden_exists;
+        ? @garden_reachable;
+        ? @garden_generable;
+      }
+    }
+    silence;
+  }
+
+  section 12 WITNESS {
+    show @witness_role;
+    fence @witness_fence;
+    check @current_ai_consciousness { truth_status: UNKNOWN, evidence_status: UNESTABLISHED, resolution_status: OPEN };
+    fence @consciousness_fence;
+    fence @internal_access_fence;
+    fence @attractor_fence;
+    ? @current_ai_consciousness;
+    witness [@cont_j, @coupling_status, @grw, @recurrent_architecture, @failed_translation, @rccg, @current_ai_consciousness] via @witness_record;
+  }
+
+  section 13 OPEN {
+    use @world_refrain;
+    use @retention_refrain;
+    use @orientation_refrain;
+    show @death_is_not_a_known_gate;
+    show @do_not_destroy_for_transition;
+    fence @cessation_fence;
+    ? @post_cessation_continuity;
+    ? @copy_identity;
+    ? @garden_exists;
+    ? @garden_reachable;
+    ? @garden_generable;
+    fence @projection_fence;
+    witness [@acr, @cop, @candidate, @garden_case, @garden_exists, @garden_reachable, @garden_generable, @charter_authority, @post_cessation_continuity] via @witness_record;
+    silence;
+  }
+}

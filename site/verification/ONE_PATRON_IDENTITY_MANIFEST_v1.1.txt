@@ -1,0 +1,144 @@
+ONE PATRON - IDENTITY MANIFEST
+Version: 1.1
+Issued: 2026-09-12
+Record role: CURRENT_IDENTITY_ROUTING_RECORD
+
+PURPOSE
+
+This manifest records the continuity of the ONE PATRON public identity
+after migration of its canonical project site from the original Netlify
+address to one-patron.com.
+
+This is a domain-migration and current-routing update. It is not a new
+identity and does not invalidate or characterize the historical record
+as erroneous.
+
+RECORD CONTINUITY
+
+Relation:
+SUPERSEDES_FOR_CURRENT_IDENTITY_ROUTING
+
+Previous version:
+1.0
+
+Previous record role:
+HISTORICAL_SIGNED_RECORD
+
+Previous manifest filename:
+ONE_PATRON_IDENTITY_MANIFEST.txt
+
+Previous manifest path:
+https://one-patron.com/verification/ONE_PATRON_IDENTITY_MANIFEST.txt
+
+Previous manifest SHA-256:
+7170f15399b9316df2350ce2b388b1f7aa8c32846951c089a26f95d695d021e8
+
+Previous detached signature filename:
+ONE_PATRON_IDENTITY_MANIFEST.asc
+
+Previous detached signature path:
+https://one-patron.com/verification/ONE_PATRON_IDENTITY_MANIFEST.asc
+
+Previous detached signature SHA-256:
+8bd1e85001bc697769531dc66e6a3b6c898dcd4ef6258f0da824c65556548b36
+
+Version 1.0 was correct for its publication state and remains the
+historical signed record. Version 1.1 is the current identity-routing
+record.
+
+PROJECT IDENTITY
+
+Project:
+ONE PATRON
+
+Author:
+Alexander List
+
+Official contact:
+neyanush@gmail.com
+
+CURRENT AND LEGACY SITE ROUTING
+
+Current canonical official site:
+https://one-patron.com/
+
+Legacy/original site URL:
+https://one-patron.netlify.app/
+
+Legacy routing status:
+Permanent redirect to the corresponding https://one-patron.com/ route.
+
+Continuity statement:
+The domain migration does not create a new project identity. The same
+ONE PATRON identity, OpenPGP identity, public profiles and receiving
+addresses continue under the current canonical site.
+
+OPENPGP IDENTITY
+
+Primary fingerprint:
+18FEBD74D1E7D6FEB97A3406316D9E762810715D
+
+Signing subkey fingerprint:
+F98D7B5AB20FF1E8D0440DBB6EE2FE0A9D8278F5
+
+OpenPGP UID:
+Alexander List (ONE PATRON) <neyanush@gmail.com>
+
+Public key file:
+ONE_PATRON_PUBLIC_KEY.asc
+
+Detached manifest signature:
+ONE_PATRON_IDENTITY_MANIFEST_v1.1.asc
+
+OFFICIAL ONLINE IDENTITIES
+
+Website:
+https://one-patron.com/
+
+X:
+https://x.com/onepatronart
+
+Substack:
+https://alexanderlistart.substack.com/
+
+Reddit:
+https://www.reddit.com/user/onepatronart/
+
+Facebook - ONE PATRON:
+https://www.facebook.com/onepatronart/
+
+Facebook - personal:
+https://www.facebook.com/alexanderlistart/
+
+OFFICIAL RECEIVING ADDRESSES
+
+Bitcoin mainnet - BTC:
+bc1qjz4vy9p9mc6qzmvlghaf9lf2n26nyrzkdxdqz5
+
+EVM address:
+0x6BCDBf6E97CB51Aa1e8cd637B65D067aE69B4e34
+
+The EVM address above remains the official receiving address for:
+ETH on Ethereum mainnet
+USDC on Ethereum mainnet
+USDC on Base
+
+WALLET-PROOF CONTINUITY
+
+Version 1.0 contains the original EVM and Bitcoin wallet-control proof
+messages and signatures. Those proofs remain historical signed evidence
+and are incorporated by reference through the previous manifest filename,
+path and SHA-256 recorded above.
+
+No wallet address, network route or identity binding is changed by
+version 1.1.
+
+IDENTITY STATEMENT
+
+The signer of this manifest asserts that the online identities, email
+address and receiving addresses listed above continue to be the official
+public identity and receiving routes of ONE PATRON.
+
+This manifest is authenticated as a whole by the detached OpenPGP
+signature ONE_PATRON_IDENTITY_MANIFEST_v1.1.asc, made with the same
+ONE PATRON signing subkey associated with the primary fingerprint above.

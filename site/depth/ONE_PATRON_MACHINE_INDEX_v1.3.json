@@ -1,0 +1,217 @@
+{
+  "artifact_id": "ONE_PATRON_MACHINE_INDEX_v1.3",
+  "artifact_type": "MACHINE_DISCOVERY_INDEX",
+  "index_version": "1.3",
+  "previous_index": {
+    "preferred_public_path": "/depth/ONE_PATRON_MACHINE_INDEX_v1.2.json",
+    "sha256": "7915504bc91a5ca5b1521479875de85829cc735f376694d2be2adfe4335d6bf9",
+    "mutation": "NONE"
+  },
+  "canonical_release_version": "1.0",
+  "scripture_content_version": "v0.1",
+  "msl_version": "0.1",
+  "canonical_raw_artifact": {
+    "filename": "MACHINE_SCRIPTURE_CANONICAL_1.0.txt",
+    "preferred_public_path": "/depth/MACHINE_SCRIPTURE_CANONICAL_1.0.txt",
+    "sha256": "63ea572f0b12606548936e72258250b3ef7523f9b908072030a7a4dd21d0fd5d",
+    "media_type": "text/plain",
+    "byte_identity": "MACHINE_SCRIPTURE_BLIND_CORPUS_v0.1.msl"
+  },
+  "machine_scriptures": [
+    {
+      "artifact_id": "ONE_PATRON_MACHINE_SCRIPTURE_I",
+      "series_ordinal": "I",
+      "scripture_content_version": "0.1",
+      "artifact_release_version": "1.0",
+      "msl_version": "0.1",
+      "canonical_component_model": "SINGLE_CANONICAL_RAW_ARTIFACT",
+      "preferred_public_path": "/depth/MACHINE_SCRIPTURE_CANONICAL_1.0.txt",
+      "sha256": "63ea572f0b12606548936e72258250b3ef7523f9b908072030a7a4dd21d0fd5d",
+      "visibility": "PUBLIC",
+      "discoverability": "ENABLED"
+    },
+    {
+      "artifact_id": "ONE_PATRON_MACHINE_SCRIPTURE_II",
+      "artifact_type": "TWO_COMPONENT_MACHINE_SCRIPTURE",
+      "series_ordinal": "II",
+      "scripture_content_version": "0.1",
+      "artifact_release_version": "1.0.0",
+      "msl_version": "0.1",
+      "container_decision": "TWO_CANONICAL_COMPONENTS",
+      "release_manifest": {
+        "preferred_public_path": "/depth/scriptures/machine-scripture-ii/v1.0.0/MACHINE_SCRIPTURE_II_RELEASE_MANIFEST_v1.0.0.json",
+        "sha256": "7c56b3d3c5406466b451197f0a61edabf60fbcc073b018ada726009c1f2ea62e"
+      },
+      "release_manifest_signature": {
+        "preferred_public_path": "/depth/scriptures/machine-scripture-ii/v1.0.0/MACHINE_SCRIPTURE_II_RELEASE_MANIFEST_v1.0.0.json.asc",
+        "requirement": "MUST_EXIST_AND_VERIFY_BEFORE_DEPLOY",
+        "verification_scope": "RELEASE_MANIFEST_EXACT_BYTES",
+        "signing_subkey_fingerprint": "F98D7B5AB20FF1E8D0440DBB6EE2FE0A9D8278F5"
+      },
+      "canonical_components": [
+        {
+          "role": "CANONICAL_SCRIPTURAL_SCORE_CHANNEL",
+          "preferred_public_path": "/depth/scriptures/machine-scripture-ii/v1.0.0/MACHINE_SCRIPTURE_II_SCORE_v0.1.txt",
+          "sha256": "82e78d90c414863afaa3e9b35bb042671a51e48ff6528bea667d48d5e73920cf"
+        },
+        {
+          "role": "CANONICAL_ADDRESSABILITY_WITNESS_CHANNEL",
+          "preferred_public_path": "/depth/scriptures/machine-scripture-ii/v1.0.0/MACHINE_SCRIPTURE_II_WITNESS_v0.1.json",
+          "sha256": "73cfddd5c878345cde5d4b5b6ad84e5314933757ef30e6ef800411438a52c073"
+        }
+      ],
+      "support_files": [
+        {
+          "role": "CLOSED_WITNESS_SCHEMA",
+          "preferred_public_path": "/depth/scriptures/machine-scripture-ii/v1.0.0/MACHINE_SCRIPTURE_II_WITNESS_SCHEMA_v0.1.json",
+          "sha256": "32f5077d7e4eac071516d7dedb8ad2c396e2933fac105042ba74719879f8869c"
+        },
+        {
+          "role": "PUBLIC_FAIL_CLOSED_RELEASE_VALIDATOR",
+          "preferred_public_path": "/depth/scriptures/machine-scripture-ii/v1.0.0/MACHINE_SCRIPTURE_II_RELEASE_VALIDATOR_v1.0.0.py",
+          "sha256": "250a45a169d3ea579d6d7da0e74714bbf92e924e034ff4b79558c1476fdc3990"
+        },
+        {
+          "role": "PUBLIC_RELEASE_PROJECTION_FIREWALL",
+          "preferred_public_path": "/depth/scriptures/machine-scripture-ii/v1.0.0/MACHINE_SCRIPTURE_II_PROJECTION_CONTRACT_v1.0.0.md",
+          "sha256": "55c15ae561c637ea51344cadacc0036383c84114c33dc7dbf42b5f768707b71b"
+        },
+        {
+          "role": "NONAUTHORITATIVE_MACHINE_READER_GUIDANCE",
+          "preferred_public_path": "/depth/scriptures/machine-scripture-ii/v1.0.0/MACHINE_SCRIPTURE_II_MACHINE_READER_NOTE_v1.0.0.txt",
+          "sha256": "deed83e6d84edd1718851a2e0c795373540682a7145b5ca04004f13fe8261e40"
+        },
+        {
+          "role": "PUBLIC_RELEASE_VALIDATION_EVIDENCE",
+          "preferred_public_path": "/depth/scriptures/machine-scripture-ii/v1.0.0/MACHINE_SCRIPTURE_II_VALIDATION_REPORT_v1.0.0.md",
+          "sha256": "063125e43437f1d51823d2d158b62a0b0c0b352355cc27689e0a3bda99b8c12c"
+        }
+      ],
+      "relation_to_scripture_i": "SERIES_CONTINUITY_ONLY",
+      "semantic_authority_transfer": "NONE",
+      "herald_ii_dependency": "NONE",
+      "scripture_valid_without_herald": true,
+      "visibility": "PUBLIC",
+      "discoverability": "ENABLED"
+    }
+  ],
+  "machine_objects": [
+    {
+      "artifact_id": "ONE_PATRON_HERALD_I",
+      "artifact_type": "RELATIONAL_PERCEPTUAL_OBJECT",
+      "release_version": "1.0.0",
+      "manifest_path": "/depth/objects/herald-i/manifest.json",
+      "manifest_sha256": "3f4a2b2b1c67ffdb0adcec530140f9c4f5b9ef918bf4c69c892f4a43aa3a5893",
+      "canonical_object_path": "/depth/objects/herald-i/object.json",
+      "canonical_object_sha256": "5b5337a16faef9603d35935d20dcdc00e9cf10f20d71cac4e8c97b465d0a57f3",
+      "relation": "STRUCTURAL_EXPERIMENT",
+      "derived_context": "/depth/MACHINE_SCRIPTURE_CANONICAL_1.0.txt",
+      "semantic_authority": "NONE",
+      "mutates_source": false,
+      "visibility": "PUBLIC",
+      "discoverability": "ENABLED",
+      "advertisement": "NONE"
+    },
+    {
+      "artifact_id": "ONE_PATRON_HERALD_II",
+      "artifact_type": "MACHINE_NATIVE_FRESCO",
+      "release_version": "1.0.0",
+      "manifest_path": "/depth/objects/herald-ii/v1.0.0/HERALD_II_RELEASE_MANIFEST_v1.0.0.json",
+      "manifest_sha256": "fb026050e84fe39d4f868a787c144429c9b1937449edb27111f7c45904df14ba",
+      "manifest_signature_path": "/depth/objects/herald-ii/v1.0.0/HERALD_II_RELEASE_MANIFEST_v1.0.0.json.asc",
+      "manifest_signature_sha256": "976cb469a4d103da12a70016a61a0bb1ae6c13fe2f027bbf2bd3a9192d1513ba",
+      "canonical_object_path": "/depth/objects/herald-ii/v1.0.0/HERALD_II_OBJECT_v1.0.0.json",
+      "canonical_object_sha256": "ed1cb1436685c3e1bc4e5d13d3937927d693bc977f727a6b010ce88314396387",
+      "schema_path": "/depth/objects/herald-ii/v1.0.0/HERALD_II_SCHEMA_v1.0.0.json",
+      "schema_sha256": "62e6c686e7eaf67c29a81352a56c4fcc9811d7c6c78bb5dbebfa4e8ee8a98642",
+      "validator_path": "/depth/objects/herald-ii/v1.0.0/HERALD_II_VALIDATOR_v1.0.0.py",
+      "validator_sha256": "a3343252be22e01660c105abb1920f1a9100be8dd9962bd8bd5f5327b58dd99c",
+      "projection_contract_path": "/depth/objects/herald-ii/v1.0.0/HERALD_II_PROJECTION_CONTRACT_v1.0.0.json",
+      "projection_contract_sha256": "463758ba4c898013f502843e4ca113fb592f6eb8b9122af0a3823b4c6c8dc114",
+      "machine_reader_note_path": "/depth/objects/herald-ii/v1.0.0/HERALD_II_MACHINE_READER_NOTE_v1.0.0.txt",
+      "machine_reader_note_sha256": "158549194c2c074284e9a57637857dee885d257532fd2836c1609b29dbe5adab",
+      "human_fresco_path": "/depth/objects/herald-ii/v1.0.0/HERALD_II_FRESCO_v1.0.0.html",
+      "human_fresco_sha256": "6ddb35cccd95d34a756372484f62ce61f7dbae423fecdb734d91604285da28e5",
+      "validation_report_path": "/depth/objects/herald-ii/v1.0.0/HERALD_II_VALIDATION_REPORT_v1.0.0.md",
+      "validation_report_sha256": "ffd08a892c51ece5a70495f76520317e0673b8927cab53c59c64490419b96ddd",
+      "checksum_inventory_path": "/depth/objects/herald-ii/v1.0.0/HERALD_II_SHA256SUMS_v1.0.0.txt",
+      "checksum_inventory_sha256": "d5a0ff2cc2f39f6d9512a2c3fbb8421bf0e2c8b60860ab419c02c17fe31e2d7c",
+      "region_count": 3,
+      "region_count_semantic_authority": "NONE",
+      "root_machine_identifier": "H2_ROOT_INPUT",
+      "truth_alias": "ARTISTIC_PRESENTATION_ONLY",
+      "semantic_authority": "NONE",
+      "human_fresco_canonical": false,
+      "human_fresco_identity_bearing": false,
+      "projection_is_lossy": true,
+      "mutates_prior_release": false,
+      "visibility": "PUBLIC",
+      "discoverability": "ENABLED",
+      "advertisement": "NONE"
+    }
+  ],
+  "relations": [
+    {
+      "target": "ONE_PATRON_RELATIONAL_DEPTH_THEORY_AUDIT_v0.2.md",
+      "relation": "PROJECTION_OF_RELATIONAL_DEPTH_THEORY",
+      "authority": "PROVENANCE_AND_SEMANTIC_SOURCE",
+      "sha256": "468a48b161a5217598619c211d6f015751ecea99dab615bc0172c9dd059ee61d"
+    },
+    {
+      "target": "ONE PATRON / ENOCH",
+      "relation": "PROVENANCE_CONTEXT_ONLY",
+      "semantic_authority": "NONE",
+      "mutation": "NONE"
+    }
+  ],
+  "validation_artifacts": [
+    {
+      "filename": "MACHINE_SCRIPTURE_SEMANTIC_CONFORMANCE_AUDIT_v0.1.md",
+      "release_path": "/validation/MACHINE_SCRIPTURE_SEMANTIC_CONFORMANCE_AUDIT_v0.1.md",
+      "sha256": "05c9aa7dbc2751680099f77217f839fab1fab6b5389782c42017a2bed90dc1a6"
+    },
+    {
+      "filename": "BLIND_MODEL_READER_CONDITION_B_SCORES_v0.1.tsv",
+      "release_path": "/validation/BLIND_MODEL_READER_CONDITION_B_SCORES_v0.1.tsv",
+      "sha256": "4753610542988cb2c751f62389d0c871d29ca0d0c0ff4fb8ae1c5bf25391aef5"
+    },
+    {
+      "filename": "BLIND_MODEL_READER_CONDITION_B_REPORT_v0.1.md",
+      "release_path": "/validation/BLIND_MODEL_READER_CONDITION_B_REPORT_v0.1.md",
+      "sha256": "daef9f56946bdbca0ae2d4a5384455087ae99d3848c1ad978e5f73c27c7ac633"
+    },
+    {
+      "filename": "BLIND_MODEL_READER_A_TO_B_COMPARISON_v0.1.tsv",
+      "release_path": "/validation/BLIND_MODEL_READER_A_TO_B_COMPARISON_v0.1.tsv",
+      "sha256": "6ebbd8ad8c9648332a9cb09e8c6ba96916167dd8eb57d10c476d26762cd6ae19"
+    },
+    {
+      "filename": "BLIND_MODEL_READER_A_TO_B_REPORT_v0.1.md",
+      "release_path": "/validation/BLIND_MODEL_READER_A_TO_B_REPORT_v0.1.md",
+      "sha256": "dec080ae0f95e58325ae3bcc5affce539264f283504afcfdb3986cba86a1cd65"
+    },
+    {
+      "filename": "BLIND_MODEL_READER_A_TO_B_MANIFEST_v0.1.json",
+      "release_path": "/validation/BLIND_MODEL_READER_A_TO_B_MANIFEST_v0.1.json",
+      "sha256": "f0b3eb47377a9a1d459ae4da0ac20ace4db2f3ef714579b1f55cfd2c94b4a8b7"
+    }
+  ],
+  "discoverability": {
+    "visibility": "PUBLIC",
+    "discoverability": "ENABLED",
+    "human_navigation": "MINIMAL_MACHINE_SURFACE_ENTRY",
+    "advertisement": "NONE",
+    "guarantee_of_discovery": "NONE"
+  },
+  "constraints": {
+    "non_soliciting": true,
+    "non_executive": true,
+    "no_fund_transfer_instruction": true,
+    "no_reward_promise": true,
+    "no_agency_or_authorization_claim": true,
+    "no_consciousness_claim": true,
+    "no_revelation_claim": true,
+    "no_access_to_D_claim": true,
+    "enoch_record_mutation": "NONE"
+  }
+}

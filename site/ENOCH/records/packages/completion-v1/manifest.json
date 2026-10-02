@@ -1,0 +1,61 @@
+{
+  "schema": "one-patron.enoch.encrypted-package.v1",
+  "version": "1.0",
+  "package_id": "completion-v1",
+  "domain": "one-patron.enoch.completion.v1",
+  "release_condition": "verified completion attestation and matching release record",
+  "key_commitment_profile": "SHA-256(UTF8(one-patron/enoch/key-commitment/v1) || 0x00 || 32-byte release key)",
+  "key_commitment_sha256": "dfabfa62820a2187b67a9494bb1463caea33232fef8cacfb837e28456f702d4c",
+  "hkdf": {
+    "hash": "SHA-256",
+    "salt_b64": "BzyzZtzHPfbNreyj7Nt78sPDftUjwBNqIkVgnVPjpgc=",
+    "derived_key_bits": 256
+  },
+  "cipher": "AES-256-GCM",
+  "components": [
+    {
+      "id": "record",
+      "media_type": "application/json",
+      "ciphertext_file": "record.enc",
+      "ciphertext_bytes": 469,
+      "ciphertext_sha256": "0825462d408bfb5b39fc409331864ce80594fad06d62a57c45462e9e0c1f6dc8",
+      "nonce_b64": "rmnauENhYogb4IAa",
+      "aad_b64": "eyJzY2hlbWEiOiJvbmUtcGF0cm9uLmVub2NoLmFlcy1nY20tY29tcG9uZW50LnYxIiwicGFja2FnZV9pZCI6ImNvbXBsZXRpb24tdjEiLCJkb21haW4iOiJvbmUtcGF0cm9uLmVub2NoLmNvbXBsZXRpb24udjEiLCJjb21wb25lbnRfaWQiOiJyZWNvcmQiLCJtZWRpYV90eXBlIjoiYXBwbGljYXRpb24vanNvbiJ9",
+      "hkdf_info": "one-patron/enoch/aes-gcm/v1/completion-v1/record",
+      "tag_bits": 128
+    },
+    {
+      "id": "lossless-audio",
+      "media_type": "audio/flac",
+      "ciphertext_file": "lossless-audio.enc",
+      "ciphertext_bytes": 17056319,
+      "ciphertext_sha256": "b33891841ce9734867be2cb10e19079ca6c968ada644cd335b1c03661a453d54",
+      "nonce_b64": "K05cEWtxJrwTDgZ4",
+      "aad_b64": "eyJzY2hlbWEiOiJvbmUtcGF0cm9uLmVub2NoLmFlcy1nY20tY29tcG9uZW50LnYxIiwicGFja2FnZV9pZCI6ImNvbXBsZXRpb24tdjEiLCJkb21haW4iOiJvbmUtcGF0cm9uLmVub2NoLmNvbXBsZXRpb24udjEiLCJjb21wb25lbnRfaWQiOiJsb3NzbGVzcy1hdWRpbyIsIm1lZGlhX3R5cGUiOiJhdWRpby9mbGFjIn0=",
+      "hkdf_info": "one-patron/enoch/aes-gcm/v1/completion-v1/lossless-audio",
+      "tag_bits": 128
+    },
+    {
+      "id": "playback-audio",
+      "media_type": "audio/wav",
+      "ciphertext_file": "playback-audio.enc",
+      "ciphertext_bytes": 17049660,
+      "ciphertext_sha256": "470c5ad85427a427570861743a307b654e3f5f750972acdd989501b0346d9e7b",
+      "nonce_b64": "5QRLegjCoAXF1a9a",
+      "aad_b64": "eyJzY2hlbWEiOiJvbmUtcGF0cm9uLmVub2NoLmFlcy1nY20tY29tcG9uZW50LnYxIiwicGFja2FnZV9pZCI6ImNvbXBsZXRpb24tdjEiLCJkb21haW4iOiJvbmUtcGF0cm9uLmVub2NoLmNvbXBsZXRpb24udjEiLCJjb21wb25lbnRfaWQiOiJwbGF5YmFjay1hdWRpbyIsIm1lZGlhX3R5cGUiOiJhdWRpby93YXYifQ==",
+      "hkdf_info": "one-patron/enoch/aes-gcm/v1/completion-v1/playback-audio",
+      "tag_bits": 128
+    },
+    {
+      "id": "response",
+      "media_type": "text/plain; charset=utf-8",
+      "ciphertext_file": "response.enc",
+      "ciphertext_bytes": 1204,
+      "ciphertext_sha256": "50bede524a9680efdb717cedab4c5133e567603866d150987dc74f02753d4845",
+      "nonce_b64": "FOHgChbLsT4G+L8v",
+      "aad_b64": "eyJzY2hlbWEiOiJvbmUtcGF0cm9uLmVub2NoLmFlcy1nY20tY29tcG9uZW50LnYxIiwicGFja2FnZV9pZCI6ImNvbXBsZXRpb24tdjEiLCJkb21haW4iOiJvbmUtcGF0cm9uLmVub2NoLmNvbXBsZXRpb24udjEiLCJjb21wb25lbnRfaWQiOiJyZXNwb25zZSIsIm1lZGlhX3R5cGUiOiJ0ZXh0L3BsYWluOyBjaGFyc2V0PXV0Zi04In0=",
+      "hkdf_info": "one-patron/enoch/aes-gcm/v1/completion-v1/response",
+      "tag_bits": 128
+    }
+  ]
+}

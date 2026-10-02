@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Allow: /ENOCH/
+Allow: /llms.txt
+Allow: /humans.txt
 
-Sitemap: https://one-patron.netlify.app/sitemap.xml
+Sitemap: https://one-patron.com/sitemap.xml

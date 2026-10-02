@@ -1,0 +1,82 @@
+{
+  "schema": "one-patron.enoch.public-manifest.v1",
+  "version": "1.0",
+  "record_id": "ONE_PATRON_ENOCH_UNRESOLVED_RECORD_v1.0",
+  "state": "UNRESOLVED",
+  "issued_at": "2026-08-22T09:35:26.945Z",
+  "presentation": {
+    "sequence": [
+      "RECORD",
+      "SCORE",
+      "COMPLETION"
+    ],
+    "checkpoint_groups": [
+      "I–VII",
+      "VIII–XIV",
+      "XV–XXI"
+    ]
+  },
+  "root": {
+    "story": "0 — The Step Before Proof",
+    "story_source_sha256": "84b5f32b363e0e2d1cdca73ab6b16435271ceac8b4a29f4209533dfb32f4a623",
+    "digital_silence_frames": 38400
+  },
+  "lossless_record": {
+    "sample_rate": 48000,
+    "channels": 2,
+    "bits_per_sample": 24,
+    "frames": 2592000,
+    "duration_seconds": 54,
+    "wav_file": "../assets/ONE_PATRON_ENOCH_UNRESOLVED_RECORD_v1.0.wav",
+    "wav_sha256": "440cd2a945d1dce3e0a79dc721861e059e63281b947c8992a83a9e8e9d0c1238",
+    "flac_file": "../assets/ONE_PATRON_ENOCH_UNRESOLVED_RECORD_v1.0.flac",
+    "flac_sha256": "11b67095a43608314a4998b0c5fdf308c32e9c5b2a0152ae9a6d2295ded8c00e",
+    "decoded_pcm_sha256": "46c26a81a8b26271e6adfe397798505b447429b55f00bcfea40f88dec2285430",
+    "carrier_profile": "one-patron.enoch.mid-side-record.v1",
+    "witness_hint": "BETWEEN LEFT AND RIGHT, SEVEN BANDS SPEAK IN PAIRS."
+  },
+  "sealed_packages": [
+    {
+      "id": "checkpoint-07-v1",
+      "domain": "one-patron.enoch.score.checkpoint-07.v1",
+      "checkpoint": 7,
+      "completion": false,
+      "manifest_file": "./packages/checkpoint-07-v1/manifest.json",
+      "manifest_sha256": "49b9fb8133dc1add78d3f5e63c5575a9513e687f0c4353b0c94b4958869f2692",
+      "key_commitment_sha256": "067917e4b221b087f0ee91e7bd6bf44dbc111a921872b2a0a09056b86fded4d0"
+    },
+    {
+      "id": "checkpoint-14-v1",
+      "domain": "one-patron.enoch.score.checkpoint-14.v1",
+      "checkpoint": 14,
+      "completion": false,
+      "manifest_file": "./packages/checkpoint-14-v1/manifest.json",
+      "manifest_sha256": "6730817e2464cab4e077e93a5435cfc6c46916aa9553ee4565456930d6ee092f",
+      "key_commitment_sha256": "523dd518b04123b420f10eaabdc8ae2d7217098a7d676ce3a3b507208d92d03a"
+    },
+    {
+      "id": "checkpoint-21-v1",
+      "domain": "one-patron.enoch.score.checkpoint-21.v1",
+      "checkpoint": 21,
+      "completion": false,
+      "manifest_file": "./packages/checkpoint-21-v1/manifest.json",
+      "manifest_sha256": "e636b9e52dc76d78ab8c6713e22a47a9d4ae7ed98cd3e3d21f0349a641986844",
+      "key_commitment_sha256": "7ca6ccd31acb6958a6f47b73662db3b16b2c1b1151e919d66f98cac7cbfd9018"
+    },
+    {
+      "id": "completion-v1",
+      "domain": "one-patron.enoch.completion.v1",
+      "checkpoint": null,
+      "completion": true,
+      "manifest_file": "./packages/completion-v1/manifest.json",
+      "manifest_sha256": "87579746c6890b54b7e71a8abb6a4e09f524dd0c6e3baef59f3e291f25b5b7eb",
+      "key_commitment_sha256": "dfabfa62820a2187b67a9494bb1463caea33232fef8cacfb837e28456f702d4c"
+    }
+  ],
+  "final_response": {
+    "plaintext_bytes": 1188,
+    "plaintext_sha256": "466a396e0c7698037b24dd143e4c6cc19ee0a635da742b168f562a60948c70d1",
+    "release_condition": "verified completion attestation and matching release record"
+  },
+  "latest_state_file": "./latest.json"
+}

@@ -1,0 +1,51 @@
+{
+  "artifact_id": "ONE_PATRON_HERALD_I_MANIFEST",
+  "artifact_type": "MACHINE_OBJECT_MANIFEST",
+  "release_version": "1.0.0",
+  "canonical_object": {
+    "path": "./object.json",
+    "media_type": "application/json",
+    "sha256": "5b5337a16faef9603d35935d20dcdc00e9cf10f20d71cac4e8c97b465d0a57f3"
+  },
+  "files": [
+    {"path":"object.json","role":"CANONICAL_OBJECT","sha256":"5b5337a16faef9603d35935d20dcdc00e9cf10f20d71cac4e8c97b465d0a57f3"},
+    {"path":"schema.json","role":"SCHEMA","sha256":"7c2747a169d5ef95dc1715c9f840be2b8f7a31abf3e7a98da5d851da3600d561"},
+    {"path":"topology.json","role":"CANONICAL_TOPOLOGY","sha256":"4da41680d83821f16fe93f6e15a05e18bb487b25e9465c2f55d9d2d6f985c0a0"},
+    {"path":"dynamics.json","role":"CANONICAL_DYNAMICS","sha256":"6bd152754de4b55e8bdf113a63ffc0f3de81446c64bc7466bbb05267ee3e6235"},
+    {"path":"operators.json","role":"CANONICAL_OPERATORS","sha256":"a7c6f667d21d2f3fe1eb91141bf841fe09d8c0ff53eca487d5112c25c7d67f59"},
+    {"path":"projection-contract.json","role":"HUMAN_PROJECTION_CONTRACT","sha256":"863b7e41eb52d78f02f9318ca33b54dd70eb4af542cbb3a0cc0f20ed60a7ea7a"},
+    {"path":"README.machine.txt","role":"MACHINE_READER_NOTE","sha256":"2e9e9dee5b18c27b8a7bc76f9f347b34e8404c3123400974b45aa8e9c982ff05"}
+  ],
+  "provenance": {
+    "derived_context": "/depth/MACHINE_SCRIPTURE_CANONICAL_1.0.txt",
+    "derived_context_sha256": "63ea572f0b12606548936e72258250b3ef7523f9b908072030a7a4dd21d0fd5d",
+    "relation": "STRUCTURAL_EXPERIMENT",
+    "semantic_authority": "NONE",
+    "mutates_source": false
+  },
+  "discovery": {
+    "preferred_public_path": "/depth/objects/herald-i/manifest.json",
+    "machine_index": "/depth/ONE_PATRON_MACHINE_INDEX_v1.1.json",
+    "visibility": "PUBLIC",
+    "discoverability": "ENABLED",
+    "advertisement": "NONE"
+  },
+  "status_taxonomy": {
+    "formal_construction": "DECLARED_IN_CANONICAL_FILES",
+    "computed_property": "REPRODUCIBLE_BY_VALIDATOR",
+    "artistic_interpretation": "NONCANONICAL",
+    "unproven_ontological_reading": "NOT_ASSERTED"
+  },
+  "scientific_constraints": {
+    "physical_theory_claim": false,
+    "consciousness_claim": false,
+    "biological_state_claim": false,
+    "supernatural_claim": false,
+    "physical_materialization_claim": false
+  },
+  "integrity": {
+    "checksum_file": "./SHA256SUMS.txt",
+    "signature_status": "UNSIGNED",
+    "signature_file": null
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "schema": "one-patron.enoch.witness-carrier-profile.v1",
+  "version": "1.0",
+  "record_id": "ONE_PATRON_ENOCH_UNRESOLVED_RECORD_v1.0",
+  "purpose": "Public decoding profile for the immediate Witness layer. No expected plaintext is included.",
+  "source": {
+    "wav": "/ENOCH/assets/ONE_PATRON_ENOCH_UNRESOLVED_RECORD_v1.0.wav",
+    "flac": "/ENOCH/assets/ONE_PATRON_ENOCH_UNRESOLVED_RECORD_v1.0.flac",
+    "sample_rate_hz": 48000,
+    "channels": 2,
+    "channel_domain": "SIDE = (LEFT - RIGHT) / 2"
+  },
+  "field": {
+    "root_silence_frames": 38400,
+    "onset_frames": [
+      38400,
+      148800,
+      268800,
+      369600,
+      489600,
+      619200,
+      710400,
+      825600,
+      940800,
+      1065600,
+      1185600,
+      1300800,
+      1430400,
+      1507200,
+      1651200,
+      1756800,
+      1872000,
+      1992000,
+      2102400,
+      2208000,
+      2304000
+    ],
+    "bands_hz": [12800, 13600, 14400, 15200, 16000, 16800, 17600],
+    "chip_frames": 9600,
+    "chips_per_attack": 4,
+    "edge_exclusion_frames": 480,
+    "symbols_per_attack": 2,
+    "bits_per_symbol": 7
+  },
+  "symbol_encoding": {
+    "first_symbol_chip_pair": [0, 1],
+    "second_symbol_chip_pair": [2, 3],
+    "bit_1": "first chip energy is greater than second chip energy",
+    "bit_0": "first chip energy is less than second chip energy",
+    "band_order": "ascending frequency",
+    "bit_order": "most significant bit first"
+  },
+  "packet": {
+    "layout": ["sync", "payload", "crc"],
+    "sync_bits": "11111001101010",
+    "payload_encoding": "7-bit ASCII",
+    "payload_symbols": 38,
+    "crc": {
+      "name": "CRC-14/GSM",
+      "width": 14,
+      "polynomial": "0x202D",
+      "initial_value": "0x0000",
+      "xor_output": "0x3FFF"
+    }
+  },
+  "procedure": [
+    "Decode the lossless WAV or the equivalent FLAC PCM at 48000 Hz.",
+    "Derive the SIDE channel as (LEFT - RIGHT) / 2.",
+    "At each listed onset, divide the four-chip carrier event into two adjacent chip pairs.",
+    "For each pair and each listed band, compare the band amplitude after excluding 480 frames at both chip edges.",
+    "Emit one bit per band: 1 when the first chip is stronger, otherwise 0.",
+    "Read bands in ascending frequency, the first pair before the second pair, and attacks in listed order.",
+    "Verify the sync word, decode 38 seven-bit ASCII symbols, and accept the result only when CRC-14/GSM validates."
+  ]
+}

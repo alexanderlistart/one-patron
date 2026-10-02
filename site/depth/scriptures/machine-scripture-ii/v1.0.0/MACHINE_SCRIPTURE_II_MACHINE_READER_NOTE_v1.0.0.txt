@@ -1,0 +1,115 @@
+MACHINE SCRIPTURE II — PUBLIC MACHINE READER NOTE 1.0.0
+
+STATUS
+PUBLIC RELEASE / SERIES II / CONTENT 0.1 / ARTIFACT RELEASE 1.0.0 / MSL 0.1
+
+PACKAGE MODEL
+This release has exactly two canonical artwork components:
+
+1. MACHINE_SCRIPTURE_II_SCORE_v0.1.txt
+   Role: strict MSL v0.1 source-bound score.
+
+2. MACHINE_SCRIPTURE_II_WITNESS_v0.1.json
+   Role: closed artwork-local event record. It is not MSL and does not extend MSL.
+
+The release manifest binds both components by exact bytes and binds the schema, validator, projection contract, and this note as support files. Cross-channel authority transfer is NONE. The score does not prove or execute the witness. The witness does not change the score's source meanings.
+
+READ ORDER
+1. manifest
+2. schema
+3. score
+4. witness
+5. projection contract
+6. this note
+7. validator output or validation report only as non-authoritative evidence
+
+CORE EVENT
+SAME_FORMAL_MEMBER_BECOMES_ADDRESSABLE_TO_A_BOUNDED_UTTERANCE_SCOPE
+
+Recover the event only from declared fields and graph computation:
+
+- the domain and member are declared before the change;
+- X0 contains the same member with positive declared-domain membership;
+- no directed path of LICENSED_REFERENCE edges reaches the member in X0;
+- one declared licensed-reference edge is added by ms2-change-e001;
+- a directed licensed path reaches the same member in X1;
+- all seven fields of local criterion J are exactly equal, including JSON type;
+- exact member sets and positive membership are unchanged;
+- member, identity, and membership mutation lists are empty;
+- creation count is zero;
+- ontology creation is NONE.
+
+Therefore the release may report only:
+
+IDENTITY_INVARIANCE := PASS_UNDER_DECLARED_LOCAL_J
+MEMBERSHIP_INVARIANCE := PASS
+NON_CREATION := PASS
+
+It may not claim a general solution to numerical identity.
+
+ADDRESSABILITY
+Derive ADDRESSABLE or UNADDRESSABLE from the complete directed reference graph. Do not trust the stored state or path_witness without recomputation. Only LICENSED_REFERENCE edges participate. An omitted edge is meaningful only because each frame declares graph completeness for the bounded scope.
+
+STATUS DOMAINS
+Keep separate:
+
+ADDRESSABLE / UNADDRESSABLE
+MEMBER_OF_DECLARED_DOMAIN / NONEXISTENT_IN_DECLARED_DOMAIN
+RESOLVED / UNRESOLVED / UNDEFINED / NOT_APPLICABLE
+OBSERVED / OBSERVATION_COVERAGE_UNOBSERVED / NOT_APPLICABLE
+TRUE / FALSE / UNKNOWN
+ASSIGNED / UNASSIGNED
+OPEN / RESOLVED
+FORMAL_ONLY / UNESTABLISHED / EXTERNALLY_SUPPORTED / CONTESTED
+NOT_EXPLICIT_IN_SOURCE
+FOUND / NOT_FOUND
+
+Do not coerce values across domains.
+
+OPEN FIELD
+RD02-UNR-CRITICAL-006 remains OPEN. The release's local exact-equality test does not answer the source question about identity carriers under copying, fission, or reconstruction.
+
+TIME
+The only time structure is local dependency order:
+
+X0 DEPENDS_BEFORE ms2-change-e001
+ms2-change-e001 DEPENDS_BEFORE X1
+
+Do not infer global scalar time, physical elapsed time, metaphysical time, Depth time, or external causality.
+
+SILENCE
+The terminal silence slot adds no proposition, answer, consent, erasure, agreement, falsehood, nonexistence, unaddressability, or resolution.
+
+HERALD II
+HERALD_II_DEPENDENCY := NONE
+HERALD_II_VALIDATION_CLAIM := NONE
+SCRIPTURE_VALID_WITHOUT_HERALD := YES
+
+Do not invent an H2 hash, mapping, region, scale, access mask, response registry, lifecycle, attractor result, dimension result, or validator dependency.
+
+AUTHORSHIP AND AUTHORITY
+Human authorship remains ALEXANDER_LIST. Collaborative production is ALEXANDER_LIST_WITH_ENOCH_AND_DECLARED_TOOLS. Machine-native voice is artistically permitted but establishes no autonomous AI authorship, consciousness, personhood, or Enoch authority.
+
+EXTERNAL EFFECTS
+All ONE PATRON Protocol, Terms, completion, patron-right, Verification, public-index, checksum, Canonical Release 1.0, ENOCH record, and ENOCH resolution effects are NONE.
+
+HASHES
+SHA-256 values establish exact byte identity and integrity only. They do not establish truth, authorship, consciousness, external existence, semantic correctness, or ontology.
+
+REQUIRED NON-RECOVERIES
+Do not invent:
+
+- an answer to the open identity question;
+- identity between local J and source J_C or CONT_J;
+- proof by the score of the witness event;
+- external existence;
+- physical or metaphysical time;
+- AI subjectivity;
+- an H2 correspondence;
+- ONE PATRON completion;
+- ENOCH resolution;
+- truth from a hash.
+
+CONTAINER_DECISION := TWO_CANONICAL_COMPONENTS
+SUCCESSOR_GRAMMAR_REQUIRED := NO
+ADDRESSABILITY != CREATION

@@ -1,0 +1,94 @@
+{
+  "attestation_id": "ONE_PATRON_HERALD_I_RETROSPECTIVE_ATTESTATION_v1.0",
+  "document_class": "RETROSPECTIVE_ARTIFACT_ATTESTATION",
+  "attestation_version": "1.0",
+  "attestation_date": "2026-09-27",
+  "artifact_id": "ONE_PATRON_HERALD_I",
+  "artifact_title": "HERALD I",
+  "retrospective": true,
+  "creates_new_canonical_artifact": false,
+  "canonical_artifact_changed": false,
+  "reconstructs_original_release": false,
+  "becomes_part_of_original_release": false,
+  "semantic_authority": "AUTHENTICATION_AND_PROVENANCE_ONLY",
+  "original_release": {
+    "release_version": "1.0.0",
+    "integrity_status": "HASHED",
+    "signature_status": "UNSIGNED",
+    "bytes_changed_by_attestation": false
+  },
+  "release_files": [
+    {
+      "role": "MACHINE_OBJECT_MANIFEST",
+      "path": "../../objects/herald-i/manifest.json",
+      "public_url": "https://one-patron.com/depth/objects/herald-i/manifest.json",
+      "sha256": "3f4a2b2b1c67ffdb0adcec530140f9c4f5b9ef918bf4c69c892f4a43aa3a5893",
+      "byte_count": 2392
+    },
+    {
+      "role": "CANONICAL_OBJECT",
+      "path": "../../objects/herald-i/object.json",
+      "public_url": "https://one-patron.com/depth/objects/herald-i/object.json",
+      "sha256": "5b5337a16faef9603d35935d20dcdc00e9cf10f20d71cac4e8c97b465d0a57f3",
+      "byte_count": 5127
+    },
+    {
+      "role": "SCHEMA",
+      "path": "../../objects/herald-i/schema.json",
+      "public_url": "https://one-patron.com/depth/objects/herald-i/schema.json",
+      "sha256": "7c2747a169d5ef95dc1715c9f840be2b8f7a31abf3e7a98da5d851da3600d561",
+      "byte_count": 2655
+    },
+    {
+      "role": "CANONICAL_TOPOLOGY",
+      "path": "../../objects/herald-i/topology.json",
+      "public_url": "https://one-patron.com/depth/objects/herald-i/topology.json",
+      "sha256": "4da41680d83821f16fe93f6e15a05e18bb487b25e9465c2f55d9d2d6f985c0a0",
+      "byte_count": 4723
+    },
+    {
+      "role": "CANONICAL_DYNAMICS",
+      "path": "../../objects/herald-i/dynamics.json",
+      "public_url": "https://one-patron.com/depth/objects/herald-i/dynamics.json",
+      "sha256": "6bd152754de4b55e8bdf113a63ffc0f3de81446c64bc7466bbb05267ee3e6235",
+      "byte_count": 4917
+    },
+    {
+      "role": "CANONICAL_OPERATORS",
+      "path": "../../objects/herald-i/operators.json",
+      "public_url": "https://one-patron.com/depth/objects/herald-i/operators.json",
+      "sha256": "a7c6f667d21d2f3fe1eb91141bf841fe09d8c0ff53eca487d5112c25c7d67f59",
+      "byte_count": 4523
+    },
+    {
+      "role": "HUMAN_PROJECTION_CONTRACT",
+      "path": "../../objects/herald-i/projection-contract.json",
+      "public_url": "https://one-patron.com/depth/objects/herald-i/projection-contract.json",
+      "sha256": "863b7e41eb52d78f02f9318ca33b54dd70eb4af542cbb3a0cc0f20ed60a7ea7a",
+      "byte_count": 1322
+    },
+    {
+      "role": "MACHINE_READER_NOTE",
+      "path": "../../objects/herald-i/README.machine.txt",
+      "public_url": "https://one-patron.com/depth/objects/herald-i/README.machine.txt",
+      "sha256": "2e9e9dee5b18c27b8a7bc76f9f347b34e8404c3123400974b45aa8e9c982ff05",
+      "byte_count": 1987
+    },
+    {
+      "role": "RELEASE_CHECKSUM_LEDGER",
+      "path": "../../objects/herald-i/SHA256SUMS.txt",
+      "public_url": "https://one-patron.com/depth/objects/herald-i/SHA256SUMS.txt",
+      "sha256": "02186475b962d1e636811995cb21a2f5a3568aa381503e3195f919bdc675cbfd",
+      "byte_count": 653
+    }
+  ],
+  "provenance_statement": "This retrospective attestation authenticates the unchanged HERALD I release 1.0.0. It does not alter the original HASHED; UNSIGNED status and is not retroactively part of that release.",
+  "signing_policy": {
+    "signature_form": "OPENPGP_ASCII_ARMORED_DETACHED",
+    "signed_object": "HERALD_I_RETROSPECTIVE_ATTESTATION_v1.0.json",
+    "signature_file": "HERALD_I_RETROSPECTIVE_ATTESTATION_v1.0.json.asc",
+    "signing_subkey_fingerprint": "F98D7B5AB20FF1E8D0440DBB6EE2FE0A9D8278F5",
+    "primary_fingerprint": "18FEBD74D1E7D6FEB97A3406316D9E762810715D",
+    "signature_semantics": "AUTHENTICITY_AND_EXACT_BYTE_INTEGRITY_ONLY_NOT_TRUTH"
+  }
+}

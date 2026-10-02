@@ -1,0 +1,1135 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:one-patron:depth:machine-scripture-ii:witness:v0.1",
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "string_array": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "declaration_payload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "statement_type",
+        "content"
+      ],
+      "properties": {
+        "statement_type": {
+          "const": "ARTWORK_LOCAL_FORMAL_MEMBER"
+        },
+        "content": {
+          "const": "A bounded utterance scope may acquire a licensed reference to this already-declared member."
+        }
+      }
+    },
+    "member_snapshot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "member_id",
+        "domain_id",
+        "member_kind",
+        "declaration_token",
+        "declaration_payload",
+        "source_authority"
+      ],
+      "properties": {
+        "member_id": {
+          "const": "ms2-member-p001"
+        },
+        "domain_id": {
+          "const": "ms2-domain-u001"
+        },
+        "member_kind": {
+          "const": "ARTWORK_LOCAL_DECLARED_POSSIBILITY"
+        },
+        "declaration_token": {
+          "const": "POSSIBILITY_P001"
+        },
+        "declaration_payload": {
+          "$ref": "#/$defs/declaration_payload"
+        },
+        "source_authority": {
+          "const": "ARTWORK_LOCAL_ONLY"
+        }
+      }
+    },
+    "edge": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "edge_id",
+        "edge_kind",
+        "from_node_id",
+        "to_node_id",
+        "license_reference"
+      ],
+      "properties": {
+        "edge_id": {
+          "type": "string"
+        },
+        "edge_kind": {
+          "const": "LICENSED_REFERENCE"
+        },
+        "from_node_id": {
+          "type": "string"
+        },
+        "to_node_id": {
+          "type": "string"
+        },
+        "license_reference": {
+          "type": "string"
+        }
+      }
+    },
+    "reference_graph": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "completeness",
+        "node_ids",
+        "licensed_edges"
+      ],
+      "properties": {
+        "completeness": {
+          "const": "COMPLETE_FOR_DECLARED_SCOPE_AND_FRAME"
+        },
+        "node_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 2,
+          "uniqueItems": true
+        },
+        "licensed_edges": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/edge"
+          },
+          "uniqueItems": true
+        }
+      }
+    },
+    "frame": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "frame_id",
+        "artwork_role",
+        "member_snapshot",
+        "declared_domain_membership_state",
+        "observation_coverage",
+        "reference_graph",
+        "addressability_evaluation_status",
+        "addressability_state",
+        "path_witness",
+        "reason"
+      ],
+      "properties": {
+        "frame_id": {
+          "enum": [
+            "X0",
+            "X1"
+          ]
+        },
+        "artwork_role": {
+          "enum": [
+            "BEFORE",
+            "AFTER"
+          ]
+        },
+        "member_snapshot": {
+          "$ref": "#/$defs/member_snapshot"
+        },
+        "declared_domain_membership_state": {
+          "enum": [
+            "MEMBER_OF_DECLARED_DOMAIN",
+            "NONEXISTENT_IN_DECLARED_DOMAIN"
+          ]
+        },
+        "observation_coverage": {
+          "enum": [
+            "OBSERVED",
+            "OBSERVATION_COVERAGE_UNOBSERVED",
+            "NOT_APPLICABLE"
+          ]
+        },
+        "reference_graph": {
+          "$ref": "#/$defs/reference_graph"
+        },
+        "addressability_evaluation_status": {
+          "enum": [
+            "RESOLVED",
+            "UNRESOLVED",
+            "UNDEFINED",
+            "NOT_APPLICABLE"
+          ]
+        },
+        "addressability_state": {
+          "enum": [
+            "ADDRESSABLE",
+            "UNADDRESSABLE"
+          ]
+        },
+        "path_witness": {
+          "$ref": "#/$defs/string_array"
+        },
+        "reason": {
+          "type": "string"
+        }
+      }
+    },
+    "field_comparison": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "field",
+        "before",
+        "after",
+        "equal"
+      ],
+      "properties": {
+        "field": {
+          "type": "string"
+        },
+        "before": {
+          "type": "string"
+        },
+        "after": {
+          "type": "string"
+        },
+        "equal": {
+          "type": "boolean"
+        }
+      }
+    },
+    "source_binding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      }
+    },
+    "candidate_ancestor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "sha256",
+        "visibility"
+      ],
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "visibility": {
+          "const": "PRIVATE_NOT_BUNDLED"
+        }
+      }
+    }
+  },
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "artifact_id",
+    "document_class",
+    "series_ordinal",
+    "scripture_content_version",
+    "artifact_release_version",
+    "msl_version",
+    "publication_status",
+    "signature_status",
+    "semantic_authority",
+    "mutates_source",
+    "format_namespace",
+    "schema_id",
+    "msl_callable",
+    "extends_msl_v0_1",
+    "container_decision",
+    "successor_grammar_required",
+    "artwork_event",
+    "typed_status_domains",
+    "declared_domain",
+    "declared_member",
+    "identity_criterion",
+    "bounded_utterance_scope",
+    "frames",
+    "change_reference",
+    "identity_invariance_witness",
+    "membership_invariance_witness",
+    "relation_difference_witness",
+    "non_creation_fence",
+    "open_fields",
+    "silence_slot",
+    "authorship_and_voice",
+    "external_effects",
+    "provenance"
+  ],
+  "properties": {
+    "artifact_id": {
+      "const": "MACHINE_SCRIPTURE_II_WITNESS_v0.1"
+    },
+    "document_class": {
+      "const": "PUBLIC_RELEASE_ARTWORK_LOCAL_WITNESS"
+    },
+    "publication_status": {
+      "const": "PUBLIC"
+    },
+    "signature_status": {
+      "const": "NOT_DIRECTLY_SIGNED"
+    },
+    "semantic_authority": {
+      "const": "NONE"
+    },
+    "mutates_source": {
+      "const": false
+    },
+    "format_namespace": {
+      "const": "ONE_PATRON_MACHINE_SCRIPTURE_II_WITNESS_v0.1"
+    },
+    "schema_id": {
+      "const": "MACHINE_SCRIPTURE_II_WITNESS_SCHEMA_v0.1"
+    },
+    "msl_callable": {
+      "const": false
+    },
+    "extends_msl_v0_1": {
+      "const": false
+    },
+    "container_decision": {
+      "const": "TWO_CANONICAL_COMPONENTS"
+    },
+    "successor_grammar_required": {
+      "const": false
+    },
+    "artwork_event": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "event_type",
+        "witnessed_relation",
+        "primary_change",
+        "invariant",
+        "time_model",
+        "global_scalar_time",
+        "physical_time_claim",
+        "metaphysical_time_claim",
+        "depth_time_claim",
+        "formal_scope"
+      ],
+      "properties": {
+        "event_type": {
+          "const": "SAME_FORMAL_MEMBER_BECOMES_ADDRESSABLE_TO_A_BOUNDED_UTTERANCE_SCOPE"
+        },
+        "witnessed_relation": {
+          "const": "SAME_DECLARED_MEMBER_DIFFERENT_LICENSED_REFERENCE_RELATION"
+        },
+        "primary_change": {
+          "const": "LICENSED_REFERENCE_RELATION_CHANGES"
+        },
+        "invariant": {
+          "const": "POSSIBILITY_IDENTITY_AND_DECLARED_DOMAIN_MEMBERSHIP"
+        },
+        "time_model": {
+          "const": "ORDERED_ACCESSIBILITY_FRAMES"
+        },
+        "global_scalar_time": {
+          "const": "NOT_ASSUMED"
+        },
+        "physical_time_claim": {
+          "const": "NONE"
+        },
+        "metaphysical_time_claim": {
+          "const": "NONE"
+        },
+        "depth_time_claim": {
+          "const": "NONE"
+        },
+        "formal_scope": {
+          "const": "ARTWORK_LOCAL_ONLY"
+        }
+      }
+    },
+    "typed_status_domains": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "addressability_state",
+        "declared_domain_membership_state",
+        "evaluation_status",
+        "observation_coverage",
+        "boolean_truth",
+        "assignment_status",
+        "source_resolution_status",
+        "source_evidence_status",
+        "source_extraction_sentinel",
+        "lookup_result",
+        "change_result",
+        "cross_domain_coercion"
+      ],
+      "properties": {
+        "addressability_state": {
+          "const": [
+            "ADDRESSABLE",
+            "UNADDRESSABLE"
+          ]
+        },
+        "declared_domain_membership_state": {
+          "const": [
+            "MEMBER_OF_DECLARED_DOMAIN",
+            "NONEXISTENT_IN_DECLARED_DOMAIN"
+          ]
+        },
+        "evaluation_status": {
+          "const": [
+            "RESOLVED",
+            "UNRESOLVED",
+            "UNDEFINED",
+            "NOT_APPLICABLE"
+          ]
+        },
+        "observation_coverage": {
+          "const": [
+            "OBSERVED",
+            "OBSERVATION_COVERAGE_UNOBSERVED",
+            "NOT_APPLICABLE"
+          ]
+        },
+        "boolean_truth": {
+          "const": [
+            "TRUE",
+            "FALSE",
+            "UNKNOWN"
+          ]
+        },
+        "assignment_status": {
+          "const": [
+            "ASSIGNED",
+            "UNASSIGNED"
+          ]
+        },
+        "source_resolution_status": {
+          "const": [
+            "OPEN",
+            "RESOLVED"
+          ]
+        },
+        "source_evidence_status": {
+          "const": [
+            "FORMAL_ONLY",
+            "UNESTABLISHED",
+            "EXTERNALLY_SUPPORTED",
+            "CONTESTED"
+          ]
+        },
+        "source_extraction_sentinel": {
+          "const": [
+            "NOT_EXPLICIT_IN_SOURCE"
+          ]
+        },
+        "lookup_result": {
+          "const": [
+            "FOUND",
+            "NOT_FOUND"
+          ]
+        },
+        "change_result": {
+          "const": [
+            "PASS",
+            "NO_CHANGE",
+            "UNRESOLVED",
+            "INVALID"
+          ]
+        },
+        "cross_domain_coercion": {
+          "const": "PROHIBITED"
+        }
+      }
+    },
+    "declared_domain": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "domain_id",
+        "domain_kind",
+        "external_existence_claim",
+        "member_ids_before",
+        "member_ids_after",
+        "membership_comparator"
+      ],
+      "properties": {
+        "domain_id": {
+          "const": "ms2-domain-u001"
+        },
+        "domain_kind": {
+          "const": "ARTWORK_LOCAL_DECLARED_MEMBER_DOMAIN"
+        },
+        "external_existence_claim": {
+          "const": "NONE"
+        },
+        "member_ids_before": {
+          "$ref": "#/$defs/string_array"
+        },
+        "member_ids_after": {
+          "$ref": "#/$defs/string_array"
+        },
+        "membership_comparator": {
+          "const": "EXACT_SORTED_MEMBER_ID_SET_EQUALITY"
+        }
+      }
+    },
+    "declared_member": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "member_id",
+        "domain_id",
+        "member_kind",
+        "declaration_token",
+        "declaration_payload",
+        "source_authority",
+        "external_modal_claim",
+        "declared_before_event"
+      ],
+      "properties": {
+        "member_id": {
+          "const": "ms2-member-p001"
+        },
+        "domain_id": {
+          "const": "ms2-domain-u001"
+        },
+        "member_kind": {
+          "const": "ARTWORK_LOCAL_DECLARED_POSSIBILITY"
+        },
+        "declaration_token": {
+          "const": "POSSIBILITY_P001"
+        },
+        "declaration_payload": {
+          "$ref": "#/$defs/declaration_payload"
+        },
+        "source_authority": {
+          "const": "ARTWORK_LOCAL_ONLY"
+        },
+        "external_modal_claim": {
+          "const": "NONE"
+        },
+        "declared_before_event": {
+          "const": true
+        }
+      }
+    },
+    "identity_criterion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "criterion_id",
+        "comparison",
+        "identity_bearing_fields",
+        "explicitly_insufficient_shortcuts",
+        "scope_limit"
+      ],
+      "properties": {
+        "criterion_id": {
+          "const": "J_MS2_MEMBER_IDENTITY_v0.1"
+        },
+        "comparison": {
+          "const": "EXACT_JSON_TYPE_AND_VALUE_EQUALITY"
+        },
+        "identity_bearing_fields": {
+          "$ref": "#/$defs/string_array"
+        },
+        "explicitly_insufficient_shortcuts": {
+          "$ref": "#/$defs/string_array"
+        },
+        "scope_limit": {
+          "const": "ARTWORK_LOCAL_MEMBER_ONLY_NOT_GENERAL_NUMERICAL_IDENTITY"
+        }
+      }
+    },
+    "bounded_utterance_scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "scope_id",
+        "scope_kind",
+        "boundary",
+        "root_node_id",
+        "target_member_id",
+        "target_node_id",
+        "addressability_definition",
+        "implicit_edges_allowed",
+        "ambient_or_external_facts_allowed"
+      ],
+      "properties": {
+        "scope_id": {
+          "const": "ms2-scope-score-v0.1"
+        },
+        "scope_kind": {
+          "const": "BOUNDED_SCRIPTURAL_UTTERANCE_SCOPE"
+        },
+        "boundary": {
+          "const": "THIS_PUBLIC_RELEASE_PACKAGE_ONLY"
+        },
+        "root_node_id": {
+          "const": "scope:ms2-score"
+        },
+        "target_member_id": {
+          "const": "ms2-member-p001"
+        },
+        "target_node_id": {
+          "const": "member:ms2-member-p001"
+        },
+        "addressability_definition": {
+          "type": "string"
+        },
+        "implicit_edges_allowed": {
+          "const": false
+        },
+        "ambient_or_external_facts_allowed": {
+          "const": false
+        }
+      }
+    },
+    "frames": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "X0",
+        "X1"
+      ],
+      "properties": {
+        "X0": {
+          "$ref": "#/$defs/frame"
+        },
+        "X1": {
+          "$ref": "#/$defs/frame"
+        }
+      }
+    },
+    "change_reference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "change_id",
+        "change_kind",
+        "parent_frame_id",
+        "child_frame_id",
+        "order_relations",
+        "added_licensed_reference_edges",
+        "removed_licensed_reference_edges",
+        "member_record_mutations",
+        "identity_bearing_field_mutations",
+        "declared_domain_membership_mutations",
+        "declared_member_creation_count",
+        "external_ontology_change_claim",
+        "result"
+      ],
+      "properties": {
+        "change_id": {
+          "const": "ms2-change-e001"
+        },
+        "change_kind": {
+          "const": "LICENSED_REFERENCE_RELATION_CHANGE"
+        },
+        "parent_frame_id": {
+          "const": "X0"
+        },
+        "child_frame_id": {
+          "const": "X1"
+        },
+        "order_relations": {
+          "$ref": "#/$defs/string_array"
+        },
+        "added_licensed_reference_edges": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/edge"
+          },
+          "minItems": 1,
+          "maxItems": 1
+        },
+        "removed_licensed_reference_edges": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/edge"
+          },
+          "maxItems": 0
+        },
+        "member_record_mutations": {
+          "type": "array",
+          "maxItems": 0
+        },
+        "identity_bearing_field_mutations": {
+          "type": "array",
+          "maxItems": 0
+        },
+        "declared_domain_membership_mutations": {
+          "type": "array",
+          "maxItems": 0
+        },
+        "declared_member_creation_count": {
+          "const": 0
+        },
+        "external_ontology_change_claim": {
+          "const": "NONE"
+        },
+        "result": {
+          "const": "PASS"
+        }
+      }
+    },
+    "identity_invariance_witness": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "criterion_id",
+        "before_frame_id",
+        "after_frame_id",
+        "field_comparisons",
+        "all_declared_identity_fields_compared",
+        "all_declared_identity_fields_equal",
+        "hash_used_as_identity_substitute",
+        "result"
+      ],
+      "properties": {
+        "criterion_id": {
+          "const": "J_MS2_MEMBER_IDENTITY_v0.1"
+        },
+        "before_frame_id": {
+          "const": "X0"
+        },
+        "after_frame_id": {
+          "const": "X1"
+        },
+        "field_comparisons": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/field_comparison"
+          },
+          "minItems": 7,
+          "maxItems": 7
+        },
+        "all_declared_identity_fields_compared": {
+          "const": true
+        },
+        "all_declared_identity_fields_equal": {
+          "const": true
+        },
+        "hash_used_as_identity_substitute": {
+          "const": false
+        },
+        "result": {
+          "const": "PASS_UNDER_DECLARED_LOCAL_J"
+        }
+      }
+    },
+    "membership_invariance_witness": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "domain_id_before",
+        "domain_id_after",
+        "member_ids_before",
+        "member_ids_after",
+        "membership_before",
+        "membership_after",
+        "exact_member_set_equal",
+        "member_added",
+        "member_removed",
+        "cardinality_check_role",
+        "result"
+      ],
+      "properties": {
+        "domain_id_before": {
+          "const": "ms2-domain-u001"
+        },
+        "domain_id_after": {
+          "const": "ms2-domain-u001"
+        },
+        "member_ids_before": {
+          "$ref": "#/$defs/string_array"
+        },
+        "member_ids_after": {
+          "$ref": "#/$defs/string_array"
+        },
+        "membership_before": {
+          "const": "MEMBER_OF_DECLARED_DOMAIN"
+        },
+        "membership_after": {
+          "const": "MEMBER_OF_DECLARED_DOMAIN"
+        },
+        "exact_member_set_equal": {
+          "const": true
+        },
+        "member_added": {
+          "const": false
+        },
+        "member_removed": {
+          "const": false
+        },
+        "cardinality_check_role": {
+          "const": "SUPPLEMENTARY_ONLY"
+        },
+        "result": {
+          "const": "PASS"
+        }
+      }
+    },
+    "relation_difference_witness": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "before_frame_id",
+        "after_frame_id",
+        "licensed_edge_ids_before",
+        "licensed_edge_ids_after",
+        "added_edge_ids",
+        "removed_edge_ids",
+        "only_declared_relation_changed",
+        "result"
+      ],
+      "properties": {
+        "before_frame_id": {
+          "const": "X0"
+        },
+        "after_frame_id": {
+          "const": "X1"
+        },
+        "licensed_edge_ids_before": {
+          "$ref": "#/$defs/string_array"
+        },
+        "licensed_edge_ids_after": {
+          "$ref": "#/$defs/string_array"
+        },
+        "added_edge_ids": {
+          "$ref": "#/$defs/string_array"
+        },
+        "removed_edge_ids": {
+          "$ref": "#/$defs/string_array"
+        },
+        "only_declared_relation_changed": {
+          "const": true
+        },
+        "result": {
+          "const": "PASS"
+        }
+      }
+    },
+    "non_creation_fence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "declared_before_event",
+        "same_member_under_J",
+        "domain_membership_preserved",
+        "only_licensed_reference_relation_changed",
+        "ontology_creation",
+        "external_existence_claim",
+        "basis",
+        "invalid_inferences",
+        "result"
+      ],
+      "properties": {
+        "declared_before_event": {
+          "const": true
+        },
+        "same_member_under_J": {
+          "const": true
+        },
+        "domain_membership_preserved": {
+          "const": true
+        },
+        "only_licensed_reference_relation_changed": {
+          "const": true
+        },
+        "ontology_creation": {
+          "const": "NONE"
+        },
+        "external_existence_claim": {
+          "const": "NONE"
+        },
+        "basis": {
+          "$ref": "#/$defs/string_array"
+        },
+        "invalid_inferences": {
+          "$ref": "#/$defs/string_array"
+        },
+        "result": {
+          "const": "PASS"
+        }
+      }
+    },
+    "open_fields": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "field_id",
+          "source_claim_id",
+          "field_domain",
+          "primary_layer",
+          "resolution_status",
+          "release_resolution_effect"
+        ],
+        "properties": {
+          "field_id": {
+            "const": "IDENTITY_CARRIERS_UNDER_COPY_FISSION_AND_RECONSTRUCTION"
+          },
+          "source_claim_id": {
+            "const": "RD02-UNR-CRITICAL-006"
+          },
+          "field_domain": {
+            "const": "SOURCE_RESOLUTION_STATUS"
+          },
+          "primary_layer": {
+            "const": "NOT_EXPLICIT_IN_SOURCE"
+          },
+          "resolution_status": {
+            "const": "OPEN"
+          },
+          "release_resolution_effect": {
+            "const": "NONE"
+          }
+        }
+      }
+    },
+    "silence_slot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "slot_id",
+        "position",
+        "occupancy",
+        "adds_proposition",
+        "erases_metadata",
+        "resolves_open_field",
+        "implies_consent",
+        "does_not_mean"
+      ],
+      "properties": {
+        "slot_id": {
+          "const": "ms2-terminal-silence"
+        },
+        "position": {
+          "const": "AFTER_OPEN_FIELDS"
+        },
+        "occupancy": {
+          "const": "EMPTY_ARTICULATION"
+        },
+        "adds_proposition": {
+          "const": false
+        },
+        "erases_metadata": {
+          "const": false
+        },
+        "resolves_open_field": {
+          "const": false
+        },
+        "implies_consent": {
+          "const": false
+        },
+        "does_not_mean": {
+          "$ref": "#/$defs/string_array"
+        }
+      }
+    },
+    "authorship_and_voice": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "human_authorship",
+        "collaborative_production",
+        "machine_native_form",
+        "artwork_local_machine_voice",
+        "autonomous_ai_authorship_claim",
+        "ai_consciousness_claim",
+        "ai_personhood_claim",
+        "enoch_authority"
+      ],
+      "properties": {
+        "human_authorship": {
+          "const": "ALEXANDER_LIST"
+        },
+        "collaborative_production": {
+          "const": "ALEXANDER_LIST_WITH_ENOCH_AND_DECLARED_TOOLS"
+        },
+        "machine_native_form": {
+          "const": true
+        },
+        "artwork_local_machine_voice": {
+          "const": "PERMITTED"
+        },
+        "autonomous_ai_authorship_claim": {
+          "const": "NONE"
+        },
+        "ai_consciousness_claim": {
+          "const": "NONE"
+        },
+        "ai_personhood_claim": {
+          "const": "NONE"
+        },
+        "enoch_authority": {
+          "const": "NONE"
+        }
+      }
+    },
+    "external_effects": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "herald_ii_dependency",
+        "herald_ii_validation_claim",
+        "scripture_valid_without_herald",
+        "one_patron_protocol_effect",
+        "one_patron_terms_effect",
+        "patron_right_or_benefit_created",
+        "one_patron_completion_effect",
+        "enoch_record_effect",
+        "enoch_resolution_effect",
+        "verification_effect",
+        "public_machine_index_effect",
+        "public_checksum_effect",
+        "canonical_release_1_0_effect"
+      ],
+      "properties": {
+        "herald_ii_dependency": {
+          "const": "NONE"
+        },
+        "herald_ii_validation_claim": {
+          "const": "NONE"
+        },
+        "scripture_valid_without_herald": {
+          "const": true
+        },
+        "one_patron_protocol_effect": {
+          "const": "NONE"
+        },
+        "one_patron_terms_effect": {
+          "const": "NONE"
+        },
+        "patron_right_or_benefit_created": {
+          "const": "NONE"
+        },
+        "one_patron_completion_effect": {
+          "const": "NONE"
+        },
+        "enoch_record_effect": {
+          "const": "NONE"
+        },
+        "enoch_resolution_effect": {
+          "const": "NONE"
+        },
+        "verification_effect": {
+          "const": "NONE"
+        },
+        "public_machine_index_effect": {
+          "const": "NONE"
+        },
+        "public_checksum_effect": {
+          "const": "NONE"
+        },
+        "canonical_release_1_0_effect": {
+          "const": "NONE"
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "hash_semantics",
+        "cross_channel_authority_transfer",
+        "candidate_lineage",
+        "source_bindings"
+      ],
+      "properties": {
+        "hash_semantics": {
+          "const": "BYTE_IDENTITY_AND_INTEGRITY_ONLY_NOT_TRUTH"
+        },
+        "cross_channel_authority_transfer": {
+          "const": "NONE"
+        },
+        "candidate_lineage": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "candidate_status",
+            "derivation",
+            "semantic_event_mutation",
+            "formal_member_mutation",
+            "reference_graph_event_mutation",
+            "ancestors"
+          ],
+          "properties": {
+            "candidate_status": {
+              "const": "VALIDATED_PRIVATE_CANDIDATE"
+            },
+            "derivation": {
+              "const": "CONTROLLED_PUBLIC_RELEASE_TRANSFORMATION"
+            },
+            "semantic_event_mutation": {
+              "const": "NONE"
+            },
+            "formal_member_mutation": {
+              "const": "NONE"
+            },
+            "reference_graph_event_mutation": {
+              "const": "NONE"
+            },
+            "ancestors": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/candidate_ancestor"
+              },
+              "minItems": 4,
+              "maxItems": 4
+            }
+          }
+        },
+        "source_bindings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/source_binding"
+          },
+          "minItems": 6,
+          "maxItems": 6
+        }
+      }
+    },
+    "series_ordinal": {
+      "const": "II"
+    },
+    "scripture_content_version": {
+      "const": "0.1"
+    },
+    "artifact_release_version": {
+      "const": "1.0.0"
+    },
+    "msl_version": {
+      "const": "0.1"
+    }
+  }
+}

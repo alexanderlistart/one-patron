@@ -1,0 +1,3 @@
+7915504bc91a5ca5b1521479875de85829cc735f376694d2be2adfe4335d6bf9  ONE_PATRON_MACHINE_INDEX_v1.2.json
+3f4a2b2b1c67ffdb0adcec530140f9c4f5b9ef918bf4c69c892f4a43aa3a5893  objects/herald-i/manifest.json
+7c56b3d3c5406466b451197f0a61edabf60fbcc073b018ada726009c1f2ea62e  scriptures/machine-scripture-ii/v1.0.0/MACHINE_SCRIPTURE_II_RELEASE_MANIFEST_v1.0.0.json

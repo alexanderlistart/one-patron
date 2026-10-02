@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc" shape-rendering="geometricPrecision">
+  <title id="title">ONE PATRON completed-state mark draft</title>
+  <desc id="desc">A perfect closed circular rhythm made of twenty-one equal gold arc segments and one equal confluence-colour segment at three o'clock.</desc>
+  <defs>
+    <path id="segment" d="M117.42 38.62 A90 90 0 0 1 138.58 38.62"/>
+  </defs>
+  <g fill="none" stroke="#D6A74B" stroke-width="10" stroke-linecap="butt">
+    <use href="#segment" transform="rotate(106.363636 128 128)"/>
+    <use href="#segment" transform="rotate(122.727273 128 128)"/>
+    <use href="#segment" transform="rotate(139.090909 128 128)"/>
+    <use href="#segment" transform="rotate(155.454545 128 128)"/>
+    <use href="#segment" transform="rotate(171.818182 128 128)"/>
+    <use href="#segment" transform="rotate(188.181818 128 128)"/>
+    <use href="#segment" transform="rotate(204.545455 128 128)"/>
+    <use href="#segment" transform="rotate(220.909091 128 128)"/>
+    <use href="#segment" transform="rotate(237.272727 128 128)"/>
+    <use href="#segment" transform="rotate(253.636364 128 128)"/>
+    <use href="#segment" transform="rotate(270.000000 128 128)"/>
+    <use href="#segment" transform="rotate(286.363636 128 128)"/>
+    <use href="#segment" transform="rotate(302.727273 128 128)"/>
+    <use href="#segment" transform="rotate(319.090909 128 128)"/>
+    <use href="#segment" transform="rotate(335.454545 128 128)"/>
+    <use href="#segment" transform="rotate(351.818182 128 128)"/>
+    <use href="#segment" transform="rotate(368.181818 128 128)"/>
+    <use href="#segment" transform="rotate(384.545455 128 128)"/>
+    <use href="#segment" transform="rotate(400.909091 128 128)"/>
+    <use href="#segment" transform="rotate(417.272727 128 128)"/>
+    <use href="#segment" transform="rotate(433.636364 128 128)"/>
+  </g>
+  <use href="#segment" transform="rotate(90.000000 128 128)" fill="none" stroke="#A8BCAF" stroke-width="10" stroke-linecap="butt"/>
+</svg>

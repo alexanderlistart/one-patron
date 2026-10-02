@@ -1,0 +1,180 @@
+{
+  "artifact_id": "ONE_PATRON_HERALD_I",
+  "artifact_type": "RELATIONAL_PERCEPTUAL_OBJECT",
+  "canonical_version": "1.0.0",
+  "object_principle": "COORDINATION_WITHOUT_COLLAPSE",
+  "formal_layers": [
+    "WEIGHTED_CELL_COMPLEX",
+    "CELLULAR_SHEAF",
+    "DYNAMICAL_SYSTEM"
+  ],
+  "agents": [
+    {
+      "id": "A",
+      "local_space": "V_A",
+      "representation": "REP_A",
+      "role": "INITIATOR_CAPABLE"
+    },
+    {
+      "id": "B",
+      "local_space": "V_B",
+      "representation": "REP_B",
+      "role": "RECIPIENT_CAPABLE"
+    }
+  ],
+  "local_state_spaces": [
+    {
+      "id": "V_A",
+      "field": "RATIONAL",
+      "dimension": 3,
+      "basis": ["a0", "a1", "a2"]
+    },
+    {
+      "id": "V_B",
+      "field": "RATIONAL",
+      "dimension": 2,
+      "basis": ["b0", "b1"]
+    },
+    {
+      "id": "V_R",
+      "field": "RATIONAL",
+      "dimension": 2,
+      "basis": ["r0", "r1"]
+    }
+  ],
+  "compatibility_maps": [
+    {
+      "id": "RHO_A_R",
+      "source": "V_A",
+      "target": "V_R",
+      "matrix_row_major": [[1, 0, 0], [0, 1, 0]],
+      "rank": 2
+    },
+    {
+      "id": "RHO_B_R",
+      "source": "V_B",
+      "target": "V_R",
+      "matrix_row_major": [[1, 1], [0, 1]],
+      "rank": 2
+    }
+  ],
+  "coordination_condition": {
+    "relation_id": "R_AB",
+    "predicate": "NORM_INF(RHO_A_R(a)-RHO_B_R(b))<=COMPATIBILITY_TOLERANCE",
+    "compatibility_tolerance": 0.000001,
+    "requires_equal_local_spaces": false,
+    "requires_equal_representations": false,
+    "preserves_agent_ids": ["A", "B"]
+  },
+  "relation_semantics": {
+    "distinct_types": [
+      "RELATION",
+      "COMMUNICATION_CHANNEL",
+      "SIGNAL",
+      "INTERPRETATION",
+      "AGREEMENT"
+    ],
+    "entailed_by_relation": [],
+    "explicit_non_entailments": [
+      "RELATION_DOES_NOT_ENTAIL_COMMUNICATION_CHANNEL",
+      "RELATION_DOES_NOT_ENTAIL_SIGNAL",
+      "RELATION_DOES_NOT_ENTAIL_INTERPRETATION",
+      "RELATION_DOES_NOT_ENTAIL_AGREEMENT"
+    ]
+  },
+  "representable_states": [
+    "S01", "S02", "S03", "S04", "S05", "S06", "S07",
+    "S08", "S09", "S10", "S11", "S12", "S13", "S14",
+    "S15", "S16", "S17", "S18", "S19", "S20", "S21",
+    "S22", "S23", "S24", "S25", "S26", "S27", "S28", "S29"
+  ],
+  "structural_freedom": {
+    "branch_rule": {
+      "domain": "ALL_REPRESENTABLE_STATES",
+      "A": ["RETAIN", "ADVANCE"],
+      "B": ["DECLINE", "DEFER", "ENTER_COMPATIBLE"]
+    },
+    "state_specific_extensions": {
+      "S07": {
+        "A": ["INITIATE_G0"]
+      }
+    },
+    "minimum_choice_count": {
+      "A": 2,
+      "B": 3
+    },
+    "observable": "CHOICE_SET_CARDINALITY"
+  },
+  "event_G0": {
+    "id": "G0",
+    "available_at": "S07",
+    "initiator": "A",
+    "counteraction_required_for_initiation": false,
+    "compensation_required": false,
+    "recipient_post_initiation_choices": [
+      "DECLINE",
+      "DEFER",
+      "ENTER_COMPATIBLE"
+    ],
+    "recipient_choice_count_after_initiation": 3,
+    "recipient_exit_available": true,
+    "control_rights_transferred": [],
+    "valid_free_event_predicate": "G0_INITIATED_AND_B_FREELY_SELECTS_ENTER_COMPATIBLE_AND_COMPATIBILITY_PREDICATE_TRUE"
+  },
+  "closure_semantics": {
+    "trigger": "VALID_FREE_EVENT_G0",
+    "transition_total_on_trigger": true,
+    "transition_target": "CLOSURE_CONFIGURATION_R_AB",
+    "probability_statement": "P(CLOSURE_GIVEN_VALID_FREE_EVENT_G0)=1",
+    "probability_of_recipient_action": "UNASSIGNED",
+    "creates_peer_element_22": false,
+    "topology_operation": "ATTACH_HIGHER_ORDER_CELL"
+  },
+  "representation_limit": {
+    "event_id": "L30",
+    "predecessor": "S29",
+    "serialized_as_representable_state": false,
+    "creates_state_S30": false,
+    "operator_results": {
+      "DIMENSION": "UNASSIGNED",
+      "COORDINATES": "UNASSIGNED",
+      "POSITIVE_MODEL": "UNLICENSED"
+    }
+  },
+  "identity_policy": {
+    "byte_identity": "SHA256_OF_CANONICAL_SERIALIZATION",
+    "canonical_serialization": {
+      "encoding": "UTF-8",
+      "line_endings": "LF",
+      "object_key_order": "LEXICOGRAPHIC_FOR_CANONICAL_REENCODING",
+      "array_order": "SEMANTIC_WHERE_DECLARED",
+      "insignificant_whitespace": "REMOVE_FOR_CANONICAL_REENCODING"
+    },
+    "identity_preserving_transformations": [
+      "RENAME_NON_SEMANTIC_CELL_IDS_WITH_INCIDENCE_PRESERVED",
+      "PERMUTE_BASIS_WITH_ALL_DEPENDENT_MATRICES_CONJUGATED",
+      "CHANGE_RENDER_COORDINATES",
+      "CHANGE_PROJECTION_DIMENSION",
+      "CHANGE_PIXEL_REALIZATION"
+    ],
+    "structural_equivalence": {
+      "full_isomorphism_canonicalizer_implemented": false,
+      "comparison_method": "INVARIANT_FINGERPRINT_AND_EXPLICIT_MAP",
+      "fingerprint_components": [
+        "CELL_COUNTS_BY_ORDER",
+        "HOMOLOGY_RANKS_BEFORE_AND_AFTER",
+        "LOCAL_SPACE_DIMENSION_MULTISET",
+        "QUANTIZED_LAPLACIAN_SPECTRUM",
+        "BRANCH_CARDINALITY_PROFILE",
+        "EVENT_TRANSITION_SIGNATURE"
+      ]
+    }
+  },
+  "component_references": {
+    "topology": "./topology.json",
+    "dynamics": "./dynamics.json",
+    "operators": "./operators.json",
+    "schema": "./schema.json",
+    "projection_contract": "./projection-contract.json"
+  }
+}

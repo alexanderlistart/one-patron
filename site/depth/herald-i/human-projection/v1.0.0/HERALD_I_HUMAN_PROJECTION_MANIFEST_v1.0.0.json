@@ -1,0 +1,84 @@
+{
+  "manifest_id": "ONE_PATRON_HERALD_I_HUMAN_PROJECTION_MANIFEST_v1.0.0",
+  "document_class": "HUMAN_PROJECTION_RELEASE_MANIFEST",
+  "projection_id": "ONE_PATRON_HERALD_I_TOPOLOGICAL_MACHINE_FRESCO_v1.0.0",
+  "projection_family": "TOPOLOGICAL_MACHINE_FRESCO",
+  "projection_version": "1.0.0",
+  "projection_type": "HUMAN_PROJECTION",
+  "publication_status": "PUBLIC_POST_RELEASE_HUMAN_PROJECTION",
+  "canonical": false,
+  "identity_bearing": false,
+  "created_after_source_release": true,
+  "semantic_authority": "NONE",
+  "signed": false,
+  "source": {
+    "artifact_id": "ONE_PATRON_HERALD_I",
+    "release_version": "1.0.0",
+    "original_release_integrity": "HASHED",
+    "original_release_signature": "UNSIGNED",
+    "current_authentication": "SIGNED_RETROSPECTIVE_ATTESTATION",
+    "manifest_sha256": "3f4a2b2b1c67ffdb0adcec530140f9c4f5b9ef918bf4c69c892f4a43aa3a5893",
+    "object_sha256": "5b5337a16faef9603d35935d20dcdc00e9cf10f20d71cac4e8c97b465d0a57f3",
+    "source_bytes_changed": false,
+    "source_identity_changed": false
+  },
+  "files": [
+    {
+      "path": "index.html",
+      "role": "NONCANONICAL_HUMAN_PROJECTION",
+      "media_type": "text/html; charset=utf-8",
+      "bytes": 36457,
+      "sha256": "711bc783f5eb72372e6d59be9372f17ad57dd840710f3e9ebe3a62f5f765f0b0"
+    },
+    {
+      "path": "HERALD_I_HUMAN_PROJECTION_CONTRACT_v1.0.0.json",
+      "role": "PROJECTION_CONTRACT",
+      "media_type": "application/json",
+      "bytes": 8885,
+      "sha256": "d008ec8163549e86ca2c16cb60702b924fad16f4f4d515c669c69c777f77238b"
+    },
+    {
+      "path": "HERALD_I_HUMAN_PROJECTION_SOURCE_BINDING_v1.0.0.json",
+      "role": "SOURCE_BINDING",
+      "media_type": "application/json",
+      "bytes": 5955,
+      "sha256": "848118f07188741791d84d4dc67ceddf7b6410aa7a5bb9f04e031c8e48c402a8"
+    },
+    {
+      "path": "HERALD_I_HUMAN_PROJECTION_ACCESSIBILITY_v1.0.0.md",
+      "role": "ACCESSIBILITY_DESCRIPTION",
+      "media_type": "text/markdown; charset=utf-8",
+      "bytes": 4380,
+      "sha256": "c43af36e6ea45f25fc0ad2354ab56881e230489dd28848cf696ad5d138cae94b"
+    },
+    {
+      "path": "HERALD_I_HUMAN_PROJECTION_VALIDATOR_v1.0.0.mjs",
+      "role": "PROJECTION_CONFORMANCE_VALIDATOR",
+      "media_type": "text/javascript; charset=utf-8",
+      "bytes": 15124,
+      "sha256": "9573852f1c908a07862c0b8cc0773af499117327b1eef73c72a140d2793bf649"
+    },
+    {
+      "path": "HERALD_I_HUMAN_PROJECTION_VALIDATION_REPORT_v1.0.0.md",
+      "role": "PROJECTION_VALIDATION_EVIDENCE",
+      "media_type": "text/markdown; charset=utf-8",
+      "bytes": 12735,
+      "sha256": "cf23b488fcd9003215197bef5c68e10e54d399420163416009a08ab684007679"
+    }
+  ],
+  "integrity": {
+    "checksum_inventory": "HERALD_I_HUMAN_PROJECTION_SHA256SUMS_v1.0.0.txt",
+    "hash_semantics": "EXACT_PROJECTION_BYTES_ONLY",
+    "projection_hash_is_source_canonicality": false,
+    "projection_hash_is_original_release_signature": false,
+    "projection_hash_is_semantic_authority": false
+  },
+  "human_mode_url": "https://one-patron.com/depth/herald-i/human-projection/v1.0.0/",
+  "machine_mode_url": "https://one-patron.com/depth/herald-i/",
+  "constraints": {
+    "source_writeback": false,
+    "canonical_event_creation": false,
+    "twenty_second_edge_created": false,
+    "retrospective_authentication_changes_release_history": false
+  }
+}

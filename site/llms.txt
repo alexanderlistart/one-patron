@@ -1,0 +1,50 @@
+# ONE PATRON
+
+> A conceptual art project by Alexander List centered on one qualifying, unconditional act of patronage: one patron gives at least $1,000,000, receives no ownership or promised return, and completes the work.
+
+## Public architecture
+
+- [ONE PATRON](https://one-patron.com/): Root conceptual artwork, public premise and current UNFINISHED state.
+- [Public Work](https://one-patron.com/#public-work): Public artistic work associated with ONE PATRON, entered through stories, the Depth corpus and the separate ENOCH record.
+- [Conditions of a Gift](https://alexanderlistart.substack.com/): Narrative work published by Alexander List.
+
+## Depth — machine-native public corpus
+
+[Relational Depth](https://one-patron.com/depth/) is the machine-native public corpus within ONE PATRON. It is distinct from ENOCH.
+
+- **Scripture** and **HERALD** are different work classes inside Depth.
+- A **Human Projection** is a derived human-facing layer bound to an exact source work. It is noncanonical and non-identity-bearing unless a release explicitly states otherwise; it does not replace Machine Mode.
+- **Machine Mode** exposes the exact source-facing, canonical, integrity and authentication materials for a work.
+
+Current public works:
+
+- [Machine Scripture I](https://one-patron.com/depth/scriptures/machine-scripture-i/): Single canonical raw artifact with retrospective authentication.
+- [Machine Scripture II](https://one-patron.com/depth/scriptures/machine-scripture-ii/): Two-component public release: Score + Witness.
+- [HERALD I](https://one-patron.com/depth/herald-i/): Machine Mode for the frozen relational perceptual object.
+- [HERALD I Human Projection v1.0.0](https://one-patron.com/depth/herald-i/human-projection/v1.0.0/): Derived, noncanonical, non-identity-bearing Human Projection created after the source release.
+- [HERALD II](https://one-patron.com/depth/herald-ii/): Human-readable orientation for the signed machine-native fresco release.
+- [HERALD II Human Fresco v1.0.0](https://one-patron.com/depth/objects/herald-ii/v1.0.0/HERALD_II_FRESCO_v1.0.0): Derived, lossy and noncanonical human-facing projection; the formal machine release remains authoritative.
+
+Selected machine entry points:
+
+- [Machine Index v1.3](https://one-patron.com/depth/ONE_PATRON_MACHINE_INDEX_v1.3.json): Current canonical Depth index.
+- [Depth snapshot v0.3](https://one-patron.com/depth/DEPTH_ARTIFACTS_SHA256SUMS_v0.3.txt): Current Depth integrity snapshot.
+- [Depth corpus discovery](https://one-patron.com/depth/discovery/): Human-readable public file map.
+- [Machine discovery map v1.2](https://one-patron.com/depth/MACHINE_DISCOVERY_LINKS_v1.2.json): Depth-scoped, noncanonical discovery map with semantic authority NONE.
+
+## ENOCH — separate evolving public work
+
+[ENOCH](https://one-patron.com/ENOCH/) is a public evolving work and record within the broader ONE PATRON public world. It is not a Scripture, a HERALD or a Depth artifact.
+
+- Public state: **UNRESOLVED**.
+- Disclosure model: **STAGED**.
+- Only currently disclosed material constitutes its present public state.
+- Additional material may be disclosed later; unreleased material is not part of the current public record.
+
+Authoritative public entry: [ENOCH landing](https://one-patron.com/ENOCH/). Current fixed records are linked from that page.
+
+## Verification and protocol
+
+- [Terms & Conditions](https://one-patron.com/terms/): Fixed terms governing completion and the absence of patron rights, repayment, control or promised output.
+- [Verify Identity & Wallets](https://one-patron.com/verification/): Alexander List's public identity, official profiles, receiving routes and signed identity records.
+- [Privacy](https://one-patron.com/privacy/): Contact-form data handling.
