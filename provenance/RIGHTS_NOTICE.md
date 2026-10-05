@@ -10,5 +10,5 @@ Publication of these files on GitHub or elsewhere does not grant a license to re
 
 Third-party names, platform marks and other third-party materials remain the property of their respective owners.
 
-Official project website: https://one-patron.netlify.app/
+Official project website: https://one-patron.com/
 

@@ -4,9 +4,9 @@ ONE PATRON is a conceptual artwork by Alexander List.
 
 ## Public project records
 
-- Website: https://one-patron.netlify.app/
-- Terms & Conditions: https://one-patron.netlify.app/terms/
-- Verify identity & wallets: https://one-patron.netlify.app/verification/
+- Website: https://one-patron.com/
+- Terms & Conditions: https://one-patron.com/terms/
+- Verify identity & wallets: https://one-patron.com/verification/
 - Substack: https://alexanderlistart.substack.com/
 - X: https://x.com/onepatronart
 - Reddit: https://www.reddit.com/user/onepatronart/
