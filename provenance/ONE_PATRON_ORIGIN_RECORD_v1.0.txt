@@ -1,0 +1,55 @@
+ONE PATRON — ORIGIN RECORD
+Version: 1.0
+
+PROJECT:
+ONE PATRON
+
+CREATOR:
+Alexander List
+
+CANONICAL PROJECT:
+https://one-patron.com/
+
+PUBLIC ORIGIN:
+28 July 2026
+
+PUBLIC ORIGIN BASIS:
+Publication of ONE PATRON Protocol v1.0.
+
+EARLIEST REPOSITORY EVIDENCE:
+16 August 2026
+
+EARLIEST REPOSITORY COMMIT:
+f03d2aad1f6900febf03bd5ab8876cdb0f2fff5e
+
+PROTOCOL:
+ONE PATRON Protocol v1.0
+
+PROTOCOL PUBLICATION:
+28 July 2026
+
+PROTOCOL SHA-256:
+e0e17234a75222bb6553cfededb65c3565c3239744cf92ed0b1a60581111e086
+
+OPENPGP IDENTITY:
+18FEBD74D1E7D6FEB97A3406316D9E762810715D
+
+SIGNING SUBKEY:
+F98D7B5AB20FF1E8D0440DBB6EE2FE0A9D8278F5
+
+PROVENANCE STATEMENT:
+This record documents the provenance and public history of the specific artwork/project ONE PATRON created by Alexander List.
+
+NON-EXCLUSIVITY STATEMENT:
+This record does not claim exclusive ownership of, or exclusive rights in, the abstract ideas of unconditional patronage, unconditional giving, gifts, artistic patronage, or related concepts.
+
+SOURCE / VERIFICATION:
+Canonical project: https://one-patron.com/
+Canonical Protocol: https://one-patron.com/protocol-v1.0.txt
+Protocol SHA-256 record: https://one-patron.com/protocol-v1.0.sha256
+Current identity record: https://one-patron.com/verification/ONE_PATRON_IDENTITY_MANIFEST_v1.1.txt
+Public repository: https://github.com/alexanderlistart/one-patron
+Repository evidence: https://github.com/alexanderlistart/one-patron/commit/f03d2aad1f6900febf03bd5ab8876cdb0f2fff5e
+
+STATUS:
+CANONICAL PROVENANCE RECORD v1.0
