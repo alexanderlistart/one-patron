@@ -210,7 +210,7 @@ h3 {
 
 .hero {
   min-height: 680px;
-  padding-block: 64px 72px;
+  padding-block: 50px 72px;
   display: grid;
   grid-template-columns: minmax(0, 1.12fr) minmax(360px, 0.88fr);
   grid-template-areas:
@@ -219,8 +219,12 @@ h3 {
     "actions figure";
   column-gap: clamp(42px, 6vw, 88px);
   row-gap: 34px;
-  align-content: center;
+  align-content: start;
   align-items: start;
+}
+
+@media (min-width: 761px) {
+  body main#main-record > section.hero:first-child { padding-top: 50px; }
 }
 
 .hero-heading {
