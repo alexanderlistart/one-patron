@@ -108,7 +108,7 @@ a:hover { color: var(--depth-blue); }
 }
 .depth-back { white-space: nowrap; }
 
-main.depth-main { padding: clamp(46px, 6vw, 76px) 0 88px; }
+main.depth-main { padding: clamp(52px, 4vw, 64px) 0 88px; }
 .depth-page-kicker,
 .depth-section-label,
 .depth-status-label,
@@ -390,6 +390,7 @@ main.depth-main { padding: clamp(46px, 6vw, 76px) 0 88px; }
 
 @media (max-width: 620px) {
   :root { --depth-page: min(100% - 28px, 1080px); --depth-row-gap: 7px; }
+  main.depth-main { padding-top: 32px; }
   .depth-header-row { min-height: 66px; gap: 14px; }
   .depth-brand { font-size: 9px; letter-spacing: .11em; }
   .depth-marker { width: 26px; height: 26px; flex-basis: 26px; }

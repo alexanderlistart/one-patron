@@ -214,7 +214,7 @@
     }
 
     .section {
-      padding: clamp(72px, 9vw, 112px) 0;
+      padding: clamp(56px, 6vw, 80px) 0;
       border-top: 1px solid var(--line);
       scroll-margin-top: 140px;
     }
@@ -257,6 +257,10 @@
     .wallet-grid,
     .profile-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .file-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .file-grid--two {
+      width: min(100%, 800px);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 
     .use-card,
     .identity-card,
@@ -458,7 +462,12 @@
     }
 
     .file-card p { flex: 1; }
-    .file-card .button { align-self: flex-start; }
+    .file-card .button {
+      width: fit-content;
+      max-width: 100%;
+      margin-top: 24px;
+      align-self: flex-start;
+    }
 
     .verification-steps {
       margin: 48px 0 0;
@@ -513,10 +522,13 @@
     .site-footer a:hover,
     .site-footer a:focus-visible { color: var(--text); }
 
+    @media (max-width: 980px) {
+      .file-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
     @media (max-width: 900px) {
       .global-links a:first-child { display: none; }
-      .use-grid,
-      .file-grid { grid-template-columns: 1fr; }
+      .use-grid { grid-template-columns: 1fr; }
       .file-card { min-height: auto; }
     }
 
@@ -527,7 +539,17 @@
       .hero { padding-top: 64px; }
       .global-links a:not(:last-child) { display: none; }
       .section-nav { top: 68px; }
-      .section-nav-inner { min-height: 44px; gap: 20px; }
+      .section-nav::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 28px;
+        background: linear-gradient(90deg, rgba(7, 8, 10, 0), rgba(7, 8, 10, 0.96));
+        pointer-events: none;
+      }
+      .section-nav-inner { min-height: 44px; padding-right: 28px; gap: 20px; }
       .identity-grid,
       .wallet-grid,
       .profile-grid { grid-template-columns: 1fr; }
@@ -535,7 +557,11 @@
       .copy-row { align-items: stretch; flex-direction: column; }
       .site-footer { align-items: flex-start; flex-direction: column; }
       .footer-logo { width: 205px; }
-      .section { scroll-margin-top: 126px; }
+      .section { padding: 52px 0; scroll-margin-top: 126px; }
+    }
+
+    @media (max-width: 680px) {
+      .file-grid { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 380px) {
@@ -747,32 +773,32 @@
           <span class="data-label">02 · CURRENT</span>
           <h3>Identity Manifest v1.1</h3>
           <p>The current identity-routing record. It preserves the established identity and wallet bindings while recording one-patron.com as the canonical site.</p>
-          <a class="button" href="/verification/ONE_PATRON_IDENTITY_MANIFEST_v1.1.txt" download>Download Current Manifest</a>
+          <a class="button" href="/verification/ONE_PATRON_IDENTITY_MANIFEST_v1.1.txt" download>Download Manifest</a>
         </article>
 
         <article class="file-card">
           <span class="data-label">03 · CURRENT</span>
           <h3>Detached Signature v1.1</h3>
           <p>The detached OpenPGP signature used to verify that the current manifest has not been changed.</p>
-          <a class="button" href="/verification/ONE_PATRON_IDENTITY_MANIFEST_v1.1.asc" download>Download Current Signature</a>
+          <a class="button" href="/verification/ONE_PATRON_IDENTITY_MANIFEST_v1.1.asc" download>Download Signature</a>
         </article>
       </div>
 
       <p class="proof-note"><strong>Continuity:</strong> v1.0 remains the historical signed record for the original Netlify address. v1.1 is the current identity-routing record for one-patron.com. The identity, OpenPGP key and receiving addresses are unchanged.</p>
 
-      <div class="file-grid">
+      <div class="file-grid file-grid--two">
         <article class="file-card">
           <span class="data-label">HISTORICAL · v1.0</span>
           <h3>Identity Manifest v1.0</h3>
           <p>The original signed identity record, preserved unchanged and correct for its publication state.</p>
-          <a class="button" href="/verification/ONE_PATRON_IDENTITY_MANIFEST.txt" download>Download Historical Manifest</a>
+          <a class="button" href="/verification/ONE_PATRON_IDENTITY_MANIFEST.txt" download>Download Manifest</a>
         </article>
 
         <article class="file-card">
           <span class="data-label">HISTORICAL · v1.0</span>
           <h3>Detached Signature v1.0</h3>
           <p>The original detached OpenPGP signature, preserved unchanged with the historical manifest.</p>
-          <a class="button" href="/verification/ONE_PATRON_IDENTITY_MANIFEST.asc" download>Download Historical Signature</a>
+          <a class="button" href="/verification/ONE_PATRON_IDENTITY_MANIFEST.asc" download>Download Signature</a>
         </article>
       </div>
 
@@ -792,7 +818,7 @@
       <h2>Project provenance.</h2>
       <p class="intro-copy">ONE PATRON was conceived and created by Alexander List. Its documented public origin and Protocol v1.0 are preserved in a signed canonical Origin Record.</p>
 
-      <div class="file-grid">
+      <div class="file-grid file-grid--two">
         <article class="file-card">
           <span class="data-label">CANONICAL · v1.0</span>
           <h3>Origin Record</h3>

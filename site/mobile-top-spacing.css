@@ -1,9 +1,16 @@
-@media (max-width: 760px) {
-  :root {
-    --mobile-first-content-gap: 44px;
-  }
+:root {
+  --first-content-gap: clamp(52px, 4vw, 64px);
+  --mobile-first-content-gap: 32px;
+}
 
-  main > .hero:first-child,
+main > .hero:first-child:not(#top) {
+  padding-top: var(--first-content-gap);
+}
+
+@media (max-width: 760px) {
+
+  main > .hero:first-child:not(#top),
+  main > .hero:first-child#top,
   main#artifact {
     padding-top: var(--mobile-first-content-gap);
   }
