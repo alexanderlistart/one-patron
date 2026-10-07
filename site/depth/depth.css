@@ -200,6 +200,27 @@ main.depth-main { padding: clamp(52px, 4vw, 64px) 0 88px; }
   text-transform: uppercase;
 }
 
+.depth-context-nav {
+  min-width: 0;
+  margin: 0 0 32px;
+  padding: 0 0 18px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px 13px;
+  border-bottom: 1px solid var(--depth-line);
+  color: var(--depth-muted);
+  font-family: var(--depth-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .09em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+.depth-context-nav a { color: var(--depth-muted); }
+.depth-context-nav a:hover { color: var(--depth-text); }
+.depth-context-nav [aria-current="page"] { color: var(--depth-muted-strong); }
+
 /* Work cards: editorial, not dashboard tiles */
 .depth-work-list { border-top: 1px solid var(--depth-line); }
 .depth-work-card {
@@ -409,6 +430,7 @@ main.depth-main { padding: clamp(52px, 4vw, 64px) 0 88px; }
   .depth-marker--landing { width: 34px; height: 34px; flex-basis: 34px; }
   .depth-back,
   .depth-corpus-label { font-size: 9px; letter-spacing: .07em; }
+  .depth-context-nav { margin-bottom: 24px; gap: 9px 11px; }
   .depth-technical-row { grid-template-columns: minmax(0, 1fr); row-gap: 5px; }
   .depth-source-body { padding: 14px; }
   .depth-source-scroll pre { padding: 16px; font-size: 11px; }

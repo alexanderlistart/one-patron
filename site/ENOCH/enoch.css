@@ -100,6 +100,32 @@ img {
   border-bottom: 1px solid rgba(243, 239, 231, 0.08);
 }
 
+.human-section-nav {
+  min-width: 0;
+  padding-top: 17px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px 13px;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 650;
+  letter-spacing: 0.11em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.human-section-nav a {
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  color: var(--muted);
+  text-underline-offset: 4px;
+}
+
+.human-section-nav a:hover { color: var(--ivory); }
+
 .header-inner {
   min-height: 84px;
   display: flex;

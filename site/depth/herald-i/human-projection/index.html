@@ -6,7 +6,7 @@
   <meta name="robots" content="index,follow">
   <title>HERALD I — Topological Machine Fresco · Human Projection v1.0.0</title>
   <meta name="description" content="A derived, noncanonical human projection of the frozen HERALD I machine work.">
-  <link rel="canonical" href="https://one-patron.com/depth/herald-i/human-projection/v1.0.0/">
+  <link rel="canonical" href="https://one-patron.com/depth/herald-i/human-projection/">
   <link rel="alternate" type="application/json" href="/depth/objects/herald-i/manifest.json" title="HERALD I canonical machine manifest">
   <meta name="projection-id" content="ONE_PATRON_HERALD_I_TOPOLOGICAL_MACHINE_FRESCO_v1.0.0">
   <meta name="projection-status" content="NONCANONICAL_PUBLIC_HUMAN_PROJECTION">
@@ -97,6 +97,26 @@
 
     .candidate-strip span { color: var(--gold); }
 
+    .viewer-nav {
+      width: min(100% - clamp(2rem, 8vw, 7rem), var(--measure));
+      min-width: 0;
+      margin: 0 auto;
+      padding: 1rem 0 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.45rem 0.75rem;
+      color: var(--muted);
+      font: 600 0.62rem/1.5 var(--mono);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .viewer-nav a { color: var(--muted); }
+    .viewer-nav a:hover { color: var(--ink); }
+    .viewer-nav [aria-current="page"] { color: var(--ink); }
+    .viewer-nav .exact-release { margin-left: auto; color: var(--gold); }
+
     main {
       width: min(100% - clamp(2rem, 8vw, 7rem), var(--measure));
       margin: 0 auto;
@@ -186,7 +206,7 @@
 
     .artwork-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 14.2rem;
+      grid-template-columns: minmax(0, 1fr) 18rem;
       min-height: min(72vw, 49rem);
     }
 
@@ -320,11 +340,13 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: clamp(1.4rem, 3vw, 2.25rem) 0 clamp(1.4rem, 3vw, 2.25rem) clamp(1.2rem, 2.6vw, 2rem);
+      min-width: 0;
+      padding: clamp(1.4rem, 3vw, 2.25rem) clamp(1rem, 2vw, 1.5rem) clamp(1.4rem, 3vw, 2.25rem) clamp(1.2rem, 2.6vw, 2rem);
     }
 
     .family-list {
       display: grid;
+      min-width: 0;
       gap: 1.25rem;
       margin: 0;
     }
@@ -334,7 +356,10 @@
       grid-template-columns: 2.2rem minmax(0, 1fr);
       gap: 0.7rem;
       align-items: start;
+      min-width: 0;
     }
+
+    .family-row > div { min-width: 0; }
 
     .family-mark {
       margin-top: 0.45rem;
@@ -361,6 +386,7 @@
       color: var(--muted);
       font: 500 0.62rem/1.55 var(--mono);
       letter-spacing: 0.04em;
+      overflow-wrap: anywhere;
     }
 
     .structural-fact {
@@ -378,11 +404,12 @@
 
     .operator-zone {
       display: grid;
-      grid-template-columns: minmax(12rem, 0.55fr) minmax(0, 1.45fr);
+      grid-template-columns: minmax(15.5rem, 0.5fr) minmax(0, 1.5fr);
       border-top: 1px solid var(--line);
     }
 
     .operator-heading {
+      min-width: 0;
       padding: clamp(1.4rem, 3vw, 2rem) clamp(1.2rem, 3vw, 2.3rem) clamp(1.4rem, 3vw, 2rem) 0;
       border-right: 1px solid var(--line);
     }
@@ -493,10 +520,12 @@
     .interpretation {
       display: grid;
       grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.75fr);
-      gap: clamp(2rem, 7vw, 7rem);
+      gap: clamp(2.5rem, 5vw, 5rem);
       align-items: start;
       padding: clamp(3rem, 7vw, 6rem) 0 clamp(2.8rem, 6vw, 5rem);
     }
+
+    .interpretation > * { min-width: 0; }
 
     .structural-summary {
       margin: 0;
@@ -513,10 +542,14 @@
 
     .disclosure {
       margin: 0;
+      width: 100%;
+      max-width: 32rem;
+      justify-self: end;
       padding-left: 1rem;
       border-left: 1px solid var(--gold);
       color: var(--muted);
       font: 500 0.69rem/1.65 var(--mono);
+      overflow-wrap: anywhere;
     }
 
     .disclosure strong {
@@ -595,6 +628,14 @@
       font: 500 0.72rem/1.6 var(--mono);
     }
 
+    @media (min-width: 1600px) {
+      :root { --measure: clamp(1220px, 65vw, 1320px); }
+    }
+
+    @media (min-width: 2200px) {
+      :root { --measure: clamp(1320px, 52vw, 1480px); }
+    }
+
     @media (max-width: 900px) {
       main { width: min(100% - 2.5rem, var(--measure)); }
 
@@ -650,6 +691,10 @@
         grid-template-columns: 1fr;
         gap: 2rem;
       }
+    }
+
+    @media (max-width: 620px) {
+      .viewer-nav .exact-release { width: 100%; margin-left: 0; }
     }
 
     @media (max-width: 620px) {
@@ -724,8 +769,16 @@
   <a class="skip-link" href="#fresco">Skip to the fresco</a>
 
   <div class="candidate-strip">
-    <span>Human Projection 1.0.0</span> · Created after source release · Noncanonical <span class="optional">· No source writeback</span>
+    <span>Human Projection 1.0.0</span> · Created after source release · Noncanonical <span class="optional">· Non-identity-bearing · No source writeback</span>
   </div>
+
+  <nav class="viewer-nav" aria-label="Human projection context">
+    <a href="/">PROJECT OVERVIEW</a><span aria-hidden="true">·</span>
+    <a href="/depth/">DEPTH</a><span aria-hidden="true">·</span>
+    <a href="/depth/herald-i/">HERALD I</a><span aria-hidden="true">·</span>
+    <span aria-current="page">HUMAN PROJECTION</span>
+    <a class="exact-release" href="/depth/herald-i/human-projection/v1.0.0/">EXACT RELEASE · v1.0.0</a>
+  </nav>
 
   <main>
     <header class="masthead">
@@ -852,7 +905,7 @@
             This Human Projection was created after the release and does not become part of it.
           </p>
           <p class="candidate-note">Projection hashes identify projection bytes only. They do not authenticate or canonicalize HERALD I.</p>
-          <p class="candidate-note"><a href="HERALD_I_HUMAN_PROJECTION_MANIFEST_v1.0.0.json">Projection manifest</a> · <a href="HERALD_I_HUMAN_PROJECTION_SHA256SUMS_v1.0.0.txt">Projection checksums</a></p>
+          <p class="candidate-note"><a href="/depth/herald-i/human-projection/v1.0.0/HERALD_I_HUMAN_PROJECTION_MANIFEST_v1.0.0.json">Projection manifest</a> · <a href="/depth/herald-i/human-projection/v1.0.0/HERALD_I_HUMAN_PROJECTION_SHA256SUMS_v1.0.0.txt">Projection checksums</a></p>
         </section>
         <section>
           <h2>Machine Mode</h2>
