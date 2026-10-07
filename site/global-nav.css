@@ -1,0 +1,196 @@
+:root {
+  --op-nav-bg: #0B0C0E;
+  --op-nav-panel: #111317;
+  --op-nav-text: #F3EFE7;
+  --op-nav-muted: #C7C4BC;
+  --op-nav-line: #2B2E33;
+  --op-nav-line-bright: #464A51;
+  --op-nav-gold: #D6A74B;
+  --op-nav-gold-light: #F0CF7A;
+  --op-nav-sans: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  --op-nav-page: min(1180px, calc(100% - 40px));
+  --op-nav-height: 76px;
+}
+.site-nav,
+.site-nav * { box-sizing: border-box; }
+
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(243, 239, 231, 0.09);
+  background: rgba(11, 12, 14, 0.86);
+  backdrop-filter: blur(18px);
+  color: var(--op-nav-text);
+}
+
+.site-nav .nav-inner {
+  width: var(--op-nav-page);
+  min-height: var(--op-nav-height);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.site-nav .brand-link {
+  display: inline-flex;
+  flex: 0 0 auto;
+}
+
+.site-nav .brand-link img {
+  width: 232px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.site-nav .nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: clamp(15px, 2.1vw, 30px);
+  font-family: var(--op-nav-sans);
+}
+
+.site-nav .nav-links a {
+  color: var(--op-nav-muted);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.11em;
+  line-height: 1.2;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.site-nav .nav-links a:hover,
+.site-nav .nav-links a:focus-visible { color: var(--op-nav-text); }
+
+.site-nav .nav-action {
+  min-height: 48px;
+  padding: 12px 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--op-nav-gold);
+  border-radius: 999px;
+  color: var(--op-nav-gold-light) !important;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.site-nav .mobile-nav { display: none; }
+
+.site-nav :focus-visible {
+  outline: 2px solid #65C9FF;
+  outline-offset: 4px;
+}
+
+@media (min-width: 2200px) {
+  :root { --op-nav-page: min(1500px, calc(100% - 96px)); }
+}
+
+@media (min-width: 2800px) {
+  :root { --op-nav-page: min(clamp(1500px, 52vw, 1640px), calc(100% - 128px)); }
+}
+
+@media (max-width: 1040px) {
+  .site-nav .nav-links { gap: 15px; }
+  .site-nav .nav-links > a:not(.nav-action) { display: none; }
+  .site-nav .mobile-nav {
+    position: relative;
+    display: block;
+    font-family: var(--op-nav-sans);
+  }
+  .site-nav .mobile-nav summary {
+    min-height: 42px;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--op-nav-line-bright);
+    border-radius: 999px;
+    color: var(--op-nav-muted);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    list-style: none;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  .site-nav .mobile-nav[open] summary {
+    border-color: var(--op-nav-gold);
+    color: var(--op-nav-text);
+  }
+  .site-nav .mobile-nav summary::-webkit-details-marker { display: none; }
+  .site-nav .mobile-panel {
+    position: absolute;
+    top: 36px;
+    right: 0;
+    min-width: 220px;
+    padding: 14px;
+    display: grid;
+    gap: 5px;
+    border: 1px solid var(--op-nav-line);
+    border-radius: 16px;
+    background: var(--op-nav-panel);
+    box-shadow: 0 18px 48px rgba(0, 0, 0, .4);
+  }
+  .site-nav .mobile-panel a {
+    padding: 9px 10px;
+    color: var(--op-nav-muted);
+    font-size: 12px;
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 680px) {
+  :root {
+    --op-nav-page: min(100% - 28px, 1180px);
+    --op-nav-height: 68px;
+  }
+  .site-nav .brand-link img { width: 184px; }
+  .site-nav .nav-inner { gap: 12px; }
+  .site-nav .nav-links { gap: 8px; }
+  .site-nav .nav-action {
+    min-height: 42px;
+    padding: 9px 14px;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+  }
+  .site-nav .mobile-panel {
+    position: fixed;
+    top: var(--op-nav-height);
+    right: 14px;
+    left: 14px;
+    min-width: 0;
+    z-index: 120;
+  }
+}
+
+@media (max-width: 400px) {
+  .site-nav .brand-link img { width: 152px; }
+  .site-nav .nav-inner { gap: 8px; }
+  .site-nav .nav-links { gap: 7px; }
+  .site-nav .mobile-nav summary {
+    width: 38px;
+    min-height: 38px;
+    padding: 0;
+    font-size: 0;
+  }
+  .site-nav .mobile-nav summary::before {
+    content: "☰";
+    font-size: 15px;
+    line-height: 1;
+  }
+  .site-nav .nav-action {
+    min-height: 38px;
+    padding-inline: 9px;
+    font-size: 9px;
+    letter-spacing: 0.055em;
+  }
+}

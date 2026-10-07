@@ -96,7 +96,7 @@ img {
   transform: translateY(0);
 }
 
-.site-header {
+.enoch-context {
   border-bottom: 1px solid rgba(243, 239, 231, 0.08);
 }
 
@@ -127,22 +127,10 @@ img {
 .human-section-nav a:hover { color: var(--ivory); }
 
 .header-inner {
-  min-height: 84px;
+  min-height: 52px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 32px;
-}
-
-.brand-home {
-  display: inline-flex;
-  flex: 0 0 auto;
-}
-
-.brand-lockup {
-  width: 218px;
-  height: auto;
-  display: block;
+  justify-content: flex-start;
 }
 
 .record-name {
@@ -967,16 +955,11 @@ body[data-completion="resolved"] .state-label {
   }
 
   .header-inner {
-    min-height: 76px;
-    gap: 16px;
-  }
-
-  .brand-lockup {
-    width: 170px;
+    min-height: 48px;
   }
 
   .record-name > span:first-child {
-    display: none;
+    display: inline-flex;
   }
 
   .hero {
@@ -1168,10 +1151,6 @@ body[data-completion="resolved"] .state-label {
 
   .header-inner {
     gap: 10px;
-  }
-
-  .brand-lockup {
-    width: 148px;
   }
 
   .state-label {

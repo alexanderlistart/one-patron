@@ -16,16 +16,44 @@
   <link rel="icon" href="/favicon-v2.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/ENOCH/enoch.css?v=23">
   <link rel="stylesheet" href="/mobile-top-spacing.css?v=1">
+  <link rel="stylesheet" href="/global-nav.css?v=1">
   <script src="/ENOCH/enoch.js?v=20" defer></script>
+  <script src="/global-nav.js?v=1" defer></script>
 </head>
 <body data-checkpoint="0" data-completion="unresolved">
   <a class="skip-link" href="#main-record">Skip to the record</a>
 
-  <header class="site-header">
-    <div class="shell header-inner">
-      <a class="brand-home" href="/" aria-label="Return to the ONE PATRON homepage">
-        <img class="brand-lockup" src="/ENOCH/artwork/one-patron-lockup-on-dark.svg" alt="ONE PATRON" width="1200" height="360">
+  <nav class="site-nav" aria-label="Primary navigation">
+    <div class="nav-inner">
+      <a class="brand-link" href="/" aria-label="ONE PATRON home">
+        <img src="/one-patron-logo.png" width="2400" height="720" alt="ONE PATRON">
       </a>
+      <div class="nav-links">
+        <a href="/#idea">The Idea</a>
+        <a href="/#alexander">Alexander</a>
+        <a href="/#public-work">Public Work</a>
+        <a href="/ENOCH/" aria-current="page">ENOCH</a>
+        <a href="/terms/">Terms &amp; Conditions</a>
+        <a href="/verification/">Verify</a>
+        <details class="mobile-nav">
+          <summary>Menu</summary>
+          <div class="mobile-panel">
+            <a href="/#idea">The Idea</a>
+            <a href="/#alexander">Alexander</a>
+            <a href="/#public-work">Public Work</a>
+            <a href="/ENOCH/" aria-current="page">ENOCH</a>
+            <a href="/terms/">Terms &amp; Conditions</a>
+            <a href="/verification/">Verify Identity &amp; Wallets</a>
+            <a href="/#contact">Contact Alexander</a>
+          </div>
+        </details>
+        <a class="nav-action" href="/#complete">Complete It</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="enoch-context">
+    <div class="shell header-inner">
       <div class="record-name" aria-label="Enoch record state">
         <span>ENOCH RECORD</span>
         <span class="state-label" data-state-label>
@@ -34,7 +62,7 @@
         </span>
       </div>
     </div>
-  </header>
+  </div>
 
   <nav class="human-section-nav shell" aria-label="ENOCH section navigation">
     <a href="/">PROJECT OVERVIEW</a><span aria-hidden="true">·</span>

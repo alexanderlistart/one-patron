@@ -108,7 +108,7 @@ a:hover { color: var(--depth-blue); }
 }
 .depth-back { white-space: nowrap; }
 
-main.depth-main { padding: clamp(52px, 4vw, 64px) 0 88px; }
+main.depth-main { padding: clamp(28px, 2.4vw, 36px) 0 88px; }
 .depth-page-kicker,
 .depth-section-label,
 .depth-status-label,
@@ -131,6 +131,7 @@ main.depth-main { padding: clamp(52px, 4vw, 64px) 0 88px; }
   line-height: 1;
 }
 .depth-page-title--landing { font-size: clamp(52px, 8vw, 92px); }
+.depth-title-word { letter-spacing: -.035em; }
 .depth-release-line {
   margin: 18px 0 0;
   color: var(--depth-muted);
