@@ -162,6 +162,10 @@
       border: 0;
     }
 
+    @media (min-width: 2600px) {
+      :root { --max: clamp(1480px, 55vw, 1680px); }
+    }
+
     @media (max-width: 820px) {
       main { padding-top: 34px; }
       .intro { grid-template-columns: 1fr; margin-top: 42px; }

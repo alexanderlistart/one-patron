@@ -1159,6 +1159,17 @@
       .hero-art img { width: min(70%, 420px); }
     }
 
+    @media (min-width: 2800px) {
+      :root { --page: min(clamp(1500px, 52vw, 1640px), calc(100% - 128px)); }
+      .hero { gap: clamp(118px, 4vw, 136px); }
+      h1 {
+        max-width: 860px;
+        font-size: clamp(92px, 2.8vw, 96px);
+      }
+      .hero-art { min-height: 560px; }
+      .hero-art img { width: min(70%, 450px); }
+    }
+
     @media (max-width: 1040px) {
       .nav-links { gap: 15px; }
       .nav-links > a:not(.nav-action) { display: none; }

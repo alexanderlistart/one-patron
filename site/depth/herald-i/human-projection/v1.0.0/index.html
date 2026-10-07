@@ -595,6 +595,14 @@
       font: 500 0.72rem/1.6 var(--mono);
     }
 
+    @media (min-width: 1600px) {
+      :root { --measure: clamp(1220px, 65vw, 1320px); }
+    }
+
+    @media (min-width: 2200px) {
+      :root { --measure: clamp(1320px, 52vw, 1480px); }
+    }
+
     @media (max-width: 900px) {
       main { width: min(100% - 2.5rem, var(--measure)); }
 

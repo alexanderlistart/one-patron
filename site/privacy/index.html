@@ -162,6 +162,12 @@
     .footer-logo { width: 230px; height: auto; }
     .site-footer a { color: var(--muted-strong); text-decoration: none; }
 
+    @media (min-width: 2200px) {
+      :root { --page: min(clamp(900px, 40vw, 980px), calc(100% - 120px)); }
+      h1 { max-width: 880px; font-size: 102px; }
+      h2 { font-size: 56px; }
+    }
+
     @media (max-width: 760px) {
       :root { --page: min(100% - 28px, 900px); }
       .nav-inner { min-height: 68px; }
