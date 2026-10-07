@@ -186,7 +186,7 @@
 
     .artwork-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 14.2rem;
+      grid-template-columns: minmax(0, 1fr) 18rem;
       min-height: min(72vw, 49rem);
     }
 
@@ -320,11 +320,13 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: clamp(1.4rem, 3vw, 2.25rem) 0 clamp(1.4rem, 3vw, 2.25rem) clamp(1.2rem, 2.6vw, 2rem);
+      min-width: 0;
+      padding: clamp(1.4rem, 3vw, 2.25rem) clamp(1rem, 2vw, 1.5rem) clamp(1.4rem, 3vw, 2.25rem) clamp(1.2rem, 2.6vw, 2rem);
     }
 
     .family-list {
       display: grid;
+      min-width: 0;
       gap: 1.25rem;
       margin: 0;
     }
@@ -334,7 +336,10 @@
       grid-template-columns: 2.2rem minmax(0, 1fr);
       gap: 0.7rem;
       align-items: start;
+      min-width: 0;
     }
+
+    .family-row > div { min-width: 0; }
 
     .family-mark {
       margin-top: 0.45rem;
@@ -361,6 +366,7 @@
       color: var(--muted);
       font: 500 0.62rem/1.55 var(--mono);
       letter-spacing: 0.04em;
+      overflow-wrap: anywhere;
     }
 
     .structural-fact {
@@ -378,11 +384,12 @@
 
     .operator-zone {
       display: grid;
-      grid-template-columns: minmax(12rem, 0.55fr) minmax(0, 1.45fr);
+      grid-template-columns: minmax(15.5rem, 0.5fr) minmax(0, 1.5fr);
       border-top: 1px solid var(--line);
     }
 
     .operator-heading {
+      min-width: 0;
       padding: clamp(1.4rem, 3vw, 2rem) clamp(1.2rem, 3vw, 2.3rem) clamp(1.4rem, 3vw, 2rem) 0;
       border-right: 1px solid var(--line);
     }
@@ -493,10 +500,12 @@
     .interpretation {
       display: grid;
       grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.75fr);
-      gap: clamp(2rem, 7vw, 7rem);
+      gap: clamp(2.5rem, 5vw, 5rem);
       align-items: start;
       padding: clamp(3rem, 7vw, 6rem) 0 clamp(2.8rem, 6vw, 5rem);
     }
+
+    .interpretation > * { min-width: 0; }
 
     .structural-summary {
       margin: 0;
@@ -513,10 +522,14 @@
 
     .disclosure {
       margin: 0;
+      width: 100%;
+      max-width: 32rem;
+      justify-self: end;
       padding-left: 1rem;
       border-left: 1px solid var(--gold);
       color: var(--muted);
       font: 500 0.69rem/1.65 var(--mono);
+      overflow-wrap: anywhere;
     }
 
     .disclosure strong {
