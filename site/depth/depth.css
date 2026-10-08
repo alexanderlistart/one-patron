@@ -282,8 +282,7 @@ main.depth-main { padding: clamp(28px, 2.4vw, 36px) 0 88px; }
   word-break: normal;
 }
 .depth-file-link { color: var(--depth-blue); }
-.depth-file-link[href$=".asc"]::after {
-  content: "↓ DOWNLOAD";
+.signature-download-label {
   margin-left: .7em;
   display: inline-block;
   color: var(--depth-gold);
