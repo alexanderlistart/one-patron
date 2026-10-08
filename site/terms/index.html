@@ -117,6 +117,19 @@
     .nav-links a:hover,
     .nav-links a:focus-visible { color: var(--text); }
 
+    .nav-links .nav-action {
+      min-height: 44px;
+      padding: 10px 17px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--gold);
+      border-radius: 999px;
+      color: var(--gold-light);
+      line-height: 1;
+      white-space: nowrap;
+    }
+
     .hero,
     .section,
     .site-footer {
@@ -310,7 +323,7 @@
         <a href="/">Project Overview</a>
         <a href="/ENOCH/">ENOCH</a>
         <a href="/verification/">Verify Identity &amp; Wallets</a>
-        <a href="/#complete">Complete It</a>
+        <a class="nav-action" href="/#complete">Complete It</a>
       </div>
     </div>
   </nav>

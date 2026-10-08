@@ -120,7 +120,7 @@
     main {
       width: min(100% - clamp(2rem, 8vw, 7rem), var(--measure));
       margin: 0 auto;
-      padding: clamp(2rem, 4vw, 3.5rem) 0 clamp(4rem, 9vw, 8rem);
+      padding: clamp(3.2rem, 8vw, 7.5rem) 0 clamp(4rem, 9vw, 8rem);
     }
 
     .masthead {
@@ -611,6 +611,15 @@
     }
 
     .machine-links a { overflow-wrap: anywhere; }
+    .machine-links a[href$=".asc"]::after {
+      content: "↓ DOWNLOAD";
+      margin-left: .7em;
+      display: inline-block;
+      color: var(--gold);
+      font: 700 .56rem/1 var(--sans);
+      letter-spacing: .1em;
+      white-space: nowrap;
+    }
 
     .candidate-note {
       margin: 1.2rem 0 0;
@@ -764,13 +773,9 @@
       }
     }
   </style>
-  <link rel="stylesheet" href="/global-nav.css?v=1">
-  <script src="/global-nav.js?v=1" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#fresco">Skip to the fresco</a>
-
-  <nav class="site-nav" aria-label="Primary navigation"><div class="nav-inner"><a class="brand-link" href="/" aria-label="ONE PATRON home"><img src="/one-patron-logo.png" width="2400" height="720" alt="ONE PATRON"></a><div class="nav-links"><a href="/#idea">The Idea</a><a href="/#alexander">Alexander</a><a href="/#public-work">Public Work</a><a href="/ENOCH/">ENOCH</a><a href="/terms/">Terms &amp; Conditions</a><a href="/verification/">Verify</a><details class="mobile-nav"><summary>Menu</summary><div class="mobile-panel"><a href="/#idea">The Idea</a><a href="/#alexander">Alexander</a><a href="/#public-work">Public Work</a><a href="/ENOCH/">ENOCH</a><a href="/terms/">Terms &amp; Conditions</a><a href="/verification/">Verify Identity &amp; Wallets</a><a href="/#contact">Contact Alexander</a></div></details><a class="nav-action" href="/#complete">Complete It</a></div></div></nav>
 
   <div class="candidate-strip">
     <span>Human Projection 1.0.0</span> · Created after source release · Noncanonical <span class="optional">· Non-identity-bearing · No source writeback</span>
@@ -923,7 +928,7 @@
             <li><a href="https://one-patron.com/depth/objects/herald-i/README.machine.txt">Machine reader note</a></li>
             <li><a href="https://one-patron.com/depth/objects/herald-i/SHA256SUMS.txt">Original checksum ledger</a></li>
             <li><a href="https://one-patron.com/depth/herald-i/attestation/HERALD_I_RETROSPECTIVE_ATTESTATION_v1.0.json">Retrospective attestation</a></li>
-            <li><a href="https://one-patron.com/depth/herald-i/attestation/HERALD_I_RETROSPECTIVE_ATTESTATION_v1.0.json.asc">Attestation signature</a></li>
+            <li><a href="https://one-patron.com/depth/herald-i/attestation/HERALD_I_RETROSPECTIVE_ATTESTATION_v1.0.json.asc">HERALD_I_RETROSPECTIVE_ATTESTATION_v1.0.json.asc</a></li>
           </ul>
         </section>
       </div>
