@@ -1,0 +1,15 @@
+STORY 0 — PROVENANCE NOTE
+
+“0 — The Step Before Proof” exists in two preserved editorial forms.
+
+The text published on Substack on 3 August 2026 is the public literary edition. Its canonical text capture under ONE-PATRON-STORY-TEXT-v1 has SHA-256:
+
+27562142d12ad0c9d9ea84057292eb0753ebb7f2d8c64f805cfec453e061a388
+
+A local Markdown file created on 8 August 2026 from Complete Story Bible v1.0 was fixed in the signed ENOCH Public Manifest v1.0 on 22 August 2026 as the historical ENOCH source object. Its exact 4,842 bytes have SHA-256:
+
+84b5f32b363e0e2d1cdca73ab6b16435271ceac8b4a29f4209533dfb32f4a623
+
+That local file was mistakenly described as the text published on 3 August. The signed ENOCH Public Manifest v1.0 correctly commits the exact local source bytes in `root.story_source_sha256`; it does not authenticate the Substack platform bytes or the canonical text capture of the public literary edition.
+
+Both editorial forms are preserved. No historical file, manifest, signature, publication date, sealed package, or commitment has been replaced or rewritten. The accompanying signed version-relationship record documents this distinction prospectively.

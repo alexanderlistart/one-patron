@@ -1,0 +1,66 @@
+{
+  "schema": "one-patron.enoch.story-version-relationship.v1",
+  "version": "1.0",
+  "record_id": "ONE_PATRON_STORY_0_VERSION_RELATIONSHIP_v1.0",
+  "created_at": "2026-10-11T15:31:45Z",
+  "correction_model": "append-only",
+  "story": {
+    "position": "0",
+    "title": "0 — The Step Before Proof"
+  },
+  "public_literary_edition": {
+    "role": "public literary edition",
+    "source_url": "https://alexanderlistart.substack.com/p/0-the-step-before-proof",
+    "published_at": "2026-08-03T10:02:54Z",
+    "observed_at": "2026-10-10T23:28:29Z",
+    "canonical_profile": "ONE-PATRON-STORY-TEXT-v1",
+    "canonical_file": "ONE_PATRON_STORY_0_PUBLIC_LITERARY_EDITION_v1.0.txt",
+    "canonical_bytes": 4649,
+    "canonical_sha256": "27562142d12ad0c9d9ea84057292eb0753ebb7f2d8c64f805cfec453e061a388",
+    "hash_scope": "Canonical visible literary text only; not Substack platform or transport bytes.",
+    "source_evidence": {
+      "substack_page_snapshot_sha256": "e7b39936b88f9ee0140f66aadf701616662b73dadf3057dc774e2d0fc871665c",
+      "substack_rss_snapshot_sha256": "f24d87965414ce0be64784559f599289a1ac10f9eca58dc270daed7a33d49a42"
+    }
+  },
+  "historical_enoch_source_object": {
+    "role": "historical ENOCH source object",
+    "source_file": "stories/0-the-step-before-proof-published.md",
+    "public_github_file": "stories/0-The-Step-Before-Proof.md",
+    "created_at": "2026-08-08T20:52:49.882Z",
+    "bytes": 4842,
+    "sha256": "84b5f32b363e0e2d1cdca73ab6b16435271ceac8b4a29f4209533dfb32f4a623",
+    "lineage": "Created from Complete Story Bible v1.0 and later committed as the ENOCH source object.",
+    "manifest_file": "ONE_PATRON_ENOCH_PUBLIC_MANIFEST_v1.0.json",
+    "manifest_sha256": "4ac413b3b9fe3952d3fec7c018b87c733e448f3bc13ac838d86fc7cd5856d8d0",
+    "manifest_field": "root.story_source_sha256",
+    "manifest_issued_at": "2026-08-22T09:35:26.945Z",
+    "manifest_signature_sha256": "0a5b00175db2b1d26cfb50934f8877aca744a0d46d1bd7e15ce9a72919cd5568"
+  },
+  "correction": {
+    "prior_designation": "The historical ENOCH source object was mistakenly described as the text published on Substack on 3 August 2026.",
+    "clarification": "The Substack text is the public literary edition. The local Markdown is a distinct historical ENOCH source object.",
+    "preservation_rule": "Preserve both editorial forms and all existing historical manifests, signatures, hashes, publication dates, sealed packages, and commitments without replacement or rewrite."
+  },
+  "human_note": {
+    "file": "ONE_PATRON_STORY_0_PROVENANCE_NOTE_v1.0.txt",
+    "bytes": 1171,
+    "sha256": "7377ea96272cbe1d367dba23a81c31191d1172b5771a4b16575e07859b8f307e"
+  },
+  "investigation_evidence": {
+    "substantive_diff_sha256": "4636f001c85520d774fea6c6a2e123b39b1d4b9b3bad0af9c7879bc6140d41d4",
+    "classification": "PROVENANCE INCONSISTENCY; no cryptographic defect in the historical ENOCH commitment."
+  },
+  "checkpoint_i_compatibility": {
+    "precommitted_package_id": "checkpoint-07-v1",
+    "precommitted_package_manifest_sha256": "49b9fb8133dc1add78d3f5e63c5575a9513e687f0c4353b0c94b4958869f2692",
+    "commitments_manifest_sha256": "b265a0b2ae6317869886989642afd15a5b5cbb3fc128a120cb3b559738de6b4a",
+    "sealed_package_modified": false,
+    "integration_rule": "Reference this signed record prospectively from a new Checkpoint I release index or record; do not alter any precommitted package manifest, ciphertext, key commitment, or historical hash."
+  },
+  "intended_signature": {
+    "format": "ASCII-armored detached OpenPGP signature",
+    "signing_subkey_fingerprint": "F98D7B5AB20FF1E8D0440DBB6EE2FE0A9D8278F5",
+    "signature_file": "ONE_PATRON_STORY_0_VERSION_RELATIONSHIP_v1.0.json.asc"
+  }
+}

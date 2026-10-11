@@ -331,7 +331,7 @@ function updateTechnical(manifest, state) {
   document.querySelector("[data-root-record]").innerHTML =
     "<code>" +
     manifest.root.digital_silence_frames.toLocaleString("en-US") +
-    " SILENT FRAMES</code><br><code>STORY SHA-256 " +
+    " SILENT FRAMES</code><br><code>HISTORICAL ENOCH SOURCE SHA-256 " +
     manifest.root.story_source_sha256 +
     "</code>";
   document.querySelector("[data-score-record]").innerHTML =
