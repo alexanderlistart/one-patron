@@ -1301,3 +1301,346 @@ body[data-completion="resolved"] .state-label {
     animation-iteration-count: 1 !important;
   }
 }
+
+/* Approved art direction: Published Score. */
+.hero {
+  min-height: 650px;
+  padding-bottom: 92px;
+}
+
+.public-orientation {
+  padding-block: 32px;
+}
+
+.public-orientation p {
+  max-width: 760px;
+  color: var(--ivory-soft);
+  font-size: 14px;
+}
+
+.record-section {
+  padding-block: 126px 132px;
+}
+
+.movement-first {
+  max-width: 1000px;
+  font-size: clamp(46px, 5.6vw, 74px);
+}
+
+.record-grid {
+  margin-top: 126px;
+  display: block;
+}
+
+.root-record {
+  max-width: 980px;
+  min-height: 230px;
+  padding: 8px 0 76px 164px;
+  border-bottom: 1px solid var(--line);
+}
+
+.root-coordinate {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+}
+
+.root-coordinate strong {
+  font-size: 92px;
+}
+
+.root-record h2 {
+  font-size: clamp(40px, 4vw, 54px);
+}
+
+.root-record > p:not(.record-kicker) {
+  max-width: 610px;
+}
+
+.audio-record {
+  padding-block: 80px 86px;
+  border-top: 0;
+  display: grid;
+  grid-template-columns: minmax(250px, 0.64fr) minmax(0, 1.36fr);
+  grid-template-areas:
+    "copy player"
+    "clue downloads"
+    "principle source";
+  column-gap: clamp(72px, 9vw, 132px);
+  row-gap: 28px;
+  align-items: start;
+}
+
+.track-copy {
+  grid-area: copy;
+}
+
+.track-copy h2 {
+  font-size: clamp(40px, 4vw, 54px);
+}
+
+.audio-control {
+  grid-area: player;
+  margin-top: 2px;
+  grid-template-columns: 78px minmax(0, 1fr);
+  gap: 30px;
+}
+
+.play-button {
+  width: 78px;
+  height: 78px;
+}
+
+.play-button svg {
+  width: 31px;
+  height: 31px;
+}
+
+.timeline input[type="range"] {
+  height: 78px;
+}
+
+.download-row {
+  grid-area: downloads;
+  margin-top: 0;
+}
+
+.audio-source-label {
+  grid-area: source;
+  position: relative;
+  margin: 0;
+  padding-left: 18px;
+  color: var(--ivory-soft);
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.audio-source-label::before {
+  position: absolute;
+  top: 0.65em;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--blue);
+  content: "";
+}
+
+.record-clue {
+  grid-area: clue;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.record-principle {
+  grid-area: principle;
+  margin-top: 0;
+}
+
+.score-section {
+  padding-block: 132px 138px;
+}
+
+.movement-second {
+  max-width: 640px;
+  margin: 0 0 62px clamp(70px, 12vw, 166px);
+  color: var(--ivory-soft);
+  font-size: clamp(32px, 3.8vw, 50px);
+}
+
+.score-heading {
+  padding-top: 56px;
+  border-top: 1px solid var(--line);
+  grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.45fr);
+}
+
+.score-heading h2 {
+  max-width: 700px;
+  font-size: clamp(46px, 5.2vw, 70px);
+}
+
+.phrase-list {
+  margin-top: 76px;
+}
+
+.phrase {
+  min-height: 108px;
+  padding-block: 23px;
+}
+
+.phrase:not(.is-released) {
+  grid-template-columns: 150px minmax(0, 1fr) auto;
+}
+
+.phrase:not(.is-released) h3 {
+  color: var(--muted);
+  font-size: 28px;
+}
+
+.phrase:not(.is-released) .phrase-trace i {
+  height: 2px;
+  background: rgba(146, 147, 153, 0.3);
+}
+
+.phrase:not(.is-released) .record-tag {
+  border-color: var(--line);
+  color: var(--muted);
+}
+
+.phrase.is-released {
+  min-height: 360px;
+  padding-block: 52px 70px;
+  border-top: 1px solid var(--gold-shadow);
+  grid-template-columns: 170px minmax(0, 1fr) auto;
+  row-gap: 34px;
+}
+
+.phrase.is-released h3 {
+  color: var(--gold-light);
+  font-size: 44px;
+}
+
+.phrase.is-released .phrase-trace i {
+  height: 5px;
+}
+
+.phrase.is-released .phrase-release {
+  max-width: 980px;
+  margin-top: 6px;
+  padding: 38px 0 0 28px;
+  border-left-color: var(--gold);
+  color: var(--ivory);
+  font-size: clamp(31px, 3vw, 39px);
+  line-height: 1.38;
+  letter-spacing: -0.018em;
+}
+
+.completion-section {
+  padding-block: 132px 124px;
+}
+
+@media (max-width: 960px) {
+  .root-record {
+    max-width: 760px;
+  }
+
+  .audio-record {
+    display: block;
+    padding-block: 70px 76px;
+  }
+
+  .audio-control {
+    margin-top: 46px;
+  }
+
+  .download-row {
+    margin-top: 30px;
+  }
+
+  .audio-source-label {
+    margin-top: 23px;
+  }
+
+  .record-clue {
+    margin-top: 40px;
+  }
+
+  .record-principle {
+    margin-top: 28px;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero {
+    min-height: auto;
+    padding-bottom: 74px;
+  }
+
+  .record-section,
+  .score-section {
+    padding-block: 84px 94px;
+  }
+
+  .record-grid {
+    margin-top: 80px;
+  }
+
+  .root-record {
+    min-height: 0;
+    padding: 0 0 70px 92px;
+  }
+
+  .root-coordinate strong {
+    font-size: 68px;
+  }
+
+  .root-record h2 {
+    font-size: clamp(34px, 9vw, 45px);
+  }
+
+  .audio-record {
+    padding-block: 62px 68px;
+  }
+
+  .audio-control {
+    grid-template-columns: 64px minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .play-button {
+    width: 64px;
+    height: 64px;
+  }
+
+  .timeline input[type="range"] {
+    height: 64px;
+  }
+
+  .movement-second {
+    margin: 0 0 48px 18px;
+    font-size: clamp(31px, 8.4vw, 42px);
+  }
+
+  .score-heading {
+    padding-top: 42px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .phrase.is-released {
+    min-height: 0;
+    padding-block: 42px 54px;
+    row-gap: 22px;
+  }
+
+  .phrase.is-released h3 {
+    font-size: 36px;
+  }
+
+  .phrase.is-released .phrase-release {
+    margin-top: 4px;
+    padding: 30px 0 0 20px;
+    font-size: clamp(26px, 7.2vw, 31px);
+    line-height: 1.43;
+  }
+}
+
+@media (max-width: 470px) {
+  .field-figure img {
+    width: min(42vw, 182px);
+  }
+
+  .root-record {
+    padding-left: 72px;
+  }
+
+  .root-coordinate strong {
+    font-size: 58px;
+  }
+
+  .audio-source-label {
+    font-size: 10px;
+    letter-spacing: 0.055em;
+  }
+}
