@@ -150,6 +150,7 @@ function configurePlayer(player) {
   const pauseIcon = button.querySelector(".pause-icon");
   const flac = document.querySelector("[data-download-flac]");
   const wav = document.querySelector("[data-download-wav]");
+  const sourceLabel = document.querySelector("[data-audio-source-label]");
   let losslessLoader = null;
   let losslessFilename = "";
   let losslessUrl = "";
@@ -252,6 +253,10 @@ function configurePlayer(player) {
       flac.href = "#record";
       flac.download = options.losslessFilename;
       flac.hidden = false;
+      button.setAttribute("aria-label", "Play the verified released Enoch record");
+      seek.setAttribute("aria-label", "Seek through the verified released Enoch record");
+      sourceLabel.textContent =
+        "Current released checkpoint, verified and opened from the signed encrypted package.";
       losslessLoader = options.losslessLoader;
       losslessFilename = options.losslessFilename;
       losslessUrl = "";
@@ -426,8 +431,7 @@ revealAvailableSignatures();
 
 loadRecord().catch((error) => {
   console.error(error);
-  document.querySelector("[data-public-state]").textContent =
-    "UNRESOLVED · RECORD VERIFICATION UNAVAILABLE";
+  document.body.dataset.recordVerification = "unavailable";
 });
 
 window.addEventListener("beforeunload", () => {

@@ -1,0 +1,8 @@
+{
+  "schema": "one-patron.enoch.release-state.v1",
+  "version": "1.0",
+  "state": "UNRESOLVED",
+  "checkpoint": 0,
+  "completion": "unresolved",
+  "releases": []
+}

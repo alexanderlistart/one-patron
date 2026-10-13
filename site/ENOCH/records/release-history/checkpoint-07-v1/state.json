@@ -1,0 +1,13 @@
+{
+  "schema": "one-patron.enoch.release-state.v1",
+  "version": "1.0",
+  "state": "OPEN",
+  "checkpoint": 7,
+  "completion": "unresolved",
+  "releases": [
+    {
+      "package_id": "checkpoint-07-v1",
+      "release_key_b64": "hZHJWAvIwsHe5MMj+sPzyj7zpcZrMMqU5M1Q0EI42mo="
+    }
+  ]
+}

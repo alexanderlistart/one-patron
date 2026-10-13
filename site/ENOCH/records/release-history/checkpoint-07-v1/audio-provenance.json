@@ -1,0 +1,37 @@
+{
+  "schema": "one-patron.enoch.public-audio-provenance.v1",
+  "version": "1.0",
+  "package_id": "checkpoint-07-v1",
+  "release_state_snapshot": {
+    "file": "./state.json",
+    "signature_file": "./state.json.asc",
+    "sha256": "0d0d765e2ac25c49323d7386d08291185e281aa2689d18c1f2b06c35cd903d97"
+  },
+  "package_manifest": {
+    "file": "../../packages/checkpoint-07-v1/manifest.json",
+    "sha256": "49b9fb8133dc1add78d3f5e63c5575a9513e687f0c4353b0c94b4958869f2692"
+  },
+  "artifacts": [
+    {
+      "component_id": "playback-audio",
+      "media_type": "audio/wav",
+      "source_ciphertext_file": "../../packages/checkpoint-07-v1/playback-audio.enc",
+      "source_ciphertext_bytes": 15552060,
+      "source_ciphertext_sha256": "d79960aafc285ab0bbb3c3d12fc102a693806b197728020065dbbfc5b55eb9ce",
+      "public_file": "../../../assets/ONE_PATRON_ENOCH_CHECKPOINT_07_v1.0.wav",
+      "plaintext_bytes": 15552044,
+      "plaintext_sha256": "55c61f49e2a8bbe3148ab23271f4dd8255cac59b9caa7254f17b053110e47819"
+    },
+    {
+      "component_id": "lossless-audio",
+      "media_type": "audio/flac",
+      "source_ciphertext_file": "../../packages/checkpoint-07-v1/lossless-audio.enc",
+      "source_ciphertext_bytes": 15558125,
+      "source_ciphertext_sha256": "8942881b12ecf27d12cf5b46b8736ff4981d974af3ba9bfd2fc6cd24887cc28c",
+      "public_file": "../../../assets/ONE_PATRON_ENOCH_CHECKPOINT_07_v1.0.flac",
+      "plaintext_bytes": 15558109,
+      "plaintext_sha256": "4dd347f71da0580b98069d98b03ffa55a4626a3be0475f53062a19c5ea51e66a"
+    }
+  ],
+  "authenticity": "Each plaintext is the exact AES-256-GCM output recovered from the committed ciphertext with the release key published in the signed checkpoint-07 state. The plaintext files are not independently OpenPGP-signed."
+}

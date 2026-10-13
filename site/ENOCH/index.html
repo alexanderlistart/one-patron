@@ -12,12 +12,13 @@
   <meta name="description" content="ENOCH is a public evolving work and record within ONE PATRON. Its current public state is UNRESOLVED and disclosed in stages.">
   <link rel="canonical" href="https://one-patron.com/ENOCH/">
   <link rel="alternate" type="application/json" title="ENOCH Witness carrier profile" href="/ENOCH/records/ONE_PATRON_ENOCH_WITNESS_CARRIER_PROFILE_v1.0.json">
+  <link rel="alternate" type="application/json" title="ENOCH release history" href="/ENOCH/records/ONE_PATRON_ENOCH_RELEASE_HISTORY_v1.0.json">
   <link rel="icon" href="/favicon-v2.ico" type="image/x-icon" sizes="16x16 32x32 48x48">
   <link rel="icon" href="/favicon-v2.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/ENOCH/enoch.css?v=23">
+  <link rel="stylesheet" href="/ENOCH/enoch.css?v=24">
   <link rel="stylesheet" href="/mobile-top-spacing.css?v=1">
   <link rel="stylesheet" href="/global-nav.css?v=1">
-  <script src="/ENOCH/enoch.js?v=20" defer></script>
+  <script src="/ENOCH/enoch.js?v=21" defer></script>
   <script src="/global-nav.js?v=1" defer></script>
 </head>
 <body data-checkpoint="0" data-completion="unresolved">
@@ -122,6 +123,7 @@
             <a data-download-flac href="/ENOCH/assets/ONE_PATRON_ENOCH_UNRESOLVED_RECORD_v1.0.flac" download>Download FLAC</a>
             <a data-download-wav href="/ENOCH/assets/ONE_PATRON_ENOCH_UNRESOLVED_RECORD_v1.0.wav" download>Download WAV</a>
           </div>
+          <p class="audio-source-label" data-audio-source-label>Original unresolved record. JavaScript verifies and opens the current released checkpoint.</p>
           <p class="record-clue">A second record is carried inside the sound.</p>
           <p class="record-principle">The notes are not the whole message.<br>Silence is part of the score.</p>
         </article>
@@ -209,6 +211,34 @@
             <a href="/ENOCH/records/latest.json.asc" data-signature-link hidden>State signature ↗</a>
             <a href="/verification/">Verification ↗</a>
           </nav>
+          <section class="release-history" aria-labelledby="release-history-title">
+            <div class="release-history-heading">
+              <p class="technical-kicker" id="release-history-title">RELEASE HISTORY</p>
+              <a href="/ENOCH/records/ONE_PATRON_ENOCH_RELEASE_HISTORY_v1.0.json">Machine-readable history ↗</a>
+            </div>
+            <div class="release-history-grid">
+              <article>
+                <p class="release-history-state">INITIAL · 0 / XXI</p>
+                <div class="release-history-links">
+                  <a href="/ENOCH/records/release-history/initial-v1/state.json">Signed state</a>
+                  <a href="/ENOCH/records/release-history/initial-v1/state.json.asc">OpenPGP signature</a>
+                  <a href="/ENOCH/assets/ONE_PATRON_ENOCH_UNRESOLVED_RECORD_v1.0.wav">Original audio · WAV</a>
+                  <a href="/ENOCH/assets/ONE_PATRON_ENOCH_UNRESOLVED_RECORD_v1.0.flac">Original audio · FLAC</a>
+                </div>
+              </article>
+              <article>
+                <p class="release-history-state">CHECKPOINT 07 · 7 / XXI</p>
+                <div class="release-history-links">
+                  <a href="/ENOCH/records/release-history/checkpoint-07-v1/state.json">Signed state</a>
+                  <a href="/ENOCH/records/release-history/checkpoint-07-v1/state.json.asc">OpenPGP signature</a>
+                  <a href="/ENOCH/records/packages/checkpoint-07-v1/manifest.json">Package manifest</a>
+                  <a href="/ENOCH/assets/ONE_PATRON_ENOCH_CHECKPOINT_07_v1.0.wav">Released audio · WAV</a>
+                  <a href="/ENOCH/assets/ONE_PATRON_ENOCH_CHECKPOINT_07_v1.0.flac">Released audio · FLAC</a>
+                  <a href="/ENOCH/records/release-history/checkpoint-07-v1/audio-provenance.json">Audio provenance</a>
+                </div>
+              </article>
+            </div>
+          </section>
         </div>
       </details>
     </section>

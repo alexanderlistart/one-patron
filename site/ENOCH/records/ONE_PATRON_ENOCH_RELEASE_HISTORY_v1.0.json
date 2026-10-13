@@ -1,0 +1,69 @@
+{
+  "schema": "one-patron.enoch.release-history.v1",
+  "version": "1.0",
+  "current_state_file": "./latest.json",
+  "releases": [
+    {
+      "id": "initial-v1",
+      "label": "INITIAL STATE",
+      "state": "UNRESOLVED",
+      "checkpoint": 0,
+      "completion": "unresolved",
+      "state_file": "./release-history/initial-v1/state.json",
+      "signature_file": "./release-history/initial-v1/state.json.asc",
+      "state_sha256": "0a9cb99ca18227719af431c995e583f3970d9ba8f0cc26700098c7a724f5e466",
+      "source_git_commit": "90044e86d2ca854a0fd6dd9fd3d3ba8fd0eaa696",
+      "audio": [
+        {
+          "role": "ORIGINAL_UNRESOLVED_RECORD",
+          "media_type": "audio/wav",
+          "file": "../assets/ONE_PATRON_ENOCH_UNRESOLVED_RECORD_v1.0.wav",
+          "bytes": 15552044,
+          "sha256": "440cd2a945d1dce3e0a79dc721861e059e63281b947c8992a83a9e8e9d0c1238"
+        },
+        {
+          "role": "ORIGINAL_UNRESOLVED_RECORD",
+          "media_type": "audio/flac",
+          "file": "../assets/ONE_PATRON_ENOCH_UNRESOLVED_RECORD_v1.0.flac",
+          "bytes": 15558109,
+          "sha256": "11b67095a43608314a4998b0c5fdf308c32e9c5b2a0152ae9a6d2295ded8c00e"
+        }
+      ]
+    },
+    {
+      "id": "checkpoint-07-v1",
+      "label": "CHECKPOINT 07",
+      "state": "OPEN",
+      "checkpoint": 7,
+      "completion": "unresolved",
+      "state_file": "./release-history/checkpoint-07-v1/state.json",
+      "signature_file": "./release-history/checkpoint-07-v1/state.json.asc",
+      "state_sha256": "0d0d765e2ac25c49323d7386d08291185e281aa2689d18c1f2b06c35cd903d97",
+      "source_git_commit": "162bf05f657c27c54f1e9cd2537e2b541f6b146c",
+      "package_manifest": "./packages/checkpoint-07-v1/manifest.json",
+      "package_manifest_sha256": "49b9fb8133dc1add78d3f5e63c5575a9513e687f0c4353b0c94b4958869f2692",
+      "encrypted_components": [
+        "./packages/checkpoint-07-v1/record.enc",
+        "./packages/checkpoint-07-v1/playback-audio.enc",
+        "./packages/checkpoint-07-v1/lossless-audio.enc"
+      ],
+      "audio_provenance": "./release-history/checkpoint-07-v1/audio-provenance.json",
+      "audio": [
+        {
+          "role": "RELEASED_CHECKPOINT_AUDIO",
+          "media_type": "audio/wav",
+          "file": "../assets/ONE_PATRON_ENOCH_CHECKPOINT_07_v1.0.wav",
+          "bytes": 15552044,
+          "sha256": "55c61f49e2a8bbe3148ab23271f4dd8255cac59b9caa7254f17b053110e47819"
+        },
+        {
+          "role": "RELEASED_CHECKPOINT_AUDIO",
+          "media_type": "audio/flac",
+          "file": "../assets/ONE_PATRON_ENOCH_CHECKPOINT_07_v1.0.flac",
+          "bytes": 15558109,
+          "sha256": "4dd347f71da0580b98069d98b03ffa55a4626a3be0475f53062a19c5ea51e66a"
+        }
+      ]
+    }
+  ]
+}
